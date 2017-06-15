@@ -1,0 +1,26 @@
+Dobry vecer,
+
+dnes som uspesne absolvoval poslednu skusku. Ako sme sa dohodli bol som na katedre ci je mozne zmenit temu a tiez ako na to.
+Pan Vojvoda mi povedal, ze najjednoduchsie je upravit terajsiu temu v AIS. Kedze temy, ktore chceme riesit nemaju akykolvek suvis 
+s akupunkturou bolo by potrebne pozmenit tak nazov ako aj popis prace.
+
+Momentalne disponujem dvoma navrhmi tem:
+Tema 1: JShell
+Tato tema by mala za ulohu vytvorit akysi unifikovany "shell", ktory by bol schopny prijimat sadu prikazov a interpretovat ich na
+stroji s lubovolnym OS. Pripadne ak by bol cas a chut dalo by sa toto zadanie rozsirit o vytvorenie vlastneho jazyka/translatora, 
+ktory by akceptoval akykolvek skriptovaci jazyk a prekladal by ho do jazyka, ktory vyuziva masina na ktorom program bezi.
+
+Tema 2: Security
+V tomto pripade by slo o zabezpecenie weboveho klienta s jeho web servismi, kde by som sa pokusil rozobrat problematiku zabezpecenia
+stranok, zistit moznosti, ake maju ne/vyhody samozrejme aj s konkretnymi implementaciami a demom. 
+
+Obe tieto DP prace by bolo taktiez napomocne na projekte na ktorom firma momentalne pracuje a teda by mali aj dalsie vyuzitie.
+
+Kedze som temy velmi nerozpisal mozno bude najlepsie stretnut sa buduci tyzde a pozhovarat sa co si o nich myslite.
+
+Na kopiu pripajam aj mojho kolegu, ktory by bol zaroven moj dozor zo strany firmy.
+V pripade akychkolvek otazok, mozete kontaktovat oboch.
+
+S pozdravom
+
+Juraj Vraniak
