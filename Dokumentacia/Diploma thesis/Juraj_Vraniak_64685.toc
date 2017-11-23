@@ -1,0 +1,25 @@
+\select@language {english}
+\thispagestyle {empty}
+\contentsline {section}{\'{U}vod}{1}{section*.2}
+\contentsline {subsection}{\numberline {0.1}Jazyky}{2}{subsection.3}
+\contentsline {section}{\numberline {1}Anal\'yza jazykov}{3}{section.4}
+\contentsline {subsection}{\numberline {1.1}Priprava analyzy existujucich }{3}{subsection.5}
+\contentsline {section}{\numberline {2}Jazyky}{4}{section.6}
+\contentsline {subsection}{\numberline {2.1}Proces prekladu}{4}{subsection.7}
+\contentsline {subsection}{\numberline {2.2}Abeceda a vyhraden\'e slov\'a jazyka}{4}{subsection.8}
+\contentsline {subsection}{\numberline {2.3}Proced\'ury a algoritmy}{4}{subsection.9}
+\contentsline {subsection}{\numberline {2.4}Shell}{5}{subsection.10}
+\contentsline {subsubsection}{\numberline {2.4.1}V\'yhody}{5}{subsubsection.11}
+\contentsline {subsubsection}{\numberline {2.4.2}Nev\'yhody}{5}{subsubsection.12}
+\contentsline {subsubsection}{\numberline {2.4.3}Popis a zhodnotenie jazyka}{5}{subsubsection.13}
+\contentsline {subsection}{\numberline {2.5}Powershel/Classic shell}{6}{subsection.14}
+\contentsline {subsubsection}{\numberline {2.5.1}V\'yhody}{6}{subsubsection.15}
+\contentsline {subsubsection}{\numberline {2.5.2}Nev\'yhody}{6}{subsubsection.16}
+\contentsline {section}{\numberline {3}Anal???za existujucich rieseni}{8}{section.17}
+\contentsline {section}{Z\'{a}ver}{10}{section*.35}
+\contentsline {section}{Resum\'{e}}{11}{section*.36}
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{12}{section*.37}
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.38}
+\contentsline {section}{\numberline {A} Zoznam analyzovan?ch projektov}{II}{section.40}
+\contentsline {section}{\numberline {B} struktura el. nosica}{III}{section.43}
+\contentsline {section}{\numberline {C} Algoritmus}{IV}{section.46}

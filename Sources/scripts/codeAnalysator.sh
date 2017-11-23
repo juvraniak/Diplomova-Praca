@@ -7,10 +7,12 @@
 # version 1.0
 #
 
+
+
 SOURCES_PATH=/home/jv/Documents/Skola/Diplomovka/Diplomova-Praca/Sources/sources_for_analysis
 
-get_number_of_total_rows_per_extension(){
-    count=$(find $SOURCES_PATH -name $1 -type f | xargs wc -l | awk '{s+=$1} END {print s/=2}')
+get_number_of_total_rows_per_extension(){  
+    count=$(find $SOURCES_PATH -name $1 -type f | xargs -d '\n' wc -l | awk '{s+=$1} END {print s/=2}')
     echo $count
 }
 
@@ -25,18 +27,17 @@ loop_array(){
     for operator in "${arr_to_loop[@]}";
         do
             count=`get_number_of_occurences $ext $operator`
-            echo "Operator : " $operator
-            echo "Count : " $count
+            echo $operator ":" $count
         done
 }
 
 main(){
-
-    local extensions=("*.js" "*.py" "*.coffee")
+    local extensions=("*.js" "*.py" "*.coffee" "*.bat" "*.sh")
+    # local extensions=("*.sh")
 
     local imports_search=("import" "static import")
     local logic_operators=("&&" "||" "&" "|" "!" "==" "<" ">" ">=" "<=" "!=" "^" "~" "<<" ">>")
-    local math_operators=("+" "-" "\*" "/" "%" "+=" "\-=" "*=" "/=" "%=" "**=" "//=" "++" "--")
+    local math_operators=("+" "-" "\*" "/" "%" "+=" "\-=" "*=" "/=" "%=" "**=" "//=" "++" "\-\-")
     local decision_statements=("if" "else if" "else" "switch" "case")
     local loop_statements=("for" "while" "do" "done")
 

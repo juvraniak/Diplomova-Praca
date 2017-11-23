@@ -7,4 +7,4 @@
 # version 1.0
 #
 
-sudo logkeys -k -m /home/jv/Documents/Skola/DP\ praca/Diplomova-Praca/Sources/scripts/my_lang.keymap -o /home/jv/Documents/Skola/DP\ praca/Diplomova-Praca/Sources/logs/logkeystroke.log
+sudo logkeys -k -m /home/jv/Documents/Skola/Diplomovka/Diplomova-Praca/Sources/scripts/my_lang.keymap -o /home/jv/Documents/Skola/Diplomovka/Diplomova-Praca/Sources/logs/logkeystroke.log
