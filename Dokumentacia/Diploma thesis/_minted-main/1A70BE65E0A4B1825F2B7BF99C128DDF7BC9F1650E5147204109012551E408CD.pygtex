@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@app.task}\PYG{p}{(}\PYG{n}{bind} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+	\PYG{k}{def} \PYG{n+nf}{start\PYGZus{}training}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{trainerId}\PYG{p}{):}
+	\PYG{n}{trainerModel} \PYG{o}{=} \PYG{n}{TrainerModel}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pk}\PYG{o}{=}\PYG{n}{trainerId}\PYG{p}{)}
+	\PYG{k}{assert} \PYG{n}{trainerModel} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None}
+	\PYG{n}{positives} \PYG{o}{=} \PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{positives}\PYG{o}{.}\PYG{n}{positives}
+	\PYG{n}{positive\PYGZus{}cut} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{positives} \PYG{o}{*} \PYG{l+m+mf}{0.8}\PYG{p}{)}
+	\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{positives}\PYG{o}{.}\PYG{n}{positives} \PYG{o}{=} \PYG{n}{positive\PYGZus{}cut}
+	\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{n}{t} \PYG{o}{=} \PYG{n}{Trainer}\PYG{p}{(}\PYG{n}{trainerModel}\PYG{p}{)}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{update\PYGZus{}state}\PYG{p}{(}\PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}PROGRESS\PYGZdq{}}\PYG{p}{,} \PYG{n}{meta}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}progress\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{10}\PYG{p}{\PYGZcb{})}
+	\PYG{n}{return\PYGZus{}code} \PYG{o}{=} \PYG{n}{t}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{update\PYGZus{}state}\PYG{p}{(}\PYG{n}{state}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}PROGRESS\PYGZdq{}}\PYG{p}{,} \PYG{n}{meta}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}progress\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{p}{\PYGZcb{})}
+	\PYG{k}{if} \PYG{n}{return\PYGZus{}code} \PYG{o+ow}{is} \PYG{l+m+mi}{0}\PYG{p}{:}
+		\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}FINISHED\PYGZsq{}}
+	\PYG{k}{else}\PYG{p}{:}
+		\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}FAILED\PYGZsq{}}
+	\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}Finished!\PYGZsq{}}
+\end{Verbatim}

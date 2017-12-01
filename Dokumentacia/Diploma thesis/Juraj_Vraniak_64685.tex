@@ -1,11 +1,18 @@
-\documentclass[dp,sk]{FEIstyle}
+\documentclass[dp,m]{FEIstyle}
 
-\FEIauthor{Juraj Vraniak}
-\FEItitle{Univerz·lne, platformovo nez·vislÈ konzolovÈ rozhranie}
+\FEIauthor{Bc. Juraj Vraniak}
+\FEItitle{Univerz√°ne, platformovo nez√°vsl√© kozolov√© rozhanie}
 \FEItitleEn{Universal, platform independent console interface}
-\FEIregNr{FEI-5382-64685}
-\FEIsupervisor{Rndr. Peter Praæenica, Ing. Gabriel Szabo}
-\FEIconsultant{RnDr. Igor Kossaczk˝ CSc.}
+\FEIkeywords{skriptovaci jazyk}
+\FEIkeywordsEn{scripting language}
+\FEIregNr{FEI-5384-64685}
+\FEIsupervisor{RnDr. Igor Kossaczk√Ω, CSc.}
+\FEIconsultant{Rndr. Peter Pra≈æenica, Ing. Gabriel Szab√≥}
+
+\FEIglossaries{includes/glossary}   
+\bibliography{includes/bibliography.bib}
+
+\iffalse \input{includes/glossary} \fi
 
 \begin{document}
 \frontmatter
@@ -13,29 +20,29 @@
 \FEIpdfInfo
 \FEIcover
 \FEItitlePage
-\FEIassignment {includes/assignment.jpeg}
-\FEIabstract{includes/abstract}{slovensk˝ k???ov? slov?}
-\FEIabstractEn{includes/abstractEN}{english keywords}
-\FEIdeclaration{includes/declaration}  %nepovinne
-\FEIthanks{includes/thanks}            %nepovinne
+\FEIassignment {includes/zadanie.png}
+\pagebreak
+\FEIabstract{includes/abstract}
+\FEIabstractEn{includes/abstractEN}
+\FEIdeclaration{includes/declaration}
+%\FEIthanks{includes/thanks}
 \FEIcontent
 \FEIlistOfFiguresAndTables
-\FEIlistOfAbbreviationsAndSymbols{includes/AbbreviationsAndSymbols}
+%\FEIlistOfGlossaries
 \FEIlistOfAlgorithms
+%\FEIlistOfListings
 
 \mainmatter
 
 \FEIintroduction{includes/introduction}
-\FEIcore{includes/core/core}
+\FEIcore{includes/core}
 \FEIconclusion{includes/conclusion}
-\FEIresume{includes/resume}
-\FEIbibliography{includes/bibliography}{FEIstyle}
-
+%\FEIresume{includes/resume}
+\FEIbibliography
 
 \backmatter
 
 \FEIlistOfAppendix
-\FEIappendix{Zoznam analyzovan?ch projektov}{includes/prilohy/prilohaAnalyzovaneProjektyZoznam}
-\FEIappendix{struktura el. nosica}{includes/prilohy/prilohaA}
-\FEIappendix{Algoritmus}{includes/prilohy/prilohaB}
+\FEIappendix{CD s aplik√°ciou}{includes/attachmentA}
+\FEIappendix{N√°vod na spustenie a pou≈æ√≠vanie aplik√°cie}{includes/attachmentB}
 \end{document}

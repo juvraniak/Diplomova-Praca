@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@staticmethod}
+\PYG{k}{def} \PYG{n+nf}{run\PYGZus{}command}\PYG{p}{(}\PYG{n}{cmd}\PYG{p}{,} \PYG{n}{path}\PYG{o}{=}\PYG{n+nb+bp}{None}\PYG{p}{):}
+	\PYG{k}{if} \PYG{n}{path} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None}\PYG{p}{:}
+	\PYG{n}{os}\PYG{o}{.}\PYG{n}{chdir}\PYG{p}{(}\PYG{n}{path}\PYG{p}{)}
+	\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}Running command \PYGZhy{} \PYGZsq{}}\PYG{p}{,}\PYG{n}{cmd}\PYG{p}{)}
+
+	\PYG{n}{p} \PYG{o}{=} \PYG{n}{Popen}\PYG{p}{(}\PYG{n}{cmd}\PYG{p}{,} \PYG{n}{shell}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,} \PYG{n}{stdout}\PYG{o}{=}\PYG{n}{PIPE}\PYG{p}{,} \PYG{n}{stderr}\PYG{o}{=}\PYG{n}{PIPE}\PYG{p}{)}
+	\PYG{n}{out}\PYG{p}{,} \PYG{n}{err} \PYG{o}{=} \PYG{n}{p}\PYG{o}{.}\PYG{n}{communicate}\PYG{p}{()}
+	\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Return code: \PYGZdq{}}\PYG{p}{,} \PYG{n}{p}\PYG{o}{.}\PYG{n}{returncode}\PYG{p}{)}
+	\PYG{k}{print}\PYG{p}{(}\PYG{n}{out}\PYG{o}{.}\PYG{n}{rstrip}\PYG{p}{(),} \PYG{n}{err}\PYG{o}{.}\PYG{n}{rstrip}\PYG{p}{())}
+	\PYG{k}{return} \PYG{n}{out}\PYG{p}{,} \PYG{n}{err}
+\end{Verbatim}

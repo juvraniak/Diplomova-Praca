@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}biggest\PYGZus{}cnts}\PYG{p}{(}\PYG{n}{cnts}\PYG{p}{):}
+	\PYG{n}{biggest} \PYG{o}{=} \PYG{n+nb+bp}{None}
+	\PYG{n}{biggest\PYGZus{}area} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{k}{for} \PYG{n}{one} \PYG{o+ow}{in} \PYG{n}{cnts}\PYG{p}{:}
+		\PYG{n}{area} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{arcLength}\PYG{p}{(}\PYG{n}{one}\PYG{p}{,} \PYG{n+nb+bp}{True}\PYG{p}{)}
+		\PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{one}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+			\PYG{k}{if} \PYG{n}{biggest\PYGZus{}area} \PYG{o}{\PYGZlt{}} \PYG{n}{area}\PYG{p}{:}
+				\PYG{n}{biggest\PYGZus{}area} \PYG{o}{=} \PYG{n}{area}
+				\PYG{n}{biggest} \PYG{o}{=} \PYG{n}{one}
+	\PYG{k}{return} \PYG{n}{biggest}
+\end{Verbatim}

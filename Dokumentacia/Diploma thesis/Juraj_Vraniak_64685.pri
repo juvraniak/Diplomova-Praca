@@ -1,3 +1,4 @@
-\contentsline {priloh}{\numberline {A} Zoznam analyzovan?ch projektov}{II}{priloh.41}
-\contentsline {priloh}{\numberline {B} struktura el. nosica}{III}{priloh.44}
-\contentsline {priloh}{\numberline {C} Algoritmus}{IV}{priloh.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {priloh}{\numberline {A} CD s aplik\IeC {\'a}ciou}{II}{priloh.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {priloh}{\numberline {B} N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{priloh.31}

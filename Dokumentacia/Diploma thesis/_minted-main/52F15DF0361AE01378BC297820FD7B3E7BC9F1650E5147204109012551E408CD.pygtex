@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{def} \PYG{n+nf}{start}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+	\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Running training\PYGZsq{}}\PYG{p}{)}
+	\PYG{n}{lastIndex} \PYG{o}{=} \PYG{l+m+mi}{0}
+	\PYG{k}{while} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir}\PYG{p}{,}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{lastIndex}\PYG{p}{))):}
+	\PYG{n}{lastIndex} \PYG{o}{+=} \PYG{l+m+mi}{1}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}
+	\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{dirname}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir}\PYG{p}{),} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{lastIndex}\PYG{p}{))}
+	\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir}\PYG{p}{):}
+	\PYG{n}{os}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir}\PYG{p}{)}
+	\PYG{n}{opencv\PYGZus{}trainer} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}opencv\PYGZus{}traincascade.exe\PYGZsq{}}
+	\PYG{k}{if} \PYG{n}{platform} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}linux\PYGZsq{}}\PYG{p}{:}
+	\PYG{n}{opencv\PYGZus{}trainer} \PYG{o}{=} \PYG{n}{opencv\PYGZus{}trainer}\PYG{p}{[:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{p}{]}
+	\PYG{n}{merged\PYGZus{}file} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{samplesDir}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}merged.vec\PYGZsq{}}\PYG{p}{)}
+	\PYG{n}{cmd} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZhy{}data }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZhy{}vec }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZhy{}bg negatives.dat \PYGZhy{}numPos }\PYG{l+s+si}{\PYGZpc{}i}
+	\PYG{o}{\PYGZhy{}}\PYG{n}{numNeg} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{numStages} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{precalcValBufSize} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{precalcIdxBufSize} \PYG{o}{\PYGZpc{}}\PYG{n}{i}
+	\PYG{o}{\PYGZhy{}}\PYG{n}{numThreads} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{acceptanceRatioBreakValue} \PYG{o}{\PYGZpc{}.}\PYG{l+m+mi}{8}\PYG{n}{f} \PYG{o}{\PYGZhy{}}\PYG{n}{w} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{h} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{bt} \PYG{o}{\PYGZpc{}}\PYG{n}{s}
+	\PYG{o}{\PYGZhy{}}\PYG{n}{minHitRate} \PYG{o}{\PYGZpc{}.}\PYG{l+m+mi}{3}\PYG{n}{f} \PYG{o}{\PYGZhy{}}\PYG{n}{maxFalseAlarmRate} \PYG{o}{\PYGZpc{}.}\PYG{l+m+mi}{4}\PYG{n}{f} \PYG{o}{\PYGZhy{}}\PYG{n}{weightTrimRate} \PYG{o}{\PYGZpc{}.}\PYG{l+m+mi}{2}\PYG{n}{f}
+	\PYG{o}{\PYGZhy{}}\PYG{n}{maxDepth} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{maxWeakCount} \PYG{o}{\PYGZpc{}}\PYG{n}{i} \PYG{o}{\PYGZhy{}}\PYG{n}{featureType} \PYG{o}{\PYGZpc{}}\PYG{n}{s} \PYG{o}{\PYGZhy{}}\PYG{n}{mode} \PYG{o}{\PYGZpc{}}\PYG{n}{s}\PYG{l+s+s1}{\PYGZsq{} }\PYG{l+s+se}{\PYGZbs{}}
+\PYG{l+s+s1}{	\PYGZpc{} (opencv\PYGZus{}trainer, self.resultDir, merged\PYGZus{}file, self.numPos,}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{numNeg}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{numStages}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{precalcValBuf}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{precalcIdxBuf}\PYG{p}{,}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{numThreads}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{acceptBreak}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{w}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{h}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{bt}\PYG{p}{,}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{minHitRate}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{maxFalseAlarm}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{weightTrimRate}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{maxDepth}\PYG{p}{,}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{maxWeakCount}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{featureType}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{mode}\PYG{p}{)}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}RUNNING\PYGZsq{}}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{n}{return\PYGZus{}code} \PYG{o}{=} \PYG{n}{Utils}\PYG{o}{.}\PYG{n}{run\PYGZus{}command}\PYG{p}{(}\PYG{n}{cmd}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{workDir}\PYG{p}{)}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{result\PYGZus{}xml\PYGZus{}path}\PYG{o}{=}
+	\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{resultDir}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}cascade.xml\PYGZsq{}}\PYG{p}{)}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{trainerModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{k}{return} \PYG{n}{return\PYGZus{}code}
+\end{Verbatim}

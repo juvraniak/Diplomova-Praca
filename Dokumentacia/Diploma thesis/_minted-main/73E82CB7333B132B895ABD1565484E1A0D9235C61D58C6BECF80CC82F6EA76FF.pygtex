@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{FROM}\PYG{l+s}{ continuumio/miniconda3}
+\PYG{k}{MAINTAINER}\PYG{l+s}{ Martin Tomik \PYGZlt{}mtomik@live.com\PYGZgt{}}
+
+\PYG{k}{RUN} apt\PYGZhy{}get update \PYG{o}{\PYGZam{}\PYGZam{}} apt\PYGZhy{}get \PYGZhy{}y upgrade \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{l+s+se}{\PYGZbs{}}
+apt\PYGZhy{}get install \PYGZhy{}y \PYGZhy{}\PYGZhy{}fix\PYGZhy{}missing libgtk2.0\PYGZhy{}dev libpq\PYGZhy{}dev
+COPY *.txt /
+\PYG{k}{RUN} conda update \PYGZhy{}y \PYGZhy{}\PYGZhy{}all \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{l+s+se}{\PYGZbs{}}
+conda create \PYGZhy{}y \PYGZhy{}\PYGZhy{}name work \PYG{n+nv}{python}\PYG{o}{=}3.5
+\PYG{k}{ENV}\PYG{l+s}{ PATH \PYGZdl{}CONDA\PYGZus{}DIR/bin:\PYGZdl{}PATH}
+\PYG{k}{RUN} /bin/bash \PYGZhy{}c \PYG{l+s+s2}{\PYGZdq{}source activate work \PYGZam{}\PYGZam{} \PYGZbs{}}
+\PYG{l+s+s2}{conda install \PYGZhy{}y \PYGZhy{}\PYGZhy{}file conda\PYGZhy{}requirements.txt \PYGZam{}\PYGZam{} \PYGZbs{}}
+\PYG{l+s+s2}{conda install \PYGZhy{}y \PYGZhy{}c menpo opencv3=3.2.0 \PYGZam{}\PYGZam{} \PYGZbs{}}
+\PYG{l+s+s2}{pip install  \PYGZhy{}r requirements.txt\PYGZdq{}}
+\PYG{k}{ENV}\PYG{l+s}{ PATH /opt/conda/envs/work/bin:\PYGZdl{}PATH}
+
+\PYG{c}{\PYGZsh{} copy Django project}
+\PYG{k}{RUN} mkdir /code
+\PYG{k}{WORKDIR}\PYG{l+s}{ /code}
+COPY . .
+\PYG{k}{RUN} chmod +x run\PYGZus{}web.sh
+\PYGZdl{}
+\end{Verbatim}

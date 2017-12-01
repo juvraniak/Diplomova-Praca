@@ -1,23 +1,26 @@
-\BOOKMARK [1][]{section*.2}{\332vod}{}% 1
-\BOOKMARK [2][]{subsection.3}{Jazyky}{section*.2}% 2
-\BOOKMARK [1][]{section.4}{Anal\375za jazykov}{}% 3
-\BOOKMARK [2][]{subsection.5}{Priprava analyzy existujucich }{section.4}% 4
-\BOOKMARK [1][]{section.6}{Jazyky}{}% 5
-\BOOKMARK [2][]{subsection.7}{Proces prekladu}{section.6}% 6
-\BOOKMARK [2][]{subsection.8}{Abeceda a vyhraden\351 slov\341 jazyka}{section.6}% 7
-\BOOKMARK [2][]{subsection.9}{Proced\372ry a algoritmy}{section.6}% 8
-\BOOKMARK [2][]{subsection.10}{Shell}{section.6}% 9
-\BOOKMARK [3][]{subsubsection.11}{V\375hody}{subsection.10}% 10
-\BOOKMARK [3][]{subsubsection.12}{Nev\375hody}{subsection.10}% 11
-\BOOKMARK [3][]{subsubsection.13}{Popis a zhodnotenie jazyka}{subsection.10}% 12
-\BOOKMARK [2][]{subsection.14}{Powershel/Classic shell}{section.6}% 13
-\BOOKMARK [3][]{subsubsection.15}{V\375hody}{subsection.14}% 14
-\BOOKMARK [3][]{subsubsection.16}{Nev\375hody}{subsection.14}% 15
-\BOOKMARK [1][]{section.17}{Anal???za existujucich rieseni}{}% 16
-\BOOKMARK [1][]{section*.35}{Z\341ver}{}% 17
-\BOOKMARK [1][]{section*.36}{Resum\351}{}% 18
-\BOOKMARK [1][]{section*.37}{Zoznam pou\236itej literat\372ry}{}% 19
-\BOOKMARK [1][]{section*.38}{Pr\355lohy}{}% 20
-\BOOKMARK [1][]{section.40}{ Zoznam analyzovan?ch projektov}{}% 21
-\BOOKMARK [1][]{section.43}{ struktura el. nosica}{}% 22
-\BOOKMARK [1][]{section.46}{ Algoritmus}{}% 23
+\BOOKMARK [1][]{section*.2}{\376\377\000\332\000v\000o\000d}{}% 1
+\BOOKMARK [1][]{section.3}{\376\377\000O\000\040\000p\000r\000o\000b\000l\000e\000m\000a\000t\000i\000k\000e\000\040\000j\000a\000z\000y\000k\000o\000v}{}% 2
+\BOOKMARK [2][]{subsection.4}{\376\377\000P\000r\000o\000c\000e\000s\000\040\000p\000r\000e\000k\000l\000a\000d\000u}{section.3}% 3
+\BOOKMARK [2][]{subsection.5}{\376\377\000A\000b\000e\000c\000e\000d\000a\000\040\000a\000\040\000v\000y\000h\000r\000a\000d\000e\000n\000\351\000\040\000s\000l\000o\000v\000\341\000\040\000j\000a\000z\000y\000k\000a}{section.3}% 4
+\BOOKMARK [2][]{subsection.6}{\376\377\000P\000r\000o\000c\000e\000d\000\372\000r\000y\000\040\000a\000\040\000a\000l\000g\000o\000r\000i\000t\000m\000y}{section.3}% 5
+\BOOKMARK [1][]{section.7}{\376\377\000A\000n\000a\000l\000\375\000z\000a\000\040\000s\000k\000r\000i\000p\000t\000o\000v\000a\000c\000\355\000c\000h\000\040\000j\000a\000z\000y\000k\000o\000v}{}% 6
+\BOOKMARK [2][]{subsection.8}{\376\377\000S\000h\000e\000l\000l}{section.7}% 7
+\BOOKMARK [3][]{subsubsection.9}{\376\377\000V\000\375\000h\000o\000d\000y}{subsection.8}% 8
+\BOOKMARK [3][]{subsubsection.10}{\376\377\000N\000e\000v\000\375\000h\000o\000d\000y}{subsection.8}% 9
+\BOOKMARK [3][]{subsubsection.11}{\376\377\000P\000o\000p\000i\000s\000\040\000a\000\040\000z\000h\000o\000d\000n\000o\000t\000e\000n\000i\000e\000\040\000j\000a\000z\000y\000k\000a}{subsection.8}% 10
+\BOOKMARK [2][]{subsection.12}{\376\377\000P\000o\000w\000e\000r\000s\000h\000e\000l\000/\000C\000l\000a\000s\000s\000i\000c\000\040\000s\000h\000e\000l\000l}{section.7}% 11
+\BOOKMARK [3][]{subsubsection.13}{\376\377\000V\000\375\000h\000o\000d\000y}{subsection.12}% 12
+\BOOKMARK [3][]{subsubsection.14}{\376\377\000N\000e\000v\000\375\000h\000o\000d\000y}{subsection.12}% 13
+\BOOKMARK [1][]{section.15}{\376\377\000A\000n\000a\000l\000\375\000z\000a\000\040\000e\000x\000i\000s\000t\000u\000j\000u\000c\000i\000c\000h\000\040\000r\000i\000e\001\141\000e\000n\000i}{}% 14
+\BOOKMARK [1][]{section.16}{\376\377\000A\000r\000c\000h\000i\000t\000e\000k\000t\000\372\000r\000a\000\040\000a\000p\000l\000i\000k\000\341\000c\000i\000e}{}% 15
+\BOOKMARK [2][]{subsection.17}{\376\377\000P\000o\000u\000z\000i\000t\000e\000\040\000n\000a\000v\000r\000h\000o\000v\000e\000\040\000v\000z\000o\000r\000y}{section.16}% 16
+\BOOKMARK [3][]{subsubsection.18}{\376\377\000S\000t\000r\000a\000t\000e\000g\000y}{subsection.17}% 17
+\BOOKMARK [3][]{subsubsection.19}{\376\377\000B\000u\000i\000l\000d\000e\000r}{subsection.17}% 18
+\BOOKMARK [2][]{subsection.20}{\376\377\000K\000o\000m\000p\000o\000n\000e\000n\000t\000y\000\040\000a\000p\000l\000i\000k\000\341\000c\000i\000e}{section.16}% 19
+\BOOKMARK [3][]{subsubsection.21}{\376\377\000D\000o\000c\000k\000e\000r\000\040\000c\000o\000m\000p\000o\000s\000e\000r}{subsection.20}% 20
+\BOOKMARK [1][]{section.22}{\376\377\000Z\000h\000o\000d\000n\000o\000t\000e\000n\000i\000e\000\040\000v\000\375\000s\000l\000e\000d\000k\000o\000v}{}% 21
+\BOOKMARK [1][]{section*.23}{\376\377\000Z\000\341\000v\000e\000r}{}% 22
+\BOOKMARK [1][]{section*.24}{\376\377\000Z\000o\000z\000n\000a\000m\000\040\000p\000o\000u\001\176\000i\000t\000e\000j\000\040\000l\000i\000t\000e\000r\000a\000t\000\372\000r\000y}{}% 23
+\BOOKMARK [1][]{section*.25}{\376\377\000P\000r\000\355\000l\000o\000h\000y}{}% 24
+\BOOKMARK [1][]{section.27}{\376\377\000C\000D\000\040\000s\000\040\000a\000p\000l\000i\000k\000\341\000c\000i\000o\000u}{}% 25
+\BOOKMARK [1][]{section.30}{\376\377\000N\000\341\000v\000o\000d\000\040\000n\000a\000\040\000s\000p\000u\000s\000t\000e\000n\000i\000e\000\040\000a\000\040\000p\000o\000u\001\176\000\355\000v\000a\000n\000i\000e\000\040\000a\000p\000l\000i\000k\000\341\000c\000i\000e}{}% 26

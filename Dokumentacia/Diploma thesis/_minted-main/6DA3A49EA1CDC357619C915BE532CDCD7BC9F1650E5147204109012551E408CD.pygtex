@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@app.task}\PYG{p}{(}\PYG{n}{bind} \PYG{o}{=} \PYG{n+nb+bp}{True}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{start\PYGZus{}testing}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{testingModelPk}\PYG{p}{):}
+	\PYG{n}{testingModel} \PYG{o}{=} \PYG{n}{TesterModel}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pk}\PYG{o}{=}\PYG{n}{testingModelPk}\PYG{p}{)}
+	\PYG{k}{assert} \PYG{n}{testingModel} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None}
+	\PYG{n}{xml\PYGZus{}path} \PYG{o}{=} \PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{trainer}\PYG{o}{.}\PYG{n}{result\PYGZus{}xml\PYGZus{}path}
+	\PYG{n+nb}{dir} \PYG{o}{=} \PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{samples}
+	\PYG{n}{descriptor} \PYG{o}{=} \PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{descriptor}
+	\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Running tester for xml file \PYGZsq{}}\PYG{p}{,}\PYG{n}{xml\PYGZus{}path}\PYG{p}{)}
+	\PYG{n}{test} \PYG{o}{=} \PYG{n}{Tester}\PYG{p}{(}\PYG{n}{xml\PYGZus{}ear\PYGZus{}file}\PYG{o}{=}\PYG{n}{xml\PYGZus{}path}\PYG{p}{,}
+		\PYG{n}{trainer\PYGZus{}name}\PYG{o}{=}\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{trainer}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,}\PYG{n}{samples\PYGZus{}dir}\PYG{o}{=}\PYG{n+nb}{dir}\PYG{p}{,}
+		\PYG{n}{descriptor\PYGZus{}name}\PYG{o}{=}\PYG{n}{descriptor}\PYG{p}{)}
+	\PYG{k}{try}\PYG{p}{:}
+		\PYG{n}{result} \PYG{o}{=} \PYG{n}{test}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+		\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{result} \PYG{o}{=} \PYG{n}{result}
+		\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}FINISHED\PYGZsq{}}
+	\PYG{k}{except} \PYG{n}{FileNotFoundError} \PYG{k}{as} \PYG{n}{err}\PYG{p}{:}
+		\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{result} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+		\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}ERROR\PYGZsq{}}
+		\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+		\PYG{k}{raise} \PYG{n}{FileNotFoundError}\PYG{p}{(}\PYG{n}{err}\PYG{p}{)}
+	\PYG{n}{testingModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{k}{return} \PYG{n}{result}
+\end{Verbatim}

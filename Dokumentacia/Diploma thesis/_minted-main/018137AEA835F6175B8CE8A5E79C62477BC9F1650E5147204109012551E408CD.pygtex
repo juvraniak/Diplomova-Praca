@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@login\PYGZus{}required}\PYG{p}{(}\PYG{n}{login\PYGZus{}url}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}../login/\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{start\PYGZus{}testing\PYGZus{}call}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+	\PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{method} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{:}
+	\PYG{n}{xml\PYGZus{}file} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{POST}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}xml\PYGZus{}file\PYGZsq{}}\PYG{p}{)}
+	\PYG{n}{start\PYGZus{}testing}\PYG{o}{.}\PYG{n}{delay}\PYG{p}{(}\PYG{n}{xml\PYGZus{}file}\PYG{p}{)}
+	\PYG{k}{return} \PYG{n}{render}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}earTrainer.html\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

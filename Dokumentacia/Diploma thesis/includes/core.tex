@@ -1,0 +1,86 @@
+\section{O problematike jazykov}
+\indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa pouťívajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.
+
+\subsection{Proces prekladu}
+Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa určitých pravidiel, ktoré vyplývajú z jazyka.
+-lexikálna analýza
+-syntakticka analýza
+
+\subsection{Abeceda a vyhradené slová jazyka}
+abeceda jazyka, popis ake pismena-slova rozpoznava, ake su vyhradene slova jazyka a bla bla
+
+
+\subsection{Procedúry a algoritmy}
+procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanicky.
+
+\section{Analýza skriptovacích jazykov}
+
+\subsection{Shell}
+\indent
+Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznymi zmenami a rozšíreniami. Verzie shellu su: sh, csh, ksh,tcsh, bash. Bash sa momentálne teši najväčšej obľube no zsh je verzia shellu, ktorá má najviac rôznych rozšírení funkcionality ako aj veľa priaznivcov medzi developermi. V nasledujúcich častiach všeobecne zhodnotíme jednotlivé výhody resp. nevýhody tohoto skriptovacieho jazyka.
+
+\subsubsection{Výhody}
+\noindent
+automatizácia často opakujúcich sa úloh\newline
+dokáže zbiehať zloťité zloťené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov\newline
+ľahký na používanie\newline
+výborné manuálové stránky\newline
+ak hovoríme o shell scripte je portabilný naprieč platformami linuxu-unixu\newline
+\subsubsection{Nevýhody}
+\noindent
+asi najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existuju iba rozne emulátory a 3rd tooly, ktoré sprostredkujú jeho funkcionalitu.
+\newline
+pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi\newline
+nový proces pre skoro každý spustený príkaz\newline
+zložitejší na pamatanie si rôznych prepínačov, ktoré dané príkazy podporujú\newline
+nejednotnosť prepínočov(hoc to by asi ani nešlo)\newline
+
+\subsubsection{Popis a zhodnotenie jazyka}
+\noindent
+Shell script je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií.
+Podporuje všetky matematické aj logické operátori, ktoré poznáme z iných programovacích jazykov, avšak s malými syntaktickými obmenami. Ako príklad si môžeme uviesť symboly "väčší", "menší", "rovný" kde vo vačšine jazykov tieto porovnania reprezentované znakmi '>', '','='  shell scripte treba použiť prepínače '-gt', 'lt', '-eq' inak sa s veľkou pravdepodobnosťou stane to, že namiesto porovnania hodnôt sa program bude pokúšať zapísať hodnotu z ľavej strany do hodnôt na strane pravej.
+
+
+\subsection{Powershel/Classic shell}
+\indent
+Je zakladnym skriptovacim jazykom pre windows distribucie.
+Powershell je nasledovni classic shellu.  
+Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
+
+\subsubsection{Výhody}
+rychlost
+podpora napriec linux unix 
+ludia ho poznaju
+dokumentacia
+\subsubsection{Nevýhody}
+asi najvacsou nevyhodou je ze nativne nefunguje pod windowsom, existuju iba rozne emulatory a 3rd tooly, ktore sprostredkuju jeho funkcionalitu.
+
+\section{Analýza existujucich riešeni}
+\indent
+Existuje mnozstvo emulatorov a 3rd toolov, ktore sprostredkuvaju funkcionality bashu do windowsu.
+
+Zoznam najlepsich rieseni najdenych na internet:
+-cmder- vyuziva ConEmu s vylepseniami clink
+-ConEmu
+-Babun - poskytuje bash + zsh
+-MobaXterm
+- ZOC Terminal - ZOC is a professional SSH/telnet client and terminal emulator. With its impressive list of emulations and features, it is a snap to access hosts and mainframes via secure shell, telnet, serial cable, modem/isdn and other methods of communication.
+- Console2-  facilitates the running of CMD, PowerShell, Cygwin, PuTTY, etc.g.
+
+
+\section{Architektúra aplikácie}
+DSL - domain specific language
+\subsection{Pouzite navrhove vzory}
+Aby sme zaručili rozšíriteľnosť, manažovateľnosť a ďalšie zásady dobrého softwéru bolo potrebné zvoliť vhodnú arhitektúru, ktorú popisujú použité návrhové vzory.
+\subsubsection{Strategy}
+\subsubsection{Builder}
+
+
+\subsection{Komponenty aplikácie}
+
+
+\subsubsection{Docker composer}
+
+
+\section{Zhodnotenie výsledkov}
+Tu bude treba zhodnotiť čo sa ne-podarilo, ne-stihlo a pod.
