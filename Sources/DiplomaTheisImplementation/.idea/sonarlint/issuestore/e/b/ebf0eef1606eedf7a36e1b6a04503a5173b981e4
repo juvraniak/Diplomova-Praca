@@ -1,6 +1,0 @@
-
-esquid:S4042"IUse "java.nio.Files#delete" here for better messages on error conditions.(’«ÌÌ8‰‘¨’…,
-V
-squid:S899";Do something with the "boolean" value returned by "delete".(’«ÌÌ8‰‘¨’…,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ôÿ½úÿÿÿÿÿ8‰‘¨’…,

@@ -1,0 +1,17 @@
+group 'terminal.command'
+version '1.0'
+allprojects {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs '/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commons/build/libs'
+        }
+    }
+    dependencies {
+        compile group: 'terminal.common', name: 'terminal-commons', version: '1.0'
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+    }
+}
+
+
+
