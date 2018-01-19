@@ -2,163 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0ad2de7-8d8f-4d4f-be5c-cf0f49280689" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Copy/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Copy/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/gradle.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/libraries/Gradle__terminal_common_terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/modules/ListDir.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/modules/ListDir_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/modules/ListDir_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/ListDir/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/gradle.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/libraries/Gradle__terminal_common_terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/modules/Move.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/modules/Move_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/modules/Move_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commands/Move/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/gradle.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/modules/Commons.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/modules/Commons_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/modules/Commons_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/command/Command.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/dsl/DslFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/plugins/ShellPluging.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/scopes/Scope.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/scopes/ScopeData.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/gradle.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/libraries/Gradle__terminal_common_terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/libraries/terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/modules/copy.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/modules/copy_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/modules/copy_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Copy/src/main/java/sk/stuba/plugins/CopyPlugin.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__terminal_common_terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/DoubleCommand.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/ForLoopCommand.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/IntCommand.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/configuration/AplicationConfiguration.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/plugins/DoublePlugin.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/plugins/IntPlugin.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/recievers/DoubleReciever.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/recievers/ForLoopReciever.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/recievers/IntReciever.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/registration/JarLoader.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ApplicationScope.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/scopes/FunctionScope.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ScopeFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ScriptScope.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Libraries/.idea/libraries/terminal_commons_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Libraries/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_1_11.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_1_11.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_core_8_5_23.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_8_5_23.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_apache_tomcat_tomcat_annotations_api_8_5_23.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_3_6_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_slf4j_log4j_over_slf4j_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_autoconfigure_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_logging_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_tomcat_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_web_1_5_9_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_aop_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_beans_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_context_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_core_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_expression_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_web_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/libraries/Gradle__org_yaml_snakeyaml_1_17.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/modules/Service_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/.idea/modules/Service_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Service/src/main/java/sk/stuba/controller/LibraryController.java" />
-      <change beforePath="$PROJECT_DIR$/../Commons/src/main/java/terminal/command/Command.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/DiplomaTheisImplementation_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/DiplomaTheisImplementation_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/DiplomaTheisImplementation_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/DiplomaTheisImplementation_test.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/070c9e5cd730954fc771a83e866883f5a8adbccd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f11d6960bf18c062b550572cd54b382d69f2152" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f11d6960bf18c062b550572cd54b382d69f2152" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62395417d06a353c4bee9f8f2c56856adde22df5" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62395417d06a353c4bee9f8f2c56856adde22df5" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/7144ff8b12b1045abc7b664a5105a1f802748292" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80369377c3a80c407ec08961dcf68a0ed53446f0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90bdf5d8e1eee5988be23eeb801d02b53bef2e83" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90bdf5d8e1eee5988be23eeb801d02b53bef2e83" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/923d10dcb716ce9d5c24ed00a26b60a2a4503a92" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/923d10dcb716ce9d5c24ed00a26b60a2a4503a92" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/b/9b4ce4848300748ac659851e3db2b09a330bd22e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b94d3c1a25581d64a94c856e4d3311d0636107b9" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b96aef7b82f5d062571c0864a6b12f8bcdf3d711" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cae0dbad9e38578084025386da74ca3fff1e0f09" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc6dce72a94981857bd1ca75e490ae36ad1f0308" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebf0eef1606eedf7a36e1b6a04503a5173b981e4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee5cd52943cbdd86a7d9e305624616df997e1ef3" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee5cd52943cbdd86a7d9e305624616df997e1ef3" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/CopyCommand.java" afterPath="$PROJECT_DIR$/../Libraries/CopyCommand/src/main/java/sk/stuba/commands/CopyCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/ListDirectoryCommand.java" afterPath="$PROJECT_DIR$/../Commands/ListDir/src/main/java/sk/jv/commands/ListDirectoryCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/commands/MoveCommand.java" afterPath="$PROJECT_DIR$/../Commands/Move/src/main/java/sk/jv/commands/MoveCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/main/ApplicationLoader.java" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/main/ApplicationLoader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/parser/Parser.java" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/parser/Parser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/parser/ScriptParser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/receivers/CopyReceiver.java" afterPath="$PROJECT_DIR$/../Libraries/CopyCommand/src/main/java/sk/stuba/receivers/CopyReceiver.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/receivers/Executable.java" afterPath="$PROJECT_DIR$/../Commons/src/main/java/terminal/common/receivers/Executable.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/receivers/ListDirectoryReceiver.java" afterPath="$PROJECT_DIR$/../Commands/ListDir/src/main/java/sk/jv/receivers/ListDirectoryReceiver.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/receivers/MoveReceiver.java" afterPath="$PROJECT_DIR$/../Commands/Move/src/main/java/sk/jv/receivers/MoveReceiver.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/stuba/registration/Registrator.java" afterPath="$PROJECT_DIR$/src/main/java/sk/stuba/registration/Registrator.java" />
-      <change beforePath="$PROJECT_DIR$/../Service/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/../Service/.gradle/4.0/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/../Service/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/../Service/.gradle/4.0/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/../Service/.idea/gradle.xml" afterPath="$PROJECT_DIR$/../Service/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/../Service/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Service/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/../Service/.idea/modules/Service.iml" afterPath="$PROJECT_DIR$/../Service/.idea/modules/Service.iml" />
-      <change beforePath="$PROJECT_DIR$/../Service/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Service/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Service/build.gradle" afterPath="$PROJECT_DIR$/../Service/build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -177,73 +21,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommandParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java">
+      <file leaf-file-name="Scope.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/scopes/Scope.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+            <state relative-caret-position="135">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="27" />
+              <folding>
+                <marker date="1516325886605" expanded="false" signature="0:104" ph="/.../" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registrator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/Registrator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+              <folding>
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JarLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/JarLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScopeData.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/scopes/ScopeData.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="42" />
+              <folding>
+                <marker date="1516325886605" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1516325886605" expanded="false" signature="146:205" ph="..." />
+                <marker date="1516325886605" expanded="true" signature="620:793" ph="{...}" />
+                <marker date="1516325886605" expanded="true" signature="818:825" ph="{}" />
+                <marker date="1516325886605" expanded="false" signature="874:885" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="908:914" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="961:972" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="994:1000" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1046:1057" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1077:1083" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1127:1138" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1157:1163" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1210:1221" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1240:1246" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1310:1321" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1350:1356" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1417:1428" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1455:1461" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1519:1530" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1553:1559" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1614:1625" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1646:1652" ph=" }" />
+                <marker date="1516325886605" expanded="false" signature="1710:1721" ph=" { " />
+                <marker date="1516325886605" expanded="false" signature="1742:1748" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationScope.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ApplicationScope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="e#1445#1446#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntPlugin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/plugins/IntPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/commands/DoubleCommand.java">
+      <file leaf-file-name="CommandParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JarLoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/JarLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoubleReciever.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/DoubleReciever.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoublePlugin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/plugins/DoublePlugin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntReciever.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/IntReciever.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="75">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -252,45 +129,29 @@
       <file leaf-file-name="IntCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/commands/IntCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForLoopCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/commands/ForLoopCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DependencyResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/dependency/DependencyResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForLoopReciever.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/ForLoopReciever.java">
+      <file leaf-file-name="IntReciever.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/IntReciever.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/main/ApplicationLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -811,6 +672,48 @@
               <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="terminal-commons-1.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="terminal-commons-1.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="terminal-commons-1.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="terminal-commons-1.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="receivers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DiplomaTheisImplementation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: terminal.common:terminal-commons:1.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="terminal-commons-1.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="scopes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -988,7 +891,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -998,7 +900,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32880434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1123,13 +1025,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/nio/file/Files.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="1267" column="30" lean-forward="true" selection-start-line="1267" selection-start-column="30" selection-end-line="1267" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/parser/ScriptParser.java" />
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor">
@@ -1226,13 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/plugins/PluginMeta.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/configuration/AplicationConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1289,28 +1177,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/scopes/Scope.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <marker date="1516325886605" expanded="false" signature="0:104" ph="/.../" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/plugins.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/main/ApplicationLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1329,28 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/plugins/IntPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#414#415#0" expanded="false" />
-            <element signature="e#457#458#0" expanded="false" />
-            <element signature="e#496#497#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/plugins/ShellPluging.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1364,19 +1212,8 @@
         <state relative-caret-position="-19">
           <caret line="1022" column="60" lean-forward="true" selection-start-line="1022" selection-start-column="60" selection-end-line="1022" selection-end-column="60" />
           <folding>
-            <element signature="e#48487#48488#0" expanded="true" />
-            <element signature="e#48531#48532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/Registrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="86" lean-forward="false" selection-start-line="30" selection-start-column="86" selection-end-line="30" selection-end-column="86" />
-          <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#48487#48488#0" expanded="false" />
+            <element signature="e#48531#48532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,39 +1226,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ApplicationScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="e#1445#1446#0" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/IntReciever.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="27" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/DoubleReciever.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1431,11 +1241,11 @@
         <state relative-caret-position="300">
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#349#350#0" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
+            <element signature="e#456#457#0" expanded="false" />
+            <element signature="e#498#499#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1445,16 +1255,8 @@
         <state relative-caret-position="285">
           <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="48" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/commands/IntCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1463,7 +1265,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1473,9 +1275,9 @@
         <state relative-caret-position="315">
           <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
+            <element signature="e#453#454#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1488,12 +1290,133 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/plugins/PluginMeta.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/plugins/ShellPluging.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/scopes/Scope.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <marker date="1516325886605" expanded="false" signature="0:104" ph="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/terminal/common/scopes/ScopeData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <marker date="1516325886605" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1516325886605" expanded="false" signature="146:205" ph="..." />
+            <marker date="1516325886605" expanded="true" signature="620:793" ph="{...}" />
+            <marker date="1516325886605" expanded="true" signature="818:825" ph="{}" />
+            <marker date="1516325886605" expanded="false" signature="874:885" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="908:914" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="961:972" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="994:1000" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1046:1057" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1077:1083" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1127:1138" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1157:1163" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1210:1221" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1240:1246" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1310:1321" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1350:1356" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1417:1428" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1455:1461" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1519:1530" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1553:1559" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1614:1625" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1646:1652" ph=" }" />
+            <marker date="1516325886605" expanded="false" signature="1710:1721" ph=" { " />
+            <marker date="1516325886605" expanded="false" signature="1742:1748" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/plugins/IntPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/commands/IntCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/recievers/IntReciever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/main/ApplicationLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/parser/CommandParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/Registrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/registration/JarLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="348">
+          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/scopes/ApplicationScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="e#1445#1446#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
           </folding>
         </state>
       </provider>

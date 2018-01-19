@@ -1,8 +1,8 @@
 
-Asquid:S2129" Remove this "String" constructor(›©¯°øÿÿÿÿ8Ÿµ©Ş,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(«ƒÛùûÿÿÿÿ8Ÿµ©Ş,
 Msquid:S1602",Remove useless curly braces around statement(šİÂÆøÿÿÿÿ8Ÿµ©Ş,
+Asquid:S2129" Remove this "String" constructor(›©¯°øÿÿÿÿ8Ÿµ©Ş,
+Usquid:S1068"4Remove this unused "environemtValues" private field.(ä¦‘üÿÿÿÿ8Ÿµ©Ş,
 Y
 squid:S106"9Replace this use of System.out or System.err by a logger.(÷¢éúÿÿÿÿ8Ÿµ©Ş,
-Usquid:S1068"4Remove this unused "environemtValues" private field.(ä¦‘üÿÿÿÿ8Ÿµ©Ş,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(«ƒÛùûÿÿÿÿ8Ÿµ©Ş,

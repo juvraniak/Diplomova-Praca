@@ -1,12 +1,9 @@
 
-hsquid:S2095"LUse try-with-resources or close this "JarInputStream" in a "finally" clause.(Üû„¸8Ÿµ©Ş,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ôô¹ÿ8Ÿµ©Ş,
-[squid:S1118":Add a private constructor to hide the implicit public one.(ÚÀà™úÿÿÿÿ8Ÿµ©Ş,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(÷©˜™úÿÿÿÿ8Ÿµ©Ş,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿµ©Ş,
-`squid:S2583"DChange this condition so that it does not always evaluate to "false"(ˆø¶ª8Ÿµ©Ş,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿµ©Ş,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿµ©Ş,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿµ©Ş,
-`squid:S2147"DCombine this catch with the one at line 59, which has the same body.(”ı¾8Ÿµ©Ş,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤à•„ùÿÿÿÿ8Ö°Çå,
+y
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8Ö°Çå,
+Bsquid:S1168"&Return an empty array instead of null.(¥¹ï8Ö°Çå,
+hsquid:S2095"LUse try-with-resources or close this "JarInputStream" in a "finally" clause.(Üû„¸8ıÉå,
+hsquid:S2095"LUse try-with-resources or close this "URLClassLoader" in a "finally" clause.(àî™Ò8ıÉå,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(÷©˜™úÿÿÿÿ8Õ¿ñä,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤à•„ùÿÿÿÿ8Ö°Çå,
