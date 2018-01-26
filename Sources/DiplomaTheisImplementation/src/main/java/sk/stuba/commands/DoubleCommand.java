@@ -2,6 +2,7 @@ package sk.stuba.commands;
 
 import sk.stuba.recievers.DoubleReciever;
 import terminal.common.command.Command;
+import terminal.common.receivers.Executable;
 import terminal.common.scopes.Scope;
 
 /**
@@ -10,7 +11,7 @@ import terminal.common.scopes.Scope;
 
 public class DoubleCommand implements Command {
 
-    private DoubleReciever intReciever = new DoubleReciever();
+    private Executable intReciever = new DoubleReciever();
 
     @Override
     public void execute(String s, Scope scope) {

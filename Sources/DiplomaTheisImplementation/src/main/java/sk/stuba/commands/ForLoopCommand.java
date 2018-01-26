@@ -2,6 +2,7 @@ package sk.stuba.commands;
 
 import sk.stuba.recievers.ForLoopReciever;
 import terminal.common.command.Command;
+import terminal.common.receivers.Executable;
 import terminal.common.scopes.Scope;
 
 /**
@@ -10,7 +11,7 @@ import terminal.common.scopes.Scope;
 
 public class ForLoopCommand implements Command {
 
-    private ForLoopReciever forLoopReciever = new ForLoopReciever();
+    private Executable forLoopReciever = new ForLoopReciever();
 
     @Override
     public void execute(String s, Scope scope) {

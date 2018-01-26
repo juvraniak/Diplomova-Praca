@@ -10,6 +10,7 @@ repositories {
     mavenCentral()
     flatDir {
         dirs '/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commons/build/libs'
+        dirs '/home/jv/Documents/Skola/Diplomova-Praca/Sources/Commons/build/libs'
     }
 }
 

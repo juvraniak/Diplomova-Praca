@@ -2,6 +2,7 @@ package sk.stuba.commands;
 
 import sk.stuba.recievers.IntReciever;
 import terminal.common.command.Command;
+import terminal.common.receivers.Executable;
 import terminal.common.scopes.Scope;
 
 /**
@@ -10,7 +11,7 @@ import terminal.common.scopes.Scope;
 
 public class IntCommand implements Command {
 
-    private IntReciever intReciever = new IntReciever();
+    private Executable intReciever = new IntReciever();
 
     @Override
     public void execute(String s, Scope scope) {

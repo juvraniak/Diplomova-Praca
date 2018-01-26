@@ -37,8 +37,11 @@ public class Registrator {
     private void registerCommands() {
         List<Path> jars = new ArrayList<>();
         try {
-            jars = Files.list(Paths.get("/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commands/jars/"))
-                .filter(Files::isRegularFile).collect(Collectors.toList());
+//            jars = Files.list(Paths.get("/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commands/Libs/"))
+//                .filter(Files::isRegularFile).collect(Collectors.toList());
+            
+            jars = Files.list(Paths.get("/home/jv/Documents/Skola/Diplomova-Praca/Sources/Commands/Libs"))
+                    .filter(Files::isRegularFile).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
