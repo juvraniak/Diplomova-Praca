@@ -168,17 +168,82 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 
 \subsection{Powershel/Classic command line}
 \indent
-Je zakladnym skriptovacim jazykom pre windows distribucie.
-Powershell je nasledovni classic shellu.  
+Command line je zakladnym skriptovacim jazykom pre windows distribucie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell.
+
+TODO: dpoisat dake sprostosti
+
 Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 
 \subsubsection{Výhody}
-rychlost
-podpora napriec linux unix 
-ludia ho poznaju
-dokumentacia
+\begin{itemize}
+	\item bohaté api
+	\item výborne riešeny run-time 
+	\item flexibilný
+	\item veľmi jednoduché prepnúť z .NET
+	\newline
+\end{itemize}
 \subsubsection{Nevýhody}
-asi najvacsou nevyhodou je ze nativne nefunguje pod windowsom, existuju iba rozne emulatory a 3rd tooly, ktore sprostredkuju jeho funkcionalitu.
+\begin{itemize}
+	\item bohaté api - nejednoznačné, kedy čo použiž
+	\item niektoré výhody jazyka sú až nevhodne skryté pred používateľmi
+	\item staršie verzie serverov nie sú Powershell-om podporované ako novšie
+	\item dokumentácia je horšia ako v prípade Shell scriptu
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
+
+\subsection{JavaScript}
+\subsubsection{Výhody}
+\begin{itemize}
+	\item bohaté api
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item nočná mora
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
+
+\subsection{Gradle}
+\subsubsection{Výhody}
+\begin{itemize}
+	\item bohaté api
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item nočná mora
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
+
+\subsection{Perl}
+\subsubsection{Výhody}
+\begin{itemize}
+	\item bohaté api
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item nočná mora
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+bude treba doplniť,
 
 \section{Analýza existujucich riešeni}
 \indent
@@ -194,7 +259,24 @@ Zoznam najlepsich rieseni najdenych na internet:
 
 
 \section{Architektúra aplikácie}
-DSL - domain specific language
+\indent Ako sme ukázali existuje veľké množstvo skiptovacích jazykov ci, ktoré dokážu efektívne automatizovať dennodennú prácu avšak majú jeden spoločný nedostatok - nie sú multiplatformové. Táto vlastnosť môže byť  pre niekoho nepodstatná, no pri veľkých projektoch kde sa míňa množstvo prostriedkov na automatizáciu to až tak zanedbateľný fakt nie je. Stačí si len predstaviť koľko času zabere tvorba automatizovaných skriptov pre jednu platformu a pripočítať rovnaké množstvo času pre každú ďalšiu. Niekto by mohol namietať, že pre ďalšie platformy to toľko času nezabere nakoľko logika skriptov je uz definovaná. Tu treba brať ohľad na to, že nie každý jazyk poskytuje programátorovi rovnaké API a teda treba rátať s možnosťou, že niekde bude potrebné doimplementovať veci chýbajúce v jazyku. Preto vyššie spomenuté dôvody sme sa rozhodli pre vytvorenie nového jazyka, ktorý by bol jednoducho rozšíriteľný, manažovateľný, ľahko pisateľný a platformovo nezávislý.
+
+\subsection{Java}
+\indent Je vyvíjaný spoločnosťou Oracle. Jeho syntax vychádza z jazykov C a C++. Zdrojové programy sa nekompilujú do strojového kódu, ale do medzistupňa, tzv. „byte-code“, ktorý nie je závislý od konkrétnej platformy. Táto vlastnosť Javy nám veľmi vyhovuje pre dosiahnutie cieľa platformovej nezávislosti. Ďalším veľmi podstatným faktom je, že v Jave programuje veľké množstvo developerov, tým pádom majú open source projekty veľkú šancu, že si ich komunita devoloperov osvojí a prispeje k ich postupnému zlepšovaniu.
+
+\subsubsection{História}
+V roku 1991 spoločnosť Sun Microsystems odštartovala tvz. Green project, ktorého cieľom malo byť vytvorenie programovacieho jazyka pre spotrebnú elektroniku. James Gosling ako jeden z hlavných inžinierov tak vytvoril jazyk Oak, ktorý vychádzal zo syntaxe C a C++.
+
+Oak ako programovací jazyk spĺňal podmienku, aby bolo možné program napísať, skompilovať a spustiť na rôznych platformách bez opätovnej rekompilácie, ktorá bola potrebná v prípade jazyka C/C++.
+
+I keď bola Java pôvodne vyvíjaná s cieľom použitia v spotrebnej elektronike, v ktorej Sun videl obrovský potenciál, jej cesta sa celkom nečakane obrátila na web. V dobe rozmachu Internetu boli stránky viac–menej statické a dynamika bola riešená zložitým spôsobom cez CGI skripty vykonávajúce sa na strane servera.
+
+Keďže vývojári webových stránok požadovali možnosť vyššej interaktivity, Gosling so svojím tímom jazyk upravil tak, aby mohol bežať v prostredí webového prehliadača a zabezpečoval potrebnú a požadovanú interaktivitu. Tak vznikli applety, ktoré boli základom ďalšieho úspechu Javy.
+
+Od roku 1995, kedy bola Java oficiálne predstavená, prekonala niekoľko vývojových štádií. Postupne sa prepracovala z klientskej strany na serverovú a jej robustná architektúra si vyslúžila dôveru aj v oblasti bankovníctva a finančníctva. Dnes je možné ju nájsť nielen vo firemnej sfére, ale aj v mobilných telefónoch či komunikačných moduloch.
+
+13. novembra 2006 Sun Microsystems uvoľnil veľkú časť zdrojového kódu Javy pod GNU General Public License (GPLv2). 8. mája 2007 uvoľnil zvyšnú časť kódov, ku ktorým mal na to práva. Reimplementácia zvyšných častí pokračuje.
+
 \subsection{Pouzite navrhove vzory}
 Aby sme zaručili rozšíriteľnosť, manažovateľnosť a ďalšie zásady dobrého softwéru bolo potrebné zvoliť vhodnú arhitektúru, ktorú popisujú použité návrhové vzory.
 \subsubsection{Command - príkaz}
@@ -234,7 +316,29 @@ Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
 \subsubsection{Interpreter}
 mozno pouzijem
 \subsection{Komponenty aplikácie}
-\indent Aplikacia zalozena na plugin systeme.
+\indent Ako prvé bolo treba zistiť z akých komponentov sa bude aplikácia skladať. Bolo treba zamyslieť sa čo a ako to chceme dosiahnuť. v prvom návrhu sme identifikovali nasledovné komponenty. Rozhodli sme sa, že vytvoríme plugin systém kvôli tomu, čo najdem a napíšem do analyzy.
+\begin{itemize}
+	\item Parser - vstupov aj vystupov
+	\item Loader jar súborov
+	\item Sťahovač dependencií - jarka ktoré momentálne produkt neobsahuje napr. cusotm riešenia
+	\item Scoping
+\end{itemize}
+
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=15cm]{img/first_attemp_class_diag.jpg}
+	\caption{Pvrvé funkčné riešenie}
+	\label{fig:test}
+\end{figure}
+\newline
+Z nasledovného class diagramu nebolo na prvý pohľad zreteľne viditeľné aké komponenty v programe existujú preto bolo potrebné zamyslieť sa ako by sa dali tieto časti rozumne rodeliť. Z prvotného návrhu sme vytiahli plugin. Pre implementáciu pluginu sme sa rozhodli použiť architektúru command patternu. Class diagram implementácie je viditeľný na nasledovnom obrázku.
+ \begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=15cm]{img/plugin_class.jpg}
+	\caption{Class diagram pluginu}
+	\label{fig:test}
+\end{figure}
+\newline
 Popisat scoping
 Vytvaranie commandov
 

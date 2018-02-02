@@ -1,4 +1,4 @@
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {A} CD s aplik\IeC {\'a}ciou}{II}{priloh.49}
+\contentsline {priloh}{\numberline {A} CD s aplik\IeC {\'a}ciou}{II}{priloh.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {B} N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{priloh.52}
+\contentsline {priloh}{\numberline {B} N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{priloh.71}
