@@ -1,7 +1,248 @@
+\section{Analýza stavu}
+\section{Operačné systémy}
+\indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardwéru alebo softwéru. Kus softvéru, ktorý umožnuje počítačom fungovať je operačný systém. Poznáme ich hneď niekoľko v nasledujúcich sekciách si ich stručne popíšeme.
+% tuto cast este asi rozsirim 
+\subsection{Windows}
+\indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
+\newline
+\subsection{MacOs}
+\indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
+\newline
+\subsection{Unix}
+\indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril shell script, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
+\newline
+\subsection{Linux}
+\indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpočítačoch(mainframoch) Skriptovací jazyk shell script.
+\newline
+\section{Programovacie jazyky}
+\indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
+
+\subsection{Shell}
+\indent
+Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznymi zmenami a rozšíreniami. Verzie shellu su: sh, csh, ksh,tcsh, bash. Bash sa momentálne teši najväčšej obľube no zsh je verzia shellu, ktorá má najviac rôznych rozšírení funkcionality ako aj veľa priaznivcov medzi developermi. V nasledujúcich častiach všeobecne zhodnotíme jednotlivé výhody resp. nevýhody tohoto skriptovacieho jazyka.
+
+\subsubsection{Výhody}
+\begin{itemize}
+	\item automatizácia často opakujúcich sa úloh
+	\item dokáže zbiehať zloťité zloťené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov
+	\item ľahký na používanie
+	\item výborné manuálové stránky
+	\item ak hovoríme o shell scripte je portabilný naprieč platformami linuxu-unixu
+	\item jednoduché plánovanie automatických úloh
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item asi najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existuju iba rozne emulátory a 3rd tooly, ktoré sprostredkujú jeho funkcionalitu.
+	\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi
+	\item nový proces pre skoro každý spustený príkaz
+	\item zložitejší na pamatanie si rôznych prepínačov, ktoré dané príkazy podporujú
+	\item nejednotnosť prepínočov(hoc to by asi ani nešlo)
+	\item neprenosný medzi platformami
+\end{itemize}
+\subsubsection{Popis a zhodnotenie jazyka}
+\noindent
+Shell script je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny.
+Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov.
+Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné.
+V tabuľke uvádzame príklad prepínačov pre if, tiež je vhodné poznamenať, že shell script používa hranaté zátvorky namiesto okrúhlych na aké sme zvyknutý z väčšiny programovacích jazykov. If ponúka aj ďalšie prepínače no zhodnotili sme, že pre ilustráciu budú postačovať aj ukázané.
+Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multiplatformový a teda ak by sme mali prostredie, kde servery bežia na rôznych operačných systémoch, potrebujeme poznať ďalší jazyk, ktorým docielime rovnaké alebo aspoň podobné výsledky.
+\newline
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{| c | c | }
+		\hline
+		String Comparison	&Description\\
+		\hline
+		Str1 = Str2	& Returns true if the strings are equal\\ 
+		\hline
+		Str1 != Str2 &	Returns true if the strings are not equal\\ 
+		\hline
+		-n Str1	 &R eturns true if the string is not null\\ 
+		\hline
+		-z Str1	& Returns true if the string is null\\
+		\hline
+		\hline
+		Numeric Comparison	&Description\\
+		\hline
+		expr1 -eq expr2	& Returns true if the expressions are equal\\
+		\hline
+		expr1 -ne expr2	& Returns true if the expressions are not equal\\
+		\hline
+		expr1 -gt expr2	& Returns true if expr1 is greater than expr2\\
+		\hline
+		expr1 -ge expr2	& Returns true if expr1 is greater than or equal to expr2\\
+		\hline
+		expr1 -lt expr2	& Returns true if expr1 is less than expr2\\
+		\hline
+		expr1 -le expr2	& Returns true if expr1 is less than or equal to expr2\\
+		\hline
+		! expr1	& Negates the result of the expression\\
+		\hline
+	\end{tabular}
+	\caption{Ukážka prepínačov v podmienkovom výraze if}
+	\label{table:1}
+\end{table}
+\newpage
+
+\subsection{Powershel/Classic command line}
+\indent  
+Command line je zakladnym skriptovacim jazykom pre windows distribucie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell. Powershell je kombináciou príkazového riadku, funkcionálneho programovania a objektovo orentovaného programovania. Je zaloýený na .NET, ktorý mu dáva istú mieru flexibility, ktorá v 
+
+TODO: dpoisat dake sprostosti
+
+Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
+
+\subsubsection{Výhody}
+\begin{itemize}
+	\item bohaté api
+	\item výborne riešeny run-time 
+	\item flexibilný
+	\item veľmi jednoduché prepnúť z .NET
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item bohaté api - nejednoznačné, kedy čo použiť
+	\item niektoré výhody jazyka sú až nevhodne skryté pred používateľmi
+	\item staršie verzie serverov nie sú Powershell-om podporované ako novšie
+	\item dokumentácia je horšia ako v prípade Shell scriptu
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+Powershell je obľúbený medzi programátormi a administrátormi, ktorý pracujú pod operačným systémom Windowsu. Do nedávna kým Pewrshell bežal na .NET frameworku ho nebolo možné používať mimo operačných systémov Windows, avšak s príchodom frameworku .NET Core sa situácia zmenila. Tento frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je doň možné prispievať. Okrem iného podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script a poskytuje v niektorých prípadoch rovnaké príkazy ako napríklad : mv, cp, rm, ls. Jednen zo zásadných rozdielov medzi Shellom a Powrshellom je ten, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať v Powershelli je všetko presúvané ako objekt. Po preštudovaní si materiálov jazyka z Mastering Windows PowerShell Scripting - Second Edition, mi to príde ako najzásadnejší rozdiel, nakoľko ostatné veci boli zrejme navrhované v spolupráci s používateľmi Shell scriptu.
+Aj keď Powershell môže na prvý pohľad vypadať výborne je to stále nástroj Windowsu, ktorý sa môže zo dňa na deň rozhodnúť, že toto už nebude v ďalších releasoch podporované a tým pádom by som sa pozrel po iných možnostiach.
+
+Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi prikladám nasledovný príklad, ktorý som našiel komunitných stránkach superusera.
+
+\begin{algorithm}
+	\begin{minted}[]{php}
+	function changeName(\$myObject)
+	{
+		if (\$myObject.GetType() -eq [MyType])
+		{
+			//vypíš obsah premennej
+			\$myObject.Name
+			//zmeň reťazec pre atribút name
+			\$myObject.Name = "NewName"
+		}
+		return \$myObject
+	}
+	
+	// Vytvorenie objektu s argumentom OriginalName a následné použitie funkcie na zmenu argumentu
+	//PS> \$myObject = New-Object MyType -arg "OriginalName"
+	//PS> \$myObject = changeName \$myNewObject
+	//OriginalName
+	//PS> \$myObject.Name
+	//NewName
+	// Ukážka s využitím pipe
+	//PS> \$myObject = New-Object MyType -arg "OriginalName" | changeName
+	//OriginalName
+	//PS> \$myObject.Name
+	//NewName
+	\end{minted}
+	\caption{Ukážka použitia pipe v powershell.}
+	\label{alg:gen}
+\end{algorithm}
+
+\subsection{Python}
+Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.
+\subsubsection{Výhody}
+\begin{itemize}
+	\item Je ľahko čitateľný, tým pádom ľahšie pochopiteľný
+	\item Syntax orientovaná na produktivitu
+	\item Multiplatformový
+	\item Množstvo rôznych knižníc
+	\item Open source
+	\newline
+\end{itemize}
+\subsubsection{Nevýhody}
+\begin{itemize}
+	\item Rýchlosť
+	\item Chybovosť za behu
+	\item Slabšia dokumentácia
+	\item Nevhodný pre úlohy pracujúce s vyšším množstvom pamäte
+	\item Nevhodný pre viac-procesorovú prácu
+	\newline
+\end{itemize}
+
+\subsubsection{Popis a zhodnotenie jazyka}
+Nakoľko nemam dostatočné skúsenosti aby som mohol plnohodnotne zhodnotiť Python ako jazyk, pozitíva a negatíva som radšej pohľadal na komunitných stránkach, kde ľudia píšu o svojich skúsenostich s jazykom. Jazyk poskytuje štruktúry ako pipa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Aj napriek veľkým výhodám, ktorými tento jazyk oplýva som si však nie istý stránkou bezpečnosti. Z vlastnej skúsenosti viem, že ak tento jazyk nieje používaný správne, je možné, že výsledok našej práce vyjde nazmar. Za príklad si zoberme  package subprocesses, subprocesses.call() má optional shell parameter. V momente, že je nastavený na hodnotu true vystavujeme program zranitelnosti tzv. Shell injection. Python je veľmi zaujímavý jazyk ale na prácu na serveroch kde môže byť ohrozená bezpečnosť je jeho nasadenie zatial veľmi otázne, preto ho nevidím ako vhodnú voľbu.
+
+\section{Analýza existujucich riešeni}
+\indent
+Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcionality shell scriptu do Windowsu, nikeotré z nich si predstavíme.
+
+\subsection{ConEmu}
+\indent ConEmu je konzolový emulátor, ktorý poskytuje jednoduché GUI do ktorého je možné vložiť viacero konzol. Dokáže spúšťať jednoduché GUI aplikácie ako napríklad Putty, Cygwin. Poskytuje množstvo nastavení ako nastavenie kurzora, priehľadnosti, písma a pod. Podporuje Windows 2000 a neskoršie verzie. Neposkytuje verziu pre ine operačné systémy.
+\subsubsection{Skúsenosti}
+\indent ConEmu je podarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísane v ich issues logu na githube. Ale ako každý software je aj ConEmu náchylný na chyby. Podla ich issues logu sa do ich oficiálnych releasov dostávajú rôzne problémy, ktoré neboli problémom v predchadzajúcich verziách. Na základe ich issue logu usudzujem, že ich testy niesú dostatočne vypracované na zaručenie kvality produktu, čo by sa pri použití v produkčných systémoch nestretlo s veľkým pochopením zákazníkov. Preto by som tento emulátor nepovažoval za dostatočnú náhradu za shell.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.3]{img/conEmuImg.jpg}
+\caption{Ukážka ConEmu emulátora}
+\label{fig:test}
+\end{figure}
+\newpage
+\subsection{cmder}
+\indent Cmder je ďalším príkladom emulátora shell terminálu. Vychádza z troch projektov ConEmu, Clink a Git pre Windows - voľiteľná súčasť. ConEmu sme si predstavili v predcházajúcej časti s jeho kladymi a zápormi. Clink, konkrétne clink-completions je v projekte využívaný na zvýšenie komfortu pri písaní skriptov, nepridáva ďalšiu shellovú funkcionalitu. 
+\subsubsection{Skúsenosti}
+\indent ConEmu je príjemný nástroj, dokáže zjednodušíť človeku prácu obzvlášť ak je zvyknutý na programovanie v shell scripte. Nakoľko cmder používa ConEmu ako emulátor shell terminálu a je úzko určený pre Windows platformu nemožno hovoriť o multiplatformovom riešení.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[height=10cm]{img/cmder.jpg}
+	\caption{Ukážka cmder emulátora}
+	\label{fig:test}
+\end{figure}
+\subsection{Babun}
+\indent Babun je ďalším z množstva emulátorov pre Windows. Je nadstavba cygwinu. Používa zshell a bash. Zafarbovanie textu podla zdrojoveho jazyka. Je tam git, svn, puython, perl. Integrované sťahovanie nových packagov ktoré ponúka cygwin pomocou kľúčového slova pact. Nakoľko to používa zsh a bash nevidím problém s kompatibilitou skriptou, avšak zas a znova je to terminál iba pre Windows, teda značne oklieštené možnosti.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=15cm]{img/babun.jpeg}
+	\caption{Ukážka babun emulátora}
+	\label{fig:test}
+\end{figure}
+\subsection{MobaXterm}
+\indent Poskytuje množstvo funkcionality avšak je zatažený licenciou v hodnote 50 eur. 
+\subsubsection{Neplatená verzia}
+\begin{itemize}
+	\item Full X server and SSH support
+	\item Remote desktop (RDP, VNC, Xdmcp)
+	\item Remote terminal (SSH, telnet, rlogin, Mosh)
+	\item X11-Forwarding
+	\item Automatic SFTP browser
+	\item Plugins support
+	\item Portable and installer versions
+	\item Full documentation
+	\item Max. 12 sessions
+	\item Max. 2 SSH tunnels
+	\item Max. 4 macros
+	\item Max. 360 seconds for Tftp, Nfs and Cron
+\end{itemize}
+
+\subsubsection{Platená verzia}
+
+\begin{itemize}
+	\item Every feature from Home Edition +
+	\item Customize your startup message and logo
+	\item Modify your profile script
+	\item Remove unwanted games, screensaver or tools
+	\item Unlimited number of sessions
+	\item Unlimited number of tunnels and macros
+	\item Unlimited run time for network daemons
+	\item Master password support
+	\item Professional support
+	\item Lifetime right to use
+\end{itemize}
+
+\section{Zhodnotenie analyzovaných technológií}
+
 \section{Programovacie jazyky a kompilátory}
 \indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
 
-\subsection{Proces prekladu}
+\subsection{Kompilátor proces prekladu}
 Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa určitých pravidiel, ktoré vyplývajú z jazyka. Proces prekladu je možné rodeliť na 4 hlavné časti.
 \begin{itemize}
 	\item lexikálna analýza
@@ -74,208 +315,99 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \subsubsection{Generovanie cieľového jazyka}
 \indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .
 
+\subsection{Iterpreter}
+\indent popis interpretera, hladam cosi schopne.
+
 \subsection{Abeceda a vyhradené slová jazyka}
 abeceda jazyka, popis ake pismena-slova rozpoznava, ake su vyhradene slova jazyka a bla bla
-
+Doplit daco o co sa bude dat opret v navrhu a arch.
 
 \subsection{Procedúry a algoritmy}
-procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanicky.
+procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanicky. Doplit daco o co sa bude dat opret v navrhu a arch.
 
-\section{Operačné systémy}
-
-\subsection{Windows}
-\indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
-\newline
-\subsection{MacOs}
-\indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
-\newline
-\subsection{Unix}
-\indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril shell script, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
-\newline
-\subsection{Linux}
-\indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpoťétačoch9(mainframoch) Skriptovací jazyk shell script.
-\newline
-\section{ Skriptovacie jazyky}
-\indent S príchodom počítačov, hlavne serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne.
-Vačšina serverov bežalo na Unixových distribúciách.
-
-\subsection{Shell}
-\indent
-Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznymi zmenami a rozšíreniami. Verzie shellu su: sh, csh, ksh,tcsh, bash. Bash sa momentálne teši najväčšej obľube no zsh je verzia shellu, ktorá má najviac rôznych rozšírení funkcionality ako aj veľa priaznivcov medzi developermi. V nasledujúcich častiach všeobecne zhodnotíme jednotlivé výhody resp. nevýhody tohoto skriptovacieho jazyka.
-
-\subsubsection{Výhody}
-\begin{itemize}
-\item automatizácia často opakujúcich sa úloh
-\item dokáže zbiehať zloťité zloťené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov
-\item ľahký na používanie
-\item výborné manuálové stránky
-\item ak hovoríme o shell scripte je portabilný naprieč platformami linuxu-unixu
-\item jednoduché plánovanie automatických úloh
-\newline
-\end{itemize}
-\subsubsection{Nevýhody}
-\begin{itemize}
-\item asi najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existuju iba rozne emulátory a 3rd tooly, ktoré sprostredkujú jeho funkcionalitu.
-\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi
-\item nový proces pre skoro každý spustený príkaz
-\item zložitejší na pamatanie si rôznych prepínačov, ktoré dané príkazy podporujú
-\item nejednotnosť prepínočov(hoc to by asi ani nešlo)
-\end{itemize}
-\subsubsection{Popis a zhodnotenie jazyka}
-\noindent
-Shell script je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny.
-Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov.
-Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné.
-V tabuľke uvádzame príklad prepínačov pre if, tiež je vhodné poznamenať, že shell script používa hranaté zátvorky namiesto okrúhlych na aké sme zvyknutý z väčšiny programovacích jazykov. If ponúka aj ďalšie prepínače no zhodnotili sme, že pre ilustráciu budú postačovať aj ukázané.
-Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multiplatformový a teda ak by sme mali prostredie, kde servery bežia na rôznych operačných systémoch, potrebujeme poznať ďalší jazyk, ktorým docielime rovnaké alebo aspoň podobné výsledky.
-\newline
-\begin{table}[h!]
+\section{Návrh}
+\subsection{Use case}
+\begin{figure}[!htbp]
 	\centering
-	\begin{tabular}{| c | c | }
+	\includegraphics[width=15cm]{img/usecase.jpg}
+	\caption{Use case pre navrhovanú aplikáciu}
+	\label{fig:test}
+\end{figure}
+\subsubsection{Popis use casov}
+\begin{center}
+	\begin{tabular}{ |c|c| } 
 		\hline
-		String Comparison	&Description\\
+		\textbf{Use case} & Run command \\ 
 		\hline
-		Str1 = Str2	& Returns true if the strings are equal\\ 
+		\textbf{Podmienky} & Shell aplikácia musí byť spustená \\ 
 		\hline
-		Str1 != Str2 &	Returns true if the strings are not equal\\ 
+		\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 		\hline
-		-n Str1	 &R eturns true if the string is not null\\ 
-		\hline
-		-z Str1	& Returns true if the string is null\\
-		\hline
-		\hline
-		Numeric Comparison	&Description\\
-		\hline
-		expr1 -eq expr2	& Returns true if the expressions are equal\\
-		\hline
-		expr1 -ne expr2	& Returns true if the expressions are not equal\\
-		\hline
-		expr1 -gt expr2	& Returns true if expr1 is greater than expr2\\
-		\hline
-		expr1 -ge expr2	& Returns true if expr1 is greater than or equal to expr2\\
-		\hline
-		expr1 -lt expr2	& Returns true if expr1 is less than expr2\\
-		\hline
-		expr1 -le expr2	& Returns true if expr1 is less than or equal to expr2\\
-		\hline
-		! expr1	& Negates the result of the expression\\
-	    \hline
 	\end{tabular}
-\caption{Ukážka prepínačov v podmienkovom výraze if}
 \label{table:1}
-\end{table}
-\newpage
+\end{center}
 
-\subsection{Powershel/Classic command line}
-\indent
-Command line je zakladnym skriptovacim jazykom pre windows distribucie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell.
+\begin{center}
+	\begin{tabular}{ |c|c| } 
+		\hline
+		\textbf{Use case} & Run script \\ 
+		\hline
+		\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
+		\hline
+		\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú popísané v p \\ 
+		\hline
+	\end{tabular}
+	\label{table:1}
+\end{center}
 
-TODO: dpoisat dake sprostosti
+\begin{center}
+	\begin{tabular}{ |c|c| } 
+		\hline
+		\textbf{Use case} & Manage packages \\ 
+		\hline
+		\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\
+		\hline
+		\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný package. \\ 
+		\hline
+	\end{tabular}
+	\label{table:1}
+\end{center}
 
-Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
+\begin{center}
+	\begin{tabular}{ |c|c| } 
+		\hline
+		\textbf{Use case} & Schedule job \\ 
+		\hline
+		\textbf{Podmienky} & \\ 
+		\hline
+		\textbf{Popis} & cell8 \\ 
+		\hline
+	\end{tabular}
+	\label{table:1}
+\end{center}
 
-\subsubsection{Výhody}
-\begin{itemize}
-	\item bohaté api
-	\item výborne riešeny run-time 
-	\item flexibilný
-	\item veľmi jednoduché prepnúť z .NET
-	\newline
-\end{itemize}
-\subsubsection{Nevýhody}
-\begin{itemize}
-	\item bohaté api - nejednoznačné, kedy čo použiž
-	\item niektoré výhody jazyka sú až nevhodne skryté pred používateľmi
-	\item staršie verzie serverov nie sú Powershell-om podporované ako novšie
-	\item dokumentácia je horšia ako v prípade Shell scriptu
-	\newline
-\end{itemize}
+\begin{center}
+	\begin{tabular}{ |c|c| } 
+		\hline
+		\textbf{Use case} & Reťaziť príkazy \\ 
+		\hline
+		\textbf{Podmienky} & cell5 \\ 
+		\hline
+		\textbf{Popis} & cell8 \\ 
+		\hline
+	\end{tabular}
+	\label{table:1}
+\end{center}
+Doplním chýbajúce.
 
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\subsection{JavaScript}
-\subsubsection{Výhody}
-\begin{itemize}
-	\item bohaté api
-	\newline
-\end{itemize}
-\subsubsection{Nevýhody}
-\begin{itemize}
-	\item nočná mora
-	\newline
-\end{itemize}
-
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\subsection{Gradle}
-\subsubsection{Výhody}
-\begin{itemize}
-	\item bohaté api
-	\newline
-\end{itemize}
-\subsubsection{Nevýhody}
-\begin{itemize}
-	\item nočná mora
-	\newline
-\end{itemize}
-
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\subsection{Perl}
-\subsubsection{Výhody}
-\begin{itemize}
-	\item bohaté api
-	\newline
-\end{itemize}
-\subsubsection{Nevýhody}
-\begin{itemize}
-	\item nočná mora
-	\newline
-\end{itemize}
-
-\subsubsection{Popis a zhodnotenie jazyka}
-bude treba doplniť,
-
-\section{Analýza existujucich riešeni}
-\indent
-Existuje mnozstvo emulatorov a 3rd toolov, ktore sprostredkuvaju funkcionality bashu do windowsu.
-
-Zoznam najlepsich rieseni najdenych na internet:
--cmder- vyuziva ConEmu s vylepseniami clink
--ConEmu
--Babun - poskytuje bash + zsh
--MobaXterm
-- ZOC Terminal - ZOC is a professional SSH/telnet client and terminal emulator. With its impressive list of emulations and features, it is a snap to access hosts and mainframes via secure shell, telnet, serial cable, modem/isdn and other methods of communication.
-- Console2-  facilitates the running of CMD, PowerShell, Cygwin, PuTTY, etc.g.
-
+\subsection{Prvotný nástrel}
+\subsection{Oddelenie štruktúry}
 
 \section{Architektúra aplikácie}
 \indent Ako sme ukázali existuje veľké množstvo skiptovacích jazykov ci, ktoré dokážu efektívne automatizovať dennodennú prácu avšak majú jeden spoločný nedostatok - nie sú multiplatformové. Táto vlastnosť môže byť  pre niekoho nepodstatná, no pri veľkých projektoch kde sa míňa množstvo prostriedkov na automatizáciu to až tak zanedbateľný fakt nie je. Stačí si len predstaviť koľko času zabere tvorba automatizovaných skriptov pre jednu platformu a pripočítať rovnaké množstvo času pre každú ďalšiu. Niekto by mohol namietať, že pre ďalšie platformy to toľko času nezabere nakoľko logika skriptov je uz definovaná. Tu treba brať ohľad na to, že nie každý jazyk poskytuje programátorovi rovnaké API a teda treba rátať s možnosťou, že niekde bude potrebné doimplementovať veci chýbajúce v jazyku. Preto vyššie spomenuté dôvody sme sa rozhodli pre vytvorenie nového jazyka, ktorý by bol jednoducho rozšíriteľný, manažovateľný, ľahko pisateľný a platformovo nezávislý.
 
 \subsection{Java}
 \indent Je vyvíjaný spoločnosťou Oracle. Jeho syntax vychádza z jazykov C a C++. Zdrojové programy sa nekompilujú do strojového kódu, ale do medzistupňa, tzv. „byte-code“, ktorý nie je závislý od konkrétnej platformy. Táto vlastnosť Javy nám veľmi vyhovuje pre dosiahnutie cieľa platformovej nezávislosti. Ďalším veľmi podstatným faktom je, že v Jave programuje veľké množstvo developerov, tým pádom majú open source projekty veľkú šancu, že si ich komunita devoloperov osvojí a prispeje k ich postupnému zlepšovaniu.
-
-\subsubsection{História}
-V roku 1991 spoločnosť Sun Microsystems odštartovala tvz. Green project, ktorého cieľom malo byť vytvorenie programovacieho jazyka pre spotrebnú elektroniku. James Gosling ako jeden z hlavných inžinierov tak vytvoril jazyk Oak, ktorý vychádzal zo syntaxe C a C++.
-
-Oak ako programovací jazyk spĺňal podmienku, aby bolo možné program napísať, skompilovať a spustiť na rôznych platformách bez opätovnej rekompilácie, ktorá bola potrebná v prípade jazyka C/C++.
-
-I keď bola Java pôvodne vyvíjaná s cieľom použitia v spotrebnej elektronike, v ktorej Sun videl obrovský potenciál, jej cesta sa celkom nečakane obrátila na web. V dobe rozmachu Internetu boli stránky viac–menej statické a dynamika bola riešená zložitým spôsobom cez CGI skripty vykonávajúce sa na strane servera.
-
-Keďže vývojári webových stránok požadovali možnosť vyššej interaktivity, Gosling so svojím tímom jazyk upravil tak, aby mohol bežať v prostredí webového prehliadača a zabezpečoval potrebnú a požadovanú interaktivitu. Tak vznikli applety, ktoré boli základom ďalšieho úspechu Javy.
-
-Od roku 1995, kedy bola Java oficiálne predstavená, prekonala niekoľko vývojových štádií. Postupne sa prepracovala z klientskej strany na serverovú a jej robustná architektúra si vyslúžila dôveru aj v oblasti bankovníctva a finančníctva. Dnes je možné ju nájsť nielen vo firemnej sfére, ale aj v mobilných telefónoch či komunikačných moduloch.
-
-13. novembra 2006 Sun Microsystems uvoľnil veľkú časť zdrojového kódu Javy pod GNU General Public License (GPLv2). 8. mája 2007 uvoľnil zvyšnú časť kódov, ku ktorým mal na to práva. Reimplementácia zvyšných častí pokračuje.
 
 \subsection{Pouzite navrhove vzory}
 Aby sme zaručili rozšíriteľnosť, manažovateľnosť a ďalšie zásady dobrého softwéru bolo potrebné zvoliť vhodnú arhitektúru, ktorú popisujú použité návrhové vzory.

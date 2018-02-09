@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>30</x>
-      <y>210</y>
+      <x>40</x>
+      <y>240</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -105,71 +105,57 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>80</x>
+      <x>90</x>
       <y>120</y>
+      <w>200</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;160.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>190</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;90.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>250</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;30.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>270</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;190.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>270</y>
       <w>210</w>
       <h>150</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;130.0;190.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>80</x>
-      <y>190</y>
-      <w>220</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;60.0;200.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>80</x>
-      <y>230</y>
-      <w>220</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;200.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>80</x>
-      <y>240</y>
-      <w>220</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;200.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>80</x>
-      <y>240</y>
-      <w>220</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;200.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>280</x>
-      <y>580</y>
-      <w>170</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>Support multiple
-platforms
-Not a use case 
-</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;10.0;190.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -186,37 +172,69 @@ EE tools</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>80</x>
-      <y>240</y>
-      <w>230</w>
-      <h>250</h>
+      <x>90</x>
+      <y>270</y>
+      <w>220</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;210.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;200.0;200.0</additional_attributes>
   </element>
   <element>
-    <id>UMLPackage</id>
+    <id>UMLActor</id>
     <coordinates>
-      <x>770</x>
-      <y>60</y>
-      <w>420</w>
-      <h>590</h>
+      <x>40</x>
+      <y>530</y>
+      <w>80</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>commands
---
-bg=green
-cp - copy
-mv - move
-| - pipe
-grep
-&gt; - save output to a file
-cat
-tail
-touch
-mathematical
-logic
-if/switch
-while/for/foreach</panel_attributes>
+    <panel_attributes>Developer</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>240</x>
+      <y>550</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Create new
+package</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>560</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>240</x>
+      <y>610</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Revise existing
+packages</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>560</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;70.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
