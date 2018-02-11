@@ -88,7 +88,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1}Use case}{20}{subsection.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Popis use casov}{21}{subsubsection.57}
+\contentsline {subsubsection}{\numberline {7.1.1}Popis use casov}{20}{subsubsection.57}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2}Prvotn\IeC {\'y} n\IeC {\'a}strel}{21}{subsection.58}
 \defcounter {refsection}{0}\relax 
