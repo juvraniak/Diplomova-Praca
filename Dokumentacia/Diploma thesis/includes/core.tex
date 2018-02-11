@@ -1,27 +1,27 @@
 \section{Analýza stavu}
-\section{Operačné systémy}
+\subsection{Operačné systémy}
 \indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardwéru alebo softwéru. Kus softvéru, ktorý umožnuje počítačom fungovať je operačný systém. Poznáme ich hneď niekoľko v nasledujúcich sekciách si ich stručne popíšeme.
 % tuto cast este asi rozsirim 
-\subsection{Windows}
+\subsubsection{Windows}
 \indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
 \newline
-\subsection{MacOs}
+\subsubsection{MacOs}
 \indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
 \newline
-\subsection{Unix}
+\subsubsection{Unix}
 \indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril shell script, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
 \newline
-\subsection{Linux}
+\subsubsection{Linux}
 \indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpočítačoch(mainframoch) Skriptovací jazyk shell script.
 \newline
-\section{Programovacie jazyky}
+\subsection{Programovacie jazyky}
 \indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
 
-\subsection{Shell}
+\subsubsection{Shell}
 \indent
 Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznymi zmenami a rozšíreniami. Verzie shellu su: sh, csh, ksh,tcsh, bash. Bash sa momentálne teši najväčšej obľube no zsh je verzia shellu, ktorá má najviac rôznych rozšírení funkcionality ako aj veľa priaznivcov medzi developermi. V nasledujúcich častiach všeobecne zhodnotíme jednotlivé výhody resp. nevýhody tohoto skriptovacieho jazyka.
 
-\subsubsection{Výhody}
+\paragraph{Výhody}
 \begin{itemize}
 	\item automatizácia často opakujúcich sa úloh
 	\item dokáže zbiehať zloťité zloťené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov
@@ -31,7 +31,7 @@ Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznym
 	\item jednoduché plánovanie automatických úloh
 	\newline
 \end{itemize}
-\subsubsection{Nevýhody}
+\paragraph{Nevýhody}
 \begin{itemize}
 	\item asi najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existuju iba rozne emulátory a 3rd tooly, ktoré sprostredkujú jeho funkcionalitu.
 	\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi
@@ -40,7 +40,7 @@ Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznym
 	\item nejednotnosť prepínočov(hoc to by asi ani nešlo)
 	\item neprenosný medzi platformami
 \end{itemize}
-\subsubsection{Popis a zhodnotenie jazyka}
+\paragraph{Popis a zhodnotenie jazyka}
 \noindent
 Shell script je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny.
 Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov.
@@ -52,7 +52,7 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 	\centering
 	\begin{tabular}{| c | c | }
 		\hline
-		String Comparison	&Description\\
+		String Compaarison	&Description\\
 		\hline
 		Str1 = Str2	& Returns true if the strings are equal\\ 
 		\hline
@@ -85,7 +85,7 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 \end{table}
 \newpage
 
-\subsection{Powershel/Classic command line}
+\subsubsection{Powershel/Classic command line}
 \indent  
 Command line je zakladnym skriptovacim jazykom pre windows distribucie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell. Powershell je kombináciou príkazového riadku, funkcionálneho programovania a objektovo orentovaného programovania. Je zaloýený na .NET, ktorý mu dáva istú mieru flexibility, ktorá v 
 
@@ -93,7 +93,7 @@ TODO: dpoisat dake sprostosti
 
 Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 
-\subsubsection{Výhody}
+\paragraph{Výhody}
 \begin{itemize}
 	\item bohaté api
 	\item výborne riešeny run-time 
@@ -101,7 +101,7 @@ Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 	\item veľmi jednoduché prepnúť z .NET
 	\newline
 \end{itemize}
-\subsubsection{Nevýhody}
+\paragraph{Nevýhody}
 \begin{itemize}
 	\item bohaté api - nejednoznačné, kedy čo použiť
 	\item niektoré výhody jazyka sú až nevhodne skryté pred používateľmi
@@ -110,7 +110,7 @@ Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 	\newline
 \end{itemize}
 
-\subsubsection{Popis a zhodnotenie jazyka}
+\paragraph{Popis a zhodnotenie jazyka}
 Powershell je obľúbený medzi programátormi a administrátormi, ktorý pracujú pod operačným systémom Windowsu. Do nedávna kým Pewrshell bežal na .NET frameworku ho nebolo možné používať mimo operačných systémov Windows, avšak s príchodom frameworku .NET Core sa situácia zmenila. Tento frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je doň možné prispievať. Okrem iného podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script a poskytuje v niektorých prípadoch rovnaké príkazy ako napríklad : mv, cp, rm, ls. Jednen zo zásadných rozdielov medzi Shellom a Powrshellom je ten, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať v Powershelli je všetko presúvané ako objekt. Po preštudovaní si materiálov jazyka z Mastering Windows PowerShell Scripting - Second Edition, mi to príde ako najzásadnejší rozdiel, nakoľko ostatné veci boli zrejme navrhované v spolupráci s používateľmi Shell scriptu.
 Aj keď Powershell môže na prvý pohľad vypadať výborne je to stále nástroj Windowsu, ktorý sa môže zo dňa na deň rozhodnúť, že toto už nebude v ďalších releasoch podporované a tým pádom by som sa pozrel po iných možnostiach.
 
@@ -146,9 +146,9 @@ Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi pri
 	\label{alg:gen}
 \end{algorithm}
 
-\subsection{Python}
+\subsubsection{Python}
 Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.
-\subsubsection{Výhody}
+\paragraph{Výhody}
 \begin{itemize}
 	\item Je ľahko čitateľný, tým pádom ľahšie pochopiteľný
 	\item Syntax orientovaná na produktivitu
@@ -157,7 +157,7 @@ Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopul�
 	\item Open source
 	\newline
 \end{itemize}
-\subsubsection{Nevýhody}
+\paragraph{Nevýhody}
 \begin{itemize}
 	\item Rýchlosť
 	\item Chybovosť za behu
@@ -167,16 +167,16 @@ Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopul�
 	\newline
 \end{itemize}
 
-\subsubsection{Popis a zhodnotenie jazyka}
+\paragraph{Popis a zhodnotenie jazyka}
 Nakoľko nemam dostatočné skúsenosti aby som mohol plnohodnotne zhodnotiť Python ako jazyk, pozitíva a negatíva som radšej pohľadal na komunitných stránkach, kde ľudia píšu o svojich skúsenostich s jazykom. Jazyk poskytuje štruktúry ako pipa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Aj napriek veľkým výhodám, ktorými tento jazyk oplýva som si však nie istý stránkou bezpečnosti. Z vlastnej skúsenosti viem, že ak tento jazyk nieje používaný správne, je možné, že výsledok našej práce vyjde nazmar. Za príklad si zoberme  package subprocesses, subprocesses.call() má optional shell parameter. V momente, že je nastavený na hodnotu true vystavujeme program zranitelnosti tzv. Shell injection. Python je veľmi zaujímavý jazyk ale na prácu na serveroch kde môže byť ohrozená bezpečnosť je jeho nasadenie zatial veľmi otázne, preto ho nevidím ako vhodnú voľbu.
 
-\section{Analýza existujucich riešeni}
+\subsection{Analýza existujucich riešeni}
 \indent
 Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcionality shell scriptu do Windowsu, nikeotré z nich si predstavíme.
 
-\subsection{ConEmu}
+\subsubsection{ConEmu}
 \indent ConEmu je konzolový emulátor, ktorý poskytuje jednoduché GUI do ktorého je možné vložiť viacero konzol. Dokáže spúšťať jednoduché GUI aplikácie ako napríklad Putty, Cygwin. Poskytuje množstvo nastavení ako nastavenie kurzora, priehľadnosti, písma a pod. Podporuje Windows 2000 a neskoršie verzie. Neposkytuje verziu pre ine operačné systémy.
-\subsubsection{Skúsenosti}
+\paragraph{Skúsenosti}
 \indent ConEmu je podarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísane v ich issues logu na githube. Ale ako každý software je aj ConEmu náchylný na chyby. Podla ich issues logu sa do ich oficiálnych releasov dostávajú rôzne problémy, ktoré neboli problémom v predchadzajúcich verziách. Na základe ich issue logu usudzujem, že ich testy niesú dostatočne vypracované na zaručenie kvality produktu, čo by sa pri použití v produkčných systémoch nestretlo s veľkým pochopením zákazníkov. Preto by som tento emulátor nepovažoval za dostatočnú náhradu za shell.
 
 \begin{figure}[!htbp]
@@ -186,9 +186,9 @@ Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcional
 \label{fig:test}
 \end{figure}
 \newpage
-\subsection{cmder}
+\subsubsection{cmder}
 \indent Cmder je ďalším príkladom emulátora shell terminálu. Vychádza z troch projektov ConEmu, Clink a Git pre Windows - voľiteľná súčasť. ConEmu sme si predstavili v predcházajúcej časti s jeho kladymi a zápormi. Clink, konkrétne clink-completions je v projekte využívaný na zvýšenie komfortu pri písaní skriptov, nepridáva ďalšiu shellovú funkcionalitu. 
-\subsubsection{Skúsenosti}
+\paragraph{Skúsenosti}
 \indent ConEmu je príjemný nástroj, dokáže zjednodušíť človeku prácu obzvlášť ak je zvyknutý na programovanie v shell scripte. Nakoľko cmder používa ConEmu ako emulátor shell terminálu a je úzko určený pre Windows platformu nemožno hovoriť o multiplatformovom riešení.
 \begin{figure}[!htbp]
 	\centering
@@ -196,7 +196,7 @@ Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcional
 	\caption{Ukážka cmder emulátora}
 	\label{fig:test}
 \end{figure}
-\subsection{Babun}
+\subsubsection{Babun}
 \indent Babun je ďalším z množstva emulátorov pre Windows. Je nadstavba cygwinu. Používa zshell a bash. Zafarbovanie textu podla zdrojoveho jazyka. Je tam git, svn, puython, perl. Integrované sťahovanie nových packagov ktoré ponúka cygwin pomocou kľúčového slova pact. Nakoľko to používa zsh a bash nevidím problém s kompatibilitou skriptou, avšak zas a znova je to terminál iba pre Windows, teda značne oklieštené možnosti.
 \begin{figure}[!htbp]
 	\centering
@@ -204,9 +204,9 @@ Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcional
 	\caption{Ukážka babun emulátora}
 	\label{fig:test}
 \end{figure}
-\subsection{MobaXterm}
+\subsubsection{MobaXterm}
 \indent Poskytuje množstvo funkcionality avšak je zatažený licenciou v hodnote 50 eur. 
-\subsubsection{Neplatená verzia}
+\paragraph{Neplatená verzia}
 \begin{itemize}
 	\item Full X server and SSH support
 	\item Remote desktop (RDP, VNC, Xdmcp)
@@ -222,7 +222,7 @@ Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcional
 	\item Max. 360 seconds for Tftp, Nfs and Cron
 \end{itemize}
 
-\subsubsection{Platená verzia}
+\paragraph{Platená verzia}
 
 \begin{itemize}
 	\item Every feature from Home Edition +
@@ -237,7 +237,7 @@ Existuje množstvo emulátorov a 3rd toolov, ktoré sprostredkúvajú funkcional
 	\item Lifetime right to use
 \end{itemize}
 
-\section{Zhodnotenie analyzovaných technológií}
+\subsection{Zhodnotenie analyzovaných technológií}
 
 \section{Programovacie jazyky a kompilátory}
 \indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
@@ -331,76 +331,325 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 \indent 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=15cm]{img/usecase.jpg}
+	\includegraphics[scale=0.7]{img/usecase.jpg}
 	\caption{Use case pre navrhovanú aplikáciu}
 	\label{fig:test}
 \end{figure}
-\subsubsection{Popis use casov}
+\newpage
+\subsection{Popis use casov}
+\indent V tejto časti sa venueme popisu jednotlivých use casov. Use case diagram spolu s popisom sú základnými prvkami na ktorých je možné špecifikovať novo vznikajúci software. Je dôležité aby najpodstatnejšie časti systému boli specifikované už na začiatku aby sa pri následnom navrhovaní architektúry aplikácie mohli prijať také rozhodnutia, ktorými bude možné zaručiť, že výsledné riešenie bude to najlepšie možné. V našom prípade sme identifikovali dvoch hráčov " : Skript developer a Plugin developer. 
+\subsubsection{Spustiť konzolu}
 \begin{center}
-	\begin{tabular}{ |c|c| } 
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Spustiť konzolu \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\
+			\hline
+			\textbf{Popis} & Konzolové rozhranie sa spustí. \\ 
+			\hline
+		\end{tabular}
+	\caption{Use case : Spustiť konzolu}
+	\label{table:1}
+	\end{table}
+\end{center}
+\subsubsection{Spustiť príkaz}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
 		\hline
-		\textbf{Use case} & Run command \\ 
+		\textbf{Use case} & Spustiť príkaz \\ 
 		\hline
 		\textbf{Podmienky} & Shell aplikácia musí byť spustená \\ 
 		\hline
 		\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 		\hline
-	\end{tabular}
-\label{table:1}
-\end{center}
-
-\begin{center}
-	\begin{tabular}{ |c|c| } 
-		\hline
-		\textbf{Use case} & Run script \\ 
-		\hline
-		\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
-		\hline
-		\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú popísané v p \\ 
-		\hline
-	\end{tabular}
+		\end{tabular}
+	\caption{Use case : Spustiť príkaz}
 	\label{table:1}
+	\end{table}
 \end{center}
-
+\subsubsection{Spustiť skript}
 \begin{center}
-	\begin{tabular}{ |c|c| } 
-		\hline
-		\textbf{Use case} & Manage packages \\ 
-		\hline
-		\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\
-		\hline
-		\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný package. \\ 
-		\hline
-	\end{tabular}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Spustiť skript \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
+			\hline
+			\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
+			\hline
+		\end{tabular}
 	\label{table:1}
+	\caption{Use case : Spustiť skript}
+	\end{table}
 \end{center}
-
+\newpage
+\subsubsection{Spustiť shell príkaz}
 \begin{center}
-	\begin{tabular}{ |c|c| } 
-		\hline
-		\textbf{Use case} & Schedule job \\ 
-		\hline
-		\textbf{Podmienky} & \\ 
-		\hline
-		\textbf{Popis} & cell8 \\ 
-		\hline
-	\end{tabular}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Spustiť shell príkaz \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Taktiež musí byť v operačnom systéme ktorý podporuje shell. \\ 
+			\hline
+			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
+			\hline
+		\end{tabular}
 	\label{table:1}
+	\caption{Use case : Spustiť shell príkaz}
+	\end{table}
 \end{center}
-
+\subsubsection{Spustiť powershell príkaz}
 \begin{center}
-	\begin{tabular}{ |c|c| } 
-		\hline
-		\textbf{Use case} & Reťaziť príkazy \\ 
-		\hline
-		\textbf{Podmienky} & cell5 \\ 
-		\hline
-		\textbf{Popis} & cell8 \\ 
-		\hline
-	\end{tabular}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Spustiť powershell príkaz \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný powershell.\\ 
+			\hline
+			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
+			\hline
+		\end{tabular}
 	\label{table:1}
+	\caption{Use case : Spustiť powershell príkaz}
+	\end{table}
 \end{center}
-Doplním chýbajúce.
+\subsubsection{Reťazie príkazov}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Reťazie príkazov \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Vstup musí byť zadaný v správnom formáte.\\ 
+			\hline
+			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú svoje výstupy svojmu nasledovníkovy po úspešnom ukončení. Príkazy sa vykonávajú až kým nepríde na posledný príkaz v sekvencii, alebo ako počas behu príde pri niektorom z príkazov ku chybe. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
+			\hline
+		\end{tabular}
+	\label{table:1}
+	\caption{Use case : Reťazie príkazov}
+	\end{table}
+\end{center}
+\newpage
+
+\subsubsection{Manažovať balíčky}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Manažovať balíčky \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\ 
+			\hline
+			\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný balíček. \\ 
+			\hline
+		\end{tabular}
+	\label{table:1}
+	\caption{Use case : Manažovať balíčky}
+	\end{table}
+\end{center}
+\subsubsection{Stiahnúť nový balíček}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Stiahnúť nový balíček \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na stiahnutie balíčka musí byť správne zadaný.\\ 
+			\hline
+			\textbf{Popis} & Program stiahne nový balíček a načíta ho medzi aktívne balíčky. \\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Stiahnúť nový balíček}
+	\end{table}
+\end{center}
+\subsubsection{Zmeniť  použiťý balíček}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Zmeniť  použiťý balíček \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenenie používaného balíčka musí byť správne zadaný.\\ 
+			\hline
+			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. \\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Zmeniť  použiťý balíček}
+	\end{table}
+\end{center}
+\newpage
+\subsubsection{Zmazať vybraný balíček}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Zmazať vybraný balíček \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmazanie vybraného balíčka musí byť správne zadaný.\\ 
+			\hline
+			\textbf{Popis} & Program zmaže používateľom vybraný balíček z aktívnych balíčkov a následne ho fyzicky zmaže z disku. \\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Zmazať vybraný balíček}
+	\end{table}
+\end{center}
+\subsubsection{Získať systémové informácie}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Získať systémové informácie \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie systémových informácií. \\ 
+			\hline
+			\textbf{Popis} & Program vypíše na štandardný výstup informácie o systémových informáciách ako napríklad využitie procesoru, využitie pamäte RAM, využitie oddielu swap, teplotu zariadení a podobné.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Získať systémové informácie}
+	\end{table}
+\end{center}
+\subsubsection{Získať informácie o procesoch}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Získať informácie o procesoch \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie informácií o procesoch. \\ 
+			\hline
+			\textbf{Popis} & Program vypíše na štandardný výstup informácie o bežiacich procesoch, používateľoch, ktorý tieto procesy spúšťajú, koľko procesoru, pamäte RAM pouýívajú.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Získať informácie o procesoch}
+	\end{table}
+\end{center}
+\newpage
+\subsubsection{Presmerovať chybový výstup}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Presmerovať chybový výstup \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
+			\hline
+			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Presmerovať chybový výstup}
+	\end{table}
+\end{center}
+\subsubsection{Presmerovať štandardný výstup}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Presmerovať štandardný výstup \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
+			\hline
+			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Získať informácie o procesoch}
+	\end{table}
+\end{center}
+\subsubsection{Vynútiť ukončenie procesu}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Vynútiť ukončenie procesu \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na ukončenie procesu. \\ 
+			\hline
+			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Vynútiť ukončenie procesu}
+	\end{table}
+\end{center}
+\newpage
+\subsubsection{Vytvoriť funkciu}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Vytvoriť funkciu \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Vytvoriť funkciu}
+	\end{table}
+\end{center}
+\subsubsection{Override funkcie}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Override funkcie \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Override funkcie}
+	\end{table}
+\end{center}
+Developerská časť use casu.
+\subsubsection{Implementovať vlastný balíček}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Implementovať vlastný balíček \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
+			\hline
+			\textbf{Popis} & Používateľ implementuje novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov.\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Implementovať vlastný balíček}
+	\end{table}
+\end{center}
+\newpage
+\subsubsection{Upravovať existujúce balíčky}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Upravovať existujúce balíčky \\ 
+			\hline
+			\textbf{Podmienky} &  Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
+			\hline
+			\textbf{Popis} & Používateľ upraví implementáciu alebo pridá novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov\\ 
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Upravovať existujúce balíčky}
+	\end{table}
+\end{center}
 
 \subsection{Prvotný nástrel}
 \subsection{Oddelenie štruktúry}

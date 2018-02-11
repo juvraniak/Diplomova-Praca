@@ -1,6 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{FEIstyle}[2017/03/13 v. 1.5 Thesis template - FEI STUBA] 
-
 % parse arguments
 
 \DeclareOption{dp}{\def\typPraceSkr{d}
@@ -540,6 +539,7 @@
         
 \newcommand\FEIcontent{ 
     \pagestyle{empty}
+    \setcounter{tocdepth}{5}
     \addtocontents{toc}{\protect\thispagestyle{empty}}
     \tableofcontents
     \newpage
@@ -662,6 +662,8 @@
 }
 
 \newcommand\FEIcore[1]{
+	%\setcounter{secnumdepth}{3}
+	\renewcommand*{\thesubparagraph}{\alph{subparagraph}}
     \let\stdsection\section
     \renewcommand\section{\newpage\stdsection}  
     \newpage
