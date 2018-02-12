@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{FROM}\PYG{l+s}{ rabbitmq:3.6.9}
+\PYG{k}{RUN} rabbitmq\PYGZhy{}plugins \PYG{n+nb}{enable} rabbitmq\PYGZus{}management
+\end{Verbatim}

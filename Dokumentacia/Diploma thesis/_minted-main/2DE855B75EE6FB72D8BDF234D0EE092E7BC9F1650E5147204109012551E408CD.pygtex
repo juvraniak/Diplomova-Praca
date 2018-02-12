@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ears} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{detector}\PYG{o}{.}\PYG{n}{detectMultiScale}\PYG{p}{(}\PYG{n}{gray}\PYG{p}{,} \PYG{n}{scaleFactor}\PYG{o}{=}\PYG{l+m+mf}{1.3}\PYG{p}{,}
+	\PYG{n}{minNeighbors}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{n}{minSize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{maxSize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{),}
+	\PYG{n}{flags}\PYG{o}{=}\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{CASCADE\PYGZus{}FIND\PYGZus{}BIGGEST\PYGZus{}OBJECT}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{ears} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n+nb+bp}{None}\PYG{p}{:}
+	\PYG{n}{rects} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{x} \PYG{o}{+} \PYG{n}{w}\PYG{p}{,} \PYG{n}{y} \PYG{o}{+} \PYG{n}{h}\PYG{p}{]} \PYG{k}{for} \PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{w}\PYG{p}{,} \PYG{n}{h}\PYG{p}{)} \PYG{o+ow}{in} \PYG{n}{ears}\PYG{p}{])}
+	\PYG{n}{pick} \PYG{o}{=} \PYG{n}{non\PYGZus{}max\PYGZus{}suppression}\PYG{p}{(}\PYG{n}{rects}\PYG{p}{,} \PYG{n}{probs}\PYG{o}{=}\PYG{n+nb+bp}{None}\PYG{p}{,} \PYG{n}{overlapThresh}\PYG{o}{=}\PYG{l+m+mf}{0.65}\PYG{p}{)}
+
+	\PYG{k}{for} \PYG{p}{(}\PYG{n}{xA}\PYG{p}{,} \PYG{n}{yA}\PYG{p}{,} \PYG{n}{xB}\PYG{p}{,} \PYG{n}{yB}\PYG{p}{)} \PYG{o+ow}{in} \PYG{n}{pick}\PYG{p}{:}
+		\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{rectangle}\PYG{p}{(}\PYG{n}{orig}\PYG{p}{,} \PYG{p}{(}\PYG{n}{xA}\PYG{p}{,} \PYG{n}{yA}\PYG{p}{),} \PYG{p}{(}\PYG{n}{xB}\PYG{p}{,} \PYG{n}{yB}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{),} \PYG{l+m+mi}{2}\PYG{p}{)}
+		\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}[INFO] : \PYGZob{}\PYGZcb{} original boxes, \PYGZob{}\PYGZcb{} after suppression\PYGZdq{}}
+			\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rects}\PYG{p}{),} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{pick}\PYG{p}{)))}
+	\PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{pick}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{p}{:}
+		\PYG{n}{img\PYGZus{}url} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{save\PYGZus{}image}\PYG{p}{(}\PYG{n}{orig}\PYG{p}{,}\PYG{n}{name}\PYG{p}{)}
+		\PYG{n}{result\PYGZus{}images}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{img\PYGZus{}url}\PYG{p}{)}
+\end{Verbatim}

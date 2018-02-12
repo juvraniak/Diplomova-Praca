@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{n}{ellipse}\PYG{p}{:}
+	\PYG{n}{pick} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{return\PYGZus{}biggest}\PYG{p}{(}\PYG{n}{pick}\PYG{p}{)}
+	\PYG{n}{only\PYGZus{}ear} \PYG{o}{=} \PYG{n}{gray}\PYG{p}{[}\PYG{n}{pick}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]:}\PYG{n}{pick}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{],} \PYG{n}{pick}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]:}\PYG{n}{pick}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]]}
+	\PYG{n}{img}\PYG{p}{,}\PYG{n}{ellipse\PYGZus{}shape} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{contour\PYGZus{}match}\PYG{p}{(}\PYG{n}{only\PYGZus{}ear}\PYG{p}{)}
+	\PYG{n}{img} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{cut\PYGZus{}only\PYGZus{}ellipse}\PYG{p}{(}\PYG{n}{only\PYGZus{}ear}\PYG{p}{,}\PYG{n}{ellipse\PYGZus{}shape}\PYG{p}{)}
+	\PYG{k}{return} \PYG{n}{result\PYGZus{}images}
+\end{Verbatim}

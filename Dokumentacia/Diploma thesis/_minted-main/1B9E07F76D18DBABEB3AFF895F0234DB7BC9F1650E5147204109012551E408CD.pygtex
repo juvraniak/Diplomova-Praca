@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{bb\PYGZus{}intersection\PYGZus{}over\PYGZus{}union}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{boxA}\PYG{p}{,} \PYG{n}{boxB}\PYG{p}{):}
+	\PYG{n}{xA} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+	\PYG{n}{yA} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+	\PYG{n}{xB} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{])}
+	\PYG{n}{yB} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{],} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{])}
+
+	\PYG{n}{interArea} \PYG{o}{=} \PYG{p}{(}\PYG{n}{xB} \PYG{o}{\PYGZhy{}} \PYG{n}{xA} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{yB} \PYG{o}{\PYGZhy{}} \PYG{n}{yA} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+	\PYG{n}{boxAArea} \PYG{o}{=} \PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{boxA}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+	\PYG{n}{boxBArea} \PYG{o}{=} \PYG{p}{(}\PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{boxB}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+	\PYG{n}{iou} \PYG{o}{=} \PYG{n}{interArea} \PYG{o}{/} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{boxAArea} \PYG{o}{+} \PYG{n}{boxBArea} \PYG{o}{\PYGZhy{}} \PYG{n}{interArea}\PYG{p}{)}
+	\PYG{k}{return} \PYG{n}{iou}
+\end{Verbatim}

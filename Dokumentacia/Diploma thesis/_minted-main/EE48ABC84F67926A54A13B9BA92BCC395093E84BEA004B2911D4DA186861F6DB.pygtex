@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+docker \PYG{n+nb}{exec} \PYGZhy{}ti earfront\PYGZus{}worker\PYGZus{}1 cat /var/log/app/worker\PYGZus{}std.log
+\end{Verbatim}

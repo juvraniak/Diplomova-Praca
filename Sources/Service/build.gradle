@@ -1,0 +1,26 @@
+group 'sk.stuba'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            [group: 'org.springframework.boot', name: 'spring-boot', version: '1.5.9.RELEASE'],
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.9.RELEASE'],
+            [group: 'org.projectlombok', name: 'lombok', version: '1.16.18'],
+            [group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'],
+            [group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0']
+    )
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.12']
+    )
+}

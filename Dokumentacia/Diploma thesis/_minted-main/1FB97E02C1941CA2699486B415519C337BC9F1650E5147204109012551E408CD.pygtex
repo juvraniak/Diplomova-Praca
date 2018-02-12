@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{app} \PYG{o}{=} \PYG{n}{Celery}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}tasks\PYGZsq{}}\PYG{p}{,} \PYG{n}{broker}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}pyamqp://guest@localhost//\PYGZsq{}}\PYG{p}{)}
+	\PYG{n+nd}{@app.task}
+	\PYG{k}{def} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+	\PYG{k}{return} \PYG{n}{x} \PYG{o}{+} \PYG{n}{y}
+\end{Verbatim}

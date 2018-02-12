@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{def} \PYG{n+nf}{start}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+	\PYG{c+c1}{\PYGZsh{} Vytvorenie deskriptora ( zoznam cies ku vsetkym snimkom )}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{positivesDat} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}positive\PYGZus{}dat}\PYG{p}{()}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{negativesDat} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}negative\PYGZus{}dat}\PYG{p}{()}
+	\PYG{c+c1}{\PYGZsh{} ulozenie stavu procesu do DB}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{samplesModel}\PYG{o}{.}\PYG{n}{status} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}RUNNING\PYGZsq{}}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{samplesModel}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+	\PYG{c+c1}{\PYGZsh{} vytvorenie pozitívnych VEC suborov}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}pos\PYGZus{}samples}\PYG{p}{()}
+	\PYG{c+c1}{\PYGZsh{} Spojenie vsetkych VEC do jedneho}
+	\PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{run\PYGZus{}merge\PYGZus{}vec}\PYG{p}{()}
+\end{Verbatim}

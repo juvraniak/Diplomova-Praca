@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k+kn}{from} \PYG{n+nn}{tasks} \PYG{k+kn}{import} \PYG{n}{add}
+	\PYG{n}{result} \PYG{o}{=} \PYG{n}{add}\PYG{o}{.}\PYG{n}{delay}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\end{Verbatim}

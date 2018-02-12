@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{gray} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{medianBlur}\PYG{p}{(}\PYG{n}{img}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{)}
+\end{Verbatim}

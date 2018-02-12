@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZdl{} docker build –rm \PYGZhy{}t earfront\PYG{l+s+se}{\PYGZbs{}\PYGZus{}}web .
+\end{Verbatim}

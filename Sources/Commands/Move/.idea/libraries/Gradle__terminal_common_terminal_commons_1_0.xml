@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: terminal.common:terminal-commons:1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Commons/build/libs/terminal-commons-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

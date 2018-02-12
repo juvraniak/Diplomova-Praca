@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	celery \PYGZhy{}A tasks worker \PYGZhy{}\PYGZhy{}loglevel\PYG{o}{=}info
+\end{Verbatim}

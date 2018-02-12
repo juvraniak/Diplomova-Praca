@@ -1,0 +1,7 @@
+
+qsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(‡œüÿÿÿÿ8ıÎşä,
+Msquid:S1068"1Remove this unused "INSTANCE_NAME" private field.(…‡Ü»8ıÎşä,
+squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—Û“Î8ıÎşä,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(›Äæ÷üÿÿÿÿ8ıÎşä,
+Nsquid:S1068"-Remove this unused "callStack" private field.(‡œüÿÿÿÿ8ıÎşä,

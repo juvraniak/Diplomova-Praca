@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{thresh} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{adaptiveThreshold}\PYG{p}{(}\PYG{n}{gray}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{ADAPTIVE\PYGZus{}THRESH\PYGZus{}GAUSSIAN\PYGZus{}C}\PYG{p}{,}
+				\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{THRESH\PYGZus{}BINARY\PYGZus{}INV}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}

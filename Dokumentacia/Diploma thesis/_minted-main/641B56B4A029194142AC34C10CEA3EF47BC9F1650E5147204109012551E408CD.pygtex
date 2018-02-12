@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{im2}\PYG{p}{,} \PYG{n}{cnts}\PYG{p}{,} \PYG{n}{hierarchy} \PYG{o}{=} \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{findContours}\PYG{p}{(}\PYG{n}{closing}\PYG{p}{,}\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{RETR\PYGZus{}TREE}\PYG{p}{,}
+				\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{CHAIN\PYGZus{}APPROX\PYGZus{}SIMPLE}\PYG{p}{)}
+\PYG{n}{biggest} \PYG{o}{=} \PYG{n}{get\PYGZus{}biggest\PYGZus{}cnt}\PYG{p}{(}\PYG{n}{cnts}\PYG{p}{)}
+\PYG{n}{cv2}\PYG{o}{.}\PYG{n}{drawContours}\PYG{p}{(}\PYG{n}{closing}\PYG{p}{,[}\PYG{n}{biggest}\PYG{p}{],}\PYG{l+m+mi}{0}\PYG{p}{,(}\PYG{l+m+mi}{255}\PYG{p}{,}\PYG{l+m+mi}{255}\PYG{p}{,}\PYG{l+m+mi}{255}\PYG{p}{),}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}

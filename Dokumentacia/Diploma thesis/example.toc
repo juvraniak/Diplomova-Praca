@@ -1,0 +1,53 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {slovak}
+\defcounter {refsection}{0}\relax 
+\thispagestyle {empty}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\'{U}vod}{1}{section*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}\IeC {\'U}k\IeC {\'a}\IeC {\v z}ka glossaries}{2}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Recit\IeC {\'a}cia}{3}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Mo\IeC {\v z}nosti anonymiz\IeC {\'a}cie}{4}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}S\IeC {\'u}kromn\IeC {\'e} prehliadanie}{4}{subsection.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Anonymn\IeC {\'a} sie\IeC {\v t}}{4}{subsection.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Funkcionalita}{4}{subsection.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.1}Funkcionalita2}{4}{subsubsection.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Vzh\IeC {\v l}ad}{4}{subsection.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Z\'{a}ver}{8}{section*.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Resum\'{e}}{9}{section*.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{10}{section*.64}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {slovak}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {slovak}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {slovak}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {slovak}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}\IeC {\v S}trukt\IeC {\'u}ra elektronick\IeC {\'e}ho nosi\IeC {\v c}a}{II}{section.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Algoritmus}{III}{section.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}V\IeC {\'y}pis sublime}{IV}{section.91}
