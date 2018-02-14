@@ -1,0 +1,96 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{netalg}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e0de635ebf22124684a4b6606f655c7c}{%
+           family={Ciaccio},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{fullhash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{authornamehash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{authorfullhash}{e0de635ebf22124684a4b6606f655c7c}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PowerShell vs. the Unix Shell}
+      \field{year}{18-12-2010}
+      \verb{url}
+      \verb https://superuser.com/questions/223300/powershell-vs-the-unix-shell
+      \endverb
+    \endentry
+    \entry{shellprep}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e4ffd39cd5d7bea68ccc1e6ee286855d}{%
+           family={Koluguri},
+           familyi={K\bibinitperiod},
+           given={Naveen},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
+      \strng{fullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
+      \strng{authornamehash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
+      \strng{authorfullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{If / Else Statements (Shell Scripting) - Code Wiki}
+      \field{year}{11-11-2017}
+      \verb{url}
+      \verb http://codewiki.wikidot.com/shell-script:if-else
+      \endverb
+    \endentry
+    \entry{psbook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=656021b32d31c36e09aad282d243e358}{%
+           family={Brenton\bibnamedelimb J.W.\bibnamedelimi Blawat},
+           familyi={B\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Chris\bibnamedelima Dent},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birmingham : Packt Publishing, 2017}%
+      }
+      \strng{namehash}{656021b32d31c36e09aad282d243e358}
+      \strng{fullhash}{656021b32d31c36e09aad282d243e358}
+      \strng{authornamehash}{656021b32d31c36e09aad282d243e358}
+      \strng{authorfullhash}{656021b32d31c36e09aad282d243e358}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{note}{ISBN: 9781787126305}
+      \field{title}{Mastering Windows PowerShell Scripting - Second Edition}
+      \field{year}{2004}
+      \field{pages}{s. 440}
+      \range{pages}{-1}
+    \endentry
+  \endsortlist
+  \missing{morf}
+\endrefsection
+\endinput
+

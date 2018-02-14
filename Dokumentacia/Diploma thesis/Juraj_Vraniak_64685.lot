@@ -2,42 +2,44 @@
 \defcounter {refsection}{0}\relax 
 \select@language {slovak}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka prep\IeC {\'\i }na\IeC {\v c}ov v podmienkovom v\IeC {\'y}raze if\relax }}{5}{table.caption.14}
+\thispagestyle {empty}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2}{\ignorespaces Use case : Spusti\IeC {\v t} konzolu\relax }}{20}{table.caption.59}
+\contentsline {table}{\numberline {1}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka prep\IeC {\'\i }na\IeC {\v c}ov v podmienkovom v\IeC {\'y}raze if \cite {shellprep}\relax }}{5}{table.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3}{\ignorespaces Use case : Spusti\IeC {\v t} pr\IeC {\'\i }kaz\relax }}{20}{table.caption.61}
+\contentsline {table}{\numberline {2}{\ignorespaces Use case : Spusti\IeC {\v t} konzolu\relax }}{19}{table.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4}{\ignorespaces Use case : Spusti\IeC {\v t} skript\relax }}{20}{table.caption.63}
+\contentsline {table}{\numberline {3}{\ignorespaces Use case : Spusti\IeC {\v t} pr\IeC {\'\i }kaz\relax }}{20}{table.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5}{\ignorespaces Use case : Spusti\IeC {\v t} shell pr\IeC {\'\i }kaz\relax }}{21}{table.caption.65}
+\contentsline {table}{\numberline {4}{\ignorespaces Use case : Spusti\IeC {\v t} skript\relax }}{20}{table.caption.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6}{\ignorespaces Use case : Spusti\IeC {\v t} powershell pr\IeC {\'\i }kaz\relax }}{21}{table.caption.67}
+\contentsline {table}{\numberline {5}{\ignorespaces Use case : Spusti\IeC {\v t} shell pr\IeC {\'\i }kaz\relax }}{20}{table.caption.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7}{\ignorespaces Use case : Re\IeC {\v t}azie pr\IeC {\'\i }kazov\relax }}{21}{table.caption.69}
+\contentsline {table}{\numberline {6}{\ignorespaces Use case : Spusti\IeC {\v t} powershell pr\IeC {\'\i }kaz\relax }}{21}{table.caption.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {8}{\ignorespaces Use case : Mana\IeC {\v z}ova\IeC {\v t} bal\IeC {\'\i }\IeC {\v c}ky\relax }}{22}{table.caption.71}
+\contentsline {table}{\numberline {7}{\ignorespaces Use case : Re\IeC {\v t}azie pr\IeC {\'\i }kazov\relax }}{21}{table.caption.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {9}{\ignorespaces Use case : Stiahn\IeC {\'u}\IeC {\v t} nov\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{22}{table.caption.73}
+\contentsline {table}{\numberline {8}{\ignorespaces Use case : Mana\IeC {\v z}ova\IeC {\v t} bal\IeC {\'\i }\IeC {\v c}ky\relax }}{22}{table.caption.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {10}{\ignorespaces Use case : Zmeni\IeC {\v t} pou\IeC {\v z}i\IeC {\v t}\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{22}{table.caption.75}
+\contentsline {table}{\numberline {9}{\ignorespaces Use case : Stiahn\IeC {\'u}\IeC {\v t} nov\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{22}{table.caption.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {11}{\ignorespaces Use case : Zmaza\IeC {\v t} vybran\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{23}{table.caption.77}
+\contentsline {table}{\numberline {10}{\ignorespaces Use case : Zmeni\IeC {\v t} pou\IeC {\v z}i\IeC {\v t}\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{23}{table.caption.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {12}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} syst\IeC {\'e}mov\IeC {\'e} inform\IeC {\'a}cie\relax }}{23}{table.caption.79}
+\contentsline {table}{\numberline {11}{\ignorespaces Use case : Zmaza\IeC {\v t} vybran\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{23}{table.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {13}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch\relax }}{23}{table.caption.81}
+\contentsline {table}{\numberline {12}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} syst\IeC {\'e}mov\IeC {\'e} inform\IeC {\'a}cie\relax }}{24}{table.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {14}{\ignorespaces Use case : Presmerova\IeC {\v t} chybov\IeC {\'y} v\IeC {\'y}stup\relax }}{24}{table.caption.83}
+\contentsline {table}{\numberline {13}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch\relax }}{24}{table.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {15}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch\relax }}{24}{table.caption.85}
+\contentsline {table}{\numberline {14}{\ignorespaces Use case : Presmerova\IeC {\v t} chybov\IeC {\'y} v\IeC {\'y}stup\relax }}{25}{table.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {16}{\ignorespaces Use case : Vyn\IeC {\'u}ti\IeC {\v t} ukon\IeC {\v c}enie procesu\relax }}{24}{table.caption.87}
+\contentsline {table}{\numberline {15}{\ignorespaces Use case : Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch\relax }}{25}{table.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {17}{\ignorespaces Use case : Vytvori\IeC {\v t} funkciu\relax }}{25}{table.caption.89}
+\contentsline {table}{\numberline {16}{\ignorespaces Use case : Vyn\IeC {\'u}ti\IeC {\v t} ukon\IeC {\v c}enie procesu\relax }}{26}{table.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {18}{\ignorespaces Use case : Override funkcie\relax }}{25}{table.caption.91}
+\contentsline {table}{\numberline {17}{\ignorespaces Use case : Vytvori\IeC {\v t} funkciu\relax }}{26}{table.caption.90}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {19}{\ignorespaces Use case : Implementova\IeC {\v t} vlastn\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{25}{table.caption.93}
+\contentsline {table}{\numberline {18}{\ignorespaces Use case : Override funkcie\relax }}{27}{table.caption.92}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {20}{\ignorespaces Use case : Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky\relax }}{26}{table.caption.95}
+\contentsline {table}{\numberline {19}{\ignorespaces Use case : Implementova\IeC {\v t} vlastn\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek\relax }}{27}{table.caption.95}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {20}{\ignorespaces Use case : Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky\relax }}{28}{table.caption.97}
