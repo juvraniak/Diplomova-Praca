@@ -4,15 +4,23 @@
 % tuto cast este asi rozsirim 
 \subsubsection{Windows}
 \indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
+\paragraph{Predinštalovaný software}
+\indent Málo predinštalovaného softvéru jedine powershell na widows serveri je defaultne, ostatné programátorské tooly je potrebné stiahnúť dodatočne. 
 \newline
 \subsubsection{MacOs}
 \indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
-\newline
+\paragraph{Predinštalovaný software}
+\indent Predinštalovaný software pre developerov na Mac OS je python, apple script, Ruby, bash, objective-c. Donedávna bola štandardom aj Java.
+
 \subsubsection{Unix}
 \indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril Unix shell, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
+\paragraph{Predinštalovaný software}
+\indent Na vačšine unixových systémoch je predinštalovaný bash a open JDK.
 \newline
 \subsubsection{Linux}
 \indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpočítačoch(mainframoch) Skriptovací jazyk Unix shell resp. jeho najrozšírenejšia forma Bash.
+\paragraph{Predinštalovaný software}
+\indent Predinštalovaný software vo väčšine distribúciách linuxu sú bash, Open Jdk - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .net frameworku.
 \newline
 \subsection{Programovacie jazyky}
 \indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
@@ -49,10 +57,10 @@ Unix Shell je obľúbeným scriptovacím jazykom, vhodným na automatizovanie ka
 	35
 \end{minted}
 V uvedenom príklade sme vylistovali obsah adresára v ktorom sa práve nachádzame a výstupom z programu sme naplnili štandardný vstup aplikácie "wc" ktorá spočíta, koľko riadkov sa nachádza vo vstupe, ktorý jej bol dodaný. Príkaz za znakom pajpy "|" beží v subshelli, čo znamená, že nebude schopný zmodifikované hodnoty v rodičovskom procese. Zlyhanie príkazu v pajpe vedie k takzvanej "zlomenej pajpe", v tomto prípade exekúcia príkazov skončí. \cite{mbash}
-\linebreak
+\newpage
 Taktiež niektoré často používané príkazy majú pozmenený spôsob zápisu.
-Ako prvý si uvedieme príkaz for. Vo väčšine jazykov sme zvyknutý na zápis ako v prvom a treťom príklade : 
-Pri Bashi je syntax nasledovná : 
+Ako príklad si uvedieme príkaz for, pri ktorom bash používa nsledovnú syntax:
+
 \begin{algorithm}
 	\begin{minted}{php}
 // prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
@@ -80,7 +88,9 @@ exit 0
 	\caption{Bash ukážka rôznych volaní for cyklu. \cite{mbash}}
 \label{alg:gen}
 \end{algorithm}
+
 Ako je vidieť z príkladu for používa podobnú syntax ako ostatné jazyky, a ešte ju rozširuje, druhý spôsob môže uľahčiť prácu napríklad pri prototypovaní skriptu. Vyššie spomenuté použitia niesú jediné, shell poskytuje možnosť vložiť parametre pre nasledovnú iteráciu priamo z konzoly ako v nasledovnom príklade.
+\newpage
 \begin{algorithm}
 	\begin{minted}{php}
 //telo skriptu
@@ -103,8 +113,8 @@ City 3 is: Paris
 	\caption{Bash ukážka volania skriptu s for cylom priamo z konzoly . \cite{mbash}}
 	\label{alg:gen}
 \end{algorithm}
-\linebreak
-\indent Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné. 
+
+Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné. 
 V tabuľke uvádzame príklad prepínačov pre if, ktorý pre podmienkovú časť používa hranaté zátvorky namiesto okrúhlych na aké sme zvyknutý z väčšiny programovacích jazykov. Za zmienku stojí tiež, že napríklad Unix shell nepoužíva žiadne zátvorky v podmienkovej časti príkazu, na ukončenie podmienkovej časti sa používa bodkočiarka, čo spôsobuje problémi pri prenositeľnosti. If ponúka aj ďalšie prepínače no zhodnotili sme, že pre ilustráciu budú postačovať aj príklady uveené v tabuľke.
 Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multiplatformový a teda ak by sme mali prostredie, kde servery bežia na rôznych operačných systémoch, potrebujeme poznať ďalší jazyk, ktorým docielime rovnaké alebo aspoň podobné výsledky.
 \newline
@@ -176,7 +186,7 @@ Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 Powershell je obľúbený medzi programátormi a administrátormi, ktorý pracujú pod operačným systémom Windowsu. Do nedávna kým Pewrshell bežal na .NET frameworku ho nebolo možné používať mimo operačných systémov Windows, avšak s príchodom frameworku .NET Core sa situácia zmenila. Tento frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je doň možné prispievať. Okrem iného podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script a poskytuje v niektorých prípadoch rovnaké príkazy ako napríklad : mv, cp, rm, ls. Jednen zo zásadných rozdielov medzi Shellom a Powrshellom je ten, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať v Powershelli je všetko presúvané ako objekt. Po preštudovaní si materiálov jazyka z Mastering Windows PowerShell Scripting - Second Edition \cite{psbook}, ide o najzásadnejší rozdiel, nakoľko ostatné veci boli zrejme navrhované v spolupráci s používateľmi Shell scriptu.
 
 Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi prikladám nasledovný príklad.
-
+\newpage
 \begin{algorithm}
 	\begin{minted}[]{php}
 	function changeName(\$myObject)
@@ -277,15 +287,16 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \indent ConEmu je príjemný nástroj, dokáže zjednodušíť človeku prácu obzvlášť ak je zvyknutý na programovanie v shell scripte. Nakoľko cmder používa ConEmu ako emulátor shell terminálu a je úzko určený pre Windows platformu nemožno hovoriť o multiplatformovom riešení.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[height=10cm]{img/cmder.jpg}
+	\includegraphics[scale=0.3]{img/cmder.jpg}
 	\caption{Ukážka cmder emulátora}
 	\label{fig:test}
 \end{figure}
+\newpage
 \subsubsection{Babun}
 \indent Babun je ďalším z množstva emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináľa vlasné gui, ktoré dokáže zafarbovať text podla zdrojoveho jazyka, čo zvyšuje prehľadnosť. Je tam git, svn, puython, perl. Tiež má integrované sťahovanie nových packagov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor čisto pre Windows distribúcie.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=15cm]{img/babun.jpeg}
+	\includegraphics[scale=0.4]{img/babun.jpeg}
 	\caption{Ukážka babun emulátora}
 	\label{fig:test}
 \end{figure}
@@ -412,12 +423,10 @@ Doplit daco o co sa bude dat opret v navrhu a arch.
 procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanicky. Doplit daco o co sa bude dat opret v navrhu a arch.
 
 \section{Návrh riešenia}
-\indent 
 \subsection{Prípady použitia}
-\indent 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[scale=0.7]{img/usecase.jpg}
+	\includegraphics[scale=0.6]{img/usecase.jpg}
 	\caption{Prípady použitia pre navrhovanú aplikáciu}
 	\label{fig:test}
 \end{figure}
@@ -448,6 +457,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 	\label{table:1}
 	\end{table}
 \end{center}
+\newpage
 \paragraph{Spustiť príkaz}
 \begin{center}
 	\begin{table}[htbp]
@@ -479,13 +489,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Vstupom je skript, ktorý v hlavičke definuje balíčky ktoré bude používať. Za nimi môže nasledovať čokoľvek od definície premenných, funkcií. V tele skriptu musí byť zadefinovaná metóda main(String args).\\
 			\hline
 			\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Výstup je textový reťazec, závislý na logike skriptu.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na stderr chybové hlášky spolu zo základným popisom problému, tracom.\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -537,6 +547,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 	\caption{Use case : Spustiť powershell príkaz}
 	\end{table}
 \end{center}
+\newpage
 \paragraph{Reťazie príkazov}
 \begin{center}
 	\begin{table}[htbp]
@@ -559,7 +570,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 	\caption{Use case : Reťazie príkazov}
 	\end{table}
 \end{center}
-\newpage
+
 
 \paragraph{Manažovať balíčky}
 \begin{center}
@@ -583,6 +594,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 	\caption{Use case : Manažovať balíčky}
 	\end{table}
 \end{center}
+\newpage
 \paragraph{Stiahnúť nový balíček}
 \begin{center}
 	\begin{table}[htbp]
@@ -594,7 +606,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg download <názov balička>"\\
 			\hline
-			\textbf{Popis} & Program stiahne nový balíček a načíta ho medzi aktívne balíčky. \\ 
+			\textbf{Popis} & Program sa ako prvé pozrie do adresára balíčkov či už daný balíček nebol stiahnutý, ak nie stiahne nový balíček a načíta ho medzi aktívne balíčky. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
 			\hline
 			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania.\\
 			\hline
@@ -614,13 +626,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenenie používaného balíčka musí byť správne zadaný.\\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg change <názov nahradzovaného balička> <názov nahradzujúceho balička>"\\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg change <názov nahradzovaného balička> <názov nahradzujúceho balička>\\
 			\hline
-			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. \\ 
+			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. V prípade, že nahradzujúci balíček nieje dostupný lokálne, používateľ bude vyzvaný stiahnúť daný balíček.\\ 
 			\hline
-			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti výmeny.\\
+			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti výmeny, alebo informujúci o potrebe stiahnutia balíčka.\\
 			\hline
-			\textbf{Chyba} & Výpíše chybu do stderr.\\
+			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -635,15 +647,15 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Use case} & Zmazať vybraný balíček \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmazanie vybraného balíčka musí byť správne zadaný.\\ 
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg delete <názov balička>.\\
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmazanie vybraného balíčka musí byť správne zadaný.\\ 
 			\hline
 			\textbf{Popis} & Program zmaže používateľom vybraný balíček z aktívnych balíčkov a následne ho fyzicky zmaže z disku. \\
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -657,21 +669,29 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Use case} & Získať systémové informácie \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie systémových informácií. \\ 
+			\textbf{Vstup} & Vstupom je textový reťazec "sysinfo".\\
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie systémových informácií. \\ 
 			\hline
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o systémových informáciách ako napríklad využitie procesoru, využitie pamäte RAM, využitie oddielu swap, teplotu zariadení a podobné.\\ 
 			\hline
-			\textbf{Výstp} & \\
+					
+			\textbf{Výstp} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypísu informácie o každom z jadier.  \\
 			\hline
-			\textbf{Chyba} & \\
+		\end{tabular}
+	\end{table}
+\newpage
+\begin{table}[htbp]
+\begin{tabular}{|p{2.5cm}|p{14cm}|}
+\hline
+			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií program vypíse dôvod priamo na stdout. Tak isto tam vypíše aj akékoľvek chyby ku ktorým môže prísť počas behu.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
 		\caption{Use case : Získať systémové informácie}
 	\end{table}
 \end{center}
+
 \paragraph{Získať informácie o procesoch}
 \begin{center}
 	\begin{table}[htbp]
@@ -679,15 +699,15 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Use case} & Získať informácie o procesoch \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie informácií o procesoch. \\ 
+			\textbf{Vstup} & Vstupom je textový reťazec "processes".\\
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie informácií o procesoch. \\ 
 			\hline
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o bežiacich procesoch, používateľoch, ktorý tieto procesy spúšťajú, koľko procesoru, pamäte RAM pouýívajú.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -702,15 +722,15 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Use case} & Presmerovať chybový výstup \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
+			\textbf{Vstup} & Pre presmerovanie na chybový výstup je potrebné dodržať syntax command stderr> file\\
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
 			\hline
 			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -726,19 +746,20 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stderr> file\\
 			\hline
 			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
-		\caption{Use case : Získať informácie o procesoch}
+		\caption{Use case : Presmerovať štandardný výstup }
 	\end{table}
 \end{center}
+\newpage
 \paragraph{Vynútiť ukončenie procesu}
 \begin{center}
 	\begin{table}[htbp]
@@ -746,22 +767,22 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Use case} & Vynútiť ukončenie procesu \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na ukončenie procesu. \\ 
+			\textbf{Vstup} & Pre vynútenie ukončenia procesu je potrebné použitie kľúčového slova kill <pid>.\\
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na ukončenie procesu. \\ 
 			\hline
 			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Výstup programu je textový reťazec informujúci o úspešnosti ukončenia procesu.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Ak pri ukončovaní procesu príde k chybe, informácie sa presunú na stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
 		\caption{Use case : Vynútiť ukončenie procesu}
 	\end{table}
 \end{center}
-\newpage
+
 \paragraph{Vytvoriť funkciu}
 \begin{center}
 	\begin{table}[htbp]
@@ -771,19 +792,22 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
+			Synax pre definovanie funkcie : 
+			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
 			\hline
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
 		\caption{Use case : Vytvoriť funkciu}
 	\end{table}
 \end{center}
+\newpage
 \paragraph{Override funkcie}
 \begin{center}
 	\begin{table}[htbp]
@@ -793,13 +817,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Nad funciou je potrebné zapísať @Override alebo @Override(číslo) čo prekladaču povie, že má používať práve túto verziu funkcie, v druhom prípade číslo značí prioritu pri prepisovaní. Najnižšia priorita je 1, metóda s najvžšším číslom teda s najvyššou prioritou bude použitá v skripte.\\
 			\hline
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Premenná, ktorá je uvedená v definícii funkcie.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade zle zadefinovanej syntaxe je problém zapísaný na stderr a vykonávanie skriptu je ukončené.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -817,13 +841,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Balíček obsahujúci všetky potrebné rozhrania, ktoré musí vývojár balíčka implementovať.\\
 			\hline
 			\textbf{Popis} & Používateľ implementuje novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov.\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Balíček, ktorý je možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy ho o chybe informuje prekladač jazyka v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na stout.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -840,11 +864,11 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} &  Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Zdrojové súbory už existujúceho balíčka.\\
 			\hline
 			\textbf{Popis} & Používateľ upraví implementáciu alebo pridá novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov\\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Po úprave je balíček možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
 			\textbf{Chyba} & \\
 			\hline
