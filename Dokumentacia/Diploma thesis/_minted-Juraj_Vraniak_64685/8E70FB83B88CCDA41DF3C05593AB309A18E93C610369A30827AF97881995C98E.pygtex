@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{// prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu}
+\PYG{x}{for placeholder in list\PYGZus{}of\PYGZus{}items}
+\PYG{x}{do}
+\PYG{x}{action\PYGZus{}1 \PYGZbs{}\PYGZdl{}placeholder}
+\PYG{x}{action\PYGZus{}2 \PYGZbs{}\PYGZdl{}placeholder}
+\PYG{x}{action\PYGZus{}n \PYGZbs{}\PYGZdl{}placeholder}
+\PYG{x}{done}
+\PYG{x}{//kolekcia vo fore môze byť reprezentovaná vymenovaním prvkov}
+\PYG{x}{//priamo za \PYGZdq{}in\PYGZdq{} časťou}
+\PYG{x}{for i in 1 2 3 4 5}
+\PYG{x}{do}
+\PYG{x}{echo \PYGZdq{}\PYGZbs{}\PYGZdl{}i\PYGZdq{}}
+\PYG{x}{done}
+\PYG{x}{// c\PYGZhy{}like prístup}
+\PYG{x}{for ((i=20;i \PYGZgt{} 0;i\PYGZhy{}\PYGZhy{}))}
+\PYG{x}{\PYGZob{}}
+\PYG{x}{	if (( i \PYGZpc{} 2 == 0 ))}
+\PYG{x}{	then}
+\PYG{x}{	echo \PYGZdq{}\PYGZbs{}\PYGZdl{}i is divisible by 2\PYGZdq{}fi}
+\PYG{x}{\PYGZcb{}}
+\PYG{x}{exit 0}
+\end{Verbatim}

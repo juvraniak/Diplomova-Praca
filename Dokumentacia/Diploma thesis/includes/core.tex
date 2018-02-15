@@ -39,18 +39,78 @@ Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznym
 	\item zložitejší na pamatanie si rôznych prepínačov, ktoré dané príkazy podporujú
 	\item nejednotnosť prepínočov(hoc to by asi ani nešlo)
 	\item neprenosný medzi platformami
+	\item shell nepridáva vlastné príkazy, používa iba tie, ktoré sú dostupné na konkrétnom počítači
 \end{itemize}
 \paragraph{Popis a zhodnotenie jazyka}
 \indent
-Unix Shell je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny. V nasledujujucich častiach budem popisovať Bash, ktorý je najrozšírenejšia verzia Unix shellu.
-Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov.
-Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné.
+Unix Shell je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny. V nasledujujucich častiach budem popisovať Bash, ktorý je najrozšírenejšia verzia Unix shellu. Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov. Ďalšou zaujímavou vymoženosťou jazyka je pajpa. Pajpa je klasickým príkladom vnútro-procesorovej komunikácie : odovzdáva štandardný výstup "stdout" procesu na štandardný vstup "stdin"iného procesu, viď príklad.
+\begin{minted}[]{php}
+	zarrelli:~\$ ls -lah | wc -l
+	35
+\end{minted}
+V uvedenom príklade sme vylistovali obsah adresára v ktorom sa práve nachádzame a výstupom z programu sme naplnili štandardný vstup aplikácie "wc" ktorá spočíta, koľko riadkov sa nachádza vo vstupe, ktorý jej bol dodaný. Príkaz za znakom pajpy "|" beží v subshelli, čo znamená, že nebude schopný zmodifikované hodnoty v rodičovskom procese. Zlyhanie príkazu v pajpe vedie k takzvanej "zlomenej pajpe", v tomto prípade exekúcia príkazov skončí. \cite{mbash}
+\linebreak
+Taktiež niektoré často používané príkazy majú pozmenený spôsob zápisu.
+Ako prvý si uvedieme príkaz for. Vo väčšine jazykov sme zvyknutý na zápis ako v prvom a treťom príklade : 
+Pri Bashi je syntax nasledovná : 
+\begin{algorithm}
+	\begin{minted}{php}
+// prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
+for placeholder in list_of_items
+do
+action_1 \$placeholder
+action_2 \$placeholder
+action_n \$placeholder
+done
+//kolekcia vo fore môze byť reprezentovaná vymenovaním prvkov 
+//priamo za "in" časťou
+for i in 1 2 3 4 5
+do
+echo "\$i"
+done
+// c-like prístup
+for ((i=20;i > 0;i--))
+{
+	if (( i % 2 == 0 ))
+	then
+	echo "\$i is divisible by 2"fi
+}
+exit 0
+	\end{minted} 
+	\caption{Bash ukážka rôznych volaní for cyklu. \cite{mbash}}
+\label{alg:gen}
+\end{algorithm}
+Ako je vidieť z príkladu for používa podobnú syntax ako ostatné jazyky, a ešte ju rozširuje, druhý spôsob môže uľahčiť prácu napríklad pri prototypovaní skriptu. Vyššie spomenuté použitia niesú jediné, shell poskytuje možnosť vložiť parametre pre nasledovnú iteráciu priamo z konzoly ako v nasledovnom príklade.
+\begin{algorithm}
+	\begin{minted}{php}
+//telo skriptu
+#!/bin/bash
+i=0
+for cities 
+do
+echo "City $((i++)) is: $cities"
+done
+exit 0
+
+//následné volanie z konzoly
+./for-pair-input.sh 
+Belfast Redwood Milan Paris
+City 0 is: Belfast
+City 1 is: Redwood
+City 2 is: Milan
+City 3 is: Paris
+	\end{minted}
+	\caption{Bash ukážka volania skriptu s for cylom priamo z konzoly . \cite{mbash}}
+	\label{alg:gen}
+\end{algorithm}
+\linebreak
+\indent Avšak syntax jazyka sa učí tažšie nakoľko používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné. 
 V tabuľke uvádzame príklad prepínačov pre if, ktorý pre podmienkovú časť používa hranaté zátvorky namiesto okrúhlych na aké sme zvyknutý z väčšiny programovacích jazykov. Za zmienku stojí tiež, že napríklad Unix shell nepoužíva žiadne zátvorky v podmienkovej časti príkazu, na ukončenie podmienkovej časti sa používa bodkočiarka, čo spôsobuje problémi pri prenositeľnosti. If ponúka aj ďalšie prepínače no zhodnotili sme, že pre ilustráciu budú postačovať aj príklady uveené v tabuľke.
 Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multiplatformový a teda ak by sme mali prostredie, kde servery bežia na rôznych operačných systémoch, potrebujeme poznať ďalší jazyk, ktorým docielime rovnaké alebo aspoň podobné výsledky.
 \newline
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{| l | l | }
+	\begin{tabular}{|p{4cm}|p{13cm}|}
 		\hline
 		Reťazcové porovnanie & Popis \\
 		\hline
@@ -100,7 +160,8 @@ Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 	\item výborne riešeny run-time 
 	\item flexibilný
 	\item veľmi jednoduché prepnúť z .NET frameworku
-	\newline
+	\item dokáže pridávať funkcionalitu používaním tired a funkcií z .net knižníc
+	\newline 
 \end{itemize}
 \paragraph{Nevýhody}
 \begin{itemize}
@@ -147,12 +208,12 @@ Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi pri
 \end{algorithm}
 
 \subsubsection{Python}
-Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.
+\indent Do analýzy sme sa rozhodli pripojiť aj Python. Python sme si nevybrali náhodne, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.
 \paragraph{Výhody}
 \begin{itemize}
 	\item Je ľahko čitateľný, tým pádom ľahšie pochopiteľný
 	\item Syntax orientovaná na produktivitu
-	\item Multiplatformový
+	\item Multiplatformový - po inštalácii interpretera
 	\item Množstvo rôznych knižníc
 	\item Open source
 	\newline
@@ -160,16 +221,40 @@ Do analýzy sme sa rozhodli pripojiť aj Python, nakoľko je jedným z najpopul�
 \paragraph{Nevýhody}
 \begin{itemize}
 	\item Rýchlosť
-	\item Chybovosť za behu
 	\item Slabšia dokumentácia
 	\item Nevhodný pre úlohy pracujúce s vyšším množstvom pamäte
 	\item Nevhodný pre viac-procesorovú prácu
+	\item Nevhodný pre vývoj na mobilných zariadeniach
+	\item Limitácie pri prístupe k databázam 
 	\newline
 \end{itemize}
 
 \paragraph{Popis a zhodnotenie jazyka}
-Nakoľko nemam dostatočné skúsenosti aby som mohol plnohodnotne zhodnotiť Python ako jazyk, pozitíva a negatíva som radšej pohľadal na komunitných stránkach, kde ľudia píšu o svojich skúsenostich s jazykom. Jazyk poskytuje štruktúry ako pipa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Aj napriek veľkým výhodám, ktorými tento jazyk oplýva som si však nie istý stránkou bezpečnosti. Z vlastnej skúsenosti viem, že ak tento jazyk nieje používaný správne, je možné, že výsledok našej práce vyjde nazmar. Za príklad si zoberme  package subprocesses, subprocesses.call() má optional shell parameter. V momente, že je nastavený na hodnotu true vystavujeme program zranitelnosti tzv. Shell injection. Python je veľmi zaujímavý jazyk ale na prácu na serveroch kde môže byť ohrozená bezpečnosť je jeho nasadenie zatial veľmi otázne, preto ho nevidím ako vhodnú voľbu.
-
+\indent Ako sme spomínali Python je jeden z najobľúbenejších jazykov súčastnosti, veľkú časť tejto komunity tvoria vedci, ktorý nemajú rozsiahle programátorské znalosti. Práve jednoduchosť, čitateľnosť a pochopiteľnosť jazyka sa nemalou mierou podieľajú na tomto fakte. Taktiež tu nieje nutné manažovať pamäť a iné netriviálne záležitosti ničších programovacích jazykov. Jazyk je síce objektovo orientovaný no jednoducho sa v ňom píšu aj skripty.  Jazyk poskytuje štruktúry ako pipa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Veľkou výhodou tohoto jazyka je, že je open source s veľkou komunitou, ktorá rada testuje nové vydania, nahlasujú problímy a tým pádom sa jazyk rýchlejšie a kvalitnejšie vyvíja. Na Pythone vznikli zaujímave webové framworky ako napríklad Django. Každá strana má dve mince a ani Python nie je stopercentný. Tým, že je to interpretovaný jazyk neprekypuje rýchlosťou. Veľa ľudí sa zaoberá rýchlosťou jazykov, zisťujú efektívnosť pri rôznych úkonoch ako napríklad cykly, volania funkcií, aritmetika, prístup k pamäti, vytváranie objektov. V nasledujúcich tabuľkách je vidno rozdiel v rýchlosti jednotlivých testov. 
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+			\hline
+			\textbf{Jazyk} & \textbf{Force field benchmark}  & \textbf{Array reverse benchmark}&\textbf{Rolling average benchmark} \\ 
+			\hline
+			C++ (-O2)&1.892&4.367&0.005\\
+			\hline
+			Java 7&2.469&3.776&0.463\\
+			\hline
+			C\# (normal)&10.712&14.071&0.621\\
+			\hline
+			JavaScript&16.159&13.162&1.312\\
+			\hline
+			Python 2&717.2&1485&71.550\\
+			\hline
+			Python 3&880.7&1466&81.143\\
+			\hline
+		\end{tabular}
+		\caption{Porovnanie rýchlostí rôznych jazykov\cite{gitspeed}}
+		\label{table:1}
+	\end{table}
+\end{center}
+Aj keď sme spomenuli viaceré nedostatky, asi najväčším je rýchlosť. Nvm čo ďalej. 
 \subsection{Analýza existujucich riešeni}
 \indent
 Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkúvajú funkcionality shell scriptu do Windowsu, nikeotré z nich si predstavíme.
@@ -208,36 +293,37 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \indent Poskytuje množstvo funkcionality avšak je zatažený licenciou v hodnote 50 eur. 
 \paragraph{Neplatená verzia}
 \begin{itemize}
-	\item Full X server and SSH support
-	\item Remote desktop (RDP, VNC, Xdmcp)
-	\item Remote terminal (SSH, telnet, rlogin, Mosh)
+	\item Plná podpora SSH a X serveru
+	\item Vzdialená plocha (RDP, VNC, Xdmcp)
+	\item Vzdialený terminál (SSH, telnet, rlogin, Mosh)
 	\item X11-Forwarding
-	\item Automatic SFTP browser
-	\item Plugins support
-	\item Portable and installer versions
-	\item Full documentation
-	\item Max. 12 sessions
-	\item Max. 2 SSH tunnels
-	\item Max. 4 macros
-	\item Max. 360 seconds for Tftp, Nfs and Cron
+	\item Automatický SFTP prehliadač
+	\item Podpora pluginovt
+	\item Možnosť inšalačnej alebo prenositeľnej verzie
+	\item Plná dokumentácia
+	\item Maximálne 12 spojení
+	\item Maximálne 2 SSH tunely
+	\item Maximálne 4 maká
+	\item Maximálne 360 sekúnd pre Tftp, Nfs a Cron
 \end{itemize}
 
 \paragraph{Platená verzia}
 
 \begin{itemize}
-	\item Every feature from Home Edition +
-	\item Customize your startup message and logo
-	\item Modify your profile script
-	\item Remove unwanted games, screensaver or tools
-	\item Unlimited number of sessions
-	\item Unlimited number of tunnels and macros
-	\item Unlimited run time for network daemons
-	\item Master password support
-	\item Professional support
-	\item Lifetime right to use
+	\item Všetky vymoženosti z neplatenej verzie Home Edition +
+	\item Možnosť upraviť svoju uvítaciu správu a logo
+	\item Modifikovať profilový skript
+	\item Odstrániť nechcené hry, šetriče obrazovky alebo nástroje
+	\item Nelimitovaný počet spojení
+	\item Nelimitovaný počet tunelov a makier
+	\item Nelimitovaný čas behu pre sieťové daemony
+	\item Podpora centrálneho hesla
+	\item Profesionálny support
+	\item Doživotné právo používania
 \end{itemize}
 
 \subsection{Zhodnotenie analyzovaných technológií}
+\indent 
 
 \section{Analýza prekladu jazykov}
 \indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
@@ -371,13 +457,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 		\hline
 		\textbf{Podmienky} & Shell aplikácia musí byť spustená \\ 
 		\hline
-		\textbf{Vstup} & -\\
+		\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 		\hline
 		\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 		\hline
-		\textbf{Výstp} & \\
+		\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu.\\
 		\hline
-		\textbf{Chyba} & \\
+		\textbf{Chyba} & V prípade zlyhania je používateľ informovaný o probléme, ktorý nastal.\\
 		\hline
 		\end{tabular}
 	\caption{Use case : Spustiť príkaz}
@@ -416,13 +502,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Taktiež musí byť v operačnom systéme ktorý podporuje shell. \\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 			\hline
 			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový kód.\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -438,13 +524,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný powershell.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 			\hline
 			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
-			\hline\\
-			\textbf{Výstp} & \\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Výstp} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
+			\hline
+			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z powershellu.\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -460,13 +546,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Vstup musí byť zadaný v správnom formáte.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci sekvenciu príkazov, ich argumenty spojené znakom pajpy "|".\\
 			\hline
 			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú svoje výstupy svojmu nasledovníkovy po úspešnom ukončení. Príkazy sa vykonávajú až kým nepríde na posledný príkaz v sekvencii, alebo ako počas behu príde pri niektorom z príkazov ku chybe. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup.\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -484,13 +570,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg" alebo aky si vyberem a jeho argumenty.\\
 			\hline
 			\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný balíček. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu - možno bude informovať o šťahovacom procese.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup v podobe stack tracu napr. .\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -506,13 +592,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na stiahnutie balíčka musí byť správne zadaný.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg download <názov balička>"\\
 			\hline
 			\textbf{Popis} & Program stiahne nový balíček a načíta ho medzi aktívne balíčky. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Vypíše chybu do stderr v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -528,13 +614,13 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenenie používaného balíčka musí byť správne zadaný.\\ 
 			\hline
-			\textbf{Vstup} & -\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg change <názov nahradzovaného balička> <názov nahradzujúceho balička>"\\\
 			\hline
 			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. \\ 
 			\hline
-			\textbf{Výstp} & \\
+			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti výmeny.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Výpíše chybu do stderr.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
@@ -789,7 +875,7 @@ Cieľom vzoru je zapúzdriť požiadavku(request) ako objekt tým pádom paramet
 	\label{fig:test}
 \end{figure}
 \newline
-Command vzor deklaruje interface pre všetky budúce commandy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
+Command vzor deklaruje rozhranie pre všetky budúce commandy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
 Receiver je objekt, ktorý vie ako požadovanú operáciu splniť. Invoker pozná command a pomocou implementovanej execute() metódy dokáže vyvolať požadovanú operáciu.
 Klient potrebuje implemenotvaž ConcreteCommand a nastavit Receiver pre command. ConcreteCommand definuje spojenie medzi action a receiver. Keď Invoker zavolá execute() metódu na ConcreteCommand spustí tým jednu alebo viac akcií, ktoré budú bežať pomocou Receivera.
 
