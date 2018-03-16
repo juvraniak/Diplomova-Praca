@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liteshell.iml" filepath="$PROJECT_DIR$/.idea/modules/liteshell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liteshell_main.iml" filepath="$PROJECT_DIR$/.idea/modules/liteshell_main.iml" group="liteshell" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/liteshell_test.iml" filepath="$PROJECT_DIR$/.idea/modules/liteshell_test.iml" group="liteshell" />
+    </modules>
+  </component>
+</project>

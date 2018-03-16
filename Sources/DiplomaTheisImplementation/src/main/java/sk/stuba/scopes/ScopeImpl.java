@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Stack;
 
 import sk.stuba.parser.ParserImpl;
-import sk.stuba.registration.Registrator;
+import sk.stuba.plugins.PluginFactory;
 import terminal.common.scopes.Scope;
 import terminal.common.scopes.ScopeData;
 
@@ -20,7 +20,7 @@ public class ScopeImpl implements Scope {
 
     private static String scopeName;
     private static Stack callStack;
-    private static Registrator registrator;
+    private static PluginFactory pluginFactory;
     private static ParserImpl commandParser;
 
     private static String[] mockCommands = {"listdir /Users/jvraniak@sk.ibm.com/Desktop/test2/",
@@ -32,13 +32,10 @@ public class ScopeImpl implements Scope {
     private final ScopeData scopeData = new ScopeData();
 
     private static void initialize() {
-        registrator = new Registrator();
+        pluginFactory = PluginFactory.init();
         commandParser = new ParserImpl();
     }
 
-    public static Registrator getRegistrator() {
-        return registrator;
-    }
 
     private void printLine() {
         System.out.print("> ");
@@ -47,10 +44,10 @@ public class ScopeImpl implements Scope {
     public void run() throws IOException {
         initialize();
 
-        for (String str : mockCommands) {
-
-            commandParser.parse(str, this);
-        }
+//        for (String str : mockCommands) {
+//
+//            commandParser.parse(str, this);
+//        }
         printLine();
 
         String s = "";

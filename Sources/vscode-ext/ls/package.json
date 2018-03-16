@@ -1,0 +1,26 @@
+{
+    "name": "ls",
+    "displayName": "LiteShell",
+    "description": "desc",
+    "version": "0.0.1",
+    "publisher": "JV",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "123",
+            "aliases": ["LiteShell", "123"],
+            "extensions": ["ls"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "123",
+            "scopeName": "ls.core",
+            "path": "./syntaxes/123.tmLanguage.json"
+        }]
+    }
+}

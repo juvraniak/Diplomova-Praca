@@ -1,5 +1,0 @@
-
-Msquid:S1612",Replace this lambda with a method reference.(§ÌŸ±ûÿÿÿÿ8ÅÌªå,
-esquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(«µ±ıÿÿÿÿ8Õ¿ñä,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(Ö¿™å8‹¸„å,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õ¿ñä,

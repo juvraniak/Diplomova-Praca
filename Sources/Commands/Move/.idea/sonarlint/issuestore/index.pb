@@ -1,11 +1,13 @@
 
-]
--src/main/java/sk/jv/commands/MoveCommand.java,f/2/f266c6adae4e8b6307f8d479d3773581180e7a4b
 7
 gradlew,5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
-[
-+src/main/java/sk/jv/plugins/PluginImpl.java,5/7/5718192f8af648a903534ed50b5244980989bfb7
+c
+3src/main/java/liteshell/receivers/MoveReceiver.java,2/7/27b419fffa78615e217ff749a6b91bcfd949ff81
+a
+1src/main/java/liteshell/commands/MoveCommand.java,f/7/f71bec132e082b39a18f78f335698c3c204129ad
 _
-/src/main/java/sk/jv/receivers/MoveReceiver.java,e/1/e1302e82ac65ebbba27deb1fb71093ed834bee1c
+/src/main/java/liteshell/plugins/PluginImpl.java,b/5/b5ea8359958a7356879baecc7fbef65d4f23bde3
+d
+4src/test/java/liteshell/command/MoveCommandTest.java,2/1/21ff23f281a103f9fdd590bfd816fe7a8f11bd0c

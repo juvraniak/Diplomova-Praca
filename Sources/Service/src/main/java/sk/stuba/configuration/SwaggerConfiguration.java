@@ -26,7 +26,7 @@ public class SwaggerConfiguration {
             .apiInfo(apiInfo())
             .select()
             .apis(RequestHandlerSelectors.basePackage("sk.stuba.controller"))
-            .paths(PathSelectors.regex("/libs/.*"))
+            .paths(PathSelectors.regex("/libraries/.*"))
             .build();
     }
 

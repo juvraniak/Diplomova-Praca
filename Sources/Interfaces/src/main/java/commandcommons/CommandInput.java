@@ -1,6 +1,8 @@
 package commandcommons;
 
 
+import java.util.stream.Stream;
+
 public interface CommandInput {
-    String getCommandInput();
+    Stream<String> getCommandInput();
 }
