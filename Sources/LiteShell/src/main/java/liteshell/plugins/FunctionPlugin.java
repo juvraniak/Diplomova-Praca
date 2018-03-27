@@ -28,7 +28,7 @@ public class FunctionPlugin implements ShellPlugin, ShellRegex {
         pluginMeta.setName("function");
         pluginMeta.setVersion("1");
         pluginMeta.setMatcher(Optional.of(Arrays.asList(
-            "function " + types() + " \\D.{0,20}[(](" + types() + " \\D" + charNums() + "{0,20})*(,\\s*" + types() + " \\D" + charNums()
+            "function " + types() + " \\D.{0,20}[(](" + types() + " \\D" + charNums() + "{0,20}){0,1}(,\\s*" + types() + " \\D" + charNums()
                 + "{0,20})*[)]\\s*[{]\\s*\n" + line() + "[}]\n*")));
         return pluginMeta;
     }

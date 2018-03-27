@@ -15,6 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class DefaultOutput implements CommandOutput {
 
+    private Integer returnValue;
     private Optional<Stream<String>> output;
     private Optional<Stream<String>> errorOutput;
 

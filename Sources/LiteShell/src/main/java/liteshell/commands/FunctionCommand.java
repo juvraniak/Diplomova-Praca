@@ -4,6 +4,8 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 import liteshell.commands.ios.CommandInput;
+import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.DefaultOutput;
 import liteshell.scopes.Scope;
 
 /**
@@ -13,8 +15,8 @@ import liteshell.scopes.Scope;
 public class FunctionCommand implements Command {
 
     @Override
-    public void execute(CommandInput commandInput, Optional<Scope> scope) {
-
+    public CommandOutput execute(CommandInput commandInput, Optional<Scope> scope) {
+        return new DefaultOutput();
     }
 
     @Override

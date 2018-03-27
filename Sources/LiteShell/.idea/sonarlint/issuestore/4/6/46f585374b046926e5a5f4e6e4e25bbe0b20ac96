@@ -1,16 +1,10 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ßñú‰üÿÿÿÿ8ò½›´¡,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù†€™ùÿÿÿÿ8§úš´¡,
-Nsquid:S1068"-Remove this unused "callStack" private field.(‡œüÿÿÿÿ8§úš´¡,
-}squid:S1450"\Remove the "pluginFactory" field and declare it as a local variable in the relevant methods.(¡ä×îùÿÿÿÿ8§úš´¡,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(à¡‚È8ò½›´¡,
-Qsquid:S1068"0Remove this unused "mockCommands" private field.(´Ï¯¿þÿÿÿÿ8§úš´¡,
-Nsquid:S1068"-Remove this unused "scopeName" private field.(ÎÊ£Ïøÿÿÿÿ8§úš´¡,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(›Äæ÷üÿÿÿÿ8§úš´¡,
-qsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(‡œüÿÿÿÿ8§úš´¡,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ò½›´¡,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.( ³€¹þÿÿÿÿ8ò½›´¡,
-Rsquid:S1068"1Remove this unused "pluginFactory" private field.(¡ä×îùÿÿÿÿ8§úš´¡,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(çø¼®8§úš´¡,
-Nsquid:S1068"-Remove this unused "scopeData" private field.(âŠ¦´ùÿÿÿÿ8ò½›´¡,
+Gsquid:S3010"&Remove this assignment of "scopeName".(ÙÎ‚öüÿÿÿÿ8 šÃ£,
+Fsquid:S3010"*Remove this assignment of "pluginFactory".(æÀƒ¡8 šÃ£,
+Fsquid:S3010"%Remove this assignment of "executor".(ªÇÄ†ùÿÿÿÿ8 šÃ£,
+ksquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(†„Ñ8 šÃ£,
+Qsquid:S2209"5Change this instance-reference to a static reference.(î Ú‰8 šÃ£,
+Vsquid:S2209"5Change this instance-reference to a static reference.(ªÇÄ†ùÿÿÿÿ8 šÃ£,
+Qsquid:S2209"5Change this instance-reference to a static reference.(æÀƒ¡8 šÃ£,
+Bsquid:S3010"&Remove this assignment of "callStack".(î Ú‰8 šÃ£,
+Vsquid:S2209"5Change this instance-reference to a static reference.(ÙÎ‚öüÿÿÿÿ8 šÃ£,

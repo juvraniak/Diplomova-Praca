@@ -1,0 +1,8 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(­×˜8İ´Ÿ¦,
+Vsquid:S1191"5Use classes from the Java API instead of Sun classes.(¶ƒŸĞüÿÿÿÿ8İ´Ÿ¦,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8Òİş¦,
+‰squid:UselessImportCheck"[Remove this unused import 'com.sun.org.apache.xalan.internal.utils.FeatureManager.Feature'.(¶ƒŸĞüÿÿÿÿ8ğ¹’Ÿ¦,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(É™¢˜ÿÿÿÿÿ8İ´Ÿ¦,

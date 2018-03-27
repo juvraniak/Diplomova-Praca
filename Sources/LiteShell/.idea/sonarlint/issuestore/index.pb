@@ -29,3 +29,11 @@ e
 5src/main/java/liteshell/commands/VariableCommand.java,6/c/6c3c56b318ae75c9cca215863ebc82dc0483b5d3
 ]
 -src/main/java/liteshell/keywords/Keyword.java,1/0/1058af457bb483ec3bec5981c9163b867f5a0973
+d
+4src/main/java/liteshell/scopes/ApplicationScope.java,3/3/33eeee31eb5aa8b9cdf20970416dc9695af156a2
+Q
+!src/main/java/liteshell/Test.java,9/4/9422003c4012ee6597885878af5d012c37fe99b1
+?
+settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+T
+$src/main/java/liteshell/Climber.java,1/a/1a21b960e7266114ba1ece9f53489359966a58bb

@@ -1,4 +1,4 @@
-group 'sk.jv.copy'
+group 'liteshell.copy'
 version '1.0'
 
 apply plugin: 'java'
