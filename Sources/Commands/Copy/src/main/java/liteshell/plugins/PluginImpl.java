@@ -26,6 +26,11 @@ public class PluginImpl implements ShellPlugin, ShellRegex {
         return new CopyCommand();
     }
 
+    @Override
+    public boolean shouldPrint() {
+        return false;
+    }
+
     private Optional<List<String>> createCopyRegex() {
         return Optional.of(Arrays.asList("copy\\s{1}.+\\s{1}.+;"));
     }

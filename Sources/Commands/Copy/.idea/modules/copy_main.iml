@@ -9,7 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: terminal.common:terminal-commons:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: liteshell.commons:terminal-commons:1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.16.20" level="project" />
   </component>
 </module>

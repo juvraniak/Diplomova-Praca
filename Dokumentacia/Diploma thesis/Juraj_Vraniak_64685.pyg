@@ -1,0 +1,23 @@
+	function changeName(\$myObject)
+	{
+		if (\$myObject.GetType() -eq [MyType])
+		{
+			//vypíš obsah premennej
+			\$myObject.Name
+			//zmeň reťazec pre atribút name
+			\$myObject.Name = "NewName"
+		}
+		return \$myObject
+	}
+
+	// Vytvorenie objektu s argumentom OriginalName a následné použitie funkcie na zmenu argumentu
+	//PS> \$myObject = New-Object MyType -arg "OriginalName"
+	//PS> \$myObject = changeName \$myNewObject
+	//OriginalName
+	//PS> \$myObject.Name
+	//NewName
+	// Ukážka s využitím pipe
+	//PS> \$myObject = New-Object MyType -arg "OriginalName" | changeName
+	//OriginalName
+	//PS> \$myObject.Name
+	//NewName

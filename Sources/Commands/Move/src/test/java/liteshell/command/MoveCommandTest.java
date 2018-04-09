@@ -49,7 +49,7 @@ public class MoveCommandTest implements PluginTest{
         Path file = Paths.get(fileToCopy);
         try {
             Files.write(file, Collections.singleton(text), Charset.forName("UTF-8"));
-            moveCommand.execute(new DefaultInput(Stream.of("move " + fileToCopy + " " + copied)), Optional.empty());
+            moveCommand.execute(DefaultInput.of(Stream.of("move " + fileToCopy + " " + copied)), Optional.empty());
             Assert.assertNotNull(new File(copied));
             Assert.assertTrue(new String(Files.readAllBytes(Paths.get(copied))).contains(text));
             Files.delete(Paths.get(copied));

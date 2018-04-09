@@ -24,6 +24,11 @@ public class PluginImpl implements ShellPlugin{
         return new MoveCommand();
     }
 
+    @Override
+    public boolean shouldPrint() {
+        return false;
+    }
+
     private Optional<List<String>> createMoveRegex(){
         return Optional.of(Arrays.asList("move\\s{1}.+\\s{1}.+;"));
     }

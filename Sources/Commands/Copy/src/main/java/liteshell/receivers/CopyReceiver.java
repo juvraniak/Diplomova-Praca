@@ -20,9 +20,9 @@ public class CopyReceiver implements Receiver {
         Path destPath = Paths.get(args[2]);
         try {
             Files.copy(sourcePath, destPath);
-            commandOutput.setCommandOutput(Optional.of(Stream.of("Files were copied.")));
+            commandOutput.setCommandOutput(Stream.of("Files were copied."));
         } catch (IOException e) {
-            commandOutput.setCommandErrorOutput(Optional.ofNullable(Stream.of(e.getMessage())));
+            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
         }finally {
             return commandOutput;
         }

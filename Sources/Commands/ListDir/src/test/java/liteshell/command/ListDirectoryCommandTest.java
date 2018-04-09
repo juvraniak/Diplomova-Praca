@@ -10,6 +10,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.junit.Assert;
@@ -41,10 +43,13 @@ public class ListDirectoryCommandTest implements PluginTest{
         Command lsCommand = copyPlugin.getCommand();
         Assert.assertNotNull(lsCommand);
 
-        CommandOutput out = lsCommand.execute(new DefaultInput(Stream.of("ls "+ System.getProperty("user.dir"))), Optional.empty());
-        Assert.assertTrue(!out.getCommandErrorOutput().isPresent());
+        CommandOutput out = lsCommand.execute(DefaultInput.of(Stream.of("ls "+ System.getProperty("user.dir"))), Optional.empty());
+        Assert.assertTrue(out.getCommandErrorOutput().isPresent());
         Assert.assertTrue(out.getCommandOutput().isPresent());
+        Assert.assertTrue(out.getCommandErrorOutput().get().collect(Collectors.toList()).size() == 0);
 
+//        out.getCommandOutput().get().forEach(System.out::println);
+        out = lsCommand.execute(DefaultInput.of(Stream.of("ls")), Optional.empty());
         out.getCommandOutput().get().forEach(System.out::println);
     }
 

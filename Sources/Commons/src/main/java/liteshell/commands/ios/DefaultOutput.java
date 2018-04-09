@@ -16,27 +16,37 @@ import lombok.Setter;
 public class DefaultOutput implements CommandOutput {
 
     private Integer returnValue;
-    private Optional<Stream<String>> output;
-    private Optional<Stream<String>> errorOutput;
+    private Stream<String> output;
+    private Stream<String> errorOutput;
 
 
     @Override
+    public Optional<Integer> getReturnCode() {
+        return Optional.of(returnValue);
+    }
+
+    @Override
     public Optional<Stream<String>> getCommandOutput() {
-        return output;
+        return Optional.of(output);
     }
 
     @Override
     public Optional<Stream<String>> getCommandErrorOutput() {
-        return errorOutput;
+        return Optional.of(errorOutput);
     }
 
     @Override
-    public void setCommandOutput(Optional<Stream<String>> commandOutput) {
+    public void setReturnCode(Integer returnCode) {
+        returnValue = returnCode;
+    }
+
+    @Override
+    public void setCommandOutput(Stream<String> commandOutput) {
         this.output = commandOutput;
     }
 
     @Override
-    public void setCommandErrorOutput(Optional<Stream<String>> commandErrorOutput) {
+    public void setCommandErrorOutput(Stream<String> commandErrorOutput) {
         this.errorOutput = commandErrorOutput;
     }
 }

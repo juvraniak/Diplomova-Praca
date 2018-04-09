@@ -11,4 +11,6 @@ public interface ShellPlugin {
     PluginMeta getInfo();
 
     Command getCommand();
+
+    boolean shouldPrint();
 }

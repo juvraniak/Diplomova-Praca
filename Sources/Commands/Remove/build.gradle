@@ -1,5 +1,5 @@
 group 'liteshell.command'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 apply plugin: 'java'
 
@@ -15,12 +15,12 @@ repositories {
 }
 
 dependencies {
-    compile group: 'terminal.common', name: 'terminal-commons', version: '1.0'
+    compile group: 'liteshell.commons', name: 'terminal-commons', version: '1.0'
     compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 jar {
-    baseName = 'copy-command'
+    baseName = 'remove-command'
     version =  version
 }

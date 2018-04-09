@@ -26,6 +26,11 @@ public class PluginImpl implements ShellPlugin, ShellRegex {
         return new CopyCommand();
     }
 
+    @Override
+    public boolean shouldPrint() {
+        return false;
+    }
+
     private Optional<List<String>> createRegex() {
         return Optional.of(Arrays.asList("rm\\s{1}.+;?"));
     }

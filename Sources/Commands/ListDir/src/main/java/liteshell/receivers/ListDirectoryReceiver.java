@@ -14,12 +14,27 @@ public class ListDirectoryReceiver implements Receiver {
     @Override
     public CommandOutput executeCommand(String[] args, Optional<Scope> scope) {
         CommandOutput commandOutput = new DefaultOutput();
-
-        File curDir = new File(args[1]);
+        String directoryToList = gedDirectoryToList(args);
+        File curDir = new File(directoryToList);
         File[] filesList = curDir.listFiles();
-        Stream<String> out = Arrays.asList(filesList).stream().map(f -> f.getName()).sorted();
-        commandOutput.setCommandErrorOutput(Optional.empty());
-        commandOutput.setCommandOutput(Optional.of(out));
+
+        try{
+            Stream<String> out = Arrays.asList(filesList).stream().map(f -> f.getName()).sorted();
+            commandOutput.setCommandOutput(out);
+            commandOutput.setCommandErrorOutput(Stream.empty());
+            commandOutput.setReturnCode(0);
+        } catch (Exception e){
+            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setReturnCode(-1);
+        }
+
         return commandOutput;
+    }
+
+    private String gedDirectoryToList(String[] args) {
+        if(args.length > 1){
+            return args[1];
+        }
+        return System.getProperty("user.dir");
     }
 }

@@ -24,6 +24,11 @@ public class PluginImpl implements ShellPlugin{
         return new ListDirectoryCommand();
     }
 
+    @Override
+    public boolean shouldPrint() {
+        return true;
+    }
+
     private Optional<List<String>> createListDirRegex() {
         return Optional.of(Arrays.asList("ls"));
     }

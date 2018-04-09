@@ -17,17 +17,19 @@ import liteshell.utils.OperatingSystem;
 import liteshell.utils.OsUtils;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author xvraniak@stuba.sk
  */
 
-@Slf4j
+
 public class PluginFactory {
+    private static final Logger log = LoggerFactory.getLogger(PluginFactory.class);
 
     private static final String MAC_PATH = "/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commands/Libs/";
-    private static final String LINUX_PATH = "/Users/jvraniak@sk.ibm.com/Documents/school/Diplomova-Praca/Sources/Commands/Libs/";
+    private static final String LINUX_PATH = "/home/jv/Documents/Skola/Diplomova-Praca/Sources/Commands/Libs";
     private static final PluginFactory INSTANCE = new PluginFactory();
     @Getter
     @Setter
@@ -89,7 +91,7 @@ public class PluginFactory {
                 jars = Files.list(Paths.get(MAC_PATH))
                     .filter(Files::isRegularFile).collect(Collectors.toList());
             }
-            if (OsUtils.getOperatingSystem().isPresent() && OsUtils.getOperatingSystem().get() == OperatingSystem.LINUX) {
+            if (OsUtils.getOperatingSystem().isPresent() && OsUtils.getOperatingSystem().get() == OperatingSystem.UNIX) {
                 jars = Files.list(Paths.get(LINUX_PATH))
                     .filter(Files::isRegularFile).collect(Collectors.toList());
             }
@@ -107,5 +109,6 @@ public class PluginFactory {
     private void registerAppCommands() {
 //        shellPlugins.put("double", new DoublePlugin());
 //        shellPlugins.put("pkg", new DownloadPlugin());
+        shellPlugins.put("grep", new GrepPlugin());
     }
 }

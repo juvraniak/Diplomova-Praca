@@ -48,8 +48,8 @@ public class RemoveCommandTest implements PluginTest{
         try {
             Files.write(path1, Collections.singleton(text), Charset.forName("UTF-8"));
             Files.write(path2, Collections.singleton(text), Charset.forName("UTF-8"));
-            command.execute(new DefaultInput(Stream.of("rm " + toDelete + " " + toDelete1)), Optional.empty());
-            command.execute(new DefaultInput(Stream.of("rm " + toDelete + " " + toDelete1)), Optional.empty());
+            command.execute(DefaultInput.of(Stream.of("rm " + toDelete + " " + toDelete1)), Optional.empty());
+            command.execute(DefaultInput.of(Stream.of("rm " + toDelete + " " + toDelete1)), Optional.empty());
             Assert.assertNull(new File(toDelete));
             Assert.assertNull(new File(toDelete1));
 

@@ -11,13 +11,15 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
 import liteshell.plugins.ShellPlugin;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author xvraniak@stuba.sk
  */
-@Slf4j
+
 public class JarLoader {
+    private static final Logger log = LoggerFactory.getLogger(JarLoader.class);
 
     private JarLoader() {
     }
