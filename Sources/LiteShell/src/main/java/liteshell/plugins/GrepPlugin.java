@@ -1,10 +1,11 @@
 package liteshell.plugins;
 
 
+import java.util.Optional;
 import liteshell.commands.Command;
 import liteshell.commands.GrepCommand;
-
-import java.util.Optional;
+import liteshell.parsers.CommandParser;
+import liteshell.parsers.FunctionParser;
 
 /**
  * @author xvraniak@stuba.sk
@@ -24,5 +25,15 @@ public class GrepPlugin implements ShellPlugin {
     @Override
     public boolean shouldPrint() {
         return true;
+    }
+
+    @Override
+    public Optional<CommandParser> getCommandParser() {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<FunctionParser> getFunctionParser() {
+        return Optional.empty();
     }
 }

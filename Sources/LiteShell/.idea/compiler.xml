@@ -19,8 +19,18 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Commons_main" target="1.8" />
+      <module name="Commons_test" target="1.8" />
+      <module name="copy_main" target="1.8" />
+      <module name="copy_test" target="1.8" />
+      <module name="ListDir_main" target="1.8" />
+      <module name="ListDir_test" target="1.8" />
       <module name="liteshell_main" target="1.8" />
       <module name="liteshell_test" target="1.8" />
+      <module name="Move_main" target="1.8" />
+      <module name="Move_test" target="1.8" />
+      <module name="Remove_main" target="1.8" />
+      <module name="Remove_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

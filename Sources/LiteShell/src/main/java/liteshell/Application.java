@@ -1,12 +1,8 @@
 package liteshell;
 
-import liteshell.executors.Executor;
-import liteshell.executors.ExecutorImpl;
-import liteshell.plugins.PluginFactory;
+import java.io.IOException;
 import liteshell.scopes.ApplicationScope;
 import liteshell.scopes.Scope;
-
-import java.io.IOException;
 
 /**
  * @author xvraniak@stuba.sk
@@ -15,10 +11,9 @@ import java.io.IOException;
 public class Application {
 
     public static void main(String[] args) {
-        PluginFactory pluginFactory = PluginFactory.init();
-        Executor executor = new ExecutorImpl();
+        Client client = Client.getInstance();
 
-        Scope application = new ApplicationScope(pluginFactory, executor);
+        Scope application = new ApplicationScope(client);
 
         try {
             ((ApplicationScope) application).run();

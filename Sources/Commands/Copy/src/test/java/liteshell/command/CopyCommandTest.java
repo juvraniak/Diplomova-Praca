@@ -11,18 +11,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
-
+import liteshell.commands.Command;
+import liteshell.commands.ios.DefaultInput;
+import liteshell.plugins.CopyPlugin;
+import liteshell.test.PluginTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-import liteshell.commands.Command;
-import liteshell.commands.ios.DefaultInput;
-import liteshell.test.PluginTest;
-import liteshell.plugins.PluginImpl;
-
 public class CopyCommandTest implements PluginTest{
 
-    PluginImpl copyPlugin = new PluginImpl();
+    CopyPlugin copyPlugin = new CopyPlugin();
 
     @Test
     @Override

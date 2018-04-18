@@ -6,4 +6,5 @@ package liteshell.parsers;
 
 public interface CommandParser {
 
+  void parse(String input);
 }

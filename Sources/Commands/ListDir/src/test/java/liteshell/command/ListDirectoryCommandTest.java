@@ -1,16 +1,8 @@
 package liteshell.command;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,12 +12,12 @@ import org.junit.Test;
 import liteshell.commands.Command;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
-import liteshell.plugins.PluginImpl;
+import liteshell.plugins.ListDirPlugin;
 import liteshell.test.PluginTest;
 
 public class ListDirectoryCommandTest implements PluginTest{
 
-    PluginImpl copyPlugin = new PluginImpl();
+    ListDirPlugin copyPlugin = new ListDirPlugin();
 
     @Test
     @Override

@@ -3,16 +3,13 @@ package liteshell.scopes;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import javafx.util.Pair;
+import liteshell.Client;
 import liteshell.exceptions.UnknownCommandException;
-import liteshell.executors.Executor;
-import liteshell.plugins.PluginFactory;
 import liteshell.plugins.ShellPlugin;
 
 /**
@@ -21,19 +18,19 @@ import liteshell.plugins.ShellPlugin;
 
 public class ApplicationScope extends ScopeImpl {
 
-    public ApplicationScope(PluginFactory pluginFactory, Executor executor) {
-        super("application", pluginFactory, executor);
+    public ApplicationScope(Client client) {
+        super("application", client);
     }
 
     private final ScopeData scopeData = new ScopeData();
-
+    //mac execute
 //    private static String[] mockCommands = {"ls /Users/jvraniak@sk.ibm.com/Desktop/test2/",
 //        "copy /Users/jvraniak@sk.ibm.com/Desktop/test/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt",
 //        "ls /Users/jvraniak@sk.ibm.com/Desktop/test2/",
 //        "ls /Users/jvraniak@sk.ibm.com/Desktop/test/",
 //        "move /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test/test1.txt",
 //        "ls /Users/jvraniak@sk.ibm.com/Desktop/test/"};
-
+    //linux execute
     private static String[] mockCommands = {"grep idea","ls", "ls /home/jv/","ls /home/jv/ | grep ecli"};
 
     private void printLine() {
@@ -73,17 +70,5 @@ public class ApplicationScope extends ScopeImpl {
         return Arrays.asList(splitedCommands).stream().map(c -> new Pair<>(findShellPlugin(c), c)).collect(Collectors.toList());
     }
 
-    private Optional<ShellPlugin> findShellPlugin(String command) {
-        Optional<ShellPlugin> searchedPlugin = Optional.empty();
-        if (command.startsWith("./")) {
-            return searchedPlugin;
-        } else {
-            String searchedCommand = command.split(" ")[0];
-            ShellPlugin plugin = pluginFactory.getShellPlugins().get(searchedCommand);
-            if (plugin != null) {
-                searchedPlugin = Optional.of(plugin);
-            }
-        }
-        return searchedPlugin;
-    }
+
 }

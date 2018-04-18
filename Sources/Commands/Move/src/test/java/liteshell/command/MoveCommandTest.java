@@ -11,19 +11,17 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import liteshell.commands.Command;
 import liteshell.commands.ios.DefaultInput;
+import liteshell.plugins.MovePlugin;
 import liteshell.test.PluginTest;
-import liteshell.plugins.PluginImpl;
+import org.junit.Assert;
+import org.junit.Test;
 
 
 public class MoveCommandTest implements PluginTest{
 
-    PluginImpl movePlugin = new PluginImpl();
+    MovePlugin movePlugin = new MovePlugin();
 
     @Test
     @Override

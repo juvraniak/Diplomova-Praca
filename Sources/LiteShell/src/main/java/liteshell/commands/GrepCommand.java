@@ -1,14 +1,13 @@
 package liteshell.commands;
 
+import java.util.Optional;
+import java.util.stream.Stream;
 import liteshell.commands.ios.CommandInput;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.exceptions.CommandIOException;
 import liteshell.receivers.GrepReceiver;
 import liteshell.receivers.Receiver;
 import liteshell.scopes.Scope;
-
-import java.util.Optional;
-import java.util.stream.Stream;
 
 /**
  * @author xvraniak@stuba.sk

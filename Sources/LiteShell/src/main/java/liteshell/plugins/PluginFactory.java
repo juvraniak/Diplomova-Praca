@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import liteshell.commands.Command;
 import liteshell.loaders.JarLoader;
 import liteshell.utils.OperatingSystem;
@@ -34,6 +33,9 @@ public class PluginFactory {
     @Getter
     @Setter
     private Map<String, ShellPlugin> shellPlugins;
+    @Getter
+    @Setter
+    private Map<String, String> aliases;
 
     private PluginFactory() {
         shellPlugins = new HashMap<>();

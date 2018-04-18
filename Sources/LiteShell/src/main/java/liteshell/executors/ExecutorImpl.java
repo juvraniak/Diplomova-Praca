@@ -1,19 +1,14 @@
 package liteshell.executors;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
-
 import javafx.util.Pair;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @author xvraniak@stuba.sk
@@ -28,9 +23,11 @@ public class ExecutorImpl implements Executor {
      */
     @Override
     public void execute(Optional<ShellPlugin> plugin, String command, Scope scope) {
+        ProcessBuilder processBuilder = new ProcessBuilder();
 
         if (command.startsWith("./")) {
             //handle script - maybe i will handle shell scripts by this
+            processBuilder.command();
         } else {
             String requestedCommand = command.split(" ")[0];
             if (plugin.isPresent()) {
@@ -52,16 +49,13 @@ public class ExecutorImpl implements Executor {
     @Override
     public void execute(Scope scope, List<Pair<Optional<ShellPlugin>, String>> list) {
         validatePluginList(list);
-        List<ExecutorListener> listeners = new ArrayList<>();
-        FinishingExecutor fe = new FinishingExecutor();
-        fe.setShouldPrint(list.get(list.size()-1).getKey().get().shouldPrint());
-        listeners.add(fe);
-        ExecutorListener temp = fe;
+
+        ExecutorListener temp = null;
         for(int i = list.size()-1; i > -1; i--){
             Pair<Optional<ShellPlugin>, String> item  = list.get(i);
-            PipeExecutor executor = PipeExecutor.of(Stream.of(item.getValue()), item.getKey().get(), scope, temp, listeners);
+            PipeExecutor executor = PipeExecutor
+                .of(Stream.of(item.getValue()), item.getKey().get(), scope, temp);
             temp = executor;
-            listeners.add(temp);
         }
         temp.execute();
     }
@@ -87,18 +81,18 @@ class PipeExecutor implements ExecutorListener{
     private boolean shouldPrint;
     private Scope scope;
     private ExecutorListener listener;
-    private List<ExecutorListener> listeners;
 
-    private PipeExecutor(Stream<String> command, ShellPlugin plugin, Scope scope,ExecutorListener listener,  List<ExecutorListener> listeners){
+    private PipeExecutor(Stream<String> command, ShellPlugin plugin, Scope scope,
+        ExecutorListener listener) {
         this.command = command;
         this.plugin = plugin;
         this.scope = scope;
         this.listener = listener;
-        this.listeners = listeners;
     }
 
-    public static PipeExecutor of(Stream<String> command, ShellPlugin plugin, Scope scope, ExecutorListener listener, List<ExecutorListener> listeners){
-        return new PipeExecutor(command, plugin, scope, listener, listeners);
+    public static PipeExecutor of(Stream<String> command, ShellPlugin plugin, Scope scope,
+        ExecutorListener listener) {
+        return new PipeExecutor(command, plugin, scope, listener);
     }
 
 
@@ -110,72 +104,24 @@ class PipeExecutor implements ExecutorListener{
 
     @Override
     public void onError(CommandOutput output) {
-
+        throw new RuntimeException(
+            "Return code : " + output.getReturnCode() + "\n" + output.getCommandErrorOutput().get()
+                .findFirst());
     }
 
     @Override
     public void execute(){
         CommandOutput out = plugin.getCommand().execute(DefaultInput.of(command), Optional.of(scope));
         if(out.getReturnCode().get() == 0){
-            listener.finishedExecution(out);
+            if (listener != null) {
+                listener.finishedExecution(out);
+            } else {
+                if (plugin.shouldPrint()) {
+                    out.getCommandOutput().get().forEach(System.out::println);
+                }
+            }
+        } else {
+            onError(out);
         }
-        System.out.println("tu");
-    }
-}
-
-//class MiddleExecutor{
-//    private ShellPlugin plugin;
-//    private Stream<String> command;
-//    private boolean shouldPrint;
-//
-//    private MiddleExecutor(Stream<String> command, ShellPlugin plugin){
-//        this.command = command;
-//        this.plugin = plugin;
-//    }
-//
-//    public static MiddleExecutor of(Stream<String> command, ShellPlugin plugin){
-//        return new MiddleExecutor(command, plugin);
-//    }
-//}
-@Getter
-@Setter
-class FinishingExecutor implements ExecutorListener{
-    private boolean shouldPrint;
-    private Stream<String> output;
-
-    public void printToConsole(){
-        if(shouldPrint){
-            output.forEach(System.out::println);
-        }
-    }
-
-    @Override
-    public void finishedExecution(CommandOutput output) {
-        if(shouldPrint){
-            output.getCommandOutput().get().forEach(System.out::println);
-        }
-    }
-
-    @Override
-    public void onError(CommandOutput output) {
-        output = (CommandOutput) output.getCommandErrorOutput().get();
-    }
-
-    @Override
-    public void execute() {
-
-    }
-}
-
-interface Step<I, O> {
-
-    O execute(I value);
-
-    default <R> Step<I, R> pipe(Step<O, R> source) {
-        return value -> source.execute(execute(value));
-    }
-
-    static <I, O> Step<I, O> of(Step<I, O> source) {
-        return source;
     }
 }

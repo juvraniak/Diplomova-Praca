@@ -15,12 +15,12 @@ import org.junit.Test;
 
 import liteshell.commands.Command;
 import liteshell.commands.ios.DefaultInput;
-import liteshell.plugins.PluginImpl;
+import liteshell.plugins.RemovePlugin;
 import liteshell.test.PluginTest;
 
 public class RemoveCommandTest implements PluginTest{
 
-    PluginImpl copyPlugin = new PluginImpl();
+    RemovePlugin copyPlugin = new RemovePlugin();
 
     @Test
     @Override
