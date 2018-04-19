@@ -1,6 +1,5 @@
 package liteshell.scopes;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Stack;
@@ -17,13 +16,14 @@ import liteshell.plugins.ShellPlugin;
 
 public class ScopeImpl implements Scope {
 
-    protected static String scopeName;
-    protected static Stack callStack;
-    protected static PluginFactory pluginFactory;
+  protected String currentDir;
+  protected static String scopeName;
+  protected static Stack callStack;
+  protected static PluginFactory pluginFactory;
   protected static ParserFactory parserFactory;
-    protected static Executor executor;
-    private final ScopeData scopeData = new ScopeData();
-  List<Map<ShellPlugin, String>> stack;
+  protected static Executor executor;
+  private final ScopeData scopeData = new ScopeData();
+  Stack<Map<ShellPlugin, String>> stack;
 
   public ScopeImpl(String scopeName, Client client) {
     this.scopeName = scopeName;
@@ -31,12 +31,19 @@ public class ScopeImpl implements Scope {
     this.pluginFactory = client.getPluginFactory();
     this.parserFactory = client.getParserFactory();
     this.executor = client.getExecutor();
-    }
+    this.stack = new Stack<>();
+    this.currentDir = System.getProperty("user.home");
+  }
 
-    @Override
-    public ScopeData getScopeData() {
-        return scopeData;
-    }
+  @Override
+  public ScopeData getScopeData() {
+    return scopeData;
+  }
+
+  @Override
+  public String getCurrentWorkingDirectory() {
+    return currentDir;
+  }
 
   protected Optional<ShellPlugin> findShellPlugin(String command) {
     Optional<ShellPlugin> searchedPlugin = Optional.empty();

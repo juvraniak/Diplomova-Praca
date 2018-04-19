@@ -11,4 +11,6 @@ public interface Scope {
     default Scope getScope() {
         return this;
     }
+
+    String getCurrentWorkingDirectory();
 }
