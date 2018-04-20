@@ -6,8 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
-
-
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultOutput;
 import liteshell.scopes.Scope;
@@ -23,8 +21,10 @@ public class MoveReceiver implements Receiver {
         try {
             Files.move(sourcePath, destPath);
             commandOutput.setCommandOutput(Stream.of("Files were moved."));
+            commandOutput.setReturnCode(0);
         } catch (IOException e) {
             commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setReturnCode(-1);
         }finally {
             return commandOutput;
         }

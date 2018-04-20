@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Stream;
-
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultOutput;
 import liteshell.scopes.Scope;
@@ -14,7 +13,7 @@ public class ListDirectoryReceiver implements Receiver {
     @Override
     public CommandOutput executeCommand(String[] args, Optional<Scope> scope) {
         CommandOutput commandOutput = new DefaultOutput();
-        String directoryToList = gedDirectoryToList(args);
+        String directoryToList = gedDirectoryToList(args, scope.get());
         File curDir = new File(directoryToList);
         File[] filesList = curDir.listFiles();
 
@@ -31,10 +30,10 @@ public class ListDirectoryReceiver implements Receiver {
         return commandOutput;
     }
 
-    private String gedDirectoryToList(String[] args) {
+    private String gedDirectoryToList(String[] args, Scope scope) {
         if(args.length > 1){
             return args[1];
         }
-        return System.getProperty("user.dir");
+        return scope.getCurrentWorkingDirectory();
     }
 }

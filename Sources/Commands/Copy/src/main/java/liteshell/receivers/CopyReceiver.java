@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
-
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultOutput;
 import liteshell.scopes.Scope;
@@ -21,8 +20,10 @@ public class CopyReceiver implements Receiver {
         try {
             Files.copy(sourcePath, destPath);
             commandOutput.setCommandOutput(Stream.of("Files were copied."));
+            commandOutput.setReturnCode(0);
         } catch (IOException e) {
             commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setReturnCode(-1);
         }finally {
             return commandOutput;
         }

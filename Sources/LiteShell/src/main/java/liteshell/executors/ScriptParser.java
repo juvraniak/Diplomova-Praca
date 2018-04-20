@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Optional;
 import java.util.stream.Stream;
+import javafx.util.Pair;
 import liteshell.Client;
+import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
+import sun.plugin.dom.exception.PluginNotSupportedException;
 
 /**
  * @author xvraniak@stuba.sk
@@ -28,23 +32,46 @@ public class ScriptParser {
   public void parse(String scriptPath) {
 
     Scope scriptScope = new ScopeImpl(scriptPath, client);
+    StringBuilder sb = new StringBuilder();
     try (Stream<String> lines = Files.lines(Paths.get(scriptPath), Charset.defaultCharset())) {
-      lines.forEachOrdered(line -> {
-        //TODO: check if commadn
-        process(line);
+      lines
+          .filter(line -> !line.trim().startsWith("//"))
+          .forEachOrdered(line -> {
+            if (line.endsWith(";")) {
+              process(sb.append(line.trim()).toString(), scriptScope);
+              sb.delete(0, sb.toString().length());
+            } else {
+
+              sb.append(line);
+
+              if (line.length() > 0 && !line.endsWith(" ")) {
+                sb.append(" ");
+              }
+            }
       });
+
+      System.out.println("tu");
+      scriptScope.executeScript();
     } catch (IOException e) {
       e.printStackTrace();
     }
   }
 
-  private void process(String line) {
-    if (line.startsWith(COMMENT)) {
-      return;
-    }
+  private void process(String line, Scope scope) throws PluginNotSupportedException {
+    System.out.println("in process");
+    System.out.println(line);
     //TODO: import will be handled as separate plugin - makes more sense now
     //check if line is a pipe
     String[] tokens = line.split(PIPE);
+    Optional<ShellPlugin> plugin = scope.findShellPlugin(line);
+
+    if (plugin.isPresent()) {
+      Pair<ShellPlugin, String> pair = new Pair<>(plugin.get(),
+          line.substring(0, line.length() - 1));
+      scope.addCommand(pair);
+    } else {
+      throw new PluginNotSupportedException("Did not find plugin : " + line.split(" ")[0]);
+    }
 
 
   }

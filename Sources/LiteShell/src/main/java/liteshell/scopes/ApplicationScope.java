@@ -22,7 +22,7 @@ public class ApplicationScope extends ScopeImpl {
     super("application", client);
   }
 
-  private final ScopeData scopeData = new ScopeData();
+  private final ScopeVariables scopeData = new ScopeVariables();
   //mac execute
 //    private static String[] mockCommands = {"ls /Users/jvraniak@sk.ibm.com/Desktop/test2/",
 //        "copy /Users/jvraniak@sk.ibm.com/Desktop/test/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt",
@@ -58,7 +58,11 @@ public class ApplicationScope extends ScopeImpl {
         break;
       }
       try {
-        executor.execute(findShellPlugin(s), s, getScope());
+        if (s.split("\\|").length > 1) {
+          executor.execute(getScope(), preparePlugins(s));
+        } else {
+          executor.execute(findShellPlugin(s), s, getScope());
+        }
       } catch (UnknownCommandException ex) {
         System.out.println(ex.getMessage());
       }

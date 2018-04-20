@@ -1,9 +1,14 @@
 package liteshell.scopes;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.Stack;
+import java.util.stream.Stream;
+import javafx.util.Pair;
 import liteshell.Client;
+import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.DefaultInput;
 import liteshell.executors.Executor;
 import liteshell.parsers.ParserFactory;
 import liteshell.plugins.PluginFactory;
@@ -16,14 +21,14 @@ import liteshell.plugins.ShellPlugin;
 
 public class ScopeImpl implements Scope {
 
-  protected String currentDir;
+
   protected static String scopeName;
   protected static Stack callStack;
   protected static PluginFactory pluginFactory;
   protected static ParserFactory parserFactory;
   protected static Executor executor;
-  private final ScopeData scopeData = new ScopeData();
-  Stack<Map<ShellPlugin, String>> stack;
+  private final ScopeVariables scopeData = new ScopeVariables();
+  List<Pair<ShellPlugin, String>> stack;
 
   public ScopeImpl(String scopeName, Client client) {
     this.scopeName = scopeName;
@@ -31,21 +36,23 @@ public class ScopeImpl implements Scope {
     this.pluginFactory = client.getPluginFactory();
     this.parserFactory = client.getParserFactory();
     this.executor = client.getExecutor();
-    this.stack = new Stack<>();
-    this.currentDir = System.getProperty("user.home");
+    this.stack = new ArrayList<>();
+    this.scopeData.getStringMap().put("pwd", System.getProperty("user.home"));
+    this.scopeData.getInitializedVariables().add("pwd");
   }
 
   @Override
-  public ScopeData getScopeData() {
+  public ScopeVariables getScopeData() {
     return scopeData;
   }
 
   @Override
   public String getCurrentWorkingDirectory() {
-    return currentDir;
+    return this.scopeData.getStringMap().get("pwd");
   }
 
-  protected Optional<ShellPlugin> findShellPlugin(String command) {
+  @Override
+  public Optional<ShellPlugin> findShellPlugin(String command) {
     Optional<ShellPlugin> searchedPlugin = Optional.empty();
     if (command.startsWith("./")) {
       return searchedPlugin;
@@ -57,5 +64,26 @@ public class ScopeImpl implements Scope {
       }
     }
     return searchedPlugin;
+  }
+
+  @Override
+  public Scope getScope() {
+    return this;
+  }
+
+  @Override
+  public void addCommand(Pair<ShellPlugin, String> pair) {
+    this.stack.add(pair);
+  }
+
+  @Override
+  public void executeScript() {
+    this.stack.forEach(k -> {
+      CommandOutput out = k.getKey().getCommand()
+          .execute(DefaultInput.of(Stream.of(k.getValue())), Optional.of(this));
+
+      System.out.println(out.getReturnCode().get());
+      out.getCommandOutput().get().forEach(System.out::println);
+    });
   }
 }
