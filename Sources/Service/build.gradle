@@ -13,13 +13,13 @@ version '1.0'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'war'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-jar {
-    baseName = 'uploading-files'
-    version = '0.1.0'
+war {
+    archiveName 'service.war'
 }
 
 repositories {
@@ -27,6 +27,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.springframework.boot:spring-boot-starter-tomcat'
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation(
             [group: 'org.projectlombok', name: 'lombok', version: '1.16.20'],

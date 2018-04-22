@@ -11,13 +11,15 @@ import liteshell.parsers.FunctionParser;
 
 public interface ShellPlugin {
 
-    PluginMeta getInfo();
+  PluginMeta getInfo();
 
-    Command getCommand();
+  Command getCommand();
 
-    boolean shouldPrint();
+  boolean shouldPrint();
 
-    Optional<CommandParser> getCommandParser();
+  Optional<CommandParser> getCommandParser();
 
-    Optional<FunctionParser> getFunctionParser();
+  Optional<FunctionParser> getFunctionParser();
+
+
 }

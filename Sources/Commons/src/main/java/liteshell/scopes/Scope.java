@@ -10,13 +10,13 @@ import liteshell.plugins.ShellPlugin;
 
 public interface Scope {
 
-  ScopeVariables getScopeData();
+  ScopeVariables getScopeVariables();
 
-    default Scope getScope() {
+  default Scope getScope() {
         return this;
     }
 
-    String getCurrentWorkingDirectory();
+  String getCurrentWorkingDirectory();
 
   Optional<ShellPlugin> findShellPlugin(String command);
 

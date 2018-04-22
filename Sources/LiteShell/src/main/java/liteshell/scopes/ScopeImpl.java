@@ -27,7 +27,7 @@ public class ScopeImpl implements Scope {
   protected static PluginFactory pluginFactory;
   protected static ParserFactory parserFactory;
   protected static Executor executor;
-  private final ScopeVariables scopeData = new ScopeVariables();
+  private final ScopeVariables scopeVariables = new ScopeVariables();
   List<Pair<ShellPlugin, String>> stack;
 
   public ScopeImpl(String scopeName, Client client) {
@@ -37,18 +37,18 @@ public class ScopeImpl implements Scope {
     this.parserFactory = client.getParserFactory();
     this.executor = client.getExecutor();
     this.stack = new ArrayList<>();
-    this.scopeData.getStringMap().put("pwd", System.getProperty("user.home"));
-    this.scopeData.getInitializedVariables().add("pwd");
+    this.scopeVariables.getStringMap().put("pwd", System.getProperty("user.home"));
+    this.scopeVariables.getInitializedVariables().add("pwd");
   }
 
   @Override
-  public ScopeVariables getScopeData() {
-    return scopeData;
+  public ScopeVariables getScopeVariables() {
+    return scopeVariables;
   }
 
   @Override
   public String getCurrentWorkingDirectory() {
-    return this.scopeData.getStringMap().get("pwd");
+    return this.scopeVariables.getStringMap().get("pwd");
   }
 
   @Override

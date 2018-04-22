@@ -57,7 +57,7 @@ public class ExecutorImpl implements Executor {
                 .of(Stream.of(item.getValue()), item.getKey().get(), scope, temp);
             temp = executor;
         }
-        temp.execute();
+        temp.run();
     }
 
     private void validatePluginList(List<Pair<Optional<ShellPlugin>,String>> list) {
@@ -69,16 +69,14 @@ public class ExecutorImpl implements Executor {
     }
 }
 
-interface ExecutorListener{
+interface ExecutorListener extends Runnable {
     void finishedExecution(CommandOutput output);
     void onError(CommandOutput output);
-    void execute();
 }
 
 class PipeExecutor implements ExecutorListener{
     private ShellPlugin plugin;
     private Stream<String> command;
-    private boolean shouldPrint;
     private Scope scope;
     private ExecutorListener listener;
 
@@ -99,7 +97,7 @@ class PipeExecutor implements ExecutorListener{
     @Override
     public void finishedExecution(CommandOutput output) {
         command = Stream.concat(command, output.getCommandOutput().get());
-        execute();
+        run();
     }
 
     @Override
@@ -110,7 +108,7 @@ class PipeExecutor implements ExecutorListener{
     }
 
     @Override
-    public void execute(){
+    public void run() {
         CommandOutput out = plugin.getCommand().execute(DefaultInput.of(command), Optional.of(scope));
         if(out.getReturnCode().get() == 0){
             if (listener != null) {

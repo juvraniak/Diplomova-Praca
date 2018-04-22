@@ -16,11 +16,14 @@ import liteshell.plugins.ShellPlugin;
  * @author xvraniak@stuba.sk
  */
 
-public class ApplicationScope extends ScopeImpl {
+public class ApplicationScope extends ScopeImpl implements Runnable {
 
   public ApplicationScope(Client client) {
     super("application", client);
+    loadSystemVariables();
   }
+
+
 
   private final ScopeVariables scopeData = new ScopeVariables();
   //mac execute
@@ -38,7 +41,8 @@ public class ApplicationScope extends ScopeImpl {
     System.out.print("> ");
   }
 
-  public void run() throws IOException {
+  @Override
+  public void run() {
 
     for (String s : mockCommands) {
       printLine();
@@ -53,9 +57,14 @@ public class ApplicationScope extends ScopeImpl {
     String s = "";
     while (true) {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-      s = br.readLine();
+
+      try {
+        s = br.readLine();
+      } catch (IOException ex) {
+        System.out.println("Problem reading from command line");
+      }
       if (s.equals("exit")) {
-        break;
+        System.exit(0);
       }
       try {
         if (s.split("\\|").length > 1) {
@@ -71,10 +80,19 @@ public class ApplicationScope extends ScopeImpl {
   }
 
   private List<Pair<Optional<ShellPlugin>, String>> preparePlugins(String commands) {
-    String[] splitedCommands = commands.split(" \\| ");
-    return Arrays.asList(splitedCommands).stream().map(c -> new Pair<>(findShellPlugin(c), c))
+    String[] splittedCommands = commands.split(" \\| ");
+    return Arrays.stream(splittedCommands).map(c -> new Pair<>(findShellPlugin(c), c))
         .collect(Collectors.toList());
   }
 
+  private void loadSystemVariables() {
+    ScopeVariables variables = this.getScopeVariables();
+    variables.getStringMap().putAll(System.getenv());
+    variables.getInitializedVariables().addAll(variables.getStringMap().keySet());
+  }
 
+  @Override
+  public ScopeVariables getScopeVariables() {
+    return null;
+  }
 }
