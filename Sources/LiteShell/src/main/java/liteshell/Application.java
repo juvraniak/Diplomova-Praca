@@ -9,9 +9,9 @@ import liteshell.scopes.ApplicationScope;
 public class Application {
 
     public static void main(String[] args) {
-        Client client = Client.getInstance();
+        ShellClient shellClient = ShellClient.getInstance();
 
-        Runnable application = new ApplicationScope(client);
+        Runnable application = new ApplicationScope(shellClient);
 
         application.run();
 

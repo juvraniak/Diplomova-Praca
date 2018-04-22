@@ -9,7 +9,6 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
-
 import liteshell.plugins.ShellPlugin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +23,7 @@ public class JarLoader {
     private JarLoader() {
     }
 
-    //TODO : spatne na skazu refaktorovat co najskor!!!
+    //TODO : ak by sa nasiel cas poupravovat!
     public static Optional<ShellPlugin> loadCommand(Path jarPath) {
         JarEntry jarEntry;
         URL[] urls = getJarUrls(jarPath.toString());

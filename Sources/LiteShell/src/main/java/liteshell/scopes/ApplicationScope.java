@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import javafx.util.Pair;
-import liteshell.Client;
+import liteshell.ShellClient;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
 
@@ -18,14 +18,13 @@ import liteshell.plugins.ShellPlugin;
 
 public class ApplicationScope extends ScopeImpl implements Runnable {
 
-  public ApplicationScope(Client client) {
-    super("application", client);
+  public ApplicationScope(ShellClient shellClient) {
+    super("application", shellClient);
     loadSystemVariables();
   }
 
 
-
-  private final ScopeVariables scopeData = new ScopeVariables();
+  private final ScopeVariables scopeVariables = new ScopeVariables();
   //mac execute
 //    private static String[] mockCommands = {"ls /Users/jvraniak@sk.ibm.com/Desktop/test2/",
 //        "copy /Users/jvraniak@sk.ibm.com/Desktop/test/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt",
@@ -34,8 +33,8 @@ public class ApplicationScope extends ScopeImpl implements Runnable {
 //        "move /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test/test1.txt",
 //        "ls /Users/jvraniak@sk.ibm.com/Desktop/test/"};
   //linux execute
-  private static String[] mockCommands = {"grep idea", "ls", "ls /home/jv/",
-      "ls /home/jv/ | grep ecli"};
+//  private static String[] mockCommands = {"grep idea", "ls", "ls /home/jv/",
+//      "ls /home/jv/ | grep ecli"};
 
   private void printLine() {
     System.out.print("> ");
@@ -43,16 +42,16 @@ public class ApplicationScope extends ScopeImpl implements Runnable {
 
   @Override
   public void run() {
-
-    for (String s : mockCommands) {
-      printLine();
-      System.out.println(s);
-      if (s.split("\\|").length > 1) {
-        executor.execute(getScope(), preparePlugins(s));
-      } else {
-        executor.execute(findShellPlugin(s), s, getScope());
-      }
-    }
+//
+//    for (String s : mockCommands) {
+//      printLine();
+//      System.out.println(s);
+//      if (s.split("\\|").length > 1) {
+//        executor.execute(getScope(), preparePlugins(s));
+//      } else {
+//        executor.execute(findShellPlugin(s), s, getScope());
+//      }
+//    }
     printLine();
     String s = "";
     while (true) {
@@ -86,7 +85,7 @@ public class ApplicationScope extends ScopeImpl implements Runnable {
   }
 
   private void loadSystemVariables() {
-    ScopeVariables variables = this.getScopeVariables();
+    ScopeVariables variables = super.getScopeVariables();
     variables.getStringMap().putAll(System.getenv());
     variables.getInitializedVariables().addAll(variables.getStringMap().keySet());
   }

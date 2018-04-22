@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.Stack;
 import java.util.stream.Stream;
 import javafx.util.Pair;
-import liteshell.Client;
+import liteshell.ShellClient;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
 import liteshell.executors.Executor;
@@ -30,12 +30,12 @@ public class ScopeImpl implements Scope {
   private final ScopeVariables scopeVariables = new ScopeVariables();
   List<Pair<ShellPlugin, String>> stack;
 
-  public ScopeImpl(String scopeName, Client client) {
+  public ScopeImpl(String scopeName, ShellClient shellClient) {
     this.scopeName = scopeName;
     this.callStack = new Stack();
-    this.pluginFactory = client.getPluginFactory();
-    this.parserFactory = client.getParserFactory();
-    this.executor = client.getExecutor();
+    this.pluginFactory = shellClient.getPluginFactory();
+    this.parserFactory = shellClient.getParserFactory();
+    this.executor = shellClient.getExecutor();
     this.stack = new ArrayList<>();
     this.scopeVariables.getStringMap().put("pwd", System.getProperty("user.home"));
     this.scopeVariables.getInitializedVariables().add("pwd");

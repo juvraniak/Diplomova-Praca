@@ -13,21 +13,21 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Client {
+public class ShellClient {
 
-  private static final Client client = new Client();
+  private static final ShellClient SHELL_CLIENT = new ShellClient();
   private PluginFactory pluginFactory;
   private ParserFactory parserFactory;
   private Executor executor;
 
-  private Client() {
+  private ShellClient() {
     pluginFactory = PluginFactory.init();
     parserFactory = ParserFactory.init();
     parserFactory.addParsers(pluginFactory.getShellPlugins());
     executor = new ExecutorImpl();
   }
 
-  public static Client getInstance() {
-    return client;
+  public static ShellClient getInstance() {
+    return SHELL_CLIENT;
   }
 }

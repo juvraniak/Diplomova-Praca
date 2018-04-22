@@ -7,11 +7,12 @@ import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
 import javafx.util.Pair;
-import liteshell.Client;
+import liteshell.ShellClient;
+import liteshell.exceptions.PluginNotSupportedException;
 import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
-import sun.plugin.dom.exception.PluginNotSupportedException;
+
 
 /**
  * @author xvraniak@stuba.sk
@@ -23,22 +24,26 @@ public class ScriptParser {
   private static final String COMMENT = "//";
   private static final String PIPE = "\\|";
 
-  private Client client;
+  private ShellClient shellClient;
 
   public ScriptParser() {
-    this.client = Client.getInstance();
+    this.shellClient = ShellClient.getInstance();
   }
 
   public void parse(String scriptPath) {
 
-    Scope scriptScope = new ScopeImpl(scriptPath, client);
+    Scope scriptScope = new ScopeImpl(scriptPath, shellClient);
     StringBuilder sb = new StringBuilder();
     try (Stream<String> lines = Files.lines(Paths.get(scriptPath), Charset.defaultCharset())) {
       lines
           .filter(line -> !line.trim().startsWith("//"))
           .forEachOrdered(line -> {
             if (line.endsWith(";")) {
-              process(sb.append(line.trim()).toString(), scriptScope);
+              try {
+                process(sb.append(line.trim()).toString(), scriptScope);
+              } catch (PluginNotSupportedException e) {
+                e.printStackTrace();
+              }
               sb.delete(0, sb.toString().length());
             } else {
 
@@ -60,7 +65,7 @@ public class ScriptParser {
   private void process(String line, Scope scope) throws PluginNotSupportedException {
     System.out.println("in process");
     System.out.println(line);
-    //TODO: import will be handled as separate plugin - makes more sense now
+
     //check if line is a pipe
     String[] tokens = line.split(PIPE);
     Optional<ShellPlugin> plugin = scope.findShellPlugin(line);
