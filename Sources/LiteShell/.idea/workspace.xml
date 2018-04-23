@@ -2,32 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/PluginNotSupportedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/ImportDownload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.gradle/4.0/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/liteshell_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/liteshell_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/liteshell_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/liteshell_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/plugins/PackagePlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/receivers/DeletePackageReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/receivers/DownloadPackageReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/test1.ls" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/test1.ls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/ShellClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/ShellClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/utils/ShellClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Service/src/main/java/sk/stuba/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/src/main/java/sk/stuba/controller/LibraryController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -183,82 +173,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ScriptParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Commons/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginNotSupportedException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/PluginNotSupportedException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShellClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/ShellClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExecutorImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PluginFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+            <state relative-caret-position="370">
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1363#1364#0" expanded="true" />
@@ -268,23 +187,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationScope.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java">
+      <file leaf-file-name="PackageCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="90" column="3" selection-start-line="90" selection-start-column="3" selection-end-line="90" selection-end-column="3" />
+            <state relative-caret-position="648">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
-                <element signature="docComment;class#ApplicationScope#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScopeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
+      <file leaf-file-name="ImportTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="229">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadPackageReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/DownloadPackageReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -320,6 +256,7 @@
       <find>libs</find>
       <find>scopeData</find>
       <find>ExecutorImpl</find>
+      <find>scope</find>
     </findStrings>
     <replaceStrings>
       <replace>ls</replace>
@@ -2447,19 +2384,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/parsers/FunctionParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/GrepCommand.java" />
-        <option value="$PROJECT_DIR$/../Commands/Move/src/main/java/liteshell/plugins/PluginImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/GrepPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/Client.java" />
-        <option value="$PROJECT_DIR$/../Commands/Copy/src/main/java/liteshell/plugins/CopyPlugin.java" />
-        <option value="$PROJECT_DIR$/../Commands/ListDir/src/main/java/liteshell/parsers/ListDirParser.java" />
-        <option value="$PROJECT_DIR$/../Commands/ListDir/src/main/java/liteshell/plugins/ListDirPlugin.java" />
         <option value="$PROJECT_DIR$/../Commands/Move/src/main/java/liteshell/parsers/MoveParser.java" />
         <option value="$PROJECT_DIR$/../Commands/Move/src/main/java/liteshell/plugins/MovePlugin.java" />
         <option value="$PROJECT_DIR$/../Commands/Remove/src/main/java/liteshell/parsers/RemoveParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/parsers/ParserFactory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/ScriptParserTest.java" />
         <option value="$PROJECT_DIR$/../Commands/Pwd/src/main/java/CopyParser.java" />
         <option value="$PROJECT_DIR$/../Commands/Pwd/build.gradle" />
         <option value="$PROJECT_DIR$/../Commands/Pwd/src/main/java/commands/CopyCommand.java" />
@@ -2485,19 +2413,28 @@
         <option value="$PROJECT_DIR$/../Commands/Copy/src/main/java/liteshell/receivers/CopyReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" />
         <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/plugins/ShellPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/ShellClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/ImportPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/ImportCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/ImportDownload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java" />
         <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/PluginNotSupportedException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/Application.java" />
         <option value="$PROJECT_DIR$/../Commons/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/PackagePlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/DeletePackageReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/DownloadPackageReceiver.java" />
+        <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/ScriptParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/utils/UrlDownloader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/utils/JarAdder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java" />
       </list>
     </option>
   </component>
@@ -2510,7 +2447,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="27" />
     <option name="width" value="1600" />
     <option name="height" value="873" />
@@ -2532,83 +2469,12 @@
           <expand>
             <path>
               <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
-              <item name="scopes" type="462c0819:PsiDirectoryNode" />
+              <item name="LiteShell" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
               <item name="LiteShell" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
@@ -2644,6 +2510,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="liteshell" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LiteShell" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="liteshell" type="462c0819:PsiDirectoryNode" />
+              <item name="executors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
@@ -2760,11 +2635,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="file.status.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="liteshell.scopes" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../Commands/Pwd/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/liteshell/plugins" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="liteshell.parsers" />
@@ -2772,9 +2648,8 @@
       <recent name="liteshell.plugins" />
       <recent name="liteshell.loaders" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../Commands/Pwd/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main/java/liteshell/plugins" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="liteshell.scopes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2789,7 +2664,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.LiteShell [jar]">
+  <component name="RunManager" selected="JUnit.ImportTest.testDownloadCommand">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -2799,7 +2674,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="liteshell.*" />
+          <option name="PATTERN" value="liteshell.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -2810,7 +2685,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="liteshell.*" />
+          <option name="PATTERN" value="liteshell.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -2852,22 +2727,28 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
     </configuration>
-    <configuration name="Remove [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../Commands/Remove" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+    <configuration name="ImportTest.testDownloadCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liteshell_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="liteshell.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="liteshell.parser" />
+      <option name="MAIN_CLASS_NAME" value="liteshell.parser.ImportTest" />
+      <option name="METHOD_NAME" value="testDownloadCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ScriptParserTest.testScriptParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="liteshell_test" />
@@ -2945,19 +2826,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="Gradle.Remove [jar]" />
       <item itemvalue="JUnit.ScriptParserTest.testScriptParser" />
       <item itemvalue="Gradle.Commons [jar]" />
       <item itemvalue="Application.ImportDownload" />
       <item itemvalue="Gradle.LiteShell [jar]" />
+      <item itemvalue="JUnit.ImportTest.testDownloadCommand" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ImportTest.testDownloadCommand" />
         <item itemvalue="Gradle.LiteShell [jar]" />
         <item itemvalue="Application.ImportDownload" />
         <item itemvalue="Gradle.Commons [jar]" />
         <item itemvalue="JUnit.ScriptParserTest.testScriptParser" />
-        <item itemvalue="Gradle.Remove [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -3004,44 +2885,44 @@
       <workItem from="1524327784421" duration="2904000" />
       <workItem from="1524336402575" duration="6643000" />
       <workItem from="1524405562714" duration="15000" />
-      <workItem from="1524405614950" duration="12290000" />
+      <workItem from="1524405614950" duration="20263000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 00h 33m 48s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 01h 37m 01s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 00h 34m 18s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 01h 38m 17s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 11m 54s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 01h 41m 08s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 12m 01s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 01h 44m 20s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 20m 14s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 01h 45m 06s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 23m 43s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 02h 05m 07s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 26m 01s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 02h 06m 44s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 43m 52s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 02h 10m 54s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 45m 27s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 02h 11m 39s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ScriptParserTest_testScriptParser - 2018.04.20 at 01h 48m 27s.xml">
-      <configuration name="ScriptParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ImportTest_testDownloadCommand - 2018.04.23 at 02h 12m 54s.xml">
+      <configuration name="ImportTest.testDownloadCommand" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173187000" />
+    <option name="totallyTimeSpent" value="181160000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3068,21 +2949,21 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.48606467" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.48606467" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32539684" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32441473" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49780703" visible="true" weight="0.48049054" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" weight="0.48049054" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32977587" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32958034" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22198506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22198506" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
       <window_info id="Learn" order="2" weight="0.32995737" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.24386339" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.24386339" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -3156,7 +3037,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java</url>
-          <line>102</line>
+          <line>103</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
@@ -3173,25 +3054,21 @@
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/FileOutputStream.java</url>
-          <line>100</line>
+          <url>file://$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java</url>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/liteshell/Application.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="82" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="line.endsWith(&quot;;&quot;)" language="JAVA" />
         <watch expression="sb.toString()" language="JAVA" />
         <watch expression="line.length()" language="JAVA" />
+        <watch expression="PluginFactory.get()" language="JAVA" custom="liteshell.plugins.PluginFactory" />
+        <watch expression="fos.getFD()" language="JAVA" />
       </configuration>
       <configuration name="Application">
         <watch expression="this.getCurrentWorkingDirectory()" language="JAVA" />
@@ -3208,6 +3085,17 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>fos.getFD()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>PluginFactory.get()</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>liteshell.plugins.PluginFactory</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>super.getScopeVariables()</expression-string>
         <language-id>JAVA</language-id>
@@ -3245,16 +3133,6 @@
       </expression>
       <expression>
         <expression-string>line.length()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sb.toString()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>sb.delete(0, sb.toString().length())</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -3308,120 +3186,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Commands/Pwd/src/main/java/liteshell/plugins/PwdPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Pwd/src/main/java/liteshell/parsers/PwdParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Commands/Import/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/../Commands/Pwd/src/main/java/liteshell/commands/PwdCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="77" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Import/src/main/java/liteshell/commands/ImportCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Import/src/main/java/liteshell/parsers/ImportParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Import/src/main/java/liteshell/plugins/ImportPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Import/src/main/java/liteshell/receivers/ImportReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Copy/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Import/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/scopes/ScopeData.class" />
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="950" column="14" selection-start-line="950" selection-start-column="14" selection-end-line="950" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/ScopeVariables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/scopes/ScopeVariables.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/Remove/src/main/java/liteshell/plugins/RemovePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/scopes/Scope.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commands/ListDir/src/main/java/liteshell/commands/ListDirectoryCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Commands/ListDir/src/main/java/liteshell/receivers/ListDirectoryReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -3433,16 +3197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/ScriptParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3485,20 +3239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/GrepCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -3581,13 +3321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/ImportDownload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -3598,13 +3331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/CommandIOException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -3612,38 +3338,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/PluginNotSupportedException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        <state relative-caret-position="617">
+          <caret line="90" column="3" selection-start-line="90" selection-start-column="3" selection-end-line="90" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="docComment;class#ApplicationScope#0" />
           </folding>
         </state>
       </provider>
@@ -3655,46 +3355,282 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ApplicationScope.java">
+    <entry file="file://$PROJECT_DIR$/../Commons/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="90" column="3" selection-start-line="90" selection-start-column="3" selection-end-line="90" selection-end-column="3" />
-          <folding>
-            <element signature="docComment;class#ApplicationScope#0" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/exceptions/PluginNotSupportedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/ShellClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/ShellClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1327">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="377">
+          <caret line="21" column="95" lean-forward="true" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/plugins/PluginMeta.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/GrepCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commands/Remove/src/main/java/liteshell/commands/CopyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/DeletePackageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/ScriptParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PackagePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/commands/ios/DefaultInput.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/BlockJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runner/JUnitCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="370" selection-start-line="370" selection-end-line="370" />
+          <folding>
+            <element signature="e#2922#2923#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#10310#10449#0" expanded="true" />
+            <element signature="e#10448#10449#0" expanded="true" />
+            <element signature="e#11040#11204#0" expanded="true" />
+            <element signature="e#11203#11204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/InvokeMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/nio/channels/FileChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="640" column="28" lean-forward="true" selection-start-line="640" selection-start-column="28" selection-end-line="640" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/JarAdder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/UrlDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2415#2416#0" expanded="true" />
+            <element signature="e#2440#2441#0" expanded="true" />
+            <element signature="e#2695#2696#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/DownloadPackageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

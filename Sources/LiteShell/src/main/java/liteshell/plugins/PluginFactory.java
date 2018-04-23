@@ -48,7 +48,7 @@ public class PluginFactory {
     registerCommands();
   }
 
-  public static PluginFactory init() {
+  public static PluginFactory get() {
     return INSTANCE;
   }
 
@@ -56,7 +56,7 @@ public class PluginFactory {
     return shellPlugins.get(name).getCommand();
   }
 
-  public void addPlugin(final String pluginName) {
+  public void addPlugin(final String pluginName) throws IOException {
     //check whether command name is loaded - just in case
     if (shellPlugins.containsKey(pluginName)) {
       log.info("Command {} already loaded.", pluginName);
@@ -73,7 +73,7 @@ public class PluginFactory {
     downloadAndLoad(pluginName);
   }
 
-  private void downloadAndLoad(String pluginName) {
+  private void downloadAndLoad(String pluginName) throws IOException {
 
     try {
       URL website = new URL(BASE_URL);
@@ -84,6 +84,7 @@ public class PluginFactory {
     } catch (Exception ex) {
       ex.printStackTrace();
     }
+    registerCommands();
   }
 
   public void addPlugin(final String pluginName, final ShellPlugin shellPlugin) {

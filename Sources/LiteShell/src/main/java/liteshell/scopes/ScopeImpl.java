@@ -6,13 +6,13 @@ import java.util.Optional;
 import java.util.Stack;
 import java.util.stream.Stream;
 import javafx.util.Pair;
-import liteshell.ShellClient;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
 import liteshell.executors.Executor;
 import liteshell.parsers.ParserFactory;
 import liteshell.plugins.PluginFactory;
 import liteshell.plugins.ShellPlugin;
+import liteshell.utils.ShellClient;
 
 
 /**

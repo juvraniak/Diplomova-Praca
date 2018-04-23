@@ -1,4 +1,4 @@
-package liteshell;
+package liteshell.utils;
 
 import liteshell.executors.Executor;
 import liteshell.executors.ExecutorImpl;
@@ -21,7 +21,7 @@ public class ShellClient {
   private Executor executor;
 
   private ShellClient() {
-    pluginFactory = PluginFactory.init();
+    pluginFactory = PluginFactory.get();
     parserFactory = ParserFactory.init();
     parserFactory.addParsers(pluginFactory.getShellPlugins());
     executor = new ExecutorImpl();

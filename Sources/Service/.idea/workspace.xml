@@ -92,11 +92,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LibraryStorageService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LibraryStorageService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/service/LibraryStorageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+            <state relative-caret-position="1224">
+              <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2345#2346#0" expanded="true" />
@@ -106,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LibraryController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/controller/LibraryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="266">
               <caret line="49" column="31" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -560,7 +560,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="1600" />
     <option name="height" value="873" />
@@ -801,12 +801,12 @@
       <workItem from="1519241024157" duration="7304000" />
       <workItem from="1523475769978" duration="1206000" />
       <workItem from="1524404714977" duration="752000" />
-      <workItem from="1524405736382" duration="7904000" />
+      <workItem from="1524405736382" duration="9122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31401000" />
+    <option name="totallyTimeSpent" value="32619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="7" />
@@ -824,7 +824,7 @@
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.2497332" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="5" visible="true" weight="0.39933258" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" visible="true" weight="0.39933258" />
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290735" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -835,7 +835,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="1" weight="0.32914045" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3343983" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.31163287" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.31163287" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
       <window_info anchor="right" id="Bean Validation" order="1" />
       <window_info id="Web" order="0" side_tool="true" />
@@ -1131,16 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/controller/LibraryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="49" column="31" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/uploadForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1150,12 +1140,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/service/LibraryStorageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="1224">
+          <caret line="68" column="77" lean-forward="true" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2345#2346#0" expanded="true" />
             <element signature="e#2403#2404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sk/stuba/controller/LibraryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import javafx.util.Pair;
-import liteshell.ShellClient;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
+import liteshell.utils.ShellClient;
 
 /**
  * @author xvraniak@stuba.sk

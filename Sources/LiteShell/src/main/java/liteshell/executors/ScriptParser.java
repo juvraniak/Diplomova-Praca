@@ -7,11 +7,11 @@ import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
 import javafx.util.Pair;
-import liteshell.ShellClient;
 import liteshell.exceptions.PluginNotSupportedException;
 import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
+import liteshell.utils.ShellClient;
 
 
 /**
@@ -33,6 +33,7 @@ public class ScriptParser {
   public void parse(String scriptPath) {
 
     Scope scriptScope = new ScopeImpl(scriptPath, shellClient);
+//    scriptScope.getScope().
     StringBuilder sb = new StringBuilder();
     try (Stream<String> lines = Files.lines(Paths.get(scriptPath), Charset.defaultCharset())) {
       lines
@@ -53,7 +54,7 @@ public class ScriptParser {
                 sb.append(" ");
               }
             }
-      });
+          });
 
       System.out.println("tu");
       scriptScope.executeScript();
