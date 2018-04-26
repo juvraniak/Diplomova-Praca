@@ -115,7 +115,7 @@ class PipeExecutor implements ExecutorListener {
   @Override
   public void run() {
     CommandOutput out = plugin.getCommand().execute(DefaultInput.of(command), Optional.of(scope));
-    if (out.getReturnCode().get() == 0) {
+    if (out.getReturnCode() == 0) {
       if (listener != null) {
         listener.finishedExecution(out);
       } else {

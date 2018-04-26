@@ -18,10 +18,10 @@ public class RemoveReceiver implements Receiver {
         Path sourcePath = Paths.get(args[1]);
         try {
             Files.delete(sourcePath);
-            commandOutput.setCommandOutput(Stream.of("File deleted."));
+            commandOutput.setCommandOutput(Optional.of(Stream.of("File deleted.")));
             commandOutput.setReturnCode(0);
         } catch (IOException e) {
-            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
             commandOutput.setReturnCode(-1);
         }finally {
             return commandOutput;

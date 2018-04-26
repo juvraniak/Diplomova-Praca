@@ -1,12 +1,11 @@
 package liteshell.receivers;
 
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
-import liteshell.scopes.Scope;
-
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Stream;
+import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.DefaultOutput;
+import liteshell.scopes.Scope;
 
 /**
  * @author xvraniak@stuba.sk
@@ -22,11 +21,11 @@ public class GrepReceiver implements Receiver {
 
         try{
             Stream<String> out = Arrays.asList(strings).stream().skip(2).filter(item -> item.contains(filterWord)).sorted();
-            commandOutput.setCommandOutput(out);
-            commandOutput.setCommandErrorOutput(Stream.empty());
+            commandOutput.setCommandOutput(Optional.of(out));
+            commandOutput.setCommandErrorOutput(Optional.of(Stream.empty()));
             commandOutput.setReturnCode(0);
         } catch (Exception e){
-            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
             commandOutput.setReturnCode(-1);
         }
 

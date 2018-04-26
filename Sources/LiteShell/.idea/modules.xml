@@ -9,11 +9,11 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Import_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Import_main.iml" group="Import" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Import_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Import_test.iml" group="Import" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListDir.iml" filepath="$PROJECT_DIR$/.idea/modules/ListDir.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListDir_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ListDir_main.iml" group="liteshell" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListDir_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ListDir_test.iml" group="liteshell" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListDir_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ListDir_main.iml" group="ListDir" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListDir_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ListDir_test.iml" group="ListDir" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Move.iml" filepath="$PROJECT_DIR$/.idea/modules/Move.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Move_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Move_main.iml" group="liteshell" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Move_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Move_test.iml" group="liteshell" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Move_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Move_main.iml" group="Move" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Move_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Move_test.iml" group="Move" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pwd.iml" filepath="$PROJECT_DIR$/.idea/modules/Pwd.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pwd_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Pwd_main.iml" group="Pwd" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pwd_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Pwd_test.iml" group="Pwd" />

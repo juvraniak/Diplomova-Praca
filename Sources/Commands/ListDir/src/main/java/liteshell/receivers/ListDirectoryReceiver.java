@@ -19,11 +19,10 @@ public class ListDirectoryReceiver implements Receiver {
 
         try{
             Stream<String> out = Arrays.asList(filesList).stream().map(f -> f.getName()).sorted();
-            commandOutput.setCommandOutput(out);
-            commandOutput.setCommandErrorOutput(Stream.empty());
+            commandOutput.setCommandOutput(Optional.of(out));
             commandOutput.setReturnCode(0);
         } catch (Exception e){
-            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
             commandOutput.setReturnCode(-1);
         }
 

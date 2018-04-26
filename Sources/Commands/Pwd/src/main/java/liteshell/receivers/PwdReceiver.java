@@ -14,11 +14,15 @@ public class PwdReceiver implements Receiver {
 
     try {
       if (scope.isPresent()) {
-        commandOutput.setCommandOutput(Stream.of(scope.get().getCurrentWorkingDirectory()));
+        String pwd = scope.get().getCurrentWorkingDirectory();
+        Stream<String> pwdStream = Stream.of(pwd);
+        Optional<Stream<String>> optionalOut = Optional.of(pwdStream);
+        commandOutput
+            .setCommandOutput(optionalOut);
         commandOutput.setReturnCode(0);
       }
     } catch (Exception e) {
-      commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+      commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
       commandOutput.setReturnCode(-1);
     } finally {
       return commandOutput;

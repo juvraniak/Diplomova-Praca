@@ -22,6 +22,7 @@ import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
  * @author xvraniak@stuba.sk
  */
@@ -74,17 +75,26 @@ public class PluginFactory {
   }
 
   private void downloadAndLoad(String pluginName) throws IOException {
+    if (!pluginName.endsWith(".jar")) {
+      pluginName = pluginName + ".jar";
+    }
 
-    try {
-      URL website = new URL(BASE_URL);
-      ReadableByteChannel rbc = Channels.newChannel(website.openStream());
-      FileOutputStream fos = new FileOutputStream("libs/");
+    URL website = new URL(BASE_URL + pluginName);
+    try (ReadableByteChannel rbc = Channels
+        .newChannel(website.openStream()); FileOutputStream fos = new FileOutputStream(
+        "libs/" + pluginName + ".jar")) {
+//      URL website = new URL(BASE_URL);
+//      ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+//      FileOutputStream fos = new FileOutputStream("libs/");
       fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+
 
     } catch (Exception ex) {
       ex.printStackTrace();
     }
-    registerCommands();
+    //Fix: bud restartovat konzolu, alebo prist na to preco sa to neulozi do vypnutia programu
+
+
   }
 
   public void addPlugin(final String pluginName, final ShellPlugin shellPlugin) {
@@ -125,7 +135,19 @@ public class PluginFactory {
 
   private void registerAppCommands() {
 //        shellPlugins.put("double", new DoublePlugin());
-//        shellPlugins.put("pkg", new DownloadPlugin());
     shellPlugins.put("grep", new GrepPlugin());
+    shellPlugins.put("pkg", new PackagePlugin());
+    shellPlugins.put("int", new VariablePlugin());
+  }
+
+  public boolean changePlugin(String usePlugin) {
+    String[] parameters = usePlugin.split(" ");
+    String plugin = parameters[1];
+    String version = parameters[2];
+
+    System.out.println(
+        "Will try to use in pluginFactory specified plugin " + plugin + " version : " + version);
+
+    return true;
   }
 }

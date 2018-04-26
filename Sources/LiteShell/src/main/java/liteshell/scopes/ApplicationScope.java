@@ -23,8 +23,6 @@ public class ApplicationScope extends ScopeImpl implements Runnable {
     loadSystemVariables();
   }
 
-
-  private final ScopeVariables scopeVariables = new ScopeVariables();
   //mac execute
 //    private static String[] mockCommands = {"ls /Users/jvraniak@sk.ibm.com/Desktop/test2/",
 //        "copy /Users/jvraniak@sk.ibm.com/Desktop/test/test.txt /Users/jvraniak@sk.ibm.com/Desktop/test2/test.txt",
@@ -88,10 +86,5 @@ public class ApplicationScope extends ScopeImpl implements Runnable {
     ScopeVariables variables = super.getScopeVariables();
     variables.getStringMap().putAll(System.getenv());
     variables.getInitializedVariables().addAll(variables.getStringMap().keySet());
-  }
-
-  @Override
-  public ScopeVariables getScopeVariables() {
-    return null;
   }
 }

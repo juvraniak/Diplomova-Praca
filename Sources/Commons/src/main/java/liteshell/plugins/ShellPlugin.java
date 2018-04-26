@@ -20,6 +20,5 @@ public interface ShellPlugin {
   Optional<CommandParser> getCommandParser();
 
   Optional<FunctionParser> getFunctionParser();
-
-
+  
 }

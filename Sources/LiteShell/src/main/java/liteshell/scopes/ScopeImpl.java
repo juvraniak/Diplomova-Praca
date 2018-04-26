@@ -82,7 +82,7 @@ public class ScopeImpl implements Scope {
       CommandOutput out = k.getKey().getCommand()
           .execute(DefaultInput.of(Stream.of(k.getValue())), Optional.of(this));
 
-      System.out.println(out.getReturnCode().get());
+      System.out.println(out.getReturnCode());
       out.getCommandOutput().get().forEach(System.out::println);
     });
   }

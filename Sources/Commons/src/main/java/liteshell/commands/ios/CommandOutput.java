@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public interface CommandOutput {
 
-    Optional<Integer> getReturnCode();
+    Integer getReturnCode();
 
     Optional<Stream<String>> getCommandOutput();
 
@@ -17,7 +17,7 @@ public interface CommandOutput {
 
     void setReturnCode(Integer returnCode);
 
-    void setCommandOutput(Stream<String> commandOutput);
+    void setCommandOutput(Optional<Stream<String>> commandOutput);
 
-    void setCommandErrorOutput(Stream<String> commandErrorOutput);
+    void setCommandErrorOutput(Optional<Stream<String>> commandErrorOutput);
 }

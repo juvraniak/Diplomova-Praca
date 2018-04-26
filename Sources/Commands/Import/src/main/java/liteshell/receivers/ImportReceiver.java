@@ -13,10 +13,10 @@ public class ImportReceiver implements Receiver {
     CommandOutput commandOutput = new DefaultOutput();
 
     try {
-      commandOutput.setCommandOutput(Stream.of("Dummy importer."));
+      commandOutput.setCommandOutput(Optional.of(Stream.of("Dummy importer.")));
       commandOutput.setReturnCode(0);
     } catch (Exception e) {
-      commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+      commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
       commandOutput.setReturnCode(-1);
     } finally {
       return commandOutput;

@@ -20,10 +20,10 @@ public class MoveReceiver implements Receiver {
         Path destPath = Paths.get(args[2]);
         try {
             Files.move(sourcePath, destPath);
-            commandOutput.setCommandOutput(Stream.of("Files were moved."));
+            commandOutput.setCommandOutput(Optional.of(Stream.of("Files were moved.")));
             commandOutput.setReturnCode(0);
         } catch (IOException e) {
-            commandOutput.setCommandErrorOutput(Stream.of(e.getMessage()));
+            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
             commandOutput.setReturnCode(-1);
         }finally {
             return commandOutput;
