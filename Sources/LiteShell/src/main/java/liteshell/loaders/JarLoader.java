@@ -10,20 +10,17 @@ import java.util.Optional;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 import liteshell.plugins.ShellPlugin;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author xvraniak@stuba.sk
  */
-
+@Slf4j
 public class JarLoader {
-    private static final Logger log = LoggerFactory.getLogger(JarLoader.class);
+
 
     private JarLoader() {
     }
-
-    //TODO : ak by sa nasiel cas poupravovat!
     public static Optional<ShellPlugin> loadCommand(Path jarPath) {
         JarEntry jarEntry;
         URL[] urls = getJarUrls(jarPath.toString());

@@ -24,6 +24,6 @@ dependencies {
 }
 
 jar {
-    baseName = 'pwd-command'
+    baseName = 'pwd'
     version = version
 }

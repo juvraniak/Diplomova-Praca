@@ -1,7 +1,6 @@
 package liteshell.scopes;
 
 import java.util.Optional;
-import javafx.util.Pair;
 import liteshell.plugins.ShellPlugin;
 
 /**
@@ -20,7 +19,7 @@ public interface Scope {
 
   Optional<ShellPlugin> findShellPlugin(String command);
 
-  void addCommand(Pair<ShellPlugin, String> command);
+  void addCommand(String command);
 
   void executeScript();
 }

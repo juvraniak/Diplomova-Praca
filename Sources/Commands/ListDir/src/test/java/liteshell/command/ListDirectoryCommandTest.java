@@ -12,7 +12,7 @@ import org.junit.Test;
 import liteshell.commands.Command;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
-import liteshell.plugins.ListDirPlugin;
+import liteshell.v1.plugins.ListDirPlugin;
 import liteshell.test.PluginTest;
 
 public class ListDirectoryCommandTest implements PluginTest{

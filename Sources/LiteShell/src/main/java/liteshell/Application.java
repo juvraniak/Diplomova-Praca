@@ -1,6 +1,6 @@
 package liteshell;
 
-import liteshell.scopes.ApplicationScope;
+import liteshell.scopes.ScopeImpl;
 import liteshell.utils.ShellClient;
 
 /**
@@ -8,10 +8,9 @@ import liteshell.utils.ShellClient;
  */
 
 public class Application {
-
   public static void main(String[] args) {
     ShellClient shellClient = ShellClient.getInstance();
-    Runnable application = new ApplicationScope(shellClient);
+    Runnable application = new ScopeImpl("application", shellClient, null);
     application.run();
   }
 }

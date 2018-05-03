@@ -34,17 +34,14 @@ public class IntReceiver implements Receiver {
     var.getIntegerMap().put(variableName, integerValue);
     out.setReturnCode(0);
     if (strings.length > 2) {
-      //means there is = sign lets find it
-      //int i = 3
-      if (strings[2].equals("=")) {
         try {
-          integerValue = Integer.parseInt(strings[3]);
+          integerValue = Integer.parseInt(strings[2]);
           var.getIntegerMap().put(variableName, integerValue);
         } catch (NumberFormatException e) {
+          //TODO: if parseInt fail we may need to check whether it is command there...
           out.setCommandErrorOutput(Optional.of(Stream.of("Wrong format : " + e.getMessage())));
           out.setReturnCode(-1);
         }
-      }
     }
     return out;
   }

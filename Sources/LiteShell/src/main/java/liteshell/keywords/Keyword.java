@@ -3,7 +3,7 @@ package liteshell.keywords;
 /**
  * @author xvraniak@stuba.sk
  */
-
+//not sure if this will be ever needed.
 public enum Keyword {
     IF("if"),
     ELSE("else"),

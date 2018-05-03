@@ -13,7 +13,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 import liteshell.commands.Command;
 import liteshell.commands.ios.DefaultInput;
-import liteshell.plugins.MovePlugin;
+import liteshell.v1.plugins.MovePlugin;
 import liteshell.test.PluginTest;
 import org.junit.Assert;
 import org.junit.Test;

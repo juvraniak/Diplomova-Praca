@@ -21,6 +21,6 @@ dependencies {
 }
 
 jar {
-    baseName = 'copy-command'
+    baseName = 'copy'
     version =  version
 }

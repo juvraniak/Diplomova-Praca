@@ -22,7 +22,6 @@ public class ImportTest {
         .execute(DefaultInput.of(Stream.of("pkg download move-command-1.0")), Optional.empty());
 
     PluginFactory factory = PluginFactory.get();
-    factory.registerCommands();
-    factory.getShellPlugins();
+    
   }
 }

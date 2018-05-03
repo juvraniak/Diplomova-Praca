@@ -6,7 +6,9 @@ import java.util.stream.Stream;
 import liteshell.commands.ios.CommandInput;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.exceptions.CommandIOException;
+import liteshell.receivers.DoubleReceiver;
 import liteshell.receivers.IntReceiver;
+import liteshell.receivers.StringReceiver;
 import liteshell.scopes.Scope;
 
 /**
@@ -15,38 +17,49 @@ import liteshell.scopes.Scope;
 
 public class VariableCommand implements Command {
 
-    @Override
-    public CommandOutput execute(CommandInput commandInput, Optional<Scope> scope) {
-        if (commandInput.getCommandInput().isPresent()) {
-            String[] splitedImport = parseComand(commandInput.getCommandInput().get());
-            String commandCase = splitedImport[0];
-            CommandOutput out = null;
-            switch (commandCase) {
-                case "int":
-                    out = new IntReceiver().executeCommand(splitedImport, scope);
-                    break;
-                case "double":
-//                    out = new ChangePackageReceiver().executeCommand(splitedImport, scope);
-                    break;
-                case "boolean":
+  @Override
+  public CommandOutput execute(CommandInput commandInput, Optional<Scope> scope) {
+    if (commandInput.getCommandInput().isPresent()) {
+      String[] splitedImport = parseComand(commandInput.getCommandInput().get());
+      String commandCase = splitedImport[0];
+      CommandOutput out = null;
+      switch (commandCase) {
+        case "int":
+          out = new IntReceiver().executeCommand(splitedImport, scope);
+          break;
+        case "double":
+          out = new DoubleReceiver().executeCommand(splitedImport, scope);
+          break;
+        case "boolean":
 //                    out = new DeletePackageReceiver().executeCommand(splitedImport, scope);
-                    break;
-                case "string":
-//                    out = new DeletePackageReceiver().executeCommand(splitedImport, scope);
-                    break;
-            }
-            return out;
-        } else {
-            throw new CommandIOException("Input not found");
-        }
+          break;
+        case "string":
+          out = new StringReceiver().executeCommand(splitedImport, scope);
+          break;
+      }
+      return out;
+    } else {
+      throw new CommandIOException("Input not found");
     }
+  }
 
-    @Override
-    public String[] parseComand(Stream<String> stream) {
-        return removeEmptyStrings(stream.findFirst().get().split(" "));
+  @Override
+  public String[] parseComand(Stream<String> stream) {
+    String input = stream.findFirst().get();
+    if (input.endsWith(";")) {
+      input = input.substring(0, input.length() - 1);
     }
+    if (input.contains(" = ")) {
+      String[] eqSplit = removeEmptyStrings(input.split(" = "));
+      String[] out = new String[]{eqSplit[0].split(" ")[0], eqSplit[0].split(" ")[1],
+          eqSplit[1]};
+      return out;
+    }
+    String[] out = new String[]{input.split(" ")[0], input.split(" ")[1]};
+    return out;
+  }
 
-    private String[] removeEmptyStrings(String[] split) {
-        return Arrays.asList(split).stream().filter(s -> !s.isEmpty()).toArray(String[]::new);
-    }
+  private String[] removeEmptyStrings(String[] split) {
+    return Arrays.asList(split).stream().filter(s -> !s.isEmpty()).toArray(String[]::new);
+  }
 }

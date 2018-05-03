@@ -2,7 +2,6 @@ package liteshell.utils;
 
 import liteshell.executors.Executor;
 import liteshell.executors.ExecutorImpl;
-import liteshell.parsers.ParserFactory;
 import liteshell.plugins.PluginFactory;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,13 +16,10 @@ public class ShellClient {
 
   private static final ShellClient SHELL_CLIENT = new ShellClient();
   private PluginFactory pluginFactory;
-  private ParserFactory parserFactory;
   private Executor executor;
 
   private ShellClient() {
     pluginFactory = PluginFactory.get();
-    parserFactory = ParserFactory.init();
-    parserFactory.addParsers(pluginFactory.getShellPlugins());
     executor = new ExecutorImpl();
   }
 

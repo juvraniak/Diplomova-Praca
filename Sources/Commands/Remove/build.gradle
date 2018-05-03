@@ -21,6 +21,6 @@ dependencies {
 }
 
 jar {
-    baseName = 'remove-command'
+    baseName = 'remove'
     version =  version
 }

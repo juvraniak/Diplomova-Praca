@@ -32,7 +32,7 @@ public class ScriptParser {
   private static final String COMMENT = "//";
   private static final String PIPE = "\\|";
   private List<String> CONTENT = new ArrayList<>();
-  private Map<String, Scope> listOfScopes = new HashMap<>();
+  private Map<String, ScopeImpl> listOfScopes = new HashMap<>();
 
   private ShellClient shellClient;
 
@@ -43,7 +43,8 @@ public class ScriptParser {
   }
 
   public void parse(String scriptPath) {
-    Scope scriptScope = createNewScope("main");
+    ScopeImpl scriptScope = createNewScope("main");
+    boolean isOverride = false;
 
 
     StringBuilder sb = new StringBuilder();
@@ -51,17 +52,30 @@ public class ScriptParser {
 
     for (int i = 0; i < CONTENT.size(); ) {
       line = CONTENT.get(i);
-      if (line.trim().startsWith("function")) {
-        i = handleFunction(i);
+      if (line.trim().startsWith("@Override")) {
+        isOverride = true;
+        i++;
+      } else if (line.trim().startsWith("function")) {
+        i = handleFunction(i, scriptScope, isOverride);
+        isOverride = false;
+      } else if (line.endsWith("\\")) {
+        sb.append(line.substring(0, line.length() - 1));
+        i++;
+      } else if (line.endsWith(";")) {
+        //for noW it may be only global variables
+        sb.append(line.replace(";", ""));
+        scriptScope.addCommand(sb.toString().trim());
+        i++;
       }
     }
 
     System.out.println("tu");
+    scriptScope.setFunctions(listOfScopes);
     scriptScope.executeScript();
 
   }
 
-  private int handleFunction(int currentLine) {
+  private int handleFunction(int currentLine, Scope parrentScope, boolean isOverride) {
     String line = CONTENT.get(currentLine).trim();
     StringBuilder sb = new StringBuilder();
     String parameters = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
@@ -72,19 +86,17 @@ public class ScriptParser {
 
     String returnType = functionLine[0];
     String functionName = functionLine[1];
-    Scope functionScope = createNewScope(functionName);
-
+    ScopeImpl functionScope = (ScopeImpl) createNewScope(functionName, parrentScope);
+    functionScope.setReturnType(returnType);
+    List<Pair<String, String>> input = handleInputParam(parameters);
+    functionScope.setInputParameters(input);
+    functionScope.setOverride(isOverride);
     for (int i = currentLine + 1; i < CONTENT.size(); i++) {
       line = CONTENT.get(i);
       if (line.endsWith(";")) {
-        try {
-          process(sb.append(line.trim()).toString(), functionScope);
-        } catch (PluginNotSupportedException e) {
-          e.printStackTrace();
-        }
+        functionScope.addCommand(sb.append(line.trim()).toString());
         sb.delete(0, sb.toString().length());
       } else if (line.endsWith("\\")) {
-
         sb.append(line.substring(0, line.length() - 1));
 
 //        if (line.length() > 0 && !line.endsWith(" ")) {
@@ -99,8 +111,23 @@ public class ScriptParser {
         break;
       }
     }
-    listOfScopes.put(functionName, functionScope);
+    if (isOverride || listOfScopes.get(functionName) == null) {
+      listOfScopes.put(functionName, functionScope);
+    }
     return currentLine;
+  }
+
+  private List<Pair<String, String>> handleInputParam(String parameters) {
+    if (parameters.isEmpty()) {
+      return new ArrayList<>();
+    }
+    String[] splittedParams = StringUtils.removeEmptyStrings(parameters.split(","));
+    List<Pair<String, String>> in = new ArrayList<>();
+    for (String s : splittedParams) {
+      String[] split = s.split(BLANK_SPACE);
+      in.add(new Pair<>(split[0], split[1]));
+    }
+    return in;
   }
 
   private void process(String line, Scope scope) throws PluginNotSupportedException {
@@ -110,7 +137,7 @@ public class ScriptParser {
     String processedCommand = line;
 
     if (splited.length > 1) {
-      String processedCommand = processParameters(splited);
+//      String processedCommand = processParameters(splited);
     }
     //check if line is a pipe
     String[] tokens = line.split(PIPE);
@@ -119,7 +146,7 @@ public class ScriptParser {
     if (plugin.isPresent()) {
       Pair<ShellPlugin, String> pair = new Pair<>(plugin.get(),
           line.substring(0, line.length() - 1));
-      scope.addCommand(pair);
+//      scope.addCommand(pair);
     } else {
       throw new PluginNotSupportedException("Did not find plugin : " + line.split(BLANK_SPACE)[0]);
     }
@@ -129,7 +156,7 @@ public class ScriptParser {
 
   private String processParameters(String[] splited) {
     String command = splited[0];
-
+    return null;
   }
 
   private void loadScript(String path) throws MethodMissingEception {
@@ -163,8 +190,12 @@ public class ScriptParser {
     }
   }
 
-  private Scope createNewScope(String name) {
-    return new ScopeImpl(name, shellClient);
+  private ScopeImpl createNewScope(String name) {
+    return new ScopeImpl(name, shellClient, null);
+  }
+
+  private Scope createNewScope(String name, Scope parrent) {
+    return new ScopeImpl(name, shellClient, parrent);
   }
 
 }

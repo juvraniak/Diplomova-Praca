@@ -6,15 +6,13 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 import liteshell.commands.Command;
 import liteshell.commands.ios.DefaultInput;
-import liteshell.plugins.CopyPlugin;
 import liteshell.test.PluginTest;
+import liteshell.v1.plugins.CopyPlugin;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,16 +20,6 @@ public class CopyCommandTest implements PluginTest{
 
     CopyPlugin copyPlugin = new CopyPlugin();
 
-    @Test
-    @Override
-    public void regexTest() {
-        Optional<List<String>> patterns = copyPlugin.getInfo().getMatcher();
-        Assert.assertTrue("Matcher list is empty!", patterns.isPresent());
-        List<String> correctCommand = Arrays.asList("copy path path;");
-        List<String> incorrectCommand = Arrays.asList("copy path path");
-
-        assertRegex(patterns, correctCommand, incorrectCommand);
-    }
     @Test
     @Override
     public void commandTest() {
