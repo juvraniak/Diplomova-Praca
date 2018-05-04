@@ -160,6 +160,7 @@ public class PluginFactory {
     allAvailablePlugins.put(new PluginMeta("1.0", "int"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "double"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "string"), new VariablePlugin());
+    allAvailablePlugins.put(new PluginMeta("1.0", "${"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "cd"), new ChangeDirectoryPlugin());
   }
 

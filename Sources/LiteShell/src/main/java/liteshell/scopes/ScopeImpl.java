@@ -1,5 +1,6 @@
 package liteshell.scopes;
 
+import liteshell.keywords.Keyword;
 import liteshell.utils.ShellClient;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,7 +18,7 @@ public class ScopeImpl extends AbstractScope {
     this.executor = shellClient.getExecutor();
     this.parent = parent;
     this.scopeVariables.getStringMap().put("pwd", System.getProperty("user.home"));
-    this.scopeVariables.getInitializedVariables().add("pwd");
+    this.scopeVariables.getInitializedVariables().put("pwd", Keyword.STRING);
     if (scopeName.equals("application")) {
       loadSystemVariables();
     }

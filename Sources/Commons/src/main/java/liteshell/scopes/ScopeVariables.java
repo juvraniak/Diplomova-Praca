@@ -1,10 +1,10 @@
 package liteshell.scopes;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import liteshell.keywords.Keyword;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 public class ScopeVariables {
 
-    private Set<String> initializedVariables;
+    private Map<String, Keyword> initializedVariables;
     private Map<String, Integer> integerMap;
     private Map<String, Double> doubleMap;
     private Map<String, Boolean> booleanMap;
@@ -26,7 +26,7 @@ public class ScopeVariables {
     private Map<String, Map<?, ?>> mapMap;
 
     public ScopeVariables() {
-        this.initializedVariables = new HashSet<>();
+        this.initializedVariables = new HashMap<>();
         this.integerMap = new HashMap<>();
         this.doubleMap = new HashMap<>();
         this.booleanMap = new HashMap<>();

@@ -8,9 +8,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import javafx.util.Pair;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.executors.Executor;
+import liteshell.keywords.Keyword;
 import liteshell.plugins.PluginFactory;
 import liteshell.plugins.ShellPlugin;
 import lombok.Getter;
@@ -24,8 +26,9 @@ import lombok.extern.slf4j.Slf4j;
 public class AbstractScope implements Scope, Runnable {
 
   protected static String scopeName;
-  protected static PluginFactory pluginFactory;
-  protected static Executor executor;
+  protected PluginFactory pluginFactory;
+  @Getter
+  protected Executor executor;
   protected final ScopeVariables scopeVariables = new ScopeVariables();
   protected Scope parent;
 
@@ -112,7 +115,8 @@ public class AbstractScope implements Scope, Runnable {
 
   protected void loadSystemVariables() {
     scopeVariables.getStringMap().putAll(System.getenv());
-    scopeVariables.getInitializedVariables().addAll(scopeVariables.getStringMap().keySet());
+    scopeVariables.getInitializedVariables().putAll(scopeVariables.getStringMap().keySet().stream()
+        .collect(Collectors.toMap(a -> a, a -> Keyword.STRING)));
   }
 
   private void printLine() {

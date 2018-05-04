@@ -8,8 +8,8 @@ int globalVar = \
 8;
 
 function void main(String arg){
-  int i =5;
-  $i = 9;
+  int i = 5;
+  ${i} = 9;
   copy /home/jv/examples.desktop /home/jv/Downloads/;
   move /home/jv/Downloads/examples.desktop \
   /home/jv/Documents/examples.desktop;
@@ -21,10 +21,10 @@ function void main(String arg){
 @Override
 function void test(){
   String path = "/home/jv";
-  ls $path;
+  ls ${path};
 }
 
 function void test(){
-  int i =4;
+  int i = 4;
   ls;
 }

@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 import javafx.util.Pair;
+import liteshell.commands.VariableCommand;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultInput;
+import liteshell.commands.ios.DefaultOutput;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
@@ -26,9 +28,10 @@ public class ExecutorImpl implements Executor {
    * @param scope scope where command will be executed
    */
   @Override
-  public void execute(String command, Scope scope) {
+  public CommandOutput execute(String command, Scope scope) {
     ProcessBuilder processBuilder = new ProcessBuilder();
     processBuilder.command();
+    CommandOutput out = new DefaultOutput();
 
     if (command.startsWith("./") && command.endsWith(".sh")) {
       //TODO: handle execution of shell script
@@ -46,16 +49,21 @@ public class ExecutorImpl implements Executor {
       } catch (MethodMissingEception e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());
       }
+    } else if (command.startsWith("${")) {
+      out = new VariableCommand()
+          .execute(DefaultInput.of(Stream.of(command)), Optional.of(scope));
     } else {
-      executeSingleCommand(command, scope);
+      out = executeSingleCommand(command, scope);
     }
+    return out;
   }
 
-  private void executeSingleCommand(String command, Scope scope) {
+  private CommandOutput executeSingleCommand(String command, Scope scope) {
+    CommandOutput output = new DefaultOutput();
     String requestedCommand = command.split(" ")[0];
     Optional<ShellPlugin> plugin = scope.findShellPlugin(requestedCommand);
     if (plugin.isPresent()) {
-      CommandOutput output = plugin.get().getCommand()
+      output = plugin.get().getCommand()
           .execute(DefaultInput.of(Stream.of(command)), Optional.of(scope));
       if (output.getCommandOutput().isPresent()) {
         output.getCommandOutput().get().forEach(System.out::println);
@@ -63,6 +71,7 @@ public class ExecutorImpl implements Executor {
     } else {
       throw new UnknownCommandException(requestedCommand);
     }
+    return output;
   }
 
   private String validatePath(String filePath, Scope scope) {

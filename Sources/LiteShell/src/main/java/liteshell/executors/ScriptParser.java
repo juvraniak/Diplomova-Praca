@@ -8,14 +8,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
-import liteshell.exceptions.PluginNotSupportedException;
 import liteshell.plugins.PluginFactory;
-import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
 import liteshell.utils.ShellClient;
@@ -130,34 +127,29 @@ public class ScriptParser {
     return in;
   }
 
-  private void process(String line, Scope scope) throws PluginNotSupportedException {
-    System.out.println("in process");
-    System.out.println(line);
-    String[] splited = StringUtils.removeEmptyStrings(line.trim().split(BLANK_SPACE));
-    String processedCommand = line;
-
-    if (splited.length > 1) {
-//      String processedCommand = processParameters(splited);
-    }
-    //check if line is a pipe
-    String[] tokens = line.split(PIPE);
-    Optional<ShellPlugin> plugin = scope.findShellPlugin(line);
-
-    if (plugin.isPresent()) {
-      Pair<ShellPlugin, String> pair = new Pair<>(plugin.get(),
-          line.substring(0, line.length() - 1));
-//      scope.addCommand(pair);
-    } else {
-      throw new PluginNotSupportedException("Did not find plugin : " + line.split(BLANK_SPACE)[0]);
-    }
-
-
-  }
-
-  private String processParameters(String[] splited) {
-    String command = splited[0];
-    return null;
-  }
+//  private void process(String line, Scope scope) throws PluginNotSupportedException {
+//    System.out.println("in process");
+//    System.out.println(line);
+//    String[] splited = StringUtils.removeEmptyStrings(line.trim().split(BLANK_SPACE));
+//    String processedCommand = line;
+//
+//    if (splited.length > 1) {
+////      String processedCommand = processParameters(splited);
+//    }
+//    //check if line is a pipe
+//    String[] tokens = line.split(PIPE);
+//    Optional<ShellPlugin> plugin = scope.findShellPlugin(line);
+//
+//    if (plugin.isPresent()) {
+//      Pair<ShellPlugin, String> pair = new Pair<>(plugin.get(),
+//          line.substring(0, line.length() - 1));
+////      scope.addCommand(pair);
+//    } else {
+//      throw new PluginNotSupportedException("Did not find plugin : " + line.split(BLANK_SPACE)[0]);
+//    }
+//
+//
+//  }
 
   private void loadScript(String path) throws MethodMissingEception {
     try (Stream<String> lines = Files.lines(Paths.get(path), Charset.defaultCharset())) {
@@ -197,14 +189,5 @@ public class ScriptParser {
   private Scope createNewScope(String name, Scope parrent) {
     return new ScopeImpl(name, shellClient, parrent);
   }
-
-}
-
-
-class ScriptScope {
-
-  //map of shell plugins + their command - it has executeScript therefore shell plugin for each for cycle etc instead of scope?
-  private Map<String, Scope> functions;
-  //i need something that will hold
 
 }

@@ -5,22 +5,23 @@ package liteshell.keywords;
  */
 
 public enum Keyword {
-    IF("if"),
-    ELSE("else"),
-    INT("int"),
-    DOUBLE("double"),
-    LIST("list"),
-    MAP("map"),
-    VOID("void"),
-    FOR("for");
+  IF("if"),
+  ELSE("else"),
+  INT("int"),
+  DOUBLE("double"),
+  LIST("list"),
+  STRING("string"),
+  MAP("map"),
+  VOID("void"),
+  FOR("for");
 
-    private final String keyword;
+  private final String keyword;
 
-    private Keyword(String keyword) {
-        this.keyword = keyword;
-    }
+  private Keyword(String keyword) {
+    this.keyword = keyword;
+  }
 
-    public String getKeyword(Keyword keyword) {
-        return keyword.keyword;
-    }
+  public String getKeyword(Keyword keyword) {
+    return keyword.keyword;
+  }
 }

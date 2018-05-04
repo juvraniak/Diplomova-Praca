@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.commands.ios.DefaultOutput;
+import liteshell.keywords.Keyword;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeVariables;
 
@@ -22,7 +23,7 @@ public class DoubleReceiver implements Receiver {
     String variableName = strings[1];
 
     if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
-        .contains(variableName)) {
+        .get(variableName) != null) {
       out.setCommandErrorOutput(
           Optional
               .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
@@ -30,13 +31,12 @@ public class DoubleReceiver implements Receiver {
       return out;
     }
     ScopeVariables var = scope.get().getScopeVariables();
-    var.getInitializedVariables().add(variableName);
+    var.getInitializedVariables().put(variableName, Keyword.DOUBLE);
     var.getDoubleMap().put(variableName, doubleValue);
     out.setReturnCode(0);
     if (strings.length > 2) {
-
       try {
-        doubleValue = Double.parseDouble(strings[3]);
+        doubleValue = Double.parseDouble(strings[2]);
         var.getDoubleMap().put(variableName, doubleValue);
       } catch (NumberFormatException e) {
         out.setCommandErrorOutput(Optional.of(Stream.of("Wrong format : " + e.getMessage())));

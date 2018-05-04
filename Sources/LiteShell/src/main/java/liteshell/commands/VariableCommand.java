@@ -6,7 +6,9 @@ import java.util.stream.Stream;
 import liteshell.commands.ios.CommandInput;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.exceptions.CommandIOException;
+import liteshell.receivers.ChangeVariableReceiver;
 import liteshell.receivers.DoubleReceiver;
+import liteshell.receivers.GetVariableReceiver;
 import liteshell.receivers.IntReceiver;
 import liteshell.receivers.StringReceiver;
 import liteshell.scopes.Scope;
@@ -36,6 +38,12 @@ public class VariableCommand implements Command {
         case "string":
           out = new StringReceiver().executeCommand(splitedImport, scope);
           break;
+        case "change":
+          out = new ChangeVariableReceiver().executeCommand(splitedImport, scope);
+          break;
+        case "get":
+          out = new GetVariableReceiver().executeCommand(splitedImport, scope);
+          break;
       }
       return out;
     } else {
@@ -48,6 +56,16 @@ public class VariableCommand implements Command {
     String input = stream.findFirst().get();
     if (input.endsWith(";")) {
       input = input.substring(0, input.length() - 1);
+    }
+    if (input.startsWith("${")) {
+      if (input.contains(" = ")) {
+        String[] eqSplit = removeEmptyStrings(input.split(" = "));
+        String[] out = new String[]{"change", eqSplit[0], eqSplit[1]};
+        return out;
+      } else {
+        String[] out = new String[]{"get", input};
+        return out;
+      }
     }
     if (input.contains(" = ")) {
       String[] eqSplit = removeEmptyStrings(input.split(" = "));
