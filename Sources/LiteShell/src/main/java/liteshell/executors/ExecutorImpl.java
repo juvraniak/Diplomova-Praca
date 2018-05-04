@@ -52,8 +52,14 @@ public class ExecutorImpl implements Executor {
     } else if (command.startsWith("${")) {
       out = new VariableCommand()
           .execute(DefaultInput.of(Stream.of(command)), Optional.of(scope));
-    } else {
+    } else if (command.startsWith("$(")) {
+      if (command.endsWith(";")) {
+        command = command.substring(0, command.length() - 1);
+      }
+      command = command.substring(command.indexOf("(") + 1, command.length() - 1);
       out = executeSingleCommand(command, scope);
+    } else {
+
     }
     return out;
   }

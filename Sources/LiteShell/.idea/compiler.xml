@@ -19,6 +19,8 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Add_main" target="1.8" />
+      <module name="Add_test" target="1.8" />
       <module name="Commands-Import_main" target="1.8" />
       <module name="Commands-Import_test" target="1.8" />
       <module name="Commons_main" target="1.8" />

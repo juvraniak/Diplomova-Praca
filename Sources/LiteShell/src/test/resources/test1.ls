@@ -1,8 +1,8 @@
 use copy 1.0;
 use move 1.0;
 
-// zeby bol aj daky komentaris
-    // zeby bol aj daky komentaris aj s odsadenim
+# zeby bol aj daky komentaris
+    # zeby bol aj daky komentaris aj s odsadenim
 
 int globalVar = \
 8;
@@ -14,14 +14,16 @@ function void main(String arg){
   move /home/jv/Downloads/examples.desktop \
   /home/jv/Documents/examples.desktop;
   rm /home/jv/Documents/examples.desktop;
+  rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
   test();
 }
 
 @Override
-function void test(){
+function int test(){
   String path = "/home/jv";
   ls ${path};
+  return 4;
 }
 
 function void test(){

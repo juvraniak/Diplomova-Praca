@@ -69,6 +69,12 @@ public class AbstractScope implements Scope, Runnable {
       ShellPlugin plugin = pluginFactory.getShellPlugins().get(searchedCommand);
       if (plugin != null) {
         searchedPlugin = Optional.of(plugin);
+      } else {
+        List<String> collect = pluginFactory.getShellPlugins().keySet().stream()
+            .filter(key -> command.startsWith(key)).collect(Collectors.toList());
+        if (!collect.isEmpty()) {
+          searchedPlugin = Optional.of(pluginFactory.getShellPlugins().get(collect.get(0)));
+        }
       }
     }
     return searchedPlugin;
@@ -81,14 +87,12 @@ public class AbstractScope implements Scope, Runnable {
 
   @Override
   public void executeScript() {
+    //execute everything before main
     this.stack.forEach(k -> {
-      //TODO: should be handled by executor not SCOPE!!!
-//      CommandOutput out = k.getKey().getCommand()
-//          .execute(DefaultInput.of(Stream.of(k.getValue())), Optional.of(this));
-
-//      System.out.println(out.getReturnCode());
-//      out.getCommandOutput().get().forEach(System.out::println);
+      executor.execute(k, getScope());
     });
+    this.functions.get("main").stack.forEach(v ->
+        executor.execute(v, functions.get("main").getScope()));
   }
 
   @Override
@@ -99,18 +103,24 @@ public class AbstractScope implements Scope, Runnable {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
       try {
-        userInput = br.readLine();
+        userInput = prepareInput(br.readLine());
+        userInput = "$(add($(add(${i}, ${j})), 5));";
         executor.execute(userInput, getScope());
       } catch (UnknownCommandException ex) {
         log.error("There was issue with following command: \n {}", ex.getMessage());
       } catch (IOException ex) {
         log.error("Problem reading from command line:\n {}", ex.getMessage());
       }
-      if (userInput.equals("exit")) {
+      if (userInput.equals("$(exit);")) {
         System.exit(0);
       }
       printLine();
     }
+  }
+
+  private String prepareInput(String in) {
+    return in.startsWith("./") ? in
+        : in.endsWith(";") ? "$(" + in.substring(0, in.length() - 1) + ");" : "$(" + in + ");";
   }
 
   protected void loadSystemVariables() {

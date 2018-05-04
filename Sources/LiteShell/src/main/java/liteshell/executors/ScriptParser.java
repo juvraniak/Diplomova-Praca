@@ -26,7 +26,7 @@ import liteshell.utils.StringUtils;
 public class ScriptParser {
 
   private static final String BLANK_SPACE = " ";
-  private static final String COMMENT = "//";
+  private static final String COMMENT = "#";
   private static final String PIPE = "\\|";
   private List<String> CONTENT = new ArrayList<>();
   private Map<String, ScopeImpl> listOfScopes = new HashMap<>();
@@ -60,8 +60,8 @@ public class ScriptParser {
         i++;
       } else if (line.endsWith(";")) {
         //for noW it may be only global variables
-        sb.append(line.replace(";", ""));
-        scriptScope.addCommand(sb.toString().trim());
+        sb.append(line.replace(";", "")).append(");");
+        scriptScope.addCommand("$(" + sb.toString().trim());
         i++;
       }
     }
@@ -91,7 +91,13 @@ public class ScriptParser {
     for (int i = currentLine + 1; i < CONTENT.size(); i++) {
       line = CONTENT.get(i);
       if (line.endsWith(";")) {
-        functionScope.addCommand(sb.append(line.trim()).toString());
+        sb.append(line.trim());
+        sb.deleteCharAt(sb.length() - 1);
+        if (isFunctionCall(sb.toString())) {
+          functionScope.addCommand(sb.toString());
+        } else {
+          functionScope.addCommand("$(" + sb.toString() + ");");
+        }
         sb.delete(0, sb.toString().length());
       } else if (line.endsWith("\\")) {
         sb.append(line.substring(0, line.length() - 1));
@@ -114,6 +120,16 @@ public class ScriptParser {
     return currentLine;
   }
 
+  private boolean isFunctionCall(String call) {
+    boolean isFunction = false;
+    List<String> collect = listOfScopes.keySet().stream().filter(str -> call.contains(str + "("))
+        .collect(Collectors.toList());
+    if (!collect.isEmpty()) {
+      isFunction = true;
+    }
+    return isFunction;
+  }
+
   private List<Pair<String, String>> handleInputParam(String parameters) {
     if (parameters.isEmpty()) {
       return new ArrayList<>();
@@ -126,30 +142,6 @@ public class ScriptParser {
     }
     return in;
   }
-
-//  private void process(String line, Scope scope) throws PluginNotSupportedException {
-//    System.out.println("in process");
-//    System.out.println(line);
-//    String[] splited = StringUtils.removeEmptyStrings(line.trim().split(BLANK_SPACE));
-//    String processedCommand = line;
-//
-//    if (splited.length > 1) {
-////      String processedCommand = processParameters(splited);
-//    }
-//    //check if line is a pipe
-//    String[] tokens = line.split(PIPE);
-//    Optional<ShellPlugin> plugin = scope.findShellPlugin(line);
-//
-//    if (plugin.isPresent()) {
-//      Pair<ShellPlugin, String> pair = new Pair<>(plugin.get(),
-//          line.substring(0, line.length() - 1));
-////      scope.addCommand(pair);
-//    } else {
-//      throw new PluginNotSupportedException("Did not find plugin : " + line.split(BLANK_SPACE)[0]);
-//    }
-//
-//
-//  }
 
   private void loadScript(String path) throws MethodMissingEception {
     try (Stream<String> lines = Files.lines(Paths.get(path), Charset.defaultCharset())) {

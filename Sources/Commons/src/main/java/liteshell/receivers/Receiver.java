@@ -1,7 +1,7 @@
 package liteshell.receivers;
 
 import java.util.Optional;
-
+import java.util.stream.Collectors;
 import liteshell.commands.ios.CommandOutput;
 import liteshell.scopes.Scope;
 
@@ -10,5 +10,29 @@ import liteshell.scopes.Scope;
  */
 
 public interface Receiver {
-    CommandOutput executeCommand(String[] args, Optional<Scope> scope);
+
+  CommandOutput executeCommand(String[] args, Optional<Scope> scope);
+
+  default String findValue(String string, boolean isCommand, Scope scope) {
+    string =
+        string.startsWith("$(") ? string.substring(string.indexOf("(") + 1, string.indexOf(")"))
+            : string;
+    return isCommand ? findAndExecuteCommand(
+        string, scope) : string;
+  }
+
+  default String findAndExecuteCommand(String string, Scope scope) {
+    CommandOutput out = scope.getExecutor().execute(string, scope);
+    String str = "";
+    if (out.getReturnCode() == 0) {
+
+      Optional<String> reduce = out.getCommandOutput().get().collect(Collectors.toList())
+          .stream()
+          .reduce(String::concat);
+      if (reduce.isPresent()) {
+        return reduce.get();
+      }
+    }
+    return str;
+  }
 }

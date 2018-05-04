@@ -1,6 +1,7 @@
 package liteshell.scopes;
 
 import java.util.Optional;
+import liteshell.executors.Executor;
 import liteshell.plugins.ShellPlugin;
 
 /**
@@ -22,4 +23,6 @@ public interface Scope {
   void addCommand(String command);
 
   void executeScript();
+
+  Executor getExecutor();
 }

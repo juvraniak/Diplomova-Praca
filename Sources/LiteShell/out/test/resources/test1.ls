@@ -14,6 +14,7 @@ function void main(String arg){
   move /home/jv/Downloads/examples.desktop \
   /home/jv/Documents/examples.desktop;
   rm /home/jv/Documents/examples.desktop;
+  rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
   test();
 }
