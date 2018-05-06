@@ -2,8 +2,7 @@ package liteshell.receivers;
 
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.keywords.Keyword;
 import liteshell.scopes.Scope;
 
@@ -14,8 +13,8 @@ import liteshell.scopes.Scope;
 public class GetVariableReceiver implements Receiver {
 
   @Override
-  public CommandOutput executeCommand(String[] strings, Optional<Scope> optional) {
-    CommandOutput output = new DefaultOutput();
+  public CommandIO executeCommand(CommandIO output, String[] strings, Optional<Scope> optional) {
+
     output.setReturnCode(0);
     if (!optional.isPresent()) {
       throw new RuntimeException("Scope not present!");

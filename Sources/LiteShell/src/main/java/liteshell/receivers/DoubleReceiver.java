@@ -2,8 +2,7 @@ package liteshell.receivers;
 
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.keywords.Keyword;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeVariables;
@@ -15,8 +14,8 @@ import liteshell.scopes.ScopeVariables;
 public class DoubleReceiver implements Receiver {
 
   @Override
-  public CommandOutput executeCommand(String[] strings, Optional<Scope> scope) {
-    CommandOutput out = new DefaultOutput();
+  public CommandIO executeCommand(CommandIO out, String[] strings, Optional<Scope> scope) {
+
     boolean isScopePresent = scope.isPresent();
     Double doubleValue = 0D;
 

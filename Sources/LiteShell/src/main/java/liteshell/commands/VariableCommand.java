@@ -3,8 +3,7 @@ package liteshell.commands;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandInput;
-import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.CommandIOException;
 import liteshell.receivers.ChangeVariableReceiver;
 import liteshell.receivers.DoubleReceiver;
@@ -20,32 +19,34 @@ import liteshell.scopes.Scope;
 public class VariableCommand implements Command {
 
   @Override
-  public CommandOutput execute(CommandInput commandInput, Optional<Scope> scope) {
+  public CommandIO execute(CommandIO commandInput, Optional<Scope> scope) {
     if (commandInput.getCommandInput().isPresent()) {
       String[] splitedImport = parseComand(commandInput.getCommandInput().get());
       String commandCase = splitedImport[0];
-      CommandOutput out = null;
+
       switch (commandCase) {
         case "int":
-          out = new IntReceiver().executeCommand(splitedImport, scope);
+          commandInput = new IntReceiver().executeCommand(commandInput, splitedImport, scope);
           break;
         case "double":
-          out = new DoubleReceiver().executeCommand(splitedImport, scope);
+          commandInput = new DoubleReceiver().executeCommand(commandInput, splitedImport, scope);
           break;
         case "boolean":
-//                    out = new DeletePackageReceiver().executeCommand(splitedImport, scope);
+//                    out = new DeletePackageReceiver().executeCommand(commandInput,splitedImport, scope);
           break;
         case "string":
-          out = new StringReceiver().executeCommand(splitedImport, scope);
+          commandInput = new StringReceiver().executeCommand(commandInput, splitedImport, scope);
           break;
         case "change":
-          out = new ChangeVariableReceiver().executeCommand(splitedImport, scope);
+          commandInput = new ChangeVariableReceiver()
+              .executeCommand(commandInput, splitedImport, scope);
           break;
         case "get":
-          out = new GetVariableReceiver().executeCommand(splitedImport, scope);
+          commandInput = new GetVariableReceiver()
+              .executeCommand(commandInput, splitedImport, scope);
           break;
       }
-      return out;
+      return commandInput;
     } else {
       throw new CommandIOException("Input not found");
     }

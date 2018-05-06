@@ -1,6 +1,6 @@
 package liteshell.executors;
 
-import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
 
 /**
@@ -9,5 +9,5 @@ import liteshell.scopes.Scope;
 
 public interface Executor {
 
-    CommandOutput execute(String command, Scope scope);
+    CommandIO execute(String command, Scope scope);
 }

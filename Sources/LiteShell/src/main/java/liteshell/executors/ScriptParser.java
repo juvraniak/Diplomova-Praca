@@ -6,8 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.util.Pair;
@@ -28,6 +30,7 @@ public class ScriptParser {
   private static final String BLANK_SPACE = " ";
   private static final String COMMENT = "#";
   private static final String PIPE = "\\|";
+  private static final String INCLUDE = "include";
   private List<String> CONTENT = new ArrayList<>();
   private Map<String, ScopeImpl> listOfScopes = new HashMap<>();
 
@@ -144,14 +147,22 @@ public class ScriptParser {
   }
 
   private void loadScript(String path) throws MethodMissingEception {
+    Set<String> allIncludes = new HashSet<>();
     try (Stream<String> lines = Files.lines(Paths.get(path), Charset.defaultCharset())) {
       PluginFactory pluginFactory = shellClient.getPluginFactory();
       CONTENT = lines
-          .filter(line -> !line.trim().startsWith("//"))
+          .filter(line -> !line.trim().startsWith(COMMENT))
+          .filter(line -> line.trim().startsWith(INCLUDE))
           .filter(line -> !line.isEmpty())
           .collect(Collectors.toList());
-
+      String firstLine = lines.findFirst().get();
+      if (firstLine.startsWith("#!")) {
+        CONTENT.add(0, firstLine);
+      }
       List<String> plugins = CONTENT.stream().filter(line -> line.startsWith("use"))
+          .collect(Collectors.toList());
+
+      List<String> include = CONTENT.stream().filter(line -> line.trim().startsWith(INCLUDE))
           .collect(Collectors.toList());
 
       List<String> functions = CONTENT.stream()

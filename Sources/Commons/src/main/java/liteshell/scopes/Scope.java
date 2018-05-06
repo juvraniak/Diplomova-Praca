@@ -13,8 +13,8 @@ public interface Scope {
   ScopeVariables getScopeVariables();
 
   default Scope getScope() {
-        return this;
-    }
+    return this;
+  }
 
   String getCurrentWorkingDirectory();
 

@@ -1,10 +1,10 @@
 package liteshell.receivers;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
 
 /**
@@ -12,23 +12,25 @@ import liteshell.scopes.Scope;
  */
 
 public class GrepReceiver implements Receiver {
-    @Override
-    public CommandOutput executeCommand(String[] strings, Optional<Scope> optional) {
-        CommandOutput commandOutput = new DefaultOutput();
 
-        String filterWord = strings[1];
-        //TODO: will have to cover scenario when grep parameter is not string to grep but file to grep.
+  @Override
+  public CommandIO executeCommand(CommandIO commandIO, String[] strings,
+      Optional<Scope> optional) {
 
-        try{
-            Stream<String> out = Arrays.asList(strings).stream().skip(2).filter(item -> item.contains(filterWord)).sorted();
-            commandOutput.setCommandOutput(Optional.of(out));
-            commandOutput.setCommandErrorOutput(Optional.of(Stream.empty()));
-            commandOutput.setReturnCode(0);
-        } catch (Exception e){
-            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
-            commandOutput.setReturnCode(-1);
-        }
-
-        return commandOutput;
+    String filterWord = strings[1];
+    //TODO: will have to cover scenario when grep parameter is not string to grep but file to grep.
+    List<String> listToGrep = Arrays.asList(strings[2].split("\n"));
+    try {
+      Stream<String> out = listToGrep.stream()
+          .filter(item -> item.contains(filterWord)).sorted();
+      commandIO.setCommandOutput(Optional.of(out));
+      commandIO.setCommandErrorOutput(Optional.of(Stream.empty()));
+      commandIO.setReturnCode(0);
+    } catch (Exception e) {
+      commandIO.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
+      commandIO.setReturnCode(-1);
     }
+
+    return commandIO;
+  }
 }

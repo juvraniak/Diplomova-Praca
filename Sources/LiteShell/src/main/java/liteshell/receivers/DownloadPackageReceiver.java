@@ -2,8 +2,7 @@ package liteshell.receivers;
 
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.plugins.PluginFactory;
 import liteshell.scopes.Scope;
 
@@ -14,8 +13,7 @@ import liteshell.scopes.Scope;
 public class DownloadPackageReceiver implements Receiver {
 
   @Override
-  public CommandOutput executeCommand(String[] strings, Optional<Scope> optional) {
-    CommandOutput out = new DefaultOutput();
+  public CommandIO executeCommand(CommandIO out, String[] strings, Optional<Scope> optional) {
     if (strings.length != 3) {
       out.setReturnCode(-1);
       out.setCommandErrorOutput(Optional.of(Stream.of("Wrong number of arguments!")));

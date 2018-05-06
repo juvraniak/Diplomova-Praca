@@ -1,7 +1,7 @@
 package liteshell.receivers;
 
 import java.util.Optional;
-import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
 
 /**
@@ -11,7 +11,7 @@ import liteshell.scopes.Scope;
 public class ChangePackageReceiver implements Receiver {
 
   @Override
-  public CommandOutput executeCommand(String[] strings, Optional<Scope> optional) {
+  public CommandIO executeCommand(CommandIO commandIO, String[] strings, Optional<Scope> optional) {
     return null;
   }
 }

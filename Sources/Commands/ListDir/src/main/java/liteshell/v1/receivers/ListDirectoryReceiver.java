@@ -3,37 +3,42 @@ package liteshell.v1.receivers;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.receivers.Receiver;
 import liteshell.scopes.Scope;
 
 public class ListDirectoryReceiver implements Receiver {
 
-    @Override
-    public CommandOutput executeCommand(String[] args, Optional<Scope> scope) {
-        CommandOutput commandOutput = new DefaultOutput();
-        String directoryToList = gedDirectoryToList(args, scope.get());
-        File curDir = new File(directoryToList);
-        File[] filesList = curDir.listFiles();
+  @Override
+  public CommandIO executeCommand(CommandIO commandIO, String[] args, Optional<Scope> scope) {
 
-        try{
-            Stream<String> out = Arrays.asList(filesList).stream().map(f -> f.getName()).sorted();
-            commandOutput.setCommandOutput(Optional.of(out));
-            commandOutput.setReturnCode(0);
-        } catch (Exception e){
-            commandOutput.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
-            commandOutput.setReturnCode(-1);
-        }
+    String directoryToList = gedDirectoryToList(args, scope);
+    File curDir = new File(directoryToList);
+    File[] filesList = curDir.listFiles();
 
-        return commandOutput;
+    try {
+      String collectedFoldersFiles = Arrays.asList(filesList).stream()
+          .map(f -> f.getName() + "\n").sorted().collect(Collectors.toList())
+          .stream().reduce(String::concat).get();
+      commandIO.setCommandOutput(CommandIO.prepareIO(collectedFoldersFiles));
+      commandIO.setReturnCode(0);
+    } catch (Exception e) {
+      commandIO.setCommandErrorOutput(Optional.of(Stream.of(e.getMessage())));
+      commandIO.setReturnCode(-1);
     }
 
-    private String gedDirectoryToList(String[] args, Scope scope) {
-        if(args.length > 1){
-            return args[1];
-        }
-        return scope.getCurrentWorkingDirectory();
+    return commandIO;
+  }
+
+  private String gedDirectoryToList(String[] args, Optional<Scope> scope) {
+    if (args.length > 1) {
+      return args[1];
     }
+    if (scope.isPresent()) {
+      return scope.get().getCurrentWorkingDirectory();
+    }
+    return System.getProperty("user.home");
+  }
 }

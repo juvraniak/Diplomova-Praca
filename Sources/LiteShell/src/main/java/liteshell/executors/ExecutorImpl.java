@@ -1,14 +1,17 @@
 package liteshell.executors;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 import javafx.util.Pair;
 import liteshell.commands.VariableCommand;
-import liteshell.commands.ios.CommandOutput;
-import liteshell.commands.ios.DefaultInput;
-import liteshell.commands.ios.DefaultOutput;
+import liteshell.commands.ios.CommandIO;
+import liteshell.commands.ios.DefaultCommadIO;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
@@ -28,16 +31,15 @@ public class ExecutorImpl implements Executor {
    * @param scope scope where command will be executed
    */
   @Override
-  public CommandOutput execute(String command, Scope scope) {
+  public CommandIO execute(String command, Scope scope) {
     ProcessBuilder processBuilder = new ProcessBuilder();
     processBuilder.command();
-    CommandOutput out = new DefaultOutput();
+    CommandIO out = DefaultCommadIO.of(CommandIO.prepareIO(command));
 
-    if (command.startsWith("./") && command.endsWith(".sh")) {
-      //TODO: handle execution of shell script
-
-    } else if (command.startsWith("./") && command.endsWith(".bat")) {
-      //TODO: handle execution of windows script
+    if (command.startsWith("sh ")) {
+      executeCommand(command.substring(3));
+    } else if (command.startsWith("win ") || command.startsWith("ext ")) {
+      executeCommand(command.substring(4));
     } else if (command.startsWith("./") && command.endsWith(".ls")) {
       String path = validatePath(command.substring(2), scope);
       try {
@@ -51,29 +53,77 @@ public class ExecutorImpl implements Executor {
       }
     } else if (command.startsWith("${")) {
       out = new VariableCommand()
-          .execute(DefaultInput.of(Stream.of(command)), Optional.of(scope));
+          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));
     } else if (command.startsWith("$(")) {
       if (command.endsWith(";")) {
         command = command.substring(0, command.length() - 1);
       }
       command = command.substring(command.indexOf("(") + 1, command.length() - 1);
-      out = executeSingleCommand(command, scope);
+      if (command.split("\\|").length > 1) {
+        out = executePipe(scope, command);
+      } else {
+        out = executeSingleCommand(command, scope);
+      }
     } else {
 
     }
     return out;
   }
 
-  private CommandOutput executeSingleCommand(String command, Scope scope) {
-    CommandOutput output = new DefaultOutput();
+  private CommandIO executeCommand(String command) {
+    //FIXME ani za nic to nechce ukladat do suboru.
+//    String[] commandSplit = command.split(" > ");
+//    File f = new File(commandSplit[1]);
+//    try {
+//      f.createNewFile();
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//    }
+
+    ProcessBuilder builder = new ProcessBuilder("sh", command);
+//    builder.redirectOutput(new File(commandSplit[1]));
+//    builder.redirectError(new File(commandSplit[1]));
+//    Process p = builder.start(); // may throw IOException
+
+    CommandIO out = DefaultCommadIO.of(CommandIO.prepareIO(command));
+    out.setReturnCode(0);
+
+    try {
+      Process p = builder.start();
+
+      p.waitFor();
+      BufferedReader stdout =
+          new BufferedReader(new InputStreamReader(p.getInputStream()));
+      BufferedReader stderr =
+          new BufferedReader(new InputStreamReader(p.getErrorStream()));
+
+      out.setCommandOutput(CommandIO.prepareIO(readProcessOutputs(stdout)));
+      out.setCommandErrorOutput(CommandIO.prepareIO(readProcessOutputs(stderr)));
+
+    } catch (Exception e) {
+      out.setReturnCode(-1);
+      out.setCommandErrorOutput(CommandIO.prepareIO(e.getMessage()));
+    }
+
+    return out;
+  }
+
+  private String readProcessOutputs(BufferedReader reader) throws IOException {
+    StringBuffer output = new StringBuffer();
+    String line = "";
+    while ((line = reader.readLine()) != null) {
+      output.append(line + "\n");
+    }
+    return output.toString();
+  }
+
+  private CommandIO executeSingleCommand(String command, Scope scope) {
+    CommandIO output = DefaultCommadIO.of(CommandIO.prepareIO(command));
     String requestedCommand = command.split(" ")[0];
     Optional<ShellPlugin> plugin = scope.findShellPlugin(requestedCommand);
     if (plugin.isPresent()) {
       output = plugin.get().getCommand()
-          .execute(DefaultInput.of(Stream.of(command)), Optional.of(scope));
-      if (output.getCommandOutput().isPresent()) {
-        output.getCommandOutput().get().forEach(System.out::println);
-      }
+          .execute(output, Optional.of(scope));
     } else {
       throw new UnknownCommandException(requestedCommand);
     }
@@ -94,20 +144,28 @@ public class ExecutorImpl implements Executor {
 
   /**
    * @param scope scope where list of commands should be executed
-   * @param list list of pairs ShellPlugin and command that should be run on ShellPlugin command
+   *
    */
 //  @Override
-  public void execute(Scope scope, List<Pair<Optional<ShellPlugin>, String>> list) {
+  public CommandIO executePipe(Scope scope, String command) {
+    CommandIO out = DefaultCommadIO.of(CommandIO.prepareIO(command));
+    List<Pair<Optional<ShellPlugin>, String>> list = preparePlugins(scope, command);
     validatePluginList(list);
-
     ExecutorListener temp = null;
     for (int i = list.size() - 1; i > -1; i--) {
       Pair<Optional<ShellPlugin>, String> item = list.get(i);
       PipeExecutor executor = PipeExecutor
-          .of(Stream.of(item.getValue()), item.getKey().get(), scope, temp);
+          .of(item.getValue(), item.getKey().get(), scope, temp);
       temp = executor;
     }
-    temp.run();
+    out = temp.run();
+    return out;
+  }
+
+  private List<Pair<Optional<ShellPlugin>, String>> preparePlugins(Scope scope, String commands) {
+    String[] splittedCommands = commands.split(" \\| ");
+    return Arrays.stream(splittedCommands).map(c -> new Pair<>(scope.findShellPlugin(c), c))
+        .collect(Collectors.toList());
   }
 
   private void validatePluginList(List<Pair<Optional<ShellPlugin>, String>> list) {
@@ -119,21 +177,23 @@ public class ExecutorImpl implements Executor {
   }
 }
 
-interface ExecutorListener extends Runnable {
+interface ExecutorListener {
 
-  void finishedExecution(CommandOutput output);
+  CommandIO finishedExecution(CommandIO output);
 
-  void onError(CommandOutput output);
+  void onError(CommandIO output);
+
+  CommandIO run();
 }
 
 class PipeExecutor implements ExecutorListener {
 
   private ShellPlugin plugin;
-  private Stream<String> command;
+  private String command;
   private Scope scope;
   private ExecutorListener listener;
 
-  private PipeExecutor(Stream<String> command, ShellPlugin plugin, Scope scope,
+  private PipeExecutor(String command, ShellPlugin plugin, Scope scope,
       ExecutorListener listener) {
     this.command = command;
     this.plugin = plugin;
@@ -141,38 +201,43 @@ class PipeExecutor implements ExecutorListener {
     this.listener = listener;
   }
 
-  public static PipeExecutor of(Stream<String> command, ShellPlugin plugin, Scope scope,
+  public static PipeExecutor of(String command, ShellPlugin plugin, Scope scope,
       ExecutorListener listener) {
     return new PipeExecutor(command, plugin, scope, listener);
   }
 
 
   @Override
-  public void finishedExecution(CommandOutput output) {
-    command = Stream.concat(command, output.getCommandOutput().get());
-    run();
+  public CommandIO finishedExecution(CommandIO output) {
+    //FIXME : this is not correct!!!
+//    Stream<String> stream = Stream.concat(Stream.of(command), output.getCommandOutput().get());
+//    command = stream.findFirst().get();
+    command = command + " " + output.getCommandOutput().get().reduce(String::concat).get();
+    return run();
   }
 
   @Override
-  public void onError(CommandOutput output) {
+  public void onError(CommandIO output) {
     throw new RuntimeException(
         "Return code : " + output.getReturnCode() + "\n" + output.getCommandErrorOutput().get()
             .findFirst());
   }
 
   @Override
-  public void run() {
-    CommandOutput out = plugin.getCommand().execute(DefaultInput.of(command), Optional.of(scope));
+  public CommandIO run() {
+    CommandIO out = plugin.getCommand()
+        .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));
     if (out.getReturnCode() == 0) {
       if (listener != null) {
-        listener.finishedExecution(out);
+        out = listener.finishedExecution(out);
       } else {
         if (out.getCommandOutput().isPresent()) {
-          out.getCommandOutput().get().forEach(System.out::println);
+          return out;
         }
       }
     } else {
-      onError(out);
+      return out;
     }
+    return out;
   }
 }

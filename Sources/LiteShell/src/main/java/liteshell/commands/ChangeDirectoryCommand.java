@@ -2,8 +2,7 @@ package liteshell.commands;
 
 import java.util.Optional;
 import java.util.stream.Stream;
-import liteshell.commands.ios.CommandInput;
-import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.CommandIOException;
 import liteshell.receivers.ChangeDirectoryReceiver;
 import liteshell.receivers.Receiver;
@@ -18,9 +17,11 @@ public class ChangeDirectoryCommand implements Command {
   Receiver receiver = new ChangeDirectoryReceiver();
 
   @Override
-  public CommandOutput execute(CommandInput commandInput, Optional<Scope> optional) {
+  public CommandIO execute(CommandIO commandInput, Optional<Scope> optional) {
     if (commandInput.getCommandInput().isPresent()) {
-      return receiver.executeCommand(parseComand(commandInput.getCommandInput().get()), optional);
+      return receiver
+          .executeCommand(commandInput, parseComand(commandInput.getCommandInput().get()),
+              optional);
     } else {
       throw new CommandIOException("Input not found");
     }

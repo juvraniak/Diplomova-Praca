@@ -2,7 +2,7 @@ package liteshell.receivers;
 
 import java.util.Optional;
 import java.util.stream.Collectors;
-import liteshell.commands.ios.CommandOutput;
+import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
 
 /**
@@ -11,7 +11,7 @@ import liteshell.scopes.Scope;
 
 public interface Receiver {
 
-  CommandOutput executeCommand(String[] args, Optional<Scope> scope);
+  CommandIO executeCommand(CommandIO commandIO, String[] args, Optional<Scope> scope);
 
   default String findValue(String string, boolean isCommand, Scope scope) {
     string =
@@ -22,7 +22,7 @@ public interface Receiver {
   }
 
   default String findAndExecuteCommand(String string, Scope scope) {
-    CommandOutput out = scope.getExecutor().execute(string, scope);
+    CommandIO out = scope.getExecutor().execute(string, scope);
     String str = "";
     if (out.getReturnCode() == 0) {
 

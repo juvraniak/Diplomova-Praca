@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import javafx.util.Pair;
+import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.executors.Executor;
 import liteshell.keywords.Keyword;
@@ -97,6 +98,7 @@ public class AbstractScope implements Scope, Runnable {
 
   @Override
   public void run() {
+    CommandIO commandIO;
     printLine();
     String userInput = "";
     while (true) {
@@ -104,8 +106,13 @@ public class AbstractScope implements Scope, Runnable {
 
       try {
         userInput = prepareInput(br.readLine());
-        userInput = "$(add($(add(${i}, ${j})), 5));";
-        executor.execute(userInput, getScope());
+//        userInput = "$(add($(add(${i}, ${j})), 5));";
+//        userInput = "sh /home/jv/Umlet/umlet.sh";
+//        userInput = "sh echo \"dsadasdas\" > /home/jv/Umlet/cosi.txt";
+        commandIO = executor.execute(userInput, getScope());
+        if (commandIO.getCommandOutput().isPresent()) {
+          commandIO.getCommandOutput().get().forEach(System.out::println);
+        }
       } catch (UnknownCommandException ex) {
         log.error("There was issue with following command: \n {}", ex.getMessage());
       } catch (IOException ex) {
@@ -119,7 +126,7 @@ public class AbstractScope implements Scope, Runnable {
   }
 
   private String prepareInput(String in) {
-    return in.startsWith("./") ? in
+    return in.startsWith("./") || in.startsWith("sh ") ? in
         : in.endsWith(";") ? "$(" + in.substring(0, in.length() - 1) + ");" : "$(" + in + ");";
   }
 
