@@ -39,7 +39,10 @@ public class StringReceiver implements Receiver {
     out.setReturnCode(0);
     if (strings.length > 2) {
       try {
-
+        boolean isCommand = strings[2].startsWith("$(");
+        boolean isInitializedVariable = strings[2].startsWith("${");
+        String toExecute = isCommand ? "arithmetic" : strings[2];
+        String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
         stringValue = escapeString(strings[2]);
         var.getStringMap().put(variableName, stringValue);
       } catch (NumberFormatException e) {

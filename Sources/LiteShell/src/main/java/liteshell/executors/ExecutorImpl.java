@@ -32,8 +32,6 @@ public class ExecutorImpl implements Executor {
    */
   @Override
   public CommandIO execute(String command, Scope scope) {
-    ProcessBuilder processBuilder = new ProcessBuilder();
-    processBuilder.command();
     CommandIO out = DefaultCommadIO.of(CommandIO.prepareIO(command));
 
     if (command.startsWith("sh ")) {
@@ -51,6 +49,10 @@ public class ExecutorImpl implements Executor {
       } catch (MethodMissingEception e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());
       }
+    } else if (command.startsWith("arithmetic")) {
+      out = new VariableCommand()
+          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
+              Optional.of(scope));
     } else if (command.startsWith("${")) {
       out = new VariableCommand()
           .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));

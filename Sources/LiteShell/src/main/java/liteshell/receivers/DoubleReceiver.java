@@ -35,7 +35,12 @@ public class DoubleReceiver implements Receiver {
     out.setReturnCode(0);
     if (strings.length > 2) {
       try {
-        doubleValue = Double.parseDouble(strings[2]);
+        boolean isCommand = strings[2].startsWith("$(");
+        boolean isInitializedVariable = strings[2].startsWith("${");
+        String toExecute = isCommand ? "arithmetic" : strings[2];
+        String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
+
+        doubleValue = Double.parseDouble(replacement);
         var.getDoubleMap().put(variableName, doubleValue);
       } catch (NumberFormatException e) {
         out.setCommandErrorOutput(Optional.of(Stream.of("Wrong format : " + e.getMessage())));

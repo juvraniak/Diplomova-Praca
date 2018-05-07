@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.CommandIOException;
+import liteshell.receivers.ArithmeticReceiver;
 import liteshell.receivers.ChangeVariableReceiver;
 import liteshell.receivers.DoubleReceiver;
 import liteshell.receivers.GetVariableReceiver;
@@ -45,6 +46,9 @@ public class VariableCommand implements Command {
           commandInput = new GetVariableReceiver()
               .executeCommand(commandInput, splitedImport, scope);
           break;
+        case "arithmetic":
+          commandInput = new ArithmeticReceiver()
+              .executeCommand(commandInput, splitedImport, scope);
       }
       return commandInput;
     } else {

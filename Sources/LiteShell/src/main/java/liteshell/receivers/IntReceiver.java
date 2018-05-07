@@ -1,5 +1,6 @@
 package liteshell.receivers;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 import java.util.stream.Stream;
 import liteshell.commands.ios.CommandIO;
@@ -34,7 +35,13 @@ public class IntReceiver implements Receiver {
     out.setReturnCode(0);
     if (strings.length > 2) {
         try {
-          integerValue = Integer.parseInt(strings[2]);
+          boolean isCommand = strings[2].startsWith("$(");
+          boolean isInitializedVariable = strings[2].startsWith("${");
+          String toExecute = isCommand ? "arithmetic " + strings[2]
+              .substring(strings[2].indexOf("(") + 1, strings[2].length() - 1) : strings[2];
+          String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
+          BigDecimal bd = new BigDecimal(replacement);
+          integerValue = bd.intValue();
           var.getIntegerMap().put(variableName, integerValue);
         } catch (NumberFormatException e) {
           //TODO: if parseInt fail we may need to check whether it is command there...

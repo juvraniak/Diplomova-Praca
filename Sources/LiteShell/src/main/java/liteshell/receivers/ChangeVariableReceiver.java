@@ -30,7 +30,8 @@ public class ChangeVariableReceiver implements Receiver {
     String variableName = strings[1]
         .substring(strings[1].indexOf("{") + 1, strings[1].indexOf("}"));
 
-    boolean isCommand = strings[2].startsWith("$(") || strings[2].startsWith("${");
+    boolean isCommand = strings[2].startsWith("$(");
+    boolean isInitializedVariable = strings[2].startsWith("${");
     String replacement;
 
     Keyword key = scope.getScopeVariables().getInitializedVariables().get(variableName);
@@ -40,7 +41,7 @@ public class ChangeVariableReceiver implements Receiver {
           .of(Stream.of("Variable with name " + variableName + " was not initialized yet!")));
       return output;
     }
-    replacement = findValue(strings[2], isCommand, scope);
+    replacement = findValue(strings[2], isCommand, isInitializedVariable, scope);
 
     switch (key) {
       case STRING:

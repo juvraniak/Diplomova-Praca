@@ -13,11 +13,12 @@ public interface Receiver {
 
   CommandIO executeCommand(CommandIO commandIO, String[] args, Optional<Scope> scope);
 
-  default String findValue(String string, boolean isCommand, Scope scope) {
+  default String findValue(String string, boolean isCommand, boolean isInitializedVariable,
+      Scope scope) {
     string =
-        string.startsWith("$(") ? string.substring(string.indexOf("(") + 1, string.indexOf(")"))
+        string.startsWith("$(") ? string.substring(string.indexOf("(") + 1, string.length() - 1)
             : string;
-    return isCommand ? findAndExecuteCommand(
+    return isCommand || isInitializedVariable ? findAndExecuteCommand(
         string, scope) : string;
   }
 
