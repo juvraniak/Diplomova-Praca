@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.exceptions.PluginNotSupportedException;
@@ -110,7 +111,7 @@ public class ScriptParser {
     String processedCommand = line;
 
     if (splited.length > 1) {
-      String processedCommand = processParameters(splited);
+//      String processedCommand = processParameters(splited);
     }
     //check if line is a pipe
     String[] tokens = line.split(PIPE);
@@ -129,7 +130,7 @@ public class ScriptParser {
 
   private String processParameters(String[] splited) {
     String command = splited[0];
-
+    return null;
   }
 
   private void loadScript(String path) throws MethodMissingEception {

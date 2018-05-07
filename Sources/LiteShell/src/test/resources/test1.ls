@@ -17,5 +17,5 @@ function void main(String arg){
 
 function void test(){
   int i =4;
-  ls ${i}
+  ls ${i};
 }

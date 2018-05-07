@@ -1,6 +1,6 @@
 \section{Analýza stavu}
 \subsection{Operačné systémy}
-\indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardwéru alebo softwéru. Kus softvéru, ktorý umožnuje počítačom fungovať je operačný systém. Poznáme ich hneď niekoľko v nasledujúcich sekciách si ich stručne popíšeme.
+\indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardwéru alebo softwéru.  Operačný systém je základná časť akéhokoľvek počítaťového sytému, je to kus softvéru, ktorý umožnuje počítačom fungovať. Oblasť operačných systémov v poslednej dobe prechádza rapídnymi zmenami nakoľko počítače sa stali súčasťou každodenného života od malých zariadení napríklad v automobiloch až po najsofisitkovanejšie servery nadnárodných spoločností. Aj keď v dnešnej dobe poznáme mnohé operačné systémi, my sa zameriame na Windows, Mac OS, Unix a Linux.\cite{osbook}
 % tuto cast este asi rozsirim 
 \subsubsection{Windows}
 \indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
@@ -265,7 +265,7 @@ Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi pri
 	\end{table}
 \end{center}
 Aj keď sme spomenuli viaceré nedostatky, asi najväčším je rýchlosť. Nvm čo ďalej. 
-\subsection{Analýza existujucich riešeni}
+\subsection{Existujúce riešenia}
 \indent
 Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkúvajú funkcionality shell scriptu do Windowsu, nikeotré z nich si predstavíme.
 
@@ -336,7 +336,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \subsection{Zhodnotenie analyzovaných technológií}
 \indent 
 
-\section{Analýza prekladu jazykov}
+\section{Preklad jazykov}
 \indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
 
 \subsection{Kompilátor proces prekladu}
@@ -882,7 +882,7 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 \subsection{Oddelenie štruktúry}
 
 \section{Architektúra aplikácie}
-x1\indent Ako sme ukázali existuje veľké množstvo skiptovacích jazykov ci, ktoré dokážu efektívne automatizovať dennodennú prácu avšak majú jeden spoločný nedostatok - nie sú multiplatformové. Táto vlastnosť môže byť  pre niekoho nepodstatná, no pri veľkých projektoch kde sa míňa množstvo prostriedkov na automatizáciu to až tak zanedbateľný fakt nie je. Stačí si len predstaviť koľko času zabere tvorba automatizovaných skriptov pre jednu platformu a pripočítať rovnaké množstvo času pre každú ďalšiu. Niekto by mohol namietať, že pre ďalšie platformy to toľko času nezabere nakoľko logika skriptov je uz definovaná. Tu treba brať ohľad na to, že nie každý jazyk poskytuje programátorovi rovnaké API a teda treba rátať s možnosťou, že niekde bude potrebné doimplementovať veci chýbajúce v jazyku. Preto vyššie spomenuté dôvody sme sa rozhodli pre vytvorenie nového jazyka, ktorý by bol jednoducho rozšíriteľný, manažovateľný, ľahko pisateľný a platformovo nezávislý. \cite{morf}
+\indent Ako sme ukázali existuje veľké množstvo skiptovacích jazykov ci, ktoré dokážu efektívne automatizovať dennodennú prácu avšak majú jeden spoločný nedostatok - nie sú multiplatformové. Táto vlastnosť môže byť  pre niekoho nepodstatná, no pri veľkých projektoch kde sa míňa množstvo prostriedkov na automatizáciu to až tak zanedbateľný fakt nie je. Stačí si len predstaviť koľko času zabere tvorba automatizovaných skriptov pre jednu platformu a pripočítať rovnaké množstvo času pre každú ďalšiu. Niekto by mohol namietať, že pre ďalšie platformy to toľko času nezabere nakoľko logika skriptov je uz definovaná. Tu treba brať ohľad na to, že nie každý jazyk poskytuje programátorovi rovnaké API a teda treba rátať s možnosťou, že niekde bude potrebné doimplementovať veci chýbajúce v jazyku. Preto vyššie spomenuté dôvody sme sa rozhodli pre vytvorenie nového jazyka, ktorý by bol jednoducho rozšíriteľný, manažovateľný, ľahko pisateľný a platformovo nezávislý. \cite{morf}
 
 \subsection{Java}
 \indent Je vyvíjaný spoločnosťou Oracle. Jeho syntax vychádza z jazykov C a C++. Zdrojové programy sa nekompilujú do strojového kódu, ale do medzistupňa, tzv. „byte-code“, ktorý nie je závislý od konkrétnej platformy. Táto vlastnosť Javy nám veľmi vyhovuje pre dosiahnutie cieľa platformovej nezávislosti. Ďalším veľmi podstatným faktom je, že v Jave programuje veľké množstvo developerov, tým pádom majú open source projekty veľkú šancu, že si ich komunita devoloperov osvojí a prispeje k ich postupnému zlepšovaniu.

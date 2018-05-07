@@ -1,8 +1,10 @@
 
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÆÀûı8«Ÿ±‚°,
+Gsquid:S3010"&Remove this assignment of "LIBS_PATH".(î”®Úÿÿÿÿÿ8«Ÿ±‚°,
+psquid:S3008"TRename this field "LIBS_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°—Õ8«Ÿ±‚°,
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬“ãB8«Ÿ±‚°,
 Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å’Ó³¡,
-]squid:S1075"ARefactor your code to get this URI from a customizable parameter.(¶Ä¸8å’Ó³¡,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ì˜•8å’Ó³¡,
-bsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(ğáõ—şÿÿÿÿ8å’Ó³¡,
-Fsquid:S3010"%Remove this assignment of "commands".(Óı°âüÿÿÿÿ8å’Ó³¡,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(®¨Ã‹8¯Ñœ´¡,
-Xsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ÙøÏÀùÿÿÿÿ8¯Ñœ´¡,
+`squid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ö«»Ş8«Ÿ±‚°,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éßä8«Ÿ±‚°,
+?squid:S1148"#Use a logger to log this exception.(Ç’Çê8«Ÿ±‚°,

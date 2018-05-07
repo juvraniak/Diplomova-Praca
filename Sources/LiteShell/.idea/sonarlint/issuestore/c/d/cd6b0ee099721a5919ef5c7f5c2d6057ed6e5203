@@ -1,0 +1,38 @@
+
+gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8ê˜Ö€±,
+_squid:UnusedPrivateMethod"6Remove this unused private "processParameters" method.(ÔáœQ8ê˜Ö€±,
+Psquid:S1481"/Remove this unused "parameters" local variable.(ğİô¥şÿÿÿÿ8ê˜Ö€±,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ê˜Ö€±,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8ê˜Ö€±,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8ê˜Ö€±,
+Fsquid:S1068"+Remove this unused "COMMENT" private field.(‰ÃÊj8ê˜Ö€±,
+Wsquid:S1854";Remove this useless assignment to local variable "command".(´£İ8ê˜Ö€±,
+Psquid:S1481"/Remove this unused "returnType" local variable.(É–ä¤şÿÿÿÿ8ê˜Ö€±,
+Hsquid:S1481"'Remove this unused "sb" local variable.(€ê±Õúÿÿÿÿ8ê˜Ö€±,
+gsquid:S3027"FPut single-quotes around ')' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8ê˜Ö€±,
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ê£Œ©8ê˜Ö€±,
+Hsquid:S1481",Remove this unused "command" local variable.(´£İ8ê˜Ö€±,
+‰ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Åû’ä8ê˜Ö€±,
+Zsquid:S1854">Remove this useless assignment to local variable "correctEnd".(¬õÁ8ê˜Ö€±,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(™Á°Áøÿÿÿÿ8ê˜Ö€±,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½ÈÖ€±,
+Ksquid:S1481"/Remove this unused "correctEnd" local variable.(¬õÁ8ê˜Ö€±,
+esquid:S1854"DRemove this useless assignment to local variable "processedCommand".(»òàşúÿÿÿÿ8ê˜Ö€±,
+Vsquid:S1481"5Remove this unused "processedCommand" local variable.(»òàşúÿÿÿÿ8ê˜Ö€±,
+Msquid:S1612",Replace this lambda with a method reference.(Ğâ•şÿÿÿÿ8ê˜Ö€±,
+_squid:S1854">Remove this useless assignment to local variable "parameters".(ğİô¥şÿÿÿÿ8ê˜Ö€±,
+Nsquid:S1068"-Remove this unused "functions" private field.(•ô°·şÿÿÿÿ8ê˜Ö€±,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ĞÆùúÿÿÿÿ8ê˜Ö€±,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8ê˜Ö€±,
+Usquid:S1854":Remove this useless assignment to local variable "tokens".(î‚Á8ê˜Ö€±,
+Wsquid:S1854"6Remove this useless assignment to local variable "sb".(€ê±Õúÿÿÿÿ8ê˜Ö€±,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(æ—Æîøÿÿÿÿ8ê˜Ö€±,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8ê˜Ö€±,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ê£Œ©8ê˜Ö€±,
+_squid:S1854">Remove this useless assignment to local variable "returnType".(É–ä¤şÿÿÿÿ8ê˜Ö€±,
+tsquid:S00116"RRename this field "CONTENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ûûûÿÿÿÿ8ê˜Ö€±,
+Rsquid:S1172"1Remove this unused method parameter "scriptPath".(–»ìÏùÿÿÿÿ8ê˜Ö€±,
+Fsquid:S1481"+Remove this unused "tokens" local variable.(î‚Á8ê˜Ö€±,
