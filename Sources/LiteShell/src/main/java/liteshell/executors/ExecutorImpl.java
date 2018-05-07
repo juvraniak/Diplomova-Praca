@@ -53,6 +53,10 @@ public class ExecutorImpl implements Executor {
       out = new VariableCommand()
           .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
               Optional.of(scope));
+    } else if (command.startsWith("stringsPrep")) {
+      out = new VariableCommand()
+          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
+              Optional.of(scope));
     } else if (command.startsWith("${")) {
       out = new VariableCommand()
           .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));

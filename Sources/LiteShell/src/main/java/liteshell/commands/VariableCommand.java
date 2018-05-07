@@ -11,6 +11,7 @@ import liteshell.receivers.DoubleReceiver;
 import liteshell.receivers.GetVariableReceiver;
 import liteshell.receivers.IntReceiver;
 import liteshell.receivers.StringReceiver;
+import liteshell.receivers.StringsPrepReceiver;
 import liteshell.scopes.Scope;
 
 /**
@@ -49,6 +50,11 @@ public class VariableCommand implements Command {
         case "arithmetic":
           commandInput = new ArithmeticReceiver()
               .executeCommand(commandInput, splitedImport, scope);
+          break;
+        case "stringsPrep":
+          commandInput = new StringsPrepReceiver()
+              .executeCommand(commandInput, splitedImport, scope);
+          break;
       }
       return commandInput;
     } else {

@@ -13,10 +13,7 @@ import liteshell.scopes.ScopeVariables;
 
 public class StringReceiver implements Receiver {
 
-  final String[] metaCharacters = {"\\", " ", "\"", "^", "$", "{", "}", "[", "]", "(", ")", ".",
-      "*",
-      "+", "?",
-      "|", "<", ">", "-", "&"};
+  final String[] metaCharacters = {"\""};
 
   @Override
   public CommandIO executeCommand(CommandIO out, String[] strings, Optional<Scope> scope) {
@@ -41,9 +38,10 @@ public class StringReceiver implements Receiver {
       try {
         boolean isCommand = strings[2].startsWith("$(");
         boolean isInitializedVariable = strings[2].startsWith("${");
-        String toExecute = isCommand ? "arithmetic" : strings[2];
+        String toExecute = isCommand ? "stringsPrep " + strings[2]
+            .substring(strings[2].indexOf("(") + 1, strings[2].length() - 1) : strings[2];
         String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
-        stringValue = escapeString(strings[2]);
+        stringValue = escapeString(replacement);
         var.getStringMap().put(variableName, stringValue);
       } catch (NumberFormatException e) {
         out.setCommandErrorOutput(Optional.of(Stream.of("Wrong format : " + e.getMessage())));
@@ -55,6 +53,9 @@ public class StringReceiver implements Receiver {
   }
 
   private String escapeString(String str) {
+    if (str.startsWith("\"") && str.endsWith("\"")) {
+      str = str.substring(1, str.length() - 1);
+    }
     for (int i = 0; i < metaCharacters.length; i++) {
       String meta = metaCharacters[i];
       if (str.contains(meta)) {
