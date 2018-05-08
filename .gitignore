@@ -31,3 +31,5 @@ Sources/DiplomaTheisImplementation/.idea
 Sources/Commons/.gradle/*
 Sources/LiteShell/.idea/*
 .idea/*
+
+Sources/LiteShell/\.idea/

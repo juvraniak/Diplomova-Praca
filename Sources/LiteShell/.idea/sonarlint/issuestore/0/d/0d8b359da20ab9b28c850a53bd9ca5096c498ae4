@@ -1,29 +1,0 @@
-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8‰Šž†¤,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŸÝ»Ç8œ££„¤,
-Qsquid:S2209"5Change this instance-reference to a static reference.(á£§È8Éëâ”¤,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´ï‡Éÿÿÿÿÿ8œ££„¤,
-Gsquid:S1481"&Remove this unused "l" local variable.(®µå§ýÿÿÿÿ8Ì°Œ†¤,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÄÃÔ•úÿÿÿÿ8œ££„¤,
-Vsquid:S1854"5Remove this useless assignment to local variable "l".(®µå§ýÿÿÿÿ8Ì°Œ†¤,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¾ÃâÇúÿÿÿÿ8œ££„¤,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Šò¬Éüÿÿÿÿ8®‹Ú…¤,
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÃçÚV8œ££„¤,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Šò¬Éüÿÿÿÿ8ŽùÜ…¤,
-Tsquid:S3878"8Remove this array creation and simply pass the elements.(Œå²”8Ù°„¤,
-Dsquid:S1172"(Remove this unused method parameter "b".(á âê8ˆêà“¤,
-Vsquid:S2209"5Change this instance-reference to a static reference.(Šò¬Éüÿÿÿÿ8–ˆÜ…¤,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¾•™Åùÿÿÿÿ8ùÓü†¤,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ÔÔ¥øÿÿÿÿ8œ££„¤,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8œ££„¤,
-Vsquid:S2209"5Change this instance-reference to a static reference.(Šò¬Éüÿÿÿÿ8ŽùÜ…¤,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¸¿ ôÿÿÿÿÿ8þŒ¤„¤,
-Gsquid:S1444"+Make this "public static count" field final(˜“ÿ±8ÖãØ…¤,
-„"squid:ClassVariableVisibilityCheck"QMake count a static final constant or non-public and provide accessors if needed.(˜“ÿ±8ÖãØ…¤,
-Msquid:S1172",Remove this unused method parameter "start".(­µ’ýÿÿÿÿ8þŒ¤„¤,
-`squid:S2259"?A "NullPointerException" could be thrown; "a" is nullable here.(Šò¬Éüÿÿÿÿ8Å¯â”¤,

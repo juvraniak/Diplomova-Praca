@@ -103,6 +103,10 @@ public class ShittyArithmeticTest {
     s.getExecutor().execute(line.trim(), s);
     Assert.assertFalse(s.getScopeVariables().getBooleanMap().get("b"));
 
+    line = "$(boolean b1 = $($(${k}==${h})&&true||$(${k}<${h})));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b1"));
+
     line = "$(boolean b1 = $($(${k}==${h})));";
     s.getExecutor().execute(line.trim(), s);
     Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b1"));
@@ -115,5 +119,8 @@ public class ShittyArithmeticTest {
     s.getExecutor().execute(line.trim(), s);
     Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b"));
 
+    line = "$(boolean bshit = $(true==true));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("bshit"));
   }
 }

@@ -1,8 +1,0 @@
-
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å’Ó³¡,
-]squid:S1075"ARefactor your code to get this URI from a customizable parameter.(¶Ä¸8å’Ó³¡,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ì˜•8å’Ó³¡,
-bsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(ğáõ—şÿÿÿÿ8å’Ó³¡,
-Fsquid:S3010"%Remove this assignment of "commands".(Óı°âüÿÿÿÿ8å’Ó³¡,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(®¨Ã‹8¯Ñœ´¡,
-Xsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ÙøÏÀùÿÿÿÿ8¯Ñœ´¡,
