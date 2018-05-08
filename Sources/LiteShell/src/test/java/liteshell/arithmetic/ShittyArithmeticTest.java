@@ -122,5 +122,9 @@ public class ShittyArithmeticTest {
     line = "$(boolean bshit = $(true==true));";
     s.getExecutor().execute(line.trim(), s);
     Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("bshit"));
+
+    line = "$(boolean bshit2 = $(${str}==${str}));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("bshit2"));
   }
 }

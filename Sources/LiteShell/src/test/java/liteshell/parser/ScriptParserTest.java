@@ -19,7 +19,7 @@ public class ScriptParserTest {
     ScriptParser scriptParser;
     try {
       scriptParser = new ScriptParser(pathToScript);
-      scriptParser.parse(pathToScript);
+      scriptParser.parse();
     } catch (MethodMissingEception e) {
       e.printStackTrace();
     }

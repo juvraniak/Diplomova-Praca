@@ -1,0 +1,7 @@
+include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test3.lsh);
+@Override
+function int test(){
+  String path = "/home/jv";
+  ls ${path};
+  return 4;
+}

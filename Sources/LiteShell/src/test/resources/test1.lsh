@@ -1,6 +1,6 @@
 use copy 1.0;
 use move 1.0;
-
+include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test2.lsh);
 # zeby bol aj daky komentaris
     # zeby bol aj daky komentaris aj s odsadenim
 
@@ -18,13 +18,6 @@ function void main(String arg){
   rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
   test();
-}
-
-@Override
-function int test(){
-  String path = "/home/jv";
-  ls ${path};
-  return 4;
 }
 
 function void test(){

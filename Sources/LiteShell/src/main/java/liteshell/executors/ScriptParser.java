@@ -6,10 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.util.Pair;
@@ -42,7 +41,7 @@ public class ScriptParser {
     loadScript(path);
   }
 
-  public void parse(String scriptPath) {
+  public void parse() {
     ScopeImpl scriptScope = createNewScope("main");
     boolean isOverride = false;
 
@@ -147,23 +146,29 @@ public class ScriptParser {
   }
 
   private void loadScript(String path) throws MethodMissingEception {
-    Set<String> allIncludes = new HashSet<>();
+    Map<String, Boolean> allIncludes;
     try (Stream<String> lines = Files.lines(Paths.get(path), Charset.defaultCharset())) {
       PluginFactory pluginFactory = shellClient.getPluginFactory();
       CONTENT = lines
-          .filter(line -> !line.trim().startsWith(COMMENT))
-          .filter(line -> line.trim().startsWith(INCLUDE))
+//          .filter(line -> line.trim().startsWith(INCLUDE))
           .filter(line -> !line.isEmpty())
           .collect(Collectors.toList());
-      String firstLine = lines.findFirst().get();
+      String firstLine = CONTENT.get(0);
+      CONTENT = CONTENT.stream().filter(line -> !line.trim().startsWith(COMMENT))
+          .collect(Collectors.toList());
       if (firstLine.startsWith("#!")) {
         CONTENT.add(0, firstLine);
       }
       List<String> plugins = CONTENT.stream().filter(line -> line.startsWith("use"))
           .collect(Collectors.toList());
 
-      List<String> include = CONTENT.stream().filter(line -> line.trim().startsWith(INCLUDE))
-          .collect(Collectors.toList());
+      allIncludes = CONTENT.stream().filter(line -> line.trim().startsWith(INCLUDE))
+          .collect(Collectors.toMap(i -> i, i -> false));
+
+      allIncludes.forEach((k, v) -> CONTENT.remove(k));
+      List<String> loadedInputs = handleIncludes(allIncludes);
+
+      CONTENT.addAll(loadedInputs);
 
       List<String> functions = CONTENT.stream()
           .filter(line -> line.startsWith("function"))
@@ -183,6 +188,47 @@ public class ScriptParser {
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  private List<String> handleIncludes(Map<String, Boolean> allIncludes) {
+    List<String> loadedRows = new ArrayList<>();
+    for (Entry<String, Boolean> set : allIncludes.entrySet()) {
+      String k = set.getKey();
+      Boolean v = set.getValue();
+      if (allIncludes.get(k) != true) {
+        String path = k.substring(k.indexOf("(") + 1, k.length() - 2);
+        try (Stream<String> lines = Files.lines(Paths.get(path), Charset.defaultCharset())) {
+          //load all lines
+          List<String> newLines = lines
+              .filter(line -> !line.isEmpty())
+              .collect(Collectors.toList());
+          //find and add includes that are not already in map
+          newLines.stream().filter(line -> line.trim().startsWith(INCLUDE))
+              .collect(Collectors.toList()).forEach(line -> {
+            if (!allIncludes.containsKey(line)) {
+              allIncludes.put(line, false);
+            }
+          });
+          //delete comments
+          newLines = newLines.stream().filter(line -> !line.trim().startsWith(COMMENT))
+              .filter(line -> !line.trim().startsWith(INCLUDE))
+              .collect(Collectors.toList());
+          //add all loaded lines
+          loadedRows.addAll(newLines);
+          //mark complete loading
+          allIncludes.put(k, true);
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+
+    List<Boolean> collect = allIncludes.values().stream().filter(v -> !v)
+        .collect(Collectors.toList());
+    if (!collect.isEmpty()) {
+      loadedRows.addAll(handleIncludes(allIncludes));
+    }
+    return loadedRows;
   }
 
   private ScopeImpl createNewScope(String name) {
