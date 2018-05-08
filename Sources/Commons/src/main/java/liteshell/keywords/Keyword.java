@@ -9,6 +9,7 @@ public enum Keyword {
   ELSE("else"),
   INT("int"),
   DOUBLE("double"),
+  BOOLEAN("boolean"),
   LIST("list"),
   STRING("string"),
   MAP("map"),

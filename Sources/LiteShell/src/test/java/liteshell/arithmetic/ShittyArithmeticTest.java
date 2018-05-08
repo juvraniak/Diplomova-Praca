@@ -45,4 +45,75 @@ public class ShittyArithmeticTest {
     Assert.assertTrue(s.getScopeVariables().getStringMap().get("str2").equals("shit"));
 
   }
+
+  @Test
+  public void secondShittyTest() {
+    String line;
+    Scope s = new ScopeImpl("test", ShellClient.getInstance(), null);
+
+    line = "$(int k = 4);";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(4 == s.getScopeVariables().getIntegerMap().get("k"));
+
+    line = "$(int i = $(${k}+4+5+6-4+6*9-7/2+3-6*5/5));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(88 == s.getScopeVariables().getIntegerMap().get("i"));
+
+    line = "$(int h = ${k});";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(4 == s.getScopeVariables().getIntegerMap().get("h"));
+
+    line = "$(${h} = 3);";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(3 == s.getScopeVariables().getIntegerMap().get("h"));
+
+    line = "$(${h} = $(${k}+4+5+6-4+6*9-7/2+3-6*5/5));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(88 == s.getScopeVariables().getIntegerMap().get("h"));
+
+    line = "$(${h} = ${k});";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(4 == s.getScopeVariables().getIntegerMap().get("h"));
+
+    line = "$(string shit = \"shit\");";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getStringMap().get("shit").equals("shit"));
+
+    line = "$(string str = $(\"dsada\"+\"dasdasd\"+${shit}));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getStringMap().get("str").equals("dsadadasdasdshit"));
+
+    line = "$(string str2 = ${shit});";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getStringMap().get("str2").equals("shit"));
+
+    line = "$(${str2} = \"cosi\");";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getStringMap().get("str2").equals("cosi"));
+
+    line = "$(${str2} = ${shit});";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getStringMap().get("str2").equals("shit"));
+
+    line = "$(boolean b = true);";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b"));
+
+    line = "$(${b} = false);";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertFalse(s.getScopeVariables().getBooleanMap().get("b"));
+
+    line = "$(boolean b1 = $($(${k}==${h})));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b1"));
+
+    line = "$(${b} = $(${k}!=${h}));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertFalse(s.getScopeVariables().getBooleanMap().get("b"));
+
+    line = "$(${b} = $(${k}!=${i}));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("b"));
+
+  }
 }

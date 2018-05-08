@@ -163,6 +163,7 @@ public class PluginFactory {
     allAvailablePlugins.put(new PluginMeta("1.0", "boolean"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "arithmetic"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "stringsPrep"), new VariablePlugin());
+    allAvailablePlugins.put(new PluginMeta("1.0", "booleanPrep"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "${"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "cd"), new ChangeDirectoryPlugin());
 //    allAvailablePlugins.put(new ArithmeticPlugin().getInfo(), new ArithmeticPlugin());
