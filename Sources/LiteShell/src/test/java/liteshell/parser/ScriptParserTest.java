@@ -15,7 +15,7 @@ public class ScriptParserTest {
   public void testScriptParser() {
 
     String pathToScript =
-        System.getProperty("user.dir") + File.separator + "src/test/resources/test1.ls";
+        System.getProperty("user.dir") + File.separator + "src/test/resources/test1.lsh";
     ScriptParser scriptParser;
     try {
       scriptParser = new ScriptParser(pathToScript);

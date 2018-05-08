@@ -4,6 +4,7 @@ use move 1.0;
 # zeby bol aj daky komentaris
     # zeby bol aj daky komentaris aj s odsadenim
 
+
 int globalVar = \
 8;
 

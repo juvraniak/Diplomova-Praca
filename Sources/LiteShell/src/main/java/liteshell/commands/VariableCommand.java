@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.CommandIOException;
 import liteshell.receivers.ArithmeticReceiver;
+import liteshell.receivers.BooleanRecevier;
 import liteshell.receivers.ChangeVariableReceiver;
 import liteshell.receivers.DoubleReceiver;
 import liteshell.receivers.GetVariableReceiver;
@@ -34,7 +35,7 @@ public class VariableCommand implements Command {
           commandInput = new DoubleReceiver().executeCommand(commandInput, splitedImport, scope);
           break;
         case "boolean":
-//                    out = new DeletePackageReceiver().executeCommand(commandInput,splitedImport, scope);
+          commandInput = new BooleanRecevier().executeCommand(commandInput, splitedImport, scope);
           break;
         case "string":
           commandInput = new StringReceiver().executeCommand(commandInput, splitedImport, scope);
