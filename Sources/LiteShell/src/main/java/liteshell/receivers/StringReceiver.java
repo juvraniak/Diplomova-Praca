@@ -38,8 +38,8 @@ public class StringReceiver implements Receiver {
       try {
         boolean isCommand = strings[2].startsWith("$(");
         boolean isInitializedVariable = strings[2].startsWith("${");
-        String toExecute = isCommand ? "stringsPrep " + strings[2]
-            .substring(strings[2].indexOf("(") + 1, strings[2].length() - 1) : strings[2];
+        String toExecute = isCommand ? "$(stringsPrep " + strings[2]
+            .substring(strings[2].indexOf("(") + 1, strings[2].length()) : strings[2];
         String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
         stringValue = escapeString(replacement);
         var.getStringMap().put(variableName, stringValue);

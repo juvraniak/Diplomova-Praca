@@ -49,15 +49,17 @@ public class ExecutorImpl implements Executor {
       } catch (MethodMissingEception e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());
       }
-    } else if (command.startsWith("arithmetic")) {
-      out = new VariableCommand()
-          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
-              Optional.of(scope));
-    } else if (command.startsWith("stringsPrep")) {
-      out = new VariableCommand()
-          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
-              Optional.of(scope));
-    } else if (command.startsWith("${")) {
+    }
+//    else if (command.startsWith("arithmetic")) {
+//      out = new VariableCommand()
+//          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
+//              Optional.of(scope));
+//    } else if (command.startsWith("stringsPrep")) {
+//      out = new VariableCommand()
+//          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
+//              Optional.of(scope));
+//    }
+    else if (command.startsWith("${")) {
       out = new VariableCommand()
           .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));
     } else if (command.startsWith("$(")) {

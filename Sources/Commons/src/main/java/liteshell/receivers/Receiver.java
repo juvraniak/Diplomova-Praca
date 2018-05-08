@@ -15,9 +15,6 @@ public interface Receiver {
 
   default String findValue(String string, boolean isCommand, boolean isInitializedVariable,
       Scope scope) {
-    string =
-        string.startsWith("$(") ? string.substring(string.indexOf("(") + 1, string.length() - 1)
-            : string;
     return isCommand || isInitializedVariable ? findAndExecuteCommand(
         string, scope) : string;
   }

@@ -37,7 +37,8 @@ public class DoubleReceiver implements Receiver {
       try {
         boolean isCommand = strings[2].startsWith("$(");
         boolean isInitializedVariable = strings[2].startsWith("${");
-        String toExecute = isCommand ? "arithmetic" : strings[2];
+        String toExecute = isCommand ? "$(arithmetic " + strings[2]
+            .substring(strings[2].indexOf("(") + 1, strings[2].length()) : strings[2];
         String replacement = findValue(toExecute, isCommand, isInitializedVariable, scope.get());
 
         doubleValue = Double.parseDouble(replacement);
