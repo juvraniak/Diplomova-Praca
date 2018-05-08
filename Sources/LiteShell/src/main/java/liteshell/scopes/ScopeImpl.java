@@ -12,7 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 public class ScopeImpl extends AbstractScope {
 
 
-  public ScopeImpl(String scopeName, ShellClient shellClient, Scope parent) {
+  public ScopeImpl(String scopeName, Scope parent) {
+    ShellClient shellClient = ShellClient.getInstance();
     this.scopeName = scopeName;
     this.pluginFactory = shellClient.getPluginFactory();
     this.executor = shellClient.getExecutor();

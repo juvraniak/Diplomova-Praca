@@ -45,21 +45,11 @@ public class ExecutorImpl implements Executor {
           throw new NullPointerException("Enter correct path!");
         }
         ScriptParser parser = new ScriptParser(path);
-        parser.parse(path);
+        parser.parse();
       } catch (MethodMissingEception e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());
       }
-    }
-//    else if (command.startsWith("arithmetic")) {
-//      out = new VariableCommand()
-//          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
-//              Optional.of(scope));
-//    } else if (command.startsWith("stringsPrep")) {
-//      out = new VariableCommand()
-//          .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)),
-//              Optional.of(scope));
-//    }
-    else if (command.startsWith("${")) {
+    } else if (command.startsWith("${")) {
       out = new VariableCommand()
           .execute(DefaultCommadIO.of(CommandIO.prepareIO(command)), Optional.of(scope));
     } else if (command.startsWith("$(")) {
@@ -152,7 +142,6 @@ public class ExecutorImpl implements Executor {
 
   /**
    * @param scope scope where list of commands should be executed
-   *
    */
 //  @Override
   public CommandIO executePipe(Scope scope, String command) {

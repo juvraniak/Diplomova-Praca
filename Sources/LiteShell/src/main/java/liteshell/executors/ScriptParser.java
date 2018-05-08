@@ -232,11 +232,11 @@ public class ScriptParser {
   }
 
   private ScopeImpl createNewScope(String name) {
-    return new ScopeImpl(name, shellClient, null);
+    return new ScopeImpl(name, null);
   }
 
   private Scope createNewScope(String name, Scope parrent) {
-    return new ScopeImpl(name, shellClient, parrent);
+    return new ScopeImpl(name, parrent);
   }
 
 }
