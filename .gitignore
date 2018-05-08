@@ -28,5 +28,6 @@ Sources/Service/.idea/*
 Sources/DiplomaTheisImplementation/.idea
 
 # ignore some more
-.gradle/*
+Sources/Commons/.gradle/*
+Sources/LiteShell/.idea/*
 .idea/*
