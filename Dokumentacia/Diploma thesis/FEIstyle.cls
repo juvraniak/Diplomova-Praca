@@ -92,6 +92,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{gensymb}
+\usepackage{glossaries}
 \usepackage{eurosym}
 
 \newboolean{isThesis}
