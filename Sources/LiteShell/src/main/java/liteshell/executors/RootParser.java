@@ -5,7 +5,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,10 +12,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
+import liteshell.parser.Parser;
 import liteshell.plugins.PluginFactory;
+import liteshell.scopes.IfScope;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
-import liteshell.utils.ShellClient;
 import liteshell.utils.StringUtils;
 
 
@@ -24,27 +24,18 @@ import liteshell.utils.StringUtils;
  * @author xvraniak@stuba.sk
  */
 
-public class ScriptParser {
+public class RootParser implements Parser {
 
-  private static final String BLANK_SPACE = " ";
-  private static final String COMMENT = "#";
-  private static final String PIPE = "\\|";
-  private static final String INCLUDE = "include";
+  private final ScopeImpl scriptScope = createNewScope("script");
   private List<String> CONTENT = new ArrayList<>();
-  private Map<String, ScopeImpl> listOfScopes = new HashMap<>();
 
-  private ShellClient shellClient;
-
-
-  public ScriptParser(String path) throws MethodMissingEception {
-    this.shellClient = ShellClient.getInstance();
+  public RootParser(String path) throws MethodMissingEception {
     loadScript(path);
   }
 
   public void parse() {
-    ScopeImpl scriptScope = createNewScope("main");
-    boolean isOverride = false;
 
+    boolean isOverride = false;
 
     StringBuilder sb = new StringBuilder();
     String line;
@@ -68,9 +59,8 @@ public class ScriptParser {
       }
     }
 
-    System.out.println("tu");
     scriptScope.setFunctions(listOfScopes);
-    scriptScope.executeScript();
+    scriptScope.executeScript("main()");
 
   }
 
@@ -96,9 +86,9 @@ public class ScriptParser {
         sb.append(line.trim());
         sb.deleteCharAt(sb.length() - 1);
         if (isFunctionCall(sb.toString())) {
-          functionScope.addCommand(sb.toString());
+          functionScope.addCommand("fcall " + sb.toString());
         } else {
-          functionScope.addCommand("$(" + sb.toString() + ");");
+          functionScope.addCommand("$(" + sb.toString().trim() + ");");
         }
         sb.delete(0, sb.toString().length());
       } else if (line.endsWith("\\")) {
@@ -114,35 +104,17 @@ public class ScriptParser {
         }
         currentLine = i + 1;
         break;
+      } else if (line.trim().startsWith("if(")) {
+        String ifName = "if" + i;
+        IfScope newIf = new IfScope(ifName, functionScope, CONTENT, i);
+      } else if (line.trim().startsWith("for(")) {
+
       }
     }
     if (isOverride || listOfScopes.get(functionName) == null) {
       listOfScopes.put(functionName, functionScope);
     }
     return currentLine;
-  }
-
-  private boolean isFunctionCall(String call) {
-    boolean isFunction = false;
-    List<String> collect = listOfScopes.keySet().stream().filter(str -> call.contains(str + "("))
-        .collect(Collectors.toList());
-    if (!collect.isEmpty()) {
-      isFunction = true;
-    }
-    return isFunction;
-  }
-
-  private List<Pair<String, String>> handleInputParam(String parameters) {
-    if (parameters.isEmpty()) {
-      return new ArrayList<>();
-    }
-    String[] splittedParams = StringUtils.removeEmptyStrings(parameters.split(","));
-    List<Pair<String, String>> in = new ArrayList<>();
-    for (String s : splittedParams) {
-      String[] split = s.split(BLANK_SPACE);
-      in.add(new Pair<>(split[0], split[1]));
-    }
-    return in;
   }
 
   private void loadScript(String path) throws MethodMissingEception {
@@ -229,14 +201,6 @@ public class ScriptParser {
       loadedRows.addAll(handleIncludes(allIncludes));
     }
     return loadedRows;
-  }
-
-  private ScopeImpl createNewScope(String name) {
-    return new ScopeImpl(name, null);
-  }
-
-  private Scope createNewScope(String name, Scope parrent) {
-    return new ScopeImpl(name, parrent);
   }
 
 }

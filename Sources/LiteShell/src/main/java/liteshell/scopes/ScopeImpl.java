@@ -17,7 +17,11 @@ public class ScopeImpl extends AbstractScope {
     this.scopeName = scopeName;
     this.pluginFactory = shellClient.getPluginFactory();
     this.executor = shellClient.getExecutor();
-    this.parent = parent;
+    if (parent == null) {
+      this.parent = this;
+    } else {
+      this.parent = parent;
+    }
     this.scopeVariables.getStringMap().put("pwd", System.getProperty("user.home"));
     this.scopeVariables.getInitializedVariables().put("pwd", Keyword.STRING);
     if (scopeName.equals("application")) {

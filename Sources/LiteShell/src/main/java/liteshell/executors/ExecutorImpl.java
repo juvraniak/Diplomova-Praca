@@ -44,7 +44,7 @@ public class ExecutorImpl implements Executor {
         if (path == null) {
           throw new NullPointerException("Enter correct path!");
         }
-        ScriptParser parser = new ScriptParser(path);
+        RootParser parser = new RootParser(path);
         parser.parse();
       } catch (MethodMissingEception e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());

@@ -33,3 +33,7 @@ Sources/LiteShell/.idea/*
 .idea/*
 
 Sources/LiteShell/\.idea/
+
+*.lock
+
+*.bin

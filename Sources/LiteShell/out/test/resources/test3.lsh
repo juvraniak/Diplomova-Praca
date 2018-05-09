@@ -1,6 +1,6 @@
 @Override
 function int test(){
-  String path = "/home/jv/Documents";
+  string path = "/home/jv/Documents";
   ls ${path};
   return 5;
 }

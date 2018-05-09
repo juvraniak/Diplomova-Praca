@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
-import liteshell.utils.ShellClient;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,7 +25,7 @@ public class ShittyArithmeticTest {
     String pathToScript =
         System.getProperty("user.dir") + File.separator + "src/test/resources/arithmetic.lsh";
     StringBuilder sb = new StringBuilder();
-    Scope s = new ScopeImpl("test", ShellClient.getInstance(), null);
+    Scope s = new ScopeImpl("test", null);
     try (Stream<String> lines = Files.lines(Paths.get(pathToScript), Charset.defaultCharset())) {
       List<String> collect = lines.collect(Collectors.toList());
       collect.stream().forEach(l -> {
@@ -49,7 +48,7 @@ public class ShittyArithmeticTest {
   @Test
   public void secondShittyTest() {
     String line;
-    Scope s = new ScopeImpl("test", ShellClient.getInstance(), null);
+    Scope s = new ScopeImpl("test", null);
 
     line = "$(int k = 4);";
     s.getExecutor().execute(line.trim(), s);

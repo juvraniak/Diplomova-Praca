@@ -26,11 +26,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AbstractScope implements Scope, Runnable {
 
-  protected static String scopeName;
+  @Getter
+  protected String scopeName;
   protected PluginFactory pluginFactory;
   @Getter
   protected Executor executor;
   protected final ScopeVariables scopeVariables = new ScopeVariables();
+  @Getter
   protected Scope parent;
 
   @Getter
@@ -87,14 +89,28 @@ public class AbstractScope implements Scope, Runnable {
   }
 
   @Override
-  public void executeScript() {
-    //execute everything before main
-    this.stack.forEach(k -> {
-      executor.execute(k, getScope());
-    });
-    this.functions.get("main").stack.forEach(v ->
-        executor.execute(v, functions.get("main").getScope()));
+  public void executeScript(String function) {
+    if (scopeName.equals("script")) {
+      this.stack.forEach(k -> {
+        executor.execute(k, getScope());
+      });
+    }
+    String fName = function.substring(0, function.indexOf("("));
+    ScopeImpl parent = (ScopeImpl) this.getParent();
+    ScopeImpl functionScope = parent.functions.get(fName);
+    for (String command : functionScope.stack) {
+      if (command.startsWith("$(")) {
+        executor.execute(command, functionScope);
+      } else if (command.startsWith("fcall ")) {
+        String[] split = command.split(" = ");
+        if (split.length == 1) {
+          executeScript(command.substring("fcall ".length()));
+        }
+      }
+    }
   }
+
+
 
   @Override
   public void run() {

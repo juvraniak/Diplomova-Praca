@@ -22,7 +22,7 @@ public interface Scope {
 
   void addCommand(String command);
 
-  void executeScript();
+  void executeScript(String function);
 
   Executor getExecutor();
 }
