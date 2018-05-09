@@ -1,16 +1,0 @@
-
-Qsquid:S2209"5Change this instance-reference to a static reference.(î Ú‰8›¥µ‚°,
-Vsquid:S2209"5Change this instance-reference to a static reference.(—§¹êþÿÿÿÿ8›¥µ‚°,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(õöŒ¾øÿÿÿÿ8›¥µ‚°,
-Gsquid:S3010"&Remove this assignment of "scopeName".(ÙÎ‚öüÿÿÿÿ8›¥µ‚°,
-Ksquid:S3010"*Remove this assignment of "pluginFactory".(‡¸¯»ÿÿÿÿÿ8›¥µ‚°,
-Fsquid:S3010"%Remove this assignment of "executor".(—§¹êþÿÿÿÿ8›¥µ‚°,
-Bsquid:S3010"&Remove this assignment of "callStack".(î Ú‰8›¥µ‚°,
-Ksquid:S3010"*Remove this assignment of "parserFactory".(²î Ñùÿÿÿÿ8›¥µ‚°,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÀÀçŒúÿÿÿÿ8›¥µ‚°,
-Vsquid:S2209"5Change this instance-reference to a static reference.(‡¸¯»ÿÿÿÿÿ8›¥µ‚°,
-Vsquid:S2209"5Change this instance-reference to a static reference.(²î Ñùÿÿÿÿ8›¥µ‚°,
-ksquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(†„Ñ8›¥µ‚°,
-Vsquid:S2209"5Change this instance-reference to a static reference.(ÙÎ‚öüÿÿÿÿ8›¥µ‚°,

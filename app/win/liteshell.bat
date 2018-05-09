@@ -1,1 +1,0 @@
-java -jar LiteShell-1.0.jar
