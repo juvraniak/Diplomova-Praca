@@ -104,8 +104,12 @@ public class AbstractScope implements Scope, Runnable {
       } else if (command.startsWith("fcall ")) {
         String[] split = command.split(" = ");
         if (split.length == 1) {
+          //fcall test()
           executeScript(command.substring("fcall ".length()));
+        } else {
+          //fcall int a = test()
         }
+
       }
     }
   }
@@ -153,6 +157,6 @@ public class AbstractScope implements Scope, Runnable {
   }
 
   private void printLine() {
-    System.out.print("> ");
+    System.out.print(getCurrentWorkingDirectory() + " > ");
   }
 }

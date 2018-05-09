@@ -155,8 +155,8 @@ public class PluginFactory {
   }
 
   private void registerAppCommands() {
-    allAvailablePlugins.put(new PluginMeta("1.0", "grep"), new GrepPlugin());
-    allAvailablePlugins.put(new PluginMeta("1.0", "pgk"), new PackagePlugin());
+    allAvailablePlugins.put(new GrepPlugin().getInfo(), new GrepPlugin());
+    allAvailablePlugins.put(new PackagePlugin().getInfo(), new PackagePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "int"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "double"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "string"), new VariablePlugin());
@@ -165,7 +165,8 @@ public class PluginFactory {
     allAvailablePlugins.put(new PluginMeta("1.0", "stringsPrep"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "booleanPrep"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "${"), new VariablePlugin());
-    allAvailablePlugins.put(new PluginMeta("1.0", "cd"), new ChangeDirectoryPlugin());
+    allAvailablePlugins.put(new EchoPlugin().getInfo(), new EchoPlugin());
+    allAvailablePlugins.put(new ChangeDirectoryPlugin().getInfo(), new ChangeDirectoryPlugin());
 //    allAvailablePlugins.put(new ArithmeticPlugin().getInfo(), new ArithmeticPlugin());
   }
 

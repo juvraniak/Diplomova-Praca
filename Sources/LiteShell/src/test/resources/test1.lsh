@@ -18,6 +18,19 @@ function void main(String arg){
   rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
   test();
+  int a = getNumber(true);
+  int b = getNumber(false);
+  for(int i = 0; $(${i}<4);${i} = ${i} +1){
+     echo ("i",${i});
+  }
+}
+
+function int getNumber(boolean test){
+  if(${test}){
+    return 4;
+  } else{
+    return 5;
+  }
 }
 
 function void test(){

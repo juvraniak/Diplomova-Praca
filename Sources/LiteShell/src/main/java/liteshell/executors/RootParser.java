@@ -14,6 +14,7 @@ import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.parser.Parser;
 import liteshell.plugins.PluginFactory;
+import liteshell.scopes.ForScope;
 import liteshell.scopes.IfScope;
 import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
@@ -108,7 +109,8 @@ public class RootParser implements Parser {
         String ifName = "if" + i;
         IfScope newIf = new IfScope(ifName, functionScope, CONTENT, i);
       } else if (line.trim().startsWith("for(")) {
-
+        String forName = "for" + i;
+        ForScope newFor = new ForScope(forName, functionScope, CONTENT, i);
       }
     }
     if (isOverride || listOfScopes.get(functionName) == null) {
