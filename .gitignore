@@ -29,8 +29,8 @@ Sources/DiplomaTheisImplementation/.idea
 
 # ignore some more
 Sources/Commons/.gradle/*
-Sources/LiteShell/.idea/*
-.idea/*
+#Sources/LiteShell/.idea/*
+#.idea/*
 
 #Sources/LiteShell/\.idea/
 
