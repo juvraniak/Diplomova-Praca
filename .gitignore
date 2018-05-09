@@ -32,7 +32,7 @@ Sources/Commons/.gradle/*
 Sources/LiteShell/.idea/*
 .idea/*
 
-Sources/LiteShell/\.idea/
+#Sources/LiteShell/\.idea/
 
 *.lock
 
