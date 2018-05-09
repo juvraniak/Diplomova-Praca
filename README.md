@@ -1,1 +1,3 @@
 # Diplomova-Praca
+
+Dokumentacia
