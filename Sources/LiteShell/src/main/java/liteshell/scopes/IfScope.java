@@ -66,17 +66,21 @@ public class IfScope extends ScopeImpl implements Parser {
         IfScope newIf = new IfScope(ifName, (ScopeImpl) functionScope.getParent(), functionScope,
             content,
             index);
-        index = newIf.preProcess();
+        this.addCommand("fcall " + ifName + "()");
         listOfScopes.put(ifName, newIf);
-        functionScope.addCommand("fcall " + ifName + "()");
+        index = newIf.preProcess();
+
+
       } else if (line.trim().startsWith("for(")) {
         String forName = "for" + index;
         ForScope newFor = new ForScope(forName, (ScopeImpl) functionScope.getParent(),
             functionScope, content,
             index);
-        index = newFor.preProcess();
+        this.addCommand("fcall " + newFor + "()");
         listOfScopes.put(forName, newFor);
-        functionScope.addCommand("fcall " + newFor + "()");
+        index = newFor.preProcess();
+
+
       }
     }
 

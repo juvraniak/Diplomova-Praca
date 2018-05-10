@@ -25,6 +25,7 @@ public interface Parser {
   String INCLUDE = "include";
   ShellClient shellClient = ShellClient.getInstance();
   Map<String, ScopeImpl> listOfScopes = new HashMap<>();
+  List<String> orderOfScopes = new ArrayList<>();
 
   default List<Pair<String, String>> handleInputParam(String parameters) {
     if (parameters.isEmpty()) {

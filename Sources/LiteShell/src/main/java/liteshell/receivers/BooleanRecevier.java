@@ -1,7 +1,6 @@
 package liteshell.receivers;
 
 import java.util.Optional;
-import java.util.stream.Stream;
 import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.WrongCommandInputException;
 import liteshell.keywords.Keyword;
@@ -21,14 +20,14 @@ public class BooleanRecevier implements Receiver {
 
     String variableName = strings[1];
 
-    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
-        .get(variableName) != null) {
-      commandIO.setCommandErrorOutput(
-          Optional
-              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
-      commandIO.setReturnCode(-1);
-      return commandIO;
-    }
+//    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
+//        .get(variableName) != null) {
+//      commandIO.setCommandErrorOutput(
+//          Optional
+//              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
+//      commandIO.setReturnCode(-1);
+//      return commandIO;
+//    }
     ScopeVariables var = scope.get().getScopeVariables();
     var.getInitializedVariables().put(variableName, Keyword.BOOLEAN);
     var.getBooleanMap().put(variableName, booleanValue);

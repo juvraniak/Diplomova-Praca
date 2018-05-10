@@ -23,6 +23,9 @@ public class ForScope extends ScopeImpl implements Parser {
   private int retValue;
   private String condition;
   private String increment;
+  private String var;
+
+  private boolean isBreak;
 
 
   public ForScope(String scopeName, ScopeImpl parent, ScopeImpl functionScope, List<String> content,
@@ -45,6 +48,8 @@ public class ForScope extends ScopeImpl implements Parser {
         .split(";");
     //TODO: aby bolo podporovane pouzit uz inicializovanej premennej treba skusit ci sa nezacina na $( atd..., enhancement
     init = "$(" + forStatement[0] + ")";
+    var = forStatement[0].split(" = ")[0];
+    var = var.split(" ")[1];
     condition = forStatement[1].trim();
     increment = forStatement[2].trim();
     for (; index < content.size(); index++) {
@@ -76,18 +81,21 @@ public class ForScope extends ScopeImpl implements Parser {
         IfScope newIf = new IfScope(ifName, (ScopeImpl) functionScope.getParent(), functionScope,
             content,
             index);
-        index = newIf.preProcess();
-        functionScope.addCommand("fcall " + ifName + "()");
+        this.addCommand("fcall " + ifName + "()");
         listOfScopes.put(ifName, newIf);
+        index = newIf.preProcess();
+
 
       } else if (line.trim().startsWith("for(")) {
         String forName = "for" + index;
         ForScope newFor = new ForScope(forName, (ScopeImpl) functionScope.getParent(),
             functionScope, content,
             index);
-        index = newFor.preProcess();
-        functionScope.addCommand("fcall " + forName + "()");
+        this.addCommand("fcall " + forName + "()");
         listOfScopes.put(forName, newFor);
+        index = newFor.preProcess();
+
+
       }
 
     }
@@ -99,11 +107,16 @@ public class ForScope extends ScopeImpl implements Parser {
   public void executeScript(String function) {
     CommandIO out;
     String fName;
-    for (int i = getStart(); evalueateCondition(); evalueateIncremet()) {
+    for (int i = getStart(); evalueateCondition(); i = evalueateIncremet()) {
 
       for (int j = 0; j < stack.size(); j++) {
         String command = stack.get(j);
-        if (command.startsWith("$(")) {
+        if (command.startsWith("$(break)")) {
+          isBreak = true;
+          break;
+        } else if (command.startsWith("$(continue)")) {
+
+        } else if (command.startsWith("$(")) {
           out = executor.execute(command, this);
           if (out.getReturnCode() == 0) {
             out.getCommandOutput()
@@ -140,8 +153,12 @@ public class ForScope extends ScopeImpl implements Parser {
     }
   }
 
-  private void evalueateIncremet() {
-    getExecutor().execute(increment, this);
+  private int evalueateIncremet() {
+    CommandIO commandIO = getExecutor().execute(increment, this);
+    commandIO = getExecutor().execute("$(${" + var + "});", this);
+    commandIO.getCommandOutput()
+        .ifPresent(o -> retValue = new BigDecimal(o.reduce(String::concat).get()).intValue());
+    return retValue;
   }
 
   private int getStart() {
@@ -152,22 +169,27 @@ public class ForScope extends ScopeImpl implements Parser {
   }
 
   private boolean evalueateCondition() {
-    boolean isCommand = condition.startsWith("$(");
-    boolean isInitializedVariable = condition.startsWith("${");
+    if (isBreak) {
+      isBreak = false;
+      return false;
+    } else {
+      boolean isCommand = condition.startsWith("$(");
+      boolean isInitializedVariable = condition.startsWith("${");
 
-    String toExecute = isCommand ? "$(booleanPrep " + condition
-        .substring(condition.indexOf("(") + 1, condition.length()) : condition;
-    CommandIO out =
-        isCommand || isInitializedVariable ? this.getExecutor()
-            .execute(toExecute, this.getScope())
-            : getCommandIO();
+      String toExecute = isCommand ? "$(booleanPrep " + condition
+          .substring(condition.indexOf("(") + 1, condition.length()) : condition;
+      CommandIO out =
+          isCommand || isInitializedVariable ? this.getExecutor()
+              .execute(toExecute, this.getScope())
+              : getCommandIO();
 
-    Boolean booleanValue = resolveBoolean(
-        out.getCommandOutput().get().reduce(String::concat).get());
-    if (booleanValue != null) {
-      return booleanValue;
+      Boolean booleanValue = resolveBoolean(
+          out.getCommandOutput().get().reduce(String::concat).get());
+      if (booleanValue != null) {
+        return booleanValue;
+      }
+      return false;
     }
-    return false;
   }
 
   private Boolean resolveBoolean(String replacement) {

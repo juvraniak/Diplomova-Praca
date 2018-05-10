@@ -20,15 +20,15 @@ public class IntReceiver implements Receiver {
     Integer integerValue = 0;
 
     String variableName = strings[1];
-
-    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
-        .get(variableName) != null) {
-      out.setCommandErrorOutput(
-          Optional
-              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
-      out.setReturnCode(-1);
-      return out;
-    }
+    //TODO : think whether this is needed
+//    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
+//        .get(variableName) != null) {
+//      out.setCommandErrorOutput(
+//          Optional
+//              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
+//      out.setReturnCode(-1);
+//      return out;
+//    }
     ScopeVariables var = scope.get().getScopeVariables();
     var.getInitializedVariables().put(variableName, Keyword.INT);
     var.getIntegerMap().put(variableName, integerValue);

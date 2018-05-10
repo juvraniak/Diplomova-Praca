@@ -115,17 +115,20 @@ public class RootParser implements Parser {
         String ifName = "if" + i;
         IfScope newIf = new IfScope(ifName, (ScopeImpl) functionScope.getParent(), functionScope,
             CONTENT, i);
-        i = newIf.preProcess();
-        listOfScopes.put(ifName, newIf);
         functionScope.addCommand("fcall " + ifName + "()");
+        listOfScopes.put(ifName, newIf);
+        i = newIf.preProcess();
+
+
       } else if (line.trim().startsWith("for(")) {
         String forName = "for" + i;
         ForScope newFor = new ForScope(forName, (ScopeImpl) functionScope.getParent(),
             functionScope, CONTENT,
             i);
-        i = newFor.preProcess();
-        listOfScopes.put(forName, newFor);
         functionScope.addCommand("fcall " + forName + "()");
+        listOfScopes.put(forName, newFor);
+        i = newFor.preProcess();
+
       }
     }
     if (isOverride || listOfScopes.get(functionName) == null) {

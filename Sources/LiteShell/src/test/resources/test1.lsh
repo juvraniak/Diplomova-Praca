@@ -24,6 +24,13 @@ function void main(string arg){
 #  echo (${b});
   for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
      echo ("i",${i});
+
+     for(int i = 21; $(${i}<23);$(${i} = $(${i}+1))){
+
+        echo ("i",${i});
+
+     }
+break;
   }
 }
 

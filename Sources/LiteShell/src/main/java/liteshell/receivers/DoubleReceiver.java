@@ -21,14 +21,14 @@ public class DoubleReceiver implements Receiver {
 
     String variableName = strings[1];
 
-    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
-        .get(variableName) != null) {
-      out.setCommandErrorOutput(
-          Optional
-              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
-      out.setReturnCode(-1);
-      return out;
-    }
+//    if (isScopePresent && scope.get().getScopeVariables().getInitializedVariables()
+//        .get(variableName) != null) {
+//      out.setCommandErrorOutput(
+//          Optional
+//              .of(Stream.of("Variable " + variableName + " is already defined in this scope!")));
+//      out.setReturnCode(-1);
+//      return out;
+//    }
     ScopeVariables var = scope.get().getScopeVariables();
     var.getInitializedVariables().put(variableName, Keyword.DOUBLE);
     var.getDoubleMap().put(variableName, doubleValue);
