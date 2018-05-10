@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
+import liteshell.keywords.Keyword;
 import liteshell.parser.Parser;
 import liteshell.plugins.PluginFactory;
 import liteshell.scopes.ForScope;
@@ -77,13 +78,18 @@ public class RootParser implements Parser {
     String returnType = functionLine[0];
     String functionName = functionLine[1];
     ScopeImpl functionScope = (ScopeImpl) createNewScope(functionName, parrentScope);
-    functionScope.setReturnType(returnType);
+    functionScope.setReturnType(Keyword.getKeywordForString(returnType));
     List<Pair<String, String>> input = handleInputParam(parameters);
+    input.stream().filter(p -> !p.getKey().equals("void"))
+        .forEach(p -> initInputVariable(p, functionScope));
     functionScope.setInputParameters(input);
     functionScope.setOverride(isOverride);
     for (int i = currentLine + 1; i < CONTENT.size(); i++) {
       line = CONTENT.get(i);
       if (line.endsWith(";")) {
+        if (line.trim().startsWith("return")) {
+          line = functionScope.assignReturnValue(line, functionScope.getReturnType());
+        }
         sb.append(line.trim());
         sb.deleteCharAt(sb.length() - 1);
         if (isFunctionCall(sb.toString())) {
@@ -107,16 +113,29 @@ public class RootParser implements Parser {
         break;
       } else if (line.trim().startsWith("if(")) {
         String ifName = "if" + i;
-        IfScope newIf = new IfScope(ifName, functionScope, CONTENT, i);
+        IfScope newIf = new IfScope(ifName, (ScopeImpl) functionScope.getParent(), functionScope,
+            CONTENT, i);
+        i = newIf.preProcess();
+        listOfScopes.put(ifName, newIf);
+        functionScope.addCommand("fcall " + ifName + "()");
       } else if (line.trim().startsWith("for(")) {
         String forName = "for" + i;
-        ForScope newFor = new ForScope(forName, functionScope, CONTENT, i);
+        ForScope newFor = new ForScope(forName, (ScopeImpl) functionScope.getParent(),
+            functionScope, CONTENT,
+            i);
+        i = newFor.preProcess();
+        listOfScopes.put(forName, newFor);
+        functionScope.addCommand("fcall " + forName + "()");
       }
     }
     if (isOverride || listOfScopes.get(functionName) == null) {
       listOfScopes.put(functionName, functionScope);
     }
     return currentLine;
+  }
+
+  private void initInputVariable(Pair<String, String> p, ScopeImpl scope) {
+    scope.getExecutor().execute("$(" + p.getKey() + " " + p.getValue() + ");", scope);
   }
 
   private void loadScript(String path) throws MethodMissingEception {
@@ -204,5 +223,6 @@ public class RootParser implements Parser {
     }
     return loadedRows;
   }
+
 
 }

@@ -33,4 +33,19 @@ public class ScopeImpl extends AbstractScope {
   public Scope getScope() {
     return this;
   }
+
+  public String assignReturnValue(String line, Keyword key) {
+    switch (key) {
+      case INT:
+        return "int returnValue = " + line.trim().substring("return ".length());
+      case DOUBLE:
+        return "double returnValue = " + line.trim().substring("return ".length());
+      case STRING:
+        return "string returnValue = " + line.trim().substring("return ".length());
+      case BOOLEAN:
+        return "boolean returnValue = " + line.trim().substring("return ".length());
+
+    }
+    return line;
+  }
 }

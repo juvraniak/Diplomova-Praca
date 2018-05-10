@@ -41,7 +41,7 @@ public class AbstractScope implements Scope, Runnable {
   protected List<String> stack = new ArrayList<>();
   @Getter
   @Setter
-  protected String returnType;
+  protected Keyword returnType;
   @Getter
   @Setter
   protected String returnValue;
@@ -90,6 +90,7 @@ public class AbstractScope implements Scope, Runnable {
 
   @Override
   public void executeScript(String function) {
+    CommandIO out;
     if (scopeName.equals("script")) {
       this.stack.forEach(k -> {
         executor.execute(k, getScope());
@@ -97,21 +98,44 @@ public class AbstractScope implements Scope, Runnable {
     }
     String fName = function.substring(0, function.indexOf("("));
     ScopeImpl parent = (ScopeImpl) this.getParent();
+
     ScopeImpl functionScope = parent.functions.get(fName);
     for (String command : functionScope.stack) {
       if (command.startsWith("$(")) {
-        executor.execute(command, functionScope);
+        out = executor.execute(command, functionScope);
+        if (out.getReturnCode() == 0) {
+          out.getCommandOutput()
+              .ifPresent(
+                  stringStream -> System.out.println(stringStream.reduce(String::concat).get()));
+        } else {
+          out.getCommandErrorOutput().ifPresent(System.out::println);
+        }
       } else if (command.startsWith("fcall ")) {
         String[] split = command.split(" = ");
         if (split.length == 1) {
           //fcall test()
-          executeScript(command.substring("fcall ".length()));
+          fName = command.substring("fcall ".length());
+          if (fName.startsWith("for")) {
+
+            fName = fName.substring(0, fName.indexOf("("));
+            ForScope forScope = (ForScope) parent.functions.get(fName);
+            forScope.executeScript(fName);
+          } else if (fName.startsWith("if")) {
+            fName = command.substring("fcall ".length());
+            fName = fName.substring(0, fName.indexOf("("));
+            IfScope ifScope = (IfScope) parent.functions.get(fName);
+            ifScope.executeScript(fName);
+          } else {
+            executeScript(fName);
+          }
         } else {
           //fcall int a = test()
+          System.out.println("tu");
         }
 
       }
     }
+
   }
 
 
@@ -129,6 +153,7 @@ public class AbstractScope implements Scope, Runnable {
 //        userInput = "$(add($(add(${i}, ${j})), 5));";
 //        userInput = "sh /home/jv/Umlet/umlet.sh";
 //        userInput = "sh echo \"dsadasdas\" > /home/jv/Umlet/cosi.txt";
+        userInput = "./home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test1.lsh";
         commandIO = executor.execute(userInput, getScope());
         if (commandIO.getCommandOutput().isPresent()) {
           commandIO.getCommandOutput().get().forEach(System.out::println);
@@ -146,7 +171,7 @@ public class AbstractScope implements Scope, Runnable {
   }
 
   private String prepareInput(String in) {
-    return in.startsWith("./") || in.startsWith("sh ") ? in
+    return in.startsWith("./") || in.startsWith("sh ") || in.startsWith("win") ? in
         : in.endsWith(";") ? "$(" + in.substring(0, in.length() - 1) + ");" : "$(" + in + ");";
   }
 

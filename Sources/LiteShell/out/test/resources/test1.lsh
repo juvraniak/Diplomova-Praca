@@ -1,6 +1,6 @@
 use copy 1.0;
 use move 1.0;
-include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test2.lsh);
+#include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test2.lsh);
 # zeby bol aj daky komentaris
     # zeby bol aj daky komentaris aj s odsadenim
 
@@ -8,29 +8,31 @@ include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/reso
 int globalVar = \
 8;
 
-function void main(String arg){
+function void main(string arg){
   int i = 5;
   ${i} = 9;
-  copy /home/jv/examples.desktop /home/jv/Downloads/examples.desktop;
-  move /home/jv/Downloads/examples.desktop \
-  /home/jv/Documents/examples.desktop;
-  rm /home/jv/Documents/examples.desktop;
-  rm /home/jv/Downloads/examples.desktop;
+#  copy /home/jv/examples.desktop /home/jv/Downloads/examples.desktop;
+#  move /home/jv/Downloads/examples.desktop \
+#  /home/jv/Documents/examples.desktop;
+#  rm /home/jv/Documents/examples.desktop;
+#  rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
   test();
   int a = getNumber(true);
+#  echo (${a});
   int b = getNumber(false);
-  for(int i = 0; $(${i}<4);${i} = ${i} +1){
+#  echo (${b});
+  for(int i = 0; $(${i}<4);$(${i} = ${i} +1)){
      echo ("i",${i});
   }
 }
 
 function int getNumber(boolean test){
+  int r = 4;
   if(${test}){
-    return 4;
-  } else{
-    return 5;
+    ${r} = 5;
   }
+  return ${r};
 }
 
 function void test(){

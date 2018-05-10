@@ -52,7 +52,8 @@ public class BooleanPrepReceiver implements Receiver {
     }
     String regexp = ">|>=|==|!=|<=|<";
     String[] variables = StringUtils.removeEmptyStrings(expression.split(regexp));
-
+    isCommand = variables[0].startsWith("$(");
+    isInisInitializedVariable = variables[0].startsWith("${");
     String val1 = findValue(variables[0], isCommand, isInisInitializedVariable, scope);
     if (variables.length > 1) {
       String sign = expression
@@ -60,6 +61,8 @@ public class BooleanPrepReceiver implements Receiver {
               expression.indexOf(expression.charAt(variables[0].length() - 1)) + 1,
               expression.indexOf(variables[1],
                   expression.indexOf(expression.charAt(variables[0].length() - 1)) + 1));
+      isCommand = variables[1].startsWith("$(");
+      isInisInitializedVariable = variables[1].startsWith("${");
       String val2 = findValue(variables[1], isCommand, isInisInitializedVariable, scope);
 
       switch (sign) {

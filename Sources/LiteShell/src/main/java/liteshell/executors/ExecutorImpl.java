@@ -38,8 +38,8 @@ public class ExecutorImpl implements Executor {
       executeCommand(command.substring(3));
     } else if (command.startsWith("win ") || command.startsWith("ext ")) {
       executeCommand(command.substring(4));
-    } else if (command.startsWith("./") && command.endsWith(".ls")) {
-      String path = validatePath(command.substring(2), scope);
+    } else if (command.startsWith("./") && command.endsWith(".lsh")) {
+      String path = validatePath(command.substring(1), scope);
       try {
         if (path == null) {
           throw new NullPointerException("Enter correct path!");
