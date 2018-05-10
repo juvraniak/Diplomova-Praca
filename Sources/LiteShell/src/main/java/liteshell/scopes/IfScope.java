@@ -19,6 +19,7 @@ public class IfScope extends ScopeImpl implements Parser {
   private ScopeImpl functionScope;
 
   private String condition;
+  private boolean isBreak;
 
   public IfScope(String scopeName, ScopeImpl parent, ScopeImpl functionScope, List<String> content,
       int index) {
@@ -76,7 +77,7 @@ public class IfScope extends ScopeImpl implements Parser {
         ForScope newFor = new ForScope(forName, (ScopeImpl) functionScope.getParent(),
             functionScope, content,
             index);
-        this.addCommand("fcall " + newFor + "()");
+        this.addCommand("fcall " + forName + "()");
         listOfScopes.put(forName, newFor);
         index = newFor.preProcess();
 
@@ -89,8 +90,50 @@ public class IfScope extends ScopeImpl implements Parser {
 
   @Override
   public void executeScript(String function) {
+    CommandIO out;
+    String fName;
     if (evalueateCondition()) {
-      super.executeScript(function);
+      for (int j = 0; j < stack.size(); j++) {
+        String command = stack.get(j);
+        if (command.startsWith("$(break)")) {
+          isBreak = true;
+          break;
+        } else if (command.startsWith("$(continue)")) {
+
+        } else if (command.startsWith("$(")) {
+          out = executor.execute(command, this);
+          if (out.getReturnCode() == 0) {
+            out.getCommandOutput()
+                .ifPresent(
+                    stringStream -> System.out.println(stringStream.reduce(String::concat).get()));
+          } else {
+            out.getCommandErrorOutput().ifPresent(System.out::println);
+          }
+        } else if (command.startsWith("fcall ")) {
+          String[] split = command.split(" = ");
+          if (split.length == 1) {
+            //fcall test()
+            fName = command.substring("fcall ".length());
+            if (fName.startsWith("for")) {
+
+              fName = fName.substring(0, fName.indexOf("("));
+              ForScope forScope = (ForScope) ((ScopeImpl) parent).getFunctions().get(fName);
+              forScope.executeScript(fName);
+            } else if (fName.startsWith("if")) {
+              fName = command.substring("fcall ".length());
+              fName = fName.substring(0, fName.indexOf("("));
+              IfScope ifScope = (IfScope) ((ScopeImpl) parent).getFunctions().get(fName);
+              ifScope.executeScript(fName);
+            } else {
+              executeScript(fName);
+            }
+          } else {
+            //fcall int a = test()
+            System.out.println("tu");
+          }
+
+        }
+      }
     }
   }
 

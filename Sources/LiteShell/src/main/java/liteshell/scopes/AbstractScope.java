@@ -112,33 +112,37 @@ public class AbstractScope implements Scope, Runnable {
         }
       } else if (command.startsWith("fcall ")) {
         String[] split = command.split(" = ");
+        String callParams;
+        String afterExecuteRetValue;
         if (split.length == 1) {
-          //fcall test()
           fName = command.substring("fcall ".length());
-          if (fName.startsWith("for")) {
-
-            fName = fName.substring(0, fName.indexOf("("));
-            ForScope forScope = (ForScope) parent.functions.get(fName);
-            forScope.executeScript(fName);
-          } else if (fName.startsWith("if")) {
-            fName = command.substring("fcall ".length());
-            fName = fName.substring(0, fName.indexOf("("));
-            IfScope ifScope = (IfScope) parent.functions.get(fName);
-            ifScope.executeScript(fName);
-          } else {
-            executeScript(fName);
-          }
         } else {
-          //fcall int a = test()
-          System.out.println("tu");
+          fName = split[1];
+          afterExecuteRetValue = split[0].substring("fcall ".length());
+          callParams = split[1].substring(split[1].indexOf("(") + 1, split[1].length() - 1);
         }
+        execute(fName, parent);
+
 
       }
     }
 
   }
 
-
+  public void execute(String fName, ScopeImpl parent) {
+    if (fName.startsWith("for")) {
+      fName = fName.substring(0, fName.indexOf("("));
+      ForScope forScope = (ForScope) parent.functions.get(fName);
+      forScope.executeScript(fName);
+    } else if (fName.startsWith("if")) {
+//      fName = fName.substring("fcall ".length());
+      fName = fName.substring(0, fName.indexOf("("));
+      IfScope ifScope = (IfScope) parent.functions.get(fName);
+      ifScope.executeScript(fName);
+    } else {
+      executeScript(fName);
+    }
+  }
 
   @Override
   public void run() {
