@@ -48,4 +48,11 @@ public class ScopeImpl extends AbstractScope {
     }
     return line;
   }
+
+
+  @Override
+  protected ScopeImpl clone() throws CloneNotSupportedException {
+    ScopeImpl clonedObj = (ScopeImpl) super.clone();
+    return clonedObj;
+  }
 }

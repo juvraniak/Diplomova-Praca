@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author xvraniak@stuba.sk
  */
 @Slf4j
-public class AbstractScope implements Scope, Runnable {
+public class AbstractScope implements Scope, Runnable, Cloneable {
 
   @Getter
   protected String scopeName;
@@ -188,4 +188,6 @@ public class AbstractScope implements Scope, Runnable {
   private void printLine() {
     System.out.print(getCurrentWorkingDirectory() + " > ");
   }
+
+
 }
