@@ -1,5 +1,6 @@
 package liteshell.receivers;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
@@ -15,20 +16,20 @@ public class ArithmeticReceiver implements Receiver {
     try {
       String[] expression = prepareInput(strings, scope.get());
 
-      Double total = 0D;
+      BigDecimal total = BigDecimal.ZERO;
 
       for (int i = 0; i < expression.length; i = i + 2) {
-        Double d = Double.parseDouble(expression[i]);
+        BigDecimal d = new BigDecimal(expression[i]);
         if (i != 0) {
           String sign = expression[i - 1];
           total = compute(d, total, sign);
         } else {
-          total += d;
+          total = total.add(d);
         }
       }
 
       commandIO.setReturnCode(0);
-      commandIO.setCommandOutput(CommandIO.prepareIO(total.toString()));
+      commandIO.setCommandOutput(CommandIO.prepareIO(new Double(total.doubleValue()).toString()));
     } catch (Exception e) {
       commandIO.setReturnCode(-1);
       commandIO.setCommandOutput(CommandIO.prepareIO(e.getMessage()));
@@ -37,18 +38,18 @@ public class ArithmeticReceiver implements Receiver {
     return commandIO;
   }
 
-  private Double compute(Double d, Double total, String sign) {
+  private BigDecimal compute(BigDecimal d, BigDecimal total, String sign) {
     switch (sign) {
       case "+":
-        return total + d;
+        return total.add(d);
       case "-":
-        return total - d;
+        return total.subtract(d);
       case "*":
-        return total * d;
+        return total.multiply(d);
       case "/":
-        return total / d;
+        return total.divide(d);
       case "%":
-        return total % d;
+        return total.remainder(d);
       default:
         return total;
     }

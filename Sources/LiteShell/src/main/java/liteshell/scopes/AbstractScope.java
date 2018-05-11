@@ -31,7 +31,9 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
   protected PluginFactory pluginFactory;
   @Getter
   protected Executor executor;
-  protected final ScopeVariables scopeVariables = new ScopeVariables();
+  @Getter
+  @Setter
+  protected ScopeVariables scopeVariables = new ScopeVariables();
   @Getter
   protected Scope parent;
 
@@ -89,7 +91,7 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
   }
 
   @Override
-  public void executeScript(String function) {
+  public void executeScript(String function, ScopeVariables scopeVariables) {
     CommandIO out;
     if (scopeName.equals("script")) {
       this.stack.forEach(k -> {
@@ -133,14 +135,14 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
     if (fName.startsWith("for")) {
       fName = fName.substring(0, fName.indexOf("("));
       ForScope forScope = (ForScope) parent.functions.get(fName);
-      forScope.executeScript(fName);
+      forScope.executeScript(fName, this.getScopeVariables());
     } else if (fName.startsWith("if")) {
 //      fName = fName.substring("fcall ".length());
       fName = fName.substring(0, fName.indexOf("("));
       IfScope ifScope = (IfScope) parent.functions.get(fName);
-      ifScope.executeScript(fName);
+      ifScope.executeScript(fName, this.getScopeVariables());
     } else {
-      executeScript(fName);
+      executeScript(fName, this.getScopeVariables());
     }
   }
 

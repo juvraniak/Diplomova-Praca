@@ -89,7 +89,7 @@ public class IfScope extends ScopeImpl implements Parser {
   }
 
   @Override
-  public void executeScript(String function) {
+  public void executeScript(String function, ScopeVariables scopeVariables) {
     CommandIO out;
     String fName;
     if (evalueateCondition()) {
@@ -118,14 +118,14 @@ public class IfScope extends ScopeImpl implements Parser {
 
               fName = fName.substring(0, fName.indexOf("("));
               ForScope forScope = (ForScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              forScope.executeScript(fName);
+              forScope.executeScript(fName, this.getScopeVariables());
             } else if (fName.startsWith("if")) {
               fName = command.substring("fcall ".length());
               fName = fName.substring(0, fName.indexOf("("));
               IfScope ifScope = (IfScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              ifScope.executeScript(fName);
+              ifScope.executeScript(fName, this.getScopeVariables());
             } else {
-              executeScript(fName);
+              executeScript(fName, this.getScopeVariables());
             }
           } else {
             //fcall int a = test()

@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/liteshell/ScopeVariableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/ScopeVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/ScopeVariables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/resources/test1.lsh" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/test1.lsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/liteshell/parser/RootParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/liteshell/parser/RootParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test1.lsh" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test1.lsh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,7 +57,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/liteshell$Application.ic" NAME="Application Coverage Results" MODIFIED="1525991490926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/liteshell$Application.ic" NAME="Application Coverage Results" MODIFIED="1526077476753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>liteshell.utils.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/liteshell$ScriptParserTest_testScriptParser.ic" NAME="ScriptParserTest.testScriptParser Coverage Results" MODIFIED="1524176766252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -81,11 +92,24 @@
       <content type="file-editors">
         <state>
           <leaf>
+            <file leaf-file-name="ExecutorImpl.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="337">
+                    <caret line="68" selection-start-line="68" selection-end-line="68" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
             <file leaf-file-name="AbstractScope.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-5">
-                    <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+                  <state relative-caret-position="237">
+                    <caret line="31" selection-start-line="31" selection-end-line="31" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -93,11 +117,20 @@
                 </provider>
               </entry>
             </file>
+            <file leaf-file-name="Scope.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="360">
+                    <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
             <file leaf-file-name="ForScope.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="142">
-                    <caret line="106" column="43" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="43" />
+                  <state relative-caret-position="-87">
+                    <caret line="106" column="74" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="74" />
                     <folding>
                       <element signature="imports" expanded="true" />
                       <element signature="method#preProcess#0;class#ForScope#0" />
@@ -106,11 +139,23 @@
                 </provider>
               </entry>
             </file>
+            <file leaf-file-name="BooleanPrepReceiver.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="522">
+                    <caret line="77" column="7" lean-forward="true" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
             <file leaf-file-name="IfScope.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="237">
-                    <caret line="140" selection-start-line="140" selection-end-line="140" />
+                  <state relative-caret-position="111">
+                    <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -121,30 +166,38 @@
             <file leaf-file-name="RootParser.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="255">
-                    <caret line="140" column="31" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="31" />
+                  <state relative-caret-position="414">
+                    <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="test1.lsh" pinned="false" current-in-tab="true">
+            <file leaf-file-name="test1.lsh" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="378">
-                    <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+                  <state relative-caret-position="219">
+                    <caret line="27" column="23" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="23" />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="ScopeImpl.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
+            <file leaf-file-name="ScopeVariableTest.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/ScopeVariableTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="882">
-                    <caret line="51" selection-start-line="51" selection-end-line="51" />
+                  <state>
+                    <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
                     <folding>
-                      <element signature="e#871#872#0" expanded="true" />
-                      <element signature="e#892#893#0" expanded="true" />
+                      <element signature="imports" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="ArithmeticReceiver.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="396">
+                    <caret line="31" selection-start-line="31" selection-end-line="31" />
                   </state>
                 </provider>
               </entry>
@@ -258,26 +311,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExecutorImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
+      <file leaf-file-name="ShittyArithmeticTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="128" column="3" lean-forward="true" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
+            <state relative-caret-position="755">
+              <caret line="138" column="4" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VariableCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/VariableCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Receiver.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/receivers/Receiver.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooleanRecevier.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanRecevier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooleanPrepReceiver.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java">
+      <file leaf-file-name="DefaultCommadIO.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/commands/ios/DefaultCommadIO.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="125" selection-start-line="125" selection-end-line="125" />
+            <state relative-caret-position="396">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -297,11 +378,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>key</find>
-      <find>variables[0]</find>
-      <find>variables[1]</find>
-      <find>parse</find>
-      <find>private static final</find>
       <find>BLAN</find>
       <find>scopename</find>
       <find>test</find>
@@ -326,7 +402,12 @@
       <find>func</find>
       <find>set</find>
       <find>functionScope.addCommand</find>
+      <find>cone</find>
+      <find>clo</find>
       <find>evalueate</find>
+      <find>false</find>
+      <find>scopevariables</find>
+      <find>dVal1</find>
     </findStrings>
     <replaceStrings>
       <replace>ls</replace>
@@ -337,6 +418,7 @@
       <replace>val2</replace>
       <replace>condition</replace>
       <replace>return</replace>
+      <replace>dVal1.value</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -2206,9 +2288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/DeletePackageReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/DownloadPackageReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/GetVariableReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/ChangeDirectoryCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java" />
@@ -2219,7 +2298,6 @@
         <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/ArithmeticPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/ArithmeticCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java" />
         <option value="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ArithmeticTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/StringsReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/StringsPrepReceiver.java" />
@@ -2235,28 +2313,32 @@
         <option value="$PROJECT_DIR$/src/main/java/liteshell/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/parser/ScriptParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ScriptParser.java" />
-        <option value="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java" />
         <option value="$PROJECT_DIR$/../Commands/Move/src/test/java/liteshell/command/MoveCommandTest.java" />
-        <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java" />
         <option value="$PROJECT_DIR$/src/test/resources/test3.lsh" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/EchoPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/EchoCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/EchoReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" />
         <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/keywords/Keyword.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/parser/Parser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/IntReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/DoubleReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanRecevier.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/StringReceiver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" />
         <option value="$PROJECT_DIR$/src/test/resources/test1.lsh" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/RootParserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/liteshell/ScopeVariableTest.java" />
+        <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/ScopeVariables.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" />
+        <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java" />
+        <option value="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java" />
       </list>
     </option>
   </component>
@@ -2474,7 +2556,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.ShittyArithmeticTest.secondShittyTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -2657,6 +2739,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="ScopeVariableTest.testCopy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liteshell_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="liteshell.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="liteshell" />
+      <option name="MAIN_CLASS_NAME" value="liteshell.ScopeVariableTest" />
+      <option name="METHOD_NAME" value="testCopy" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="ShittyArithmeticTest.secondShittyTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="liteshell_test" />
       <extension name="coverage">
@@ -2670,6 +2775,29 @@
       <option name="PACKAGE_NAME" value="liteshell.arithmetic" />
       <option name="MAIN_CLASS_NAME" value="liteshell.arithmetic.ShittyArithmeticTest" />
       <option name="METHOD_NAME" value="secondShittyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ShittyArithmeticTest.testPipe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liteshell_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="liteshell.arithmetic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="liteshell.arithmetic" />
+      <option name="MAIN_CLASS_NAME" value="liteshell.arithmetic.ShittyArithmeticTest" />
+      <option name="METHOD_NAME" value="testPipe" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -2754,9 +2882,13 @@
       <item itemvalue="JUnit.ShittyArithmeticTest.secondShittyTest" />
       <item itemvalue="JUnit.ListDirectoryCommandTest.commandTest" />
       <item itemvalue="Gradle.LiteShell [jar]" />
+      <item itemvalue="JUnit.ScopeVariableTest.testCopy" />
+      <item itemvalue="JUnit.ShittyArithmeticTest.testPipe" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShittyArithmeticTest.testPipe" />
+        <item itemvalue="JUnit.ScopeVariableTest.testCopy" />
         <item itemvalue="Gradle.LiteShell [jar]" />
         <item itemvalue="JUnit.ListDirectoryCommandTest.commandTest" />
       </list>
@@ -2817,44 +2949,44 @@
       <workItem from="1525784288686" duration="33376000" />
       <workItem from="1525898344195" duration="28000" />
       <workItem from="1525898437417" duration="22626000" />
-      <workItem from="1525977756544" duration="14031000" />
+      <workItem from="1525977756544" duration="25177000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RootParserTest_testScriptParser - 2018.05.09 at 02h 34m 21s.xml">
-      <configuration name="RootParserTest.testScriptParser" configurationId="JUnit" />
+    <history-entry file="ShittyArithmeticTest_testPipe - 2018.05.12 at 01h 29m 24s.xml">
+      <configuration name="ShittyArithmeticTest.testPipe" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RootParserTest_testScriptParser - 2018.05.09 at 02h 39m 47s.xml">
-      <configuration name="RootParserTest.testScriptParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RootParserTest_testScriptParser - 2018.05.09 at 04h 05m 10s.xml">
-      <configuration name="RootParserTest.testScriptParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.10 at 21h 09m 19s.xml">
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 30m 05s.xml">
       <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.10 at 21h 10m 47s.xml">
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 33m 18s.xml">
       <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.10 at 22h 20m 33s.xml">
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 34m 47s.xml">
       <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShittyArithmeticTest_testScriptParser - 2018.05.10 at 22h 20m 42s.xml">
-      <configuration name="ShittyArithmeticTest.testScriptParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShittyArithmeticTest_testScriptParser - 2018.05.11 at 00h 27m 27s.xml">
-      <configuration name="ShittyArithmeticTest.testScriptParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.11 at 00h 27m 33s.xml">
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 42m 35s.xml">
       <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.11 at 00h 31m 25s.xml">
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 43m 47s.xml">
+      <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 45m 07s.xml">
+      <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 46m 44s.xml">
+      <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 47m 00s.xml">
+      <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShittyArithmeticTest_secondShittyTest - 2018.05.12 at 01h 47m 38s.xml">
       <configuration name="ShittyArithmeticTest.secondShittyTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="444733000" />
+    <option name="totallyTimeSpent" value="455879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2867,6 +2999,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1600" y="-2" width="1080" height="1922" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="11" />
@@ -2879,7 +3012,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.53684807" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6695011" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32199547" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -2908,6 +3041,47 @@
       <window_info anchor="bottom" id="Spring" order="16" />
       <window_info anchor="bottom" id="Dependencies Viewer" order="17" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Build" order="9" weight="0.34880802" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="sbt" order="11" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32998747" />
+      <window_info id="Image Layers" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49780703" visible="true" weight="0.42006803" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32873276" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="18" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32199547" />
+      <window_info anchor="bottom" id="SonarLint" order="12" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24967825" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32873276" />
+      <window_info anchor="bottom" id="Usages" order="13" />
+      <window_info anchor="bottom" id="Spring" order="16" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32998747" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32947233" />
+      <window_info anchor="bottom" id="Inspector" order="14" sideWeight="0.502193" side_tool="true" weight="0.34183192" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.2934363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34719536" />
+      <window_info id="Learn" order="6" weight="0.32977587" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32977587" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3288201" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6695011" />
+      <window_info anchor="bottom" id="Dependencies Viewer" order="17" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -2962,22 +3136,10 @@
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="259" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java</url>
           <line>44</line>
           <properties />
           <option name="timeStamp" value="311" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="345" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java</url>
@@ -2986,37 +3148,30 @@
           <option name="timeStamp" value="347" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java</url>
-          <line>112</line>
+          <url>file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java</url>
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="349" />
+          <option name="timeStamp" value="355" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java</url>
-          <line>121</line>
+          <url>file://$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java</url>
+          <line>25</line>
           <properties />
-          <option name="timeStamp" value="350" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java</url>
-          <line>140</line>
-          <properties />
-          <option name="timeStamp" value="351" />
+          <option name="timeStamp" value="362" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="352" />
+      <option name="time" value="367" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="parent.getScopeName()" language="JAVA" />
-        <watch expression="functionScope.getScopeName()" language="JAVA" />
-        <watch expression="command.substring(&quot;fcall &quot;.length())" language="JAVA" />
+        <watch expression="str.split(&quot;\\s{1}[|]\\s{1}&quot;)" language="JAVA" />
+        <watch expression="str1.split(&quot;\\s{1}[|]\\s{1}&quot;)" language="JAVA" />
+        <watch expression="command.split(&quot;\\s{1}[|]\\s{1}&quot;)" language="JAVA" />
+        <watch expression="input.split(&quot; = &quot;)" language="JAVA" />
+        <watch expression="dVal1.value==dVal2.value" language="JAVA" />
       </configuration>
       <configuration name="Application">
         <watch expression="listOfScopes" language="JAVA" />
-        <watch expression="command" language="JAVA" />
-        <watch expression="this.getScope()" language="JAVA" />
-        <watch expression="getParent()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -3035,53 +3190,52 @@
     </expressions>
     <expressions id="watch">
       <expression>
-        <expression-string>this.getFunctions()</expression-string>
+        <expression-string>dVal1.value==dVal2.value</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>((ArrayList) stack).size</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.util.ArrayList</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getParent()</expression-string>
+        <expression-string>input.split(&quot; = &quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getScope()</expression-string>
+        <expression-string>command.split(&quot;\\s{1}[|]\\s{1}&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>command</expression-string>
+        <expression-string>command.split(&quot;\s{1}[|]\s{1}&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>listOfScopes</expression-string>
+        <expression-string>command.split(&quot;\s{1}\\|\s{1}&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>functionScope</expression-string>
+        <expression-string>command.split(&quot;\s{1}[\\|]\s{1}&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>newIf</expression-string>
+        <expression-string>str1.split(&quot;\\s{1}[|]\\s{1}&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>newFor</expression-string>
+        <expression-string>str.split(&quot;\\|&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>command.substring(&quot;fcall &quot;.length())</expression-string>
+        <expression-string>str.split(&quot;\\s{1}[|]\\s{1}&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>command.split(&quot;[ \\| ]&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -3135,23 +3289,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/GetVariableReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/VariablePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/InvokeMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -3249,13 +3386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -3267,20 +3397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/RootParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -3321,13 +3437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/receivers/Receiver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/keywords/Keyword.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -3351,16 +3460,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/test2.lsh">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/commands/ios/DefaultCommadIO.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#1022#1023#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/executors/Executor.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -3407,16 +3506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanRecevier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="29" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/DoubleReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -3431,24 +3520,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangeVariableReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/VariableCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -3462,46 +3537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="140" column="31" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="128" column="3" lean-forward="true" selection-start-line="128" selection-start-column="3" selection-end-line="128" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="106" column="43" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#preProcess#0;class#ForScope#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="545">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="e#871#872#0" expanded="true" />
             <element signature="e#892#893#0" expanded="true" />
@@ -3509,40 +3548,157 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/parser/RootParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/ScopeVariables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="106" column="74" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#preProcess#0;class#ForScope#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="111">
+          <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/ScopeVariableTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/commands/ios/DefaultCommadIO.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="237">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
+    <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/receivers/Receiver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/VariableCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanRecevier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanPrepReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="77" column="7" lean-forward="true" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="138" column="4" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
         </state>
       </provider>
     </entry>

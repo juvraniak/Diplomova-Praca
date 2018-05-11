@@ -3,6 +3,7 @@ package liteshell.parser;
 import java.io.File;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.executors.RootParser;
+import liteshell.scopes.ScopeImpl;
 import org.junit.Test;
 
 /**
@@ -19,8 +20,8 @@ public class RootParserTest {
     RootParser rootParser;
     try {
       rootParser = new RootParser(pathToScript);
-      rootParser.parse();
-    } catch (MethodMissingEception e) {
+      rootParser.parse(new ScopeImpl("application", null));
+    } catch (MethodMissingEception | CloneNotSupportedException e) {
       e.printStackTrace();
     }
 

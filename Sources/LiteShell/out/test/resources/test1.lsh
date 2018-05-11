@@ -18,7 +18,7 @@ function void main(string arg){
 #  rm /home/jv/Downloads/examples.desktop;
   ls /home/jv/ | grep ecli;
 #  test();
-  if(true){
+  if($(true==true)){
     echo (true);
     for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
          echo ("i",${i});
@@ -34,7 +34,7 @@ if(true){
       }
   }
   int a = getNumber(true);
-#  echo (${a});
+  echo (${a});
   int b = getNumber(false);
 #  echo (${b});
 
@@ -42,7 +42,7 @@ if(true){
 
 function int getNumber(boolean test){
   int r = 4;
-  if(${test}){
+  if(true){
     ${r} = 5;
   }
   return ${r};

@@ -35,7 +35,9 @@ public class RootParser implements Parser {
     loadScript(path);
   }
 
-  public void parse() {
+  public void parse(ScopeImpl scope) throws CloneNotSupportedException {
+
+    scriptScope.setScopeVariables(scope.getScopeVariables().clone());
 
     boolean isOverride = false;
 
@@ -62,7 +64,7 @@ public class RootParser implements Parser {
     }
 
     scriptScope.setFunctions(listOfScopes);
-    scriptScope.executeScript("main()");
+    scriptScope.executeScript("main()", scriptScope.getScopeVariables());
 
   }
 

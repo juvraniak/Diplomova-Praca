@@ -28,7 +28,6 @@ public class BooleanPrepReceiver implements Receiver {
       }
     }
 
-
     commandIO.setReturnCode(0);
     commandIO.setCommandOutput(CommandIO.prepareIO(result));
     return commandIO;
@@ -55,6 +54,13 @@ public class BooleanPrepReceiver implements Receiver {
     isCommand = variables[0].startsWith("$(");
     isInisInitializedVariable = variables[0].startsWith("${");
     String val1 = findValue(variables[0], isCommand, isInisInitializedVariable, scope);
+    Double dVal1 = Double.NaN;
+    try {
+      dVal1 = Double.parseDouble(val1);
+    } catch (NumberFormatException e) {
+//      e.printStackTrace();
+    }
+
     if (variables.length > 1) {
       String sign = expression
           .substring(
@@ -64,47 +70,103 @@ public class BooleanPrepReceiver implements Receiver {
       isCommand = variables[1].startsWith("$(");
       isInisInitializedVariable = variables[1].startsWith("${");
       String val2 = findValue(variables[1], isCommand, isInisInitializedVariable, scope);
-
-      switch (sign) {
-        case "==":
-          if (val1.equals(val2)) {
-            return "true";
-          } else {
-            return "false";
-          }
-        case "!=":
-          if (!val1.equals(val2)) {
-            return "true";
-          } else {
-            return "false";
-          }
-        case "<=":
-          if (val1.compareTo(val2) <= 0) {
-            return "true";
-          } else {
-            return "false";
-          }
-        case ">=":
-          if (val1.compareTo(val2) >= 0) {
-            return "true";
-          } else {
-            return "false";
-          }
-        case "<":
-          if (val1.compareTo(val2) < 0) {
-            return "true";
-          } else {
-            return "false";
-          }
-        case ">":
-          if (val1.compareTo(val2) > 0) {
-            return "true";
-          } else {
-            return "false";
-          }
+      Double dVal2 = Double.NaN;
+      try {
+        dVal2 = Double.parseDouble(val2);
+      } catch (NumberFormatException e) {
+//        e.printStackTrace();
       }
+      if (dVal1.isNaN() && dVal2.isNaN()) {
+        return comapreStringAndBoolean(val1, val2, sign);
+      } else {
+        return compareNumers(dVal1, dVal2, sign);
+      }
+
     } else {
       return val1;
+    }
+  }
+
+  private String compareNumers(double dVal1, double dVal2, String sign) {
+    switch (sign) {
+      case "==":
+        if (dVal1 == dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "!=":
+        if (dVal1 != dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "<=":
+        if (dVal1 <= dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case ">=":
+        if (dVal1 >= dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "<":
+        if (dVal1 < dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case ">":
+        if (dVal1 > dVal2) {
+          return "true";
+        } else {
+          return "false";
+        }
+    }
+    return null;
+  }
+
+  private String comapreStringAndBoolean(String val1, String val2, String sign) {
+    switch (sign) {
+      case "==":
+        if (val1.equals(val2)) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "!=":
+        if (!val1.equals(val2)) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "<=":
+        if (val1.compareTo(val2) <= 0) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case ">=":
+        if (val1.compareTo(val2) >= 0) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case "<":
+        if (val1.compareTo(val2) < 0) {
+          return "true";
+        } else {
+          return "false";
+        }
+      case ">":
+        if (val1.compareTo(val2) > 0) {
+          return "true";
+        } else {
+          return "false";
+        }
     }
     return null;
   }

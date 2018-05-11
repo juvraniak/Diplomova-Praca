@@ -20,6 +20,13 @@ import org.junit.Test;
 public class ShittyArithmeticTest {
 
   @Test
+  public void testPipe() {
+    String str = "ls /dfsdf/fsdfsfds/fds | grep dasda";
+    String str1 = "$(boolean b1 = $($(${k}==${h})&&true||$(${k}<${h})));";
+    System.out.println("tu");
+  }
+
+  @Test
   public void testScriptParser() {
 
     String pathToScript =
@@ -125,5 +132,13 @@ public class ShittyArithmeticTest {
     line = "$(boolean bshit2 = $(${str}==${str}));";
     s.getExecutor().execute(line.trim(), s);
     Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("bshit2"));
+
+    line = "$(boolean bshit3 = $(true==true));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertTrue(s.getScopeVariables().getBooleanMap().get("bshit3"));
+    
+    line = "$(boolean bshit4 = $(12<2));";
+    s.getExecutor().execute(line.trim(), s);
+    Assert.assertFalse(s.getScopeVariables().getBooleanMap().get("bshit4"));
   }
 }

@@ -16,6 +16,7 @@ import liteshell.exceptions.MethodMissingEception;
 import liteshell.exceptions.UnknownCommandException;
 import liteshell.plugins.ShellPlugin;
 import liteshell.scopes.Scope;
+import liteshell.scopes.ScopeImpl;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -45,8 +46,8 @@ public class ExecutorImpl implements Executor {
           throw new NullPointerException("Enter correct path!");
         }
         RootParser parser = new RootParser(path);
-        parser.parse();
-      } catch (MethodMissingEception e) {
+        parser.parse((ScopeImpl) scope);
+      } catch (MethodMissingEception | CloneNotSupportedException e) {
         log.error("Problem during parsing script :\n{}", e.getMessage());
       }
     } else if (command.startsWith("${")) {
@@ -57,7 +58,7 @@ public class ExecutorImpl implements Executor {
         command = command.substring(0, command.length() - 1);
       }
       command = command.substring(command.indexOf("(") + 1, command.length() - 1);
-      if (command.split("\\|").length > 1) {
+      if (command.split("\\s{1}[|]\\s{1}").length > 1) {
         out = executePipe(scope, command);
       } else {
         out = executeSingleCommand(command, scope);
