@@ -11,6 +11,8 @@ import liteshell.scopes.Scope;
 
 public class ArithmeticReceiver implements Receiver {
 
+  private int firstIndex = 0;
+  private int secondIndex = 0;
   @Override
   public CommandIO executeCommand(CommandIO commandIO, String[] strings, Optional<Scope> scope) {
     try {
@@ -60,34 +62,40 @@ public class ArithmeticReceiver implements Receiver {
     int size = variables.length;
     int newSize = size * 2 - 1;
     String[] expression = new String[newSize];
-    int firstIndex = 0;
-    int secondIndex = 0;
+    firstIndex = 0;
+    secondIndex = 0;
     for (int i = 0, j = 0; i < newSize; i = i + 2, j++) {
       boolean isCommand = variables[j].startsWith("$(");
       boolean isInitializedVariable = variables[j].startsWith("${");
 
-      if (strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 1
-          < strings[1].length() - variables[variables.length - 1].length() - 1) {
-        String sign = strings[1]
-            .substring(
-                strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 1,
-                strings[1].indexOf(variables[j + 1], secondIndex));
-        firstIndex =
-            strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 1;
-        secondIndex = strings[1].indexOf(variables[j + 1], secondIndex);
-        expression[i + 1] = sign;
-      } else if (strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 1
-          == strings[1].length() - variables[variables.length - 1].length() - 1) {
-        expression[i + 1] = strings[1]
-            .substring(
-                strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 1,
-                strings[1].indexOf(variables[j].charAt(variables[j].length() - 1), firstIndex) + 2);
-        firstIndex += 2;
-      }
+      evaluate(strings[1], variables[j], variables, expression, i, j);
       String replacement = findValue(variables[j], isCommand, isInitializedVariable,
           scope);
       expression[i] = replacement;
     }
     return expression;
+  }
+
+  private void evaluate(String allComand, String variable, String[] variables, String[] expression,
+      int i, int j) {
+
+    if (allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 1
+        < allComand.length() - variables[variables.length - 1].length() - 1) {
+      String sign = allComand
+          .substring(
+              allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 1,
+              allComand.indexOf(variables[j + 1], secondIndex));
+      firstIndex =
+          allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 1;
+      secondIndex = allComand.indexOf(variables[j + 1], secondIndex);
+      expression[i + 1] = sign;
+    } else if (allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 1
+        == allComand.length() - variables[variables.length - 1].length() - 1) {
+      expression[i + 1] = allComand
+          .substring(
+              allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 1,
+              allComand.indexOf(variable.charAt(variable.length() - 1), firstIndex) + 2);
+      firstIndex += variable.length() + 1;
+    }
   }
 }

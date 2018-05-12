@@ -41,9 +41,17 @@ public class GetVariableReceiver implements Receiver {
       case DOUBLE:
         output.setCommandOutput(getDouble(variableName, scope));
         break;
+      case BOOLEAN:
+        output.setCommandOutput(getBoolean(variableName, scope));
+        break;
     }
 
     return output;
+  }
+
+  private Optional<Stream<String>> getBoolean(String variableName, Scope scope) {
+    return createOptStreamOfString(
+        scope.getScopeVariables().getBooleanMap().get(variableName).toString());
   }
 
   private Optional<Stream<String>> getDouble(String variableName, Scope scope) {

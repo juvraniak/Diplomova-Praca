@@ -121,8 +121,17 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
           fName = command.substring("fcall ".length());
         } else {
           fName = split[1];
-          afterExecuteRetValue = split[0].substring("fcall ".length());
+          afterExecuteRetValue = "$(" + split[0].substring("fcall ".length()) + " = ${retValue})";
           callParams = split[1].substring(split[1].indexOf("(") + 1, split[1].length() - 1);
+          String[] splitCallParam = callParams.split(",");
+          String callOnlyFName = fName.substring(0, fName.indexOf("("));
+          ScopeImpl scope = parent.functions.get(callOnlyFName);
+          List<Pair<String, String>> param = scope.inputParameters;
+          for (int i = 0; i < callParams.split(",").length; i++) {
+            this.getExecutor()
+                .execute("$(" + param.get(i).getKey() + " " + param.get(i).getValue() + " = "
+                    + splitCallParam[i] + ")", this);
+          }
         }
 
         try {

@@ -59,6 +59,8 @@ public class ForScope extends ScopeImpl implements Parser {
     increment = increment.replace("${" + originalVar + "}", "${" + var + "}");
     for (; index < content.size(); index++) {
       line = content.get(index);
+      line = line
+          .trim().replace("${" + originalVar + "}", "${" + var + "}");
       if (line.endsWith(";")) {
         if (line.trim().startsWith("return")) {
           line = functionScope.assignReturnValue(line, functionScope.getReturnType());

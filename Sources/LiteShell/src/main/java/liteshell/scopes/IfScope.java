@@ -28,6 +28,7 @@ public class IfScope extends ScopeImpl implements Parser {
     this.index = index;
     this.functionScope = functionScope;
   }
+
   //budem si vytvarat premenne na urcovanie booleanu v ife
   public int preProcess() {
     String line = content.get(index);
