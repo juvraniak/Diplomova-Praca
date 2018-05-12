@@ -19,28 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{none/global/}
-    \entry{netalg}{online}{}
-      \name{author}{1}{}{%
-        {{hash=e0de635ebf22124684a4b6606f655c7c}{%
-           family={Ciaccio},
-           familyi={C\bibinitperiod},
-           given={Robert\bibnamedelima S},
-           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{e0de635ebf22124684a4b6606f655c7c}
-      \strng{fullhash}{e0de635ebf22124684a4b6606f655c7c}
-      \strng{authornamehash}{e0de635ebf22124684a4b6606f655c7c}
-      \strng{authorfullhash}{e0de635ebf22124684a4b6606f655c7c}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{PowerShell vs. the Unix Shell}
-      \field{year}{18-12-2010}
-      \verb{url}
-      \verb https://superuser.com/questions/223300/powershell-vs-the-unix-shell
-      \endverb
-    \endentry
     \entry{mbash}{book}{}
       \name{author}{1}{}{%
         {{hash=8e6e5ceb66da401a308c90287fade1f4}{%
@@ -67,25 +45,55 @@
       \field{pages}{s. 502}
       \range{pages}{-1}
     \endentry
-    \entry{forora}{online}{}
+    \entry{netalg}{online}{}
       \name{author}{1}{}{%
-        {{hash=30162ed78b6c10f731411f2fc440c24f}{%
-           family={Oracle},
-           familyi={O\bibinitperiod}}}%
+        {{hash=e0de635ebf22124684a4b6606f655c7c}{%
+           family={Ciaccio},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
-      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
-      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
-      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
-      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
-      \field{sortinit}{4}
-      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \strng{namehash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{fullhash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{authornamehash}{e0de635ebf22124684a4b6606f655c7c}
+      \strng{authorfullhash}{e0de635ebf22124684a4b6606f655c7c}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The for Statement}
-      \field{year}{2017}
+      \field{title}{PowerShell vs. the Unix Shell}
+      \field{year}{18-12-2010}
       \verb{url}
-      \verb https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html
+      \verb https://superuser.com/questions/223300/powershell-vs-the-unix-shell
       \endverb
+    \endentry
+    \entry{osbook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c2f52cf8fbf6f645a3a6fc50f6946406}{%
+           family={Abraham\bibnamedelima Silberschatz},
+           familyi={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Greg\bibnamedelima Gagne},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod},
+           suffix={Peter\bibnamedelimb B.\bibnamedelimi Galvin},
+           suffixi={P\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley, 2012}%
+      }
+      \strng{namehash}{c2f52cf8fbf6f645a3a6fc50f6946406}
+      \strng{fullhash}{c2f52cf8fbf6f645a3a6fc50f6946406}
+      \strng{authornamehash}{c2f52cf8fbf6f645a3a6fc50f6946406}
+      \strng{authorfullhash}{c2f52cf8fbf6f645a3a6fc50f6946406}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{9}
+      \field{note}{ISBN: 978-1118063330}
+      \field{title}{Operating System Concepts - Ninth Edition}
+      \field{year}{2012}
+      \field{pages}{s. 976}
+      \range{pages}{-1}
     \endentry
     \entry{shellprep}{online}{}
       \name{author}{1}{}{%
@@ -99,8 +107,8 @@
       \strng{fullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authornamehash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authorfullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{If / Else Statements (Shell Scripting) - Code Wiki}
@@ -124,8 +132,8 @@
       \strng{fullhash}{656021b32d31c36e09aad282d243e358}
       \strng{authornamehash}{656021b32d31c36e09aad282d243e358}
       \strng{authorfullhash}{656021b32d31c36e09aad282d243e358}
-      \field{sortinit}{8}
-      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -134,6 +142,28 @@
       \field{year}{2004}
       \field{pages}{s. 440}
       \range{pages}{-1}
+    \endentry
+    \entry{gitspeed}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fc19c0dc057e2a02419916b39da6895b}{%
+           family={Nichol},
+           familyi={N\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc19c0dc057e2a02419916b39da6895b}
+      \strng{fullhash}{fc19c0dc057e2a02419916b39da6895b}
+      \strng{authornamehash}{fc19c0dc057e2a02419916b39da6895b}
+      \strng{authorfullhash}{fc19c0dc057e2a02419916b39da6895b}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{unixpickle/Benchmarks: Some language performance comparisons.}
+      \field{year}{12-04-2017}
+      \verb{url}
+      \verb https://github.com/unixpickle/Benchmarks
+      \endverb
     \endentry
   \endsortlist
   \missing{morf}

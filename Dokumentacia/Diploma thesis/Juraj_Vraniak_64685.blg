@@ -1,23 +1,25 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'Juraj_Vraniak_64685.blg'
-[35] biber-darwin:303> INFO - === Wed Feb 14, 2018, 22:13:03
-[55] Biber.pm:359> INFO - Reading 'Juraj_Vraniak_64685.bcf'
-[128] Biber.pm:835> INFO - Found 6 citekeys in bib section 0
-[139] Biber.pm:3670> INFO - Processing section 0
-[151] Biber.pm:3840> INFO - Looking for bibtex format file 'includes/bibliography.bib' for section 0
-[158] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[164] bibtex.pm:1292> INFO - Found BibTeX data source 'includes/bibliography.bib'
-[167] Utils.pm:164> WARN - year field '18-12-2010' in entry 'netalg' is not an integer - this will probably not sort properly.
-[174] Utils.pm:164> WARN - year field '11-11-2017' in entry 'shellprep' is not an integer - this will probably not sort properly.
-[175] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/7Nzvu3lnod/bibliography.bib_1893.utf8, line 10, warning: 1 characters of junk seen at toplevel
-[175] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/7Nzvu3lnod/bibliography.bib_1893.utf8, line 16, warning: 1 characters of junk seen at toplevel
-[175] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/7Nzvu3lnod/bibliography.bib_1893.utf8, line 22, warning: 1 characters of junk seen at toplevel
-[175] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/7Nzvu3lnod/bibliography.bib_1893.utf8, line 31, warning: 1 characters of junk seen at toplevel
-[175] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/7Nzvu3lnod/bibliography.bib_1893.utf8, line 40, warning: 1 characters of junk seen at toplevel
-[176] Utils.pm:164> WARN - I didn't find a database entry for 'morf' (section 0)
-[186] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[186] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[186] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'sk-SK'
-[189] bbl.pm:608> INFO - Writing 'Juraj_Vraniak_64685.bbl' with encoding 'UTF-8'
-[190] bbl.pm:712> INFO - Output to Juraj_Vraniak_64685.bbl
-[190] Biber.pm:109> INFO - WARNINGS: 8
+[35] biber-darwin:303> INFO - === Thu May 10, 2018, 00:12:10
+[58] Biber.pm:359> INFO - Reading 'Juraj_Vraniak_64685.bcf'
+[135] Biber.pm:835> INFO - Found 7 citekeys in bib section 0
+[147] Biber.pm:3670> INFO - Processing section 0
+[163] Biber.pm:3840> INFO - Looking for bibtex format file 'includes/bibliography.bib' for section 0
+[165] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[171] bibtex.pm:1292> INFO - Found BibTeX data source 'includes/bibliography.bib'
+[174] Utils.pm:164> WARN - year field '18-12-2010' in entry 'netalg' is not an integer - this will probably not sort properly.
+[183] Utils.pm:164> WARN - year field '11-11-2017' in entry 'shellprep' is not an integer - this will probably not sort properly.
+[184] Utils.pm:164> WARN - year field '12-04-2017' in entry 'gitspeed' is not an integer - this will probably not sort properly.
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 9, warning: 1 characters of junk seen at toplevel
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 15, warning: 1 characters of junk seen at toplevel
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 21, warning: 1 characters of junk seen at toplevel
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 30, warning: 1 characters of junk seen at toplevel
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 39, warning: 1 characters of junk seen at toplevel
+[185] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/5fXjT0ByMh/bibliography.bib_13844.utf8, line 48, warning: 1 characters of junk seen at toplevel
+[186] Utils.pm:164> WARN - I didn't find a database entry for 'morf' (section 0)
+[196] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[196] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[196] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'sk-SK'
+[199] bbl.pm:608> INFO - Writing 'Juraj_Vraniak_64685.bbl' with encoding 'UTF-8'
+[200] bbl.pm:712> INFO - Output to Juraj_Vraniak_64685.bbl
+[201] Biber.pm:109> INFO - WARNINGS: 10

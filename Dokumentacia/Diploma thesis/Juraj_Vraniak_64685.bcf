@@ -2138,19 +2138,20 @@
     <bcf:citekey order="3">mbash</bcf:citekey>
     <bcf:citekey order="4">mbash</bcf:citekey>
     <bcf:citekey order="5">netalg</bcf:citekey>
-    <bcf:citekey order="6">mbash</bcf:citekey>
+    <bcf:citekey order="6">osbook</bcf:citekey>
     <bcf:citekey order="7">mbash</bcf:citekey>
     <bcf:citekey order="8">mbash</bcf:citekey>
     <bcf:citekey order="9">mbash</bcf:citekey>
     <bcf:citekey order="10">mbash</bcf:citekey>
-    <bcf:citekey order="11">shellprep</bcf:citekey>
+    <bcf:citekey order="11">mbash</bcf:citekey>
     <bcf:citekey order="12">shellprep</bcf:citekey>
-    <bcf:citekey order="13">psbook</bcf:citekey>
-    <bcf:citekey order="14">netalg</bcf:citekey>
+    <bcf:citekey order="13">shellprep</bcf:citekey>
+    <bcf:citekey order="14">psbook</bcf:citekey>
     <bcf:citekey order="15">netalg</bcf:citekey>
-    <bcf:citekey order="16">gitspeed</bcf:citekey>
+    <bcf:citekey order="16">netalg</bcf:citekey>
     <bcf:citekey order="17">gitspeed</bcf:citekey>
-    <bcf:citekey order="18">morf</bcf:citekey>
+    <bcf:citekey order="18">gitspeed</bcf:citekey>
+    <bcf:citekey order="19">morf</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
