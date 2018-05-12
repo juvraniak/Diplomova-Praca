@@ -19,10 +19,11 @@ public class EchoReceiver implements Receiver {
         .map(s -> {
           boolean isCommand = s.startsWith("$(");
           boolean isVar = s.startsWith("${");
-          return findValue(s, isCommand, isVar, optional.get());
+          return eraseQotes(findValue(s, isCommand, isVar, optional.get()));
         }).collect(Collectors.toList());
     commandIO.setReturnCode(0);
-    commandIO.setCommandOutput(CommandIO.prepareIO(expression.toString()));
+    commandIO
+        .setCommandOutput(CommandIO.prepareIO(expression.stream().reduce(String::concat).get()));
     return commandIO;
   }
 
@@ -70,5 +71,12 @@ public class EchoReceiver implements Receiver {
 
   private String readString(String toParse, int i, char c) {
     return toParse.substring(i, toParse.indexOf(c, i + 1) + 1);
+  }
+
+  private String eraseQotes(String str) {
+    if (str.startsWith("\"") && str.endsWith("\"")) {
+      str = str.substring(1, str.length() - 1);
+    }
+    return str;
   }
 }

@@ -17,7 +17,6 @@ import liteshell.parser.Parser;
 import liteshell.plugins.PluginFactory;
 import liteshell.scopes.ForScope;
 import liteshell.scopes.IfScope;
-import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
 import liteshell.utils.StringUtils;
 
@@ -68,7 +67,7 @@ public class RootParser implements Parser {
 
   }
 
-  private int handleFunction(int currentLine, Scope parrentScope, boolean isOverride) {
+  private int handleFunction(int currentLine, ScopeImpl parrentScope, boolean isOverride) {
     String line = CONTENT.get(currentLine).trim();
     StringBuilder sb = new StringBuilder();
     String parameters = line.substring(line.indexOf("(") + 1, line.indexOf(")"));

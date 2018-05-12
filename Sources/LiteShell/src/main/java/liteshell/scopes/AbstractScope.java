@@ -35,7 +35,7 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
   @Setter
   protected ScopeVariables scopeVariables = new ScopeVariables();
   @Getter
-  protected Scope parent;
+  protected ScopeImpl parent;
 
   @Getter
   @Setter
@@ -102,6 +102,7 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
     ScopeImpl parent = (ScopeImpl) this.getParent();
 
     ScopeImpl functionScope = parent.functions.get(fName);
+    functionScope.setScopeVariables(scopeVariables);
     for (String command : functionScope.stack) {
       if (command.startsWith("$(")) {
         out = executor.execute(command, functionScope);
@@ -123,7 +124,12 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
           afterExecuteRetValue = split[0].substring("fcall ".length());
           callParams = split[1].substring(split[1].indexOf("(") + 1, split[1].length() - 1);
         }
-        execute(fName, parent);
+
+        try {
+          execute(fName, parent, functionScope);
+        } catch (CloneNotSupportedException e) {
+          e.printStackTrace();
+        }
 
 
       }
@@ -131,18 +137,19 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
 
   }
 
-  public void execute(String fName, ScopeImpl parent) {
+  public void execute(String fName, ScopeImpl parent, ScopeImpl functionScope)
+      throws CloneNotSupportedException {
     if (fName.startsWith("for")) {
       fName = fName.substring(0, fName.indexOf("("));
       ForScope forScope = (ForScope) parent.functions.get(fName);
-      forScope.executeScript(fName, this.getScopeVariables());
+      forScope.executeScript(fName, functionScope.getScopeVariables().clone());
     } else if (fName.startsWith("if")) {
 //      fName = fName.substring("fcall ".length());
       fName = fName.substring(0, fName.indexOf("("));
       IfScope ifScope = (IfScope) parent.functions.get(fName);
-      ifScope.executeScript(fName, this.getScopeVariables());
+      ifScope.executeScript(fName, functionScope.getScopeVariables().clone());
     } else {
-      executeScript(fName, this.getScopeVariables());
+      executeScript(fName, functionScope.getScopeVariables().clone());
     }
   }
 

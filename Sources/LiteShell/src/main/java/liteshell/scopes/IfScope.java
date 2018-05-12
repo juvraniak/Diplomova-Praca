@@ -92,6 +92,7 @@ public class IfScope extends ScopeImpl implements Parser {
   public void executeScript(String function, ScopeVariables scopeVariables) {
     CommandIO out;
     String fName;
+    setScopeVariables(scopeVariables);
     if (evalueateCondition()) {
       for (int j = 0; j < stack.size(); j++) {
         String command = stack.get(j);
@@ -111,6 +112,8 @@ public class IfScope extends ScopeImpl implements Parser {
           }
         } else if (command.startsWith("fcall ")) {
           String[] split = command.split(" = ");
+          String callParams;
+          String afterExecuteRetValue;
           if (split.length == 1) {
             //fcall test()
             fName = command.substring("fcall ".length());
@@ -118,14 +121,26 @@ public class IfScope extends ScopeImpl implements Parser {
 
               fName = fName.substring(0, fName.indexOf("("));
               ForScope forScope = (ForScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              forScope.executeScript(fName, this.getScopeVariables());
+              try {
+                forScope.executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             } else if (fName.startsWith("if")) {
               fName = command.substring("fcall ".length());
               fName = fName.substring(0, fName.indexOf("("));
               IfScope ifScope = (IfScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              ifScope.executeScript(fName, this.getScopeVariables());
+              try {
+                ifScope.executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             } else {
-              executeScript(fName, this.getScopeVariables());
+              try {
+                executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             }
           } else {
             //fcall int a = test()

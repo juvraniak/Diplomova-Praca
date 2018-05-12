@@ -9,27 +9,32 @@ int globalVar = \
 8;
 
 function void main(string arg){
+  echo ("globalVar ",${globalVar});
   int i = 5;
+  echo ("i ",${i});
   ${i} = 9;
+  echo ("i ",${i});
 #  copy /home/jv/examples.desktop /home/jv/Downloads/examples.desktop;
 #  move /home/jv/Downloads/examples.desktop \
 #  /home/jv/Documents/examples.desktop;
 #  rm /home/jv/Documents/examples.desktop;
 #  rm /home/jv/Downloads/examples.desktop;
-  ls /home/jv/ | grep ecli;
-#  test();
+#  ls /home/jv/ | grep ecli;
+  test();
   if($(true==true)){
+    echo ("globalVar after if ",${globalVar});
     echo (true);
     for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
-         echo ("i",${i});
-if(true){
-    echo (true);
-    }
-         for(int i = 21; $(${i}<23);$(${i} = $(${i}+1))){
+          echo ("globalVar in 1 for",${globalVar});
+          echo ("i ",${i});
+          if(true){
+            echo (true);
+          }
+           for(int i = 0; $(${i}<12);$(${i} = $(${i}+1))){
+              echo ("in 2 globalVar ",${globalVar});
+              echo ("i ",${i});
 
-            echo ("i",${i});
-
-         }
+           }
 
       }
   }
@@ -41,6 +46,7 @@ if(true){
 }
 
 function int getNumber(boolean test){
+  echo ("in getNumber function");
   int r = 4;
   if(true){
     ${r} = 5;
@@ -49,6 +55,11 @@ function int getNumber(boolean test){
 }
 
 function void test(){
-  int i = 4;
-  ls;
+  echo ("in test function");
+  echo ("globalVar ",${globalVar});
+  echo ("i ",${i});
+  int j = 4;
+  echo ("j ",${j});
+  echo ("exiting test function");
+#  ls;
 }

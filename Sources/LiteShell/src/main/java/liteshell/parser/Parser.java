@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.util.Pair;
-import liteshell.scopes.Scope;
 import liteshell.scopes.ScopeImpl;
 import liteshell.utils.ShellClient;
 import liteshell.utils.StringUtils;
@@ -54,7 +53,7 @@ public interface Parser {
     return new ScopeImpl(name, null);
   }
 
-  default ScopeImpl createNewScope(String name, Scope parrent) {
+  default ScopeImpl createNewScope(String name, ScopeImpl parrent) {
     return new ScopeImpl(name, parrent);
   }
 }

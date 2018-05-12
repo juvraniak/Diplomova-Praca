@@ -47,11 +47,16 @@ public class ForScope extends ScopeImpl implements Parser {
     String[] forStatement = line.trim().substring("for(".length(), line.trim().length() - 1)
         .split(";");
     //TODO: aby bolo podporovane pouzit uz inicializovanej premennej treba skusit ci sa nezacina na $( atd..., enhancement
-    init = "$(" + forStatement[0] + ")";
-    var = forStatement[0].split(" = ")[0];
-    var = var.split(" ")[1];
+    init =
+        "$(" + forStatement[0].split(" = ")[0] + scopeName + " = " + forStatement[0].split(" = ")[1]
+            + ")";
+    String originalVar = forStatement[0].split(" = ")[0];
+    var = originalVar.split(" ")[1] + scopeName;
+    originalVar = originalVar.split(" ")[1];
     condition = forStatement[1].trim();
+    condition = condition.replace("${" + originalVar + "}", "${" + var + "}");
     increment = forStatement[2].trim();
+    increment = increment.replace("${" + originalVar + "}", "${" + var + "}");
     for (; index < content.size(); index++) {
       line = content.get(index);
       if (line.endsWith(";")) {
@@ -107,6 +112,7 @@ public class ForScope extends ScopeImpl implements Parser {
   public void executeScript(String function, ScopeVariables scopeVariables) {
     CommandIO out;
     String fName;
+    setScopeVariables(scopeVariables);
     for (int i = getStart(); evalueateCondition(); i = evalueateIncremet()) {
 
       for (int j = 0; j < stack.size(); j++) {
@@ -127,6 +133,8 @@ public class ForScope extends ScopeImpl implements Parser {
           }
         } else if (command.startsWith("fcall ")) {
           String[] split = command.split(" = ");
+          String callParams;
+          String afterExecuteRetValue;
           if (split.length == 1) {
             //fcall test()
             fName = command.substring("fcall ".length());
@@ -134,14 +142,26 @@ public class ForScope extends ScopeImpl implements Parser {
 
               fName = fName.substring(0, fName.indexOf("("));
               ForScope forScope = (ForScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              forScope.executeScript(fName, this.getScopeVariables());
+              try {
+                forScope.executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             } else if (fName.startsWith("if")) {
               fName = command.substring("fcall ".length());
               fName = fName.substring(0, fName.indexOf("("));
               IfScope ifScope = (IfScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              ifScope.executeScript(fName, this.getScopeVariables());
+              try {
+                ifScope.executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             } else {
-              executeScript(fName, this.getScopeVariables());
+              try {
+                executeScript(fName, this.getScopeVariables().clone());
+              } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+              }
             }
           } else {
             //fcall int a = test()
@@ -152,6 +172,7 @@ public class ForScope extends ScopeImpl implements Parser {
       }
     }
   }
+
 
   private int evalueateIncremet() {
     CommandIO commandIO = getExecutor().execute(increment, this);
