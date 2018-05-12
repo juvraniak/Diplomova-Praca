@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
+
 import liteshell.commands.ios.CommandIO;
 import liteshell.scopes.Scope;
 
@@ -21,9 +22,12 @@ public class GrepReceiver implements Receiver {
     //TODO: will have to cover scenario when grep parameter is not string to grep but file to grep.
     List<String> listToGrep = Arrays.asList(strings[2].split("\n"));
     try {
-      Stream<String> out = listToGrep.stream()
-          .filter(item -> item.contains(filterWord)).sorted();
-      commandIO.setCommandOutput(Optional.of(out));
+
+      StringBuilder sb = new StringBuilder();
+
+      listToGrep.stream().filter(item -> item.contains(filterWord)).forEach(item -> sb.append("\n" + item));
+
+      commandIO.setCommandOutput(CommandIO.prepareIO(sb.toString()));
       commandIO.setCommandErrorOutput(Optional.of(Stream.empty()));
       commandIO.setReturnCode(0);
     } catch (Exception e) {

@@ -210,7 +210,11 @@ class PipeExecutor implements ExecutorListener {
     //FIXME : this is not correct!!!
 //    Stream<String> stream = Stream.concat(Stream.of(command), output.getCommandOutput().get());
 //    command = stream.findFirst().get();
-    command = command + " " + output.getCommandOutput().get().reduce(String::concat).get();
+	  StringBuilder sb = new StringBuilder();
+	  sb.append(command+ " ");
+	  output.getCommandOutput().get().forEach(item -> sb.append(item));
+//    command = command + " " + output.getCommandOutput().get().reduce(String::concat).get();
+	  command = sb.toString();
     return run();
   }
 

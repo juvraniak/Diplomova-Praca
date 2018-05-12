@@ -30,11 +30,8 @@ public class GrepCommand implements Command {
   @Override
   public String[] parseComand(Stream<String> stream) {
     String str = stream.reduce(String::concat).get();
-//    Object[] objects = stream.toArray();
-//    StringBuilder sb = new StringBuilder(10);
-//    for (Object o : objects) {
-//      sb.append(o).append(" ");
-//    }
-    return str.split(" ");
+    String[] temp = str.split(" ");
+    String[] toReturn = new String[] {temp[0], temp[1], str.substring(temp[0].length()+temp[1].length()+2)};
+    return toReturn;
   }
 }
