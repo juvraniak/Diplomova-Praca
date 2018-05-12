@@ -26,6 +26,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AbstractScope implements Scope, Runnable, Cloneable {
 
+  @Setter
+  protected List<String> inptutCommands;
+
   @Getter
   protected String scopeName;
   protected PluginFactory pluginFactory;
@@ -54,10 +57,6 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
   @Setter
   protected Map<String, ScopeImpl> functions = new HashMap<>();
 
-  @Override
-  public ScopeVariables getScopeVariables() {
-    return scopeVariables;
-  }
 
   @Override
   public String getCurrentWorkingDirectory() {
@@ -205,6 +204,31 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
     }
   }
 
+  public void runInputCommands() {
+    try {
+      inptutCommands.forEach(command -> {
+        CommandIO commandIO = executor.execute(prepareInput(command), getScope());
+        if (commandIO.getCommandOutput().isPresent() && commandIO.getReturnCode() == 0) {
+          try {
+            commandIO.getCommandOutput()
+                .ifPresent(out -> System.out.println(out.reduce(String::concat).get()));
+          } catch (Exception e) {
+
+          }
+        } else if (commandIO.getCommandErrorOutput().isPresent()) {
+          try {
+            commandIO.getCommandErrorOutput()
+                .ifPresent(out -> System.out.println(out.reduce(String::concat).get()));
+          } catch (Exception e) {
+
+          }
+        }
+      });
+    } catch (UnknownCommandException ex) {
+      log.error("There was issue with following command: \n {}", ex.getMessage());
+    }
+  }
+
   @Override
   public void run() {
     CommandIO commandIO;
@@ -215,13 +239,25 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
 
       try {
         userInput = prepareInput(br.readLine());
-//        userInput = "$(add($(add(${i}, ${j})), 5));";
-//        userInput = "sh /home/jv/Umlet/umlet.sh";
-//        userInput = "sh echo \"dsadasdas\" > /home/jv/Umlet/cosi.txt";
-        userInput = "./home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test1.lsh";
+//        Instant start = Instant.now();
         commandIO = executor.execute(userInput, getScope());
-        if (commandIO.getCommandOutput().isPresent()) {
-          commandIO.getCommandOutput().get().forEach(System.out::println);
+//        Instant end = Instant.now();
+//        System.out.println(Duration.between(start, end));
+
+        if (commandIO.getCommandOutput().isPresent() && commandIO.getReturnCode() == 0) {
+          try {
+            commandIO.getCommandOutput()
+                .ifPresent(out -> System.out.println(out.reduce(String::concat).get()));
+          } catch (Exception e) {
+
+          }
+        } else if (commandIO.getCommandErrorOutput().isPresent()) {
+          try {
+            commandIO.getCommandErrorOutput()
+                .ifPresent(out -> System.out.println(out.reduce(String::concat).get()));
+          } catch (Exception e) {
+
+          }
         }
       } catch (UnknownCommandException ex) {
         log.error("There was issue with following command: \n {}", ex.getMessage());

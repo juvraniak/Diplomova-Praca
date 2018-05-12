@@ -1,6 +1,0 @@
-@Override
-function int test(){
-  string path = "/home/jv/Documents";
-  ls ${path};
-  return 5;
-}

@@ -9,10 +9,11 @@ int globalVar = \
 8;
 
 function void main(string arg){
-  echo ("globalVar ",${globalVar});
-  int i = 5;
+#  echo ("globalVar ",${globalVar});
+#  int i = 5;
+int a = 5;
 #  echo ("i ",${i});
-  ${i} = 9;
+#  ${i} = 9;
 #  echo ("i ",${i});
 #  copy /home/jv/examples.desktop /home/jv/Downloads/examples.desktop;
 #  move /home/jv/Downloads/examples.desktop \
@@ -21,32 +22,34 @@ function void main(string arg){
 #  rm /home/jv/Downloads/examples.desktop;
 #  ls /home/jv/ | grep ecli;
 #  test();
-  boolean true = true;
-  if(${true}){
+#  boolean true = true;
+#  if(${true}){
 #    echo ("globalVar after if ",${globalVar});
 #    echo (true);
-    for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
+   for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
 #          echo ("globalVar in 1 for",${globalVar});
-#          echo ("i ",${i});
+          echo ("running -------------------> ",${i});
           if(true){
 #            echo (true);
           }
-           for(int i = 0; $(${i}<12);$(${i} = $(${i}+1))){
+           for(int i = 0; $(${i}<999999);$(${i} = $(${i}+1))){
 #              echo ("in 2 globalVar ",${globalVar});
-${globalVar} = 2;
-              echo ("i ",${i});
-              echo ("in 2 globalVar ",${globalVar});
+#${globalVar} = 2;
+#              echo ("i ",${i});
+ #             echo ("in 2 globalVar ",${globalVar});
+              int a = $(${i}*${i});
+              #echo (${a});
            }
 
       }
-  }
-  echo ("out  in scope ",${globalVar});
-  echo (${true});
-  int a = getNumber(${true});
-  echo (${a});
-  ${true} = false;
-  int b = getNumber(${true});
-  echo (${b});
+ # }
+#  echo ("out  in scope ",${globalVar});
+#  echo (${true});
+#  int a = getNumber(${true});
+#  echo (${a});
+#  ${true} = false;
+#  int b = getNumber(${true});
+#  echo (${b});
 
 }
 
