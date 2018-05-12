@@ -41,6 +41,7 @@ function void main(string arg){
   }
   int a = getNumber(${true});
   echo (${a});
+  ${true} = false;
   int b = getNumber(${true});
   echo (${b});
 
