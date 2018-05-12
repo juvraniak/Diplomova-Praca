@@ -137,11 +137,11 @@ public class IfScope extends ScopeImpl implements Parser {
 //                e.printStackTrace();
 //              }
             } else {
-              try {
-                executeScript(fName, this.getScopeVariables().clone());
-              } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-              }
+//              try {
+              executeScript(fName, this.getScopeVariables());
+//              } catch (CloneNotSupportedException e) {
+//                e.printStackTrace();
+//              }
             }
           } else {
             //fcall int a = test()

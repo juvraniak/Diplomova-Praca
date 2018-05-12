@@ -35,12 +35,13 @@ function void main(string arg){
 #              echo ("in 2 globalVar ",${globalVar});
 ${globalVar} = 2;
               echo ("i ",${i});
-              echo ("in 2 globalVar ",${glo
+              echo ("in 2 globalVar ",${globalVar});
            }
 
       }
   }
   echo ("out  in scope ",${globalVar});
+  echo (${true});
   int a = getNumber(${true});
   echo (${a});
   ${true} = false;
@@ -53,7 +54,7 @@ function int getNumber(boolean daco){
   echo ("in getNumber function");
   echo (${daco});
   int r = 4;
-  if(true){
+  if(${daco}){
     ${r} = 5;
   }
   return ${r};

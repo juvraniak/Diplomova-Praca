@@ -102,10 +102,20 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
     ScopeImpl parent = (ScopeImpl) this.getParent();
 
     ScopeImpl functionScope = parent.functions.get(fName);
-    functionScope.setScopeVariables(scopeVariables);
+    try {
+      functionScope.setScopeVariables(scopeVariables.clone());
+    } catch (CloneNotSupportedException e) {
+      e.printStackTrace();
+    }
     for (String command : functionScope.stack) {
       if (command.startsWith("$(")) {
         out = executor.execute(command, functionScope);
+        if (command.contains("returnValue = ")) {
+          Keyword key = functionScope.getScopeVariables().getInitializedVariables()
+              .get("returnValue");
+          scopeVariables.getInitializedVariables().put("returnValue", key);
+          changeReturnValue(key, scopeVariables, functionScope.getScopeVariables());
+        }
         if (out.getReturnCode() == 0) {
           out.getCommandOutput()
               .ifPresent(
@@ -116,12 +126,13 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
       } else if (command.startsWith("fcall ")) {
         String[] split = command.split(" = ");
         String callParams;
-        String afterExecuteRetValue;
+        String afterExecuteRetValue = "";
         if (split.length == 1) {
           fName = command.substring("fcall ".length());
         } else {
           fName = split[1];
-          afterExecuteRetValue = "$(" + split[0].substring("fcall ".length()) + " = ${retValue})";
+          afterExecuteRetValue =
+              "$(" + split[0].substring("fcall ".length()) + " = ${returnValue})";
           callParams = split[1].substring(split[1].indexOf("(") + 1, split[1].length() - 1);
           String[] splitCallParam = callParams.split(",");
           String callOnlyFName = fName.substring(0, fName.indexOf("("));
@@ -130,7 +141,7 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
           for (int i = 0; i < callParams.split(",").length; i++) {
             this.getExecutor()
                 .execute("$(" + param.get(i).getKey() + " " + param.get(i).getValue() + " = "
-                    + splitCallParam[i] + ")", this);
+                    + splitCallParam[i] + ")", functionScope);
           }
         }
 
@@ -139,10 +150,42 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
         } catch (CloneNotSupportedException e) {
           e.printStackTrace();
         }
+        if (split.length > 1) {
+          Keyword key = functionScope.getScopeVariables().getInitializedVariables()
+              .get("returnValue");
+//          try {
+          functionScope.getExecutor().execute(afterExecuteRetValue, functionScope);
+//            execute(afterExecuteRetValue, parent, functionScope);
 
+        }
       }
     }
 
+  }
+
+  private void changeReturnValue(Keyword key, ScopeVariables scopeVariables,
+      ScopeVariables calledFunctVariables) {
+//    scopeVariables.getInitializedVariables().put("retunValue");
+    System.out.println(returnValue);
+    switch (key) {
+      case INT:
+        scopeVariables.getIntegerMap()
+            .put("returnValue", calledFunctVariables.getIntegerMap().get("returnValue"));
+        break;
+      case DOUBLE:
+        scopeVariables.getDoubleMap()
+            .put("returnValue", calledFunctVariables.getDoubleMap().get("returnValue"));
+        break;
+      case BOOLEAN:
+        scopeVariables.getBooleanMap()
+            .put("returnValue", calledFunctVariables.getBooleanMap().get("returnValue"));
+        break;
+      case STRING:
+        scopeVariables.getStringMap()
+            .put("returnValue", calledFunctVariables.getStringMap().get("returnValue"));
+        break;
+
+    }
   }
 
 
@@ -158,7 +201,7 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
       IfScope ifScope = (IfScope) parent.functions.get(fName);
       ifScope.executeScript(fName, functionScope.getScopeVariables());
     } else {
-      executeScript(fName, functionScope.getScopeVariables().clone());
+      executeScript(fName, functionScope.getScopeVariables());
     }
   }
 
