@@ -9,7 +9,7 @@ int globalVar = \
 8;
 
 function void main(string arg){
-#  echo ("globalVar ",${globalVar});
+  echo ("globalVar ",${globalVar});
   int i = 5;
 #  echo ("i ",${i});
   ${i} = 9;
@@ -27,18 +27,20 @@ function void main(string arg){
 #    echo (true);
     for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
 #          echo ("globalVar in 1 for",${globalVar});
-          echo ("i ",${i});
+#          echo ("i ",${i});
           if(true){
 #            echo (true);
           }
            for(int i = 0; $(${i}<12);$(${i} = $(${i}+1))){
 #              echo ("in 2 globalVar ",${globalVar});
+${globalVar} = 2;
               echo ("i ",${i});
-
+              echo ("in 2 globalVar ",${glo
            }
 
       }
   }
+  echo ("out  in scope ",${globalVar});
   int a = getNumber(${true});
   echo (${a});
   ${true} = false;

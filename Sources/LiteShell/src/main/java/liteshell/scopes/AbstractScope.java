@@ -140,23 +140,23 @@ public class AbstractScope implements Scope, Runnable, Cloneable {
           e.printStackTrace();
         }
 
-
       }
     }
 
   }
+
 
   public void execute(String fName, ScopeImpl parent, ScopeImpl functionScope)
       throws CloneNotSupportedException {
     if (fName.startsWith("for")) {
       fName = fName.substring(0, fName.indexOf("("));
       ForScope forScope = (ForScope) parent.functions.get(fName);
-      forScope.executeScript(fName, functionScope.getScopeVariables().clone());
+      forScope.executeScript(fName, functionScope.getScopeVariables());
     } else if (fName.startsWith("if")) {
 //      fName = fName.substring("fcall ".length());
       fName = fName.substring(0, fName.indexOf("("));
       IfScope ifScope = (IfScope) parent.functions.get(fName);
-      ifScope.executeScript(fName, functionScope.getScopeVariables().clone());
+      ifScope.executeScript(fName, functionScope.getScopeVariables());
     } else {
       executeScript(fName, functionScope.getScopeVariables().clone());
     }

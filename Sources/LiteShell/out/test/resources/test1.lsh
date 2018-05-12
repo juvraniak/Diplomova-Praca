@@ -11,42 +11,47 @@ int globalVar = \
 function void main(string arg){
   echo ("globalVar ",${globalVar});
   int i = 5;
-  echo ("i ",${i});
+#  echo ("i ",${i});
   ${i} = 9;
-  echo ("i ",${i});
+#  echo ("i ",${i});
 #  copy /home/jv/examples.desktop /home/jv/Downloads/examples.desktop;
 #  move /home/jv/Downloads/examples.desktop \
 #  /home/jv/Documents/examples.desktop;
 #  rm /home/jv/Documents/examples.desktop;
 #  rm /home/jv/Downloads/examples.desktop;
 #  ls /home/jv/ | grep ecli;
-  test();
-  if($(true==true)){
-    echo ("globalVar after if ",${globalVar});
-    echo (true);
+#  test();
+  boolean true = true;
+  if(${true}){
+#    echo ("globalVar after if ",${globalVar});
+#    echo (true);
     for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
-          echo ("globalVar in 1 for",${globalVar});
-          echo ("i ",${i});
+#          echo ("globalVar in 1 for",${globalVar});
+#          echo ("i ",${i});
           if(true){
-            echo (true);
+#            echo (true);
           }
            for(int i = 0; $(${i}<12);$(${i} = $(${i}+1))){
-              echo ("in 2 globalVar ",${globalVar});
+#              echo ("in 2 globalVar ",${globalVar});
+${globalVar} = 2;
               echo ("i ",${i});
-
+              echo ("in 2 globalVar ",${glo
            }
 
       }
   }
-  int a = getNumber(true);
+  echo ("out  in scope ",${globalVar});
+  int a = getNumber(${true});
   echo (${a});
-  int b = getNumber(false);
-#  echo (${b});
+  ${true} = false;
+  int b = getNumber(${true});
+  echo (${b});
 
 }
 
-function int getNumber(boolean test){
+function int getNumber(boolean daco){
   echo ("in getNumber function");
+  echo (${daco});
   int r = 4;
   if(true){
     ${r} = 5;

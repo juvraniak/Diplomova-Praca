@@ -122,20 +122,20 @@ public class IfScope extends ScopeImpl implements Parser {
 
               fName = fName.substring(0, fName.indexOf("("));
               ForScope forScope = (ForScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              try {
-                forScope.executeScript(fName, this.getScopeVariables().clone());
-              } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-              }
+//              try {
+              forScope.executeScript(fName, this.getScopeVariables());
+//              } catch (CloneNotSupportedException e) {
+//                e.printStackTrace();
+//              }
             } else if (fName.startsWith("if")) {
               fName = command.substring("fcall ".length());
               fName = fName.substring(0, fName.indexOf("("));
               IfScope ifScope = (IfScope) ((ScopeImpl) parent).getFunctions().get(fName);
-              try {
-                ifScope.executeScript(fName, this.getScopeVariables().clone());
-              } catch (CloneNotSupportedException e) {
-                e.printStackTrace();
-              }
+//              try {
+              ifScope.executeScript(fName, this.getScopeVariables());
+//              } catch (CloneNotSupportedException e) {
+//                e.printStackTrace();
+//              }
             } else {
               try {
                 executeScript(fName, this.getScopeVariables().clone());
