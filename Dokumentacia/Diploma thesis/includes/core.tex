@@ -3,25 +3,68 @@
 \indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardwéru alebo softwéru.  Operačný systém je základná časť akéhokoľvek počítaťového sytému, je to kus softvéru, ktorý umožnuje počítačom fungovať. Oblasť operačných systémov v poslednej dobe prechádza rapídnymi zmenami nakoľko počítače sa stali súčasťou každodenného života od malých zariadení napríklad v automobiloch až po najsofisitkovanejšie servery nadnárodných spoločností. Aj keď v dnešnej dobe poznáme mnohé operačné systémi, my sa zameriame na Windows, Mac OS, Unix a Linux.\cite{osbook}
 % tuto cast este asi rozsirim 
 \subsubsection{Windows}
-\indent Microsoft Windows uviedol svoje prvé operačné systémy v roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery. Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell.
+\indent Microsoft Windows uviedol svoje prvé operačné systémy v novembri roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery.\cite{windowsHistory} Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell\cite{winAutomation}.
+\paragraph{Podiel na trhu}
+\indent Microsoft je aj vzhľadom na svoju históriu je najobľúbenejším operačným systémom v segmente osobných počítačov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 81,73\% resp.  88,42\%.
+\newline
+\indent Podľa stránky w3techs.com\cite{pop} je operačný systém Windows na 32.0\% počítačoch.
 \paragraph{Predinštalovaný software}
-\indent Málo predinštalovaného softvéru jedine powershell na widows serveri je defaultne, ostatné programátorské tooly je potrebné stiahnúť dodatočne. 
+\indent Windows operačné systémy ponúkajú len základný balík nástrojov, programov. Serverové aj neserverové verzie windowsu ponúkajú  powershell, ktorý je dostupný od inštalácie.  Oba systémy podporujú aj takzvaný "Command prompt" alebo príkazový riadok, ktorý je alernatívou k powershellu. Akékoľvek ďalšie programy je potrebné stiahnuť a doinštalovať.
 \newline
 \subsubsection{MacOs}
 \indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
 \paragraph{Predinštalovaný software}
-\indent Predinštalovaný software pre developerov na Mac OS je python, apple script, Ruby, bash, objective-c. Donedávna bola štandardom aj Java.
-
+\indent Predinštalovaný software pre developerov na Mac OS je python, apple script, Ruby, bash, objective-c. Donedávna bola štandardom aj Java, avšak Apple sa rozhodol pre radikálny krok vylúčiť Javu a propagovať objective-c.
+\paragraph{Podiel na trhu}
+\indent Populariata počítačov s predinštalovaným operačným systémom MacOs sa mierne zvyšuje čo je možné vidieť aj na obrázku na konci sekcie operačných systémov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 13,18\% resp.  9,19\%.
+\newline
+\indent Serverové verzie MacOs podľa stránky w3techs.com\cite{pop} sú iba na menej ako 0.1\% zariadeniach.
 \subsubsection{Unix}
 \indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril Unix shell, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
 \paragraph{Predinštalovaný software}
-\indent Na vačšine unixových systémoch je predinštalovaný bash a open JDK.
+\indent Na vačšine unixových systémoch je predinštalovaný shell a open JDK.
 \newline
+\paragraph{Podiel na trhu}
+\indent Podľa stránky w3techs.com\cite{pop} sa Unixové systémy používajú na rovných 68.0\% počítačov.
 \subsubsection{Linux}
 \indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpočítačoch(mainframoch) Skriptovací jazyk Unix shell resp. jeho najrozšírenejšia forma Bash.
 \paragraph{Predinštalovaný software}
 \indent Predinštalovaný software vo väčšine distribúciách linuxu sú bash, Open Jdk - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .net frameworku.
+\paragraph{Podiel na trhu}
+\indent Microsoft je aj vzhľadom na svoju históriu je najobľúbenejším operačným systémom v segmente osobných počítačov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 1,66\% resp.  1,93\%.
+\indent Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
 \newline
+\subsubsection{Grafy}
+\indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov z ktorého sa dá čítať, že unixové a linuxové servery zvysujú svoje podiely na trhu. Naopak Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyšší rating.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{img/statcounter.png}
+	\caption{\gls{os} - podiel na trhu podľa statcounter\cite{statcounter}}
+	\label{fig:test}
+	
+\end{figure}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{img/netmarketshare.png}
+	\caption{\gls{os} - podiel na trhu podľa netmarketshare\cite{netmarketshare}}
+	\label{fig:test}
+	
+\end{figure}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.4]{img/usg_server.png}
+	\caption{Serverové \gls{os} - podiel na trhu podľa w3techs\cite{pop}}
+	\label{fig:test}
+	
+\end{figure}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.4]{img/usage_grou_by_os_sites.png}
+	\caption{Serverové \gls{os} - podiel na trhu a rozdelenie podľa ratingu stránok podľa w3techs\cite{pop}}
+	\label{fig:test}
+	
+\end{figure}
+
 \subsection{Programovacie jazyky}
 \indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
 
@@ -334,7 +377,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \end{itemize}
 
 \subsection{Zhodnotenie analyzovaných technológií}
-\indent 
+\indent Analýza ukázala, že väčšinový podiel na trhu osobných počítačov ako aj serverov si delia medzi sebou Unix/Linux a Windows operačné systémy. Preto základ 
 
 \section{Preklad jazykov}
 \indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
@@ -525,22 +568,22 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 	\caption{Use case : Spustiť shell príkaz}
 	\end{table}
 \end{center}
-\paragraph{Spustiť powershell príkaz}
+\paragraph{Spustiť commander príkaz}
 \begin{center}
 	\begin{table}[htbp]
 		\begin{tabular}{|p{2.5cm}|p{14cm}|}
 			\hline
-			\textbf{Use case} & Spustiť powershell príkaz \\ 
+			\textbf{Use case} & Spustiť commander príkaz \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný powershell.\\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný windows commander.\\ 
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 			\hline
-			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
+			\textbf{Popis} & Používateľ zadá valídny príkaz zacinajuci win alebo ext, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
 			\textbf{Výstp} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
 			\hline
-			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z powershellu.\\
+			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z príkazového riadku.\\
 			\hline
 		\end{tabular}
 	\label{table:1}
@@ -606,9 +649,9 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg download <názov balička>"\\
 			\hline
-			\textbf{Popis} & Program sa ako prvé pozrie do adresára balíčkov či už daný balíček nebol stiahnutý, ak nie stiahne nový balíček a načíta ho medzi aktívne balíčky. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
+			\textbf{Popis} & Program sa ako prvé pozrie do adresára balíčkov či už daný balíček nebol stiahnutý, ak nie stiahne nový balíček. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
 			\hline
-			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania.\\
+			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
 			\hline
 			\textbf{Chyba} & Vypíše chybu do stderr v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
 			\hline
@@ -714,75 +757,28 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 		\caption{Use case : Získať informácie o procesoch}
 	\end{table}
 \end{center}
-\newpage
-\paragraph{Presmerovať chybový výstup}
+\paragraph{Vytvoriť skript}
 \begin{center}
 	\begin{table}[htbp]
 		\begin{tabular}{|p{2.5cm}|p{14cm}|}
 			\hline
-			\textbf{Use case} & Presmerovať chybový výstup \\ 
+			\textbf{Use case} & Vytvoriť skript \\ 
 			\hline
-			\textbf{Vstup} & Pre presmerovanie na chybový výstup je potrebné dodržať syntax command stderr> file\\
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
+			\textbf{Vstup} & Vstupom musí byť správne napísaný skript. \\
 			\hline
-			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
+			\textbf{Popis} & Používateľ napíše skrip, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline
-			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
+			\textbf{Výstp} & Skrip vráti výstup zo svojho beho buď na štandardný výstup alebo do súbor podľa toho ako je naimplementovaný.\\
 			\hline
-			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
-			\hline
-		\end{tabular}
-		\label{table:1}
-		\caption{Use case : Presmerovať chybový výstup}
-	\end{table}
-\end{center}
-\paragraph{Presmerovať štandardný výstup}
-\begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
-			\hline
-			\textbf{Use case} & Presmerovať štandardný výstup \\ 
-			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
-			\hline
-			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stderr> file\\
-			\hline
-			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
-			\hline
-			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
-			\hline
-			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
+			\textbf{Chyba} & V prípade, že príde k menšej chybe informácia bude zobrazená používateľovi, resp. presmerovaná do súboru.\\
 			\hline
 		\end{tabular}
 		\label{table:1}
-		\caption{Use case : Presmerovať štandardný výstup }
+		\caption{Use case : Vytvoriť skript}
 	\end{table}
 \end{center}
-\newpage
-\paragraph{Vynútiť ukončenie procesu}
-\begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
-			\hline
-			\textbf{Use case} & Vynútiť ukončenie procesu \\ 
-			\hline
-			\textbf{Vstup} & Pre vynútenie ukončenia procesu je potrebné použitie kľúčového slova kill <pid>.\\
-			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na ukončenie procesu. \\ 
-			\hline
-			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
-			\hline
-			\textbf{Výstp} & Výstup programu je textový reťazec informujúci o úspešnosti ukončenia procesu.\\
-			\hline
-			\textbf{Chyba} & Ak pri ukončovaní procesu príde k chybe, informácie sa presunú na stderr.\\
-			\hline
-		\end{tabular}
-		\label{table:1}
-		\caption{Use case : Vynútiť ukončenie procesu}
-	\end{table}
-\end{center}
-
 \paragraph{Vytvoriť funkciu}
 \begin{center}
 	\begin{table}[htbp]
@@ -830,6 +826,103 @@ procedúra - konečná postupnosť inštrukcií, ktorá sa dá vykonať mechanic
 		\caption{Use case : Override funkcie}
 	\end{table}
 \end{center}
+\paragraph{Vytvoriť cyklus}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Vytvoriť cyklus \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
+			Synax pre definovanie funkcie : 
+			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
+			\hline
+			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
+			\hline
+			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
+			\hline
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Vytvoriť cyklus}
+	\end{table}
+\end{center}
+\paragraph{Vytvoriť podmienku}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Vytvoriť podmienku \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
+			Synax pre definovanie funkcie : 
+			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
+			\hline
+			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
+			\hline
+			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
+			\hline
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Vytvoriť funkciu}
+	\end{table}
+\end{center}
+\newpage
+\paragraph{Presmerovať chybový výstup}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Presmerovať chybový výstup \\ 
+			\hline
+			\textbf{Vstup} & Pre presmerovanie na chybový výstup je potrebné dodržať syntax command stderr> file\\
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
+			\hline
+			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
+			\hline
+			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
+			\hline
+			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Presmerovať chybový výstup}
+	\end{table}
+\end{center}
+\paragraph{Presmerovať štandardný výstup}
+\begin{center}
+	\begin{table}[htbp]
+		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+			\hline
+			\textbf{Use case} & Presmerovať štandardný výstup \\ 
+			\hline
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
+			\hline
+			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stderr> file\\
+			\hline
+			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
+			\hline
+			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
+			\hline
+			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
+			\hline
+		\end{tabular}
+		\label{table:1}
+		\caption{Use case : Presmerovať štandardný výstup }
+	\end{table}
+\end{center}
+\newpage
+
+
+
 \subsubsection{Vývojár balíčkov}
 \indent Ako je z názvu role zjavné, tento hráč bude mať na starosti hlavne vývoj aplikácie, starať sa o jej funkcionalitim v zmysle rozširovania API, ktoré môže vývojár skriptov používať pre efektívnejšiu prácu.
 \paragraph{Implementovať vlastný balíček}

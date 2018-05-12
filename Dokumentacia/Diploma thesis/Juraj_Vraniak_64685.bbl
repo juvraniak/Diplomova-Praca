@@ -95,6 +95,108 @@
       \field{pages}{s. 976}
       \range{pages}{-1}
     \endentry
+    \entry{windowsHistory}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e11aa1bcae88a2f8911c5a6463b255f8}{%
+           family={Haapanen},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e11aa1bcae88a2f8911c5a6463b255f8}
+      \strng{fullhash}{e11aa1bcae88a2f8911c5a6463b255f8}
+      \strng{authornamehash}{e11aa1bcae88a2f8911c5a6463b255f8}
+      \strng{authorfullhash}{e11aa1bcae88a2f8911c5a6463b255f8}
+      \field{sortinit}{7}
+      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is the history of Microsoft Windows?}
+      \field{year}{18-01-2018}
+      \verb{url}
+      \verb https://kb.iu.edu/d/abwa
+      \endverb
+    \endentry
+    \entry{winAutomation}{online}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Windows and Windows Server Automation with Windows PowerShell}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://technet.microsoft.com/en-us/library/mt156946.aspx
+      \endverb
+    \endentry
+    \entry{statcounter}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fee3fc182e02f376217580e5bfec4f51}{%
+           family={StatCounter},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{fullhash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{authornamehash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{authorfullhash}{fee3fc182e02f376217580e5bfec4f51}
+      \field{sortinit}{9}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Desktop Operating System Market Share Worldwide | StatCounter Global Stats}
+      \field{year}{13-04-2018}
+      \verb{url}
+      \verb http://gs.statcounter.com/os-market-share/desktop/worldwide
+      \endverb
+    \endentry
+    \entry{netmarketshare}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fee3fc182e02f376217580e5bfec4f51}{%
+           family={StatCounter},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{fullhash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{authornamehash}{fee3fc182e02f376217580e5bfec4f51}
+      \strng{authorfullhash}{fee3fc182e02f376217580e5bfec4f51}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Operating Systems market share}
+      \field{year}{13-04-2018}
+      \verb{url}
+      \verb https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222017-05%22%2C%22dateEnd%22%3A%222018-04%22%2C%22segments%22%3A%22-1000%22%2C%22plotKeys%22%3A%5B%7B%22platform%22%3A%22Windows%22%7D%2C%7B%22platform%22%3A%22Mac%20OS%22%7D%2C%7B%22platform%22%3A%22Linux%22%7D%2C%7B%22platform%22%3A%22Chrome%20OS%22%7D%5D%7D
+      \endverb
+    \endentry
+    \entry{pop}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b8c88a0b473eb9cabd5c6ab5589ea50d}{%
+           family={W3Techs},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8c88a0b473eb9cabd5c6ab5589ea50d}
+      \strng{fullhash}{b8c88a0b473eb9cabd5c6ab5589ea50d}
+      \strng{authornamehash}{b8c88a0b473eb9cabd5c6ab5589ea50d}
+      \strng{authorfullhash}{b8c88a0b473eb9cabd5c6ab5589ea50d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unix vs. Linux vs. Windows vs. macOS usage statistics, May 2018}
+      \field{year}{13-04-2018}
+      \verb{url}
+      \verb https://w3techs.com/technologies/comparison/os-linux,os-windows,os-macos,os-unix
+      \endverb
+    \endentry
     \entry{shellprep}{online}{}
       \name{author}{1}{}{%
         {{hash=e4ffd39cd5d7bea68ccc1e6ee286855d}{%
@@ -107,8 +209,8 @@
       \strng{fullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authornamehash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authorfullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{If / Else Statements (Shell Scripting) - Code Wiki}
@@ -132,8 +234,8 @@
       \strng{fullhash}{656021b32d31c36e09aad282d243e358}
       \strng{authornamehash}{656021b32d31c36e09aad282d243e358}
       \strng{authorfullhash}{656021b32d31c36e09aad282d243e358}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -155,8 +257,8 @@
       \strng{fullhash}{fc19c0dc057e2a02419916b39da6895b}
       \strng{authornamehash}{fc19c0dc057e2a02419916b39da6895b}
       \strng{authorfullhash}{fc19c0dc057e2a02419916b39da6895b}
-      \field{sortinit}{1}
-      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{unixpickle/Benchmarks: Some language performance comparisons.}
@@ -167,6 +269,7 @@
     \endentry
   \endsortlist
   \missing{morf}
+  \missing{W3Techs}
 \endrefsection
 \endinput
 

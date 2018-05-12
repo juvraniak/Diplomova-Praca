@@ -4,24 +4,32 @@
 \defcounter {refsection}{0}\relax 
 \thispagestyle {empty}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka ConEmu emul\IeC {\'a}tora\relax }}{13}{figure.caption.35}
+\contentsline {figure}{\numberline {1}{\ignorespaces \gls {os} - podiel na trhu pod\IeC {\v l}a statcounter\cite {statcounter}\relax }}{4}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka cmder emul\IeC {\'a}tora\relax }}{14}{figure.caption.38}
+\contentsline {figure}{\numberline {2}{\ignorespaces \gls {os} - podiel na trhu pod\IeC {\v l}a netmarketshare\cite {netmarketshare}\relax }}{4}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka babun emul\IeC {\'a}tora\relax }}{14}{figure.caption.40}
+\contentsline {figure}{\numberline {3}{\ignorespaces Serverov\IeC {\'e} \gls {os} - podiel na trhu pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka pr\IeC {\'a}ce lexik\IeC {\'a}lneho analyz\IeC {\'a}tora\relax }}{18}{figure.caption.48}
+\contentsline {figure}{\numberline {4}{\ignorespaces Serverov\IeC {\'e} \gls {os} - podiel na trhu a rozdelenie pod\IeC {\v l}a ratingu str\IeC {\'a}nok pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka pr\IeC {\'a}ce syntaktickeho analyz\IeC {\'a}tora\relax }}{18}{figure.caption.50}
+\contentsline {figure}{\numberline {5}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka ConEmu emul\IeC {\'a}tora\relax }}{15}{figure.caption.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Pr\IeC {\'\i }pady pou\IeC {\v z}itia pre navrhovan\IeC {\'u} aplik\IeC {\'a}ciu\relax }}{21}{figure.caption.64}
+\contentsline {figure}{\numberline {6}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka cmder emul\IeC {\'a}tora\relax }}{16}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Class diagram Command n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{34}{figure.caption.113}
+\contentsline {figure}{\numberline {7}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka babun emul\IeC {\'a}tora\relax }}{16}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Sekven\IeC {\v c}n\IeC {\'y} diagram Command n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{35}{figure.caption.114}
+\contentsline {figure}{\numberline {8}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka pr\IeC {\'a}ce lexik\IeC {\'a}lneho analyz\IeC {\'a}tora\relax }}{20}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Class diagram Factory n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{35}{figure.caption.116}
+\contentsline {figure}{\numberline {9}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka pr\IeC {\'a}ce syntaktickeho analyz\IeC {\'a}tora\relax }}{20}{figure.caption.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Pvrv\IeC {\'e} funk\IeC {\v c}n\IeC {\'e} rie\IeC {\v s}enie\relax }}{36}{figure.caption.119}
+\contentsline {figure}{\numberline {10}{\ignorespaces Pr\IeC {\'\i }pady pou\IeC {\v z}itia pre navrhovan\IeC {\'u} aplik\IeC {\'a}ciu\relax }}{23}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Class diagram pluginu\relax }}{37}{figure.caption.120}
+\contentsline {figure}{\numberline {11}{\ignorespaces Class diagram Command n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{37}{figure.caption.126}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces Sekven\IeC {\v c}n\IeC {\'y} diagram Command n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{38}{figure.caption.127}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Class diagram Factory n\IeC {\'a}vrhov\IeC {\'e}ho vzoru\relax }}{38}{figure.caption.129}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces Pvrv\IeC {\'e} funk\IeC {\v c}n\IeC {\'e} rie\IeC {\v s}enie\relax }}{39}{figure.caption.132}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces Class diagram pluginu\relax }}{40}{figure.caption.133}
