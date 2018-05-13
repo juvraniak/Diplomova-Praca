@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="" />
+    <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acn" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pri" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pri" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/umlet/usecase.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/umlet/usecase.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commons/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commons/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Interfaces/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../Interfaces/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Commons.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/scopes/FunctionScope.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -186,15 +205,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VariableCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/VariableCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -231,11 +241,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PackageCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="368">
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangePackageReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scope.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -254,18 +282,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooleanRecevier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/BooleanRecevier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -2287,6 +2303,15 @@
           <expand>
             <path>
               <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Commons" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liteshell" type="b2602c69:ProjectViewProjectNode" />
               <item name="LiteShell" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -2866,7 +2891,7 @@
       <workItem from="1525898437417" duration="22626000" />
       <workItem from="1525977756544" duration="33922000" />
       <workItem from="1526140079391" duration="2724000" />
-      <workItem from="1526151984440" duration="2035000" />
+      <workItem from="1526151984440" duration="4339000" />
     </task>
     <servers />
   </component>
@@ -2903,7 +2928,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488118000" />
+    <option name="totallyTimeSpent" value="490422000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3210,13 +3235,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Commands/Move/src/main/java/liteshell/v1/commands/MoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Commands/Move/src/main/java/liteshell/v1/plugins/MovePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -3327,13 +3345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -3563,8 +3574,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/PackageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="368">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/receivers/ChangePackageReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/scopes/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -3620,11 +3645,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>liteshell</last-edited>
+          <last-edited>Commons</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

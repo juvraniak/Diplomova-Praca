@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>460</x>
-      <y>310</y>
+      <x>450</x>
+      <y>330</y>
       <w>80</w>
       <h>120</h>
     </coordinates>
@@ -61,9 +61,9 @@ Developer</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>580</x>
+      <x>570</x>
       <y>350</y>
-      <w>120</w>
+      <w>140</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>Manažovať balíčky</panel_attributes>
@@ -72,35 +72,35 @@ Developer</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
+      <x>510</x>
       <y>120</y>
-      <w>80</w>
-      <h>250</h>
+      <w>90</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;230.0;60.0;10.0</additional_attributes>
+    <additional_attributes>10.0;250.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
+      <x>510</x>
       <y>60</y>
-      <w>80</w>
-      <h>310</h>
+      <w>90</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;290.0;60.0;10.0</additional_attributes>
+    <additional_attributes>10.0;310.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>340</y>
+      <x>510</x>
+      <y>350</y>
       <w>80</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;60.0;30.0</additional_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
@@ -117,7 +117,7 @@ Developer</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>620</x>
+      <x>580</x>
       <y>730</y>
       <w>160</w>
       <h>50</h>
@@ -129,7 +129,7 @@ balíček</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>630</x>
+      <x>580</x>
       <y>850</y>
       <w>160</w>
       <h>50</h>
@@ -177,49 +177,49 @@ balíček</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
+      <x>700</x>
       <y>300</y>
-      <w>110</w>
+      <w>100</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
+      <x>700</x>
       <y>350</y>
-      <w>110</w>
+      <w>100</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
+      <x>700</x>
       <y>360</y>
-      <w>110</w>
+      <w>130</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>90.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
+      <x>510</x>
       <y>190</y>
-      <w>70</w>
-      <h>180</h>
+      <w>80</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;160.0;50.0;10.0</additional_attributes>
+    <additional_attributes>10.0;180.0;60.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -247,35 +247,35 @@ informácie</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
+      <x>510</x>
       <y>250</y>
-      <w>70</w>
-      <h>120</h>
+      <w>80</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;100.0;50.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;60.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>510</x>
       <y>740</y>
-      <w>130</w>
+      <w>90</w>
       <h>80</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;60.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>510</x>
       <y>790</y>
-      <w>140</w>
+      <w>90</w>
       <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;120.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -375,24 +375,24 @@ výstup</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>340</y>
-      <w>50</w>
-      <h>300</h>
+      <x>510</x>
+      <y>360</y>
+      <w>60</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;30.0;280.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>340</y>
-      <w>50</w>
-      <h>360</h>
+      <x>510</x>
+      <y>360</y>
+      <w>60</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;30.0;340.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;320.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -409,13 +409,13 @@ o procesoch</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>340</y>
-      <w>70</w>
-      <h>110</h>
+      <x>510</x>
+      <y>360</y>
+      <w>80</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;50.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -453,13 +453,13 @@ o procesoch</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>340</y>
-      <w>70</w>
-      <h>210</h>
+      <x>510</x>
+      <y>360</y>
+      <w>80</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;50.0;190.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -501,7 +501,7 @@ o procesoch</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>1050</x>
-      <y>510</y>
+      <y>500</y>
       <w>160</w>
       <h>50</h>
     </coordinates>
@@ -525,11 +525,11 @@ o procesoch</panel_attributes>
       <x>930</x>
       <y>510</y>
       <w>140</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>120.0;30.0;10.0;20.0</additional_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -595,11 +595,11 @@ logické operácie</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>480</x>
-      <y>410</y>
+      <y>430</y>
       <w>30</w>
-      <h>360</h>
+      <h>340</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;340.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
