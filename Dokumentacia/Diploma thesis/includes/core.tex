@@ -565,7 +565,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 		\hline
 		\textbf{Výstup} & Výstup je textový reťazec, závislý na logike skriptu.\\
 		\hline
-		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na stderr chybové hlášky spolu zo základným popisom problému, tracom.\\
+		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na štandardný chybový výstup chybové hlášky spolu zo základným popisom problému, tracom.\\
 		\hline
 		\caption{Use case : Spustiť skript}
 		\label{table:1}
@@ -681,7 +681,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Výstup} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
 			\hline
 
-			\textbf{Chyba} & Vypíše chybu do stderr v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
+			\textbf{Chyba} & Vypíše chybu na štandardný chybový výstup v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
 			\hline
 		\caption{Use case : Stiahnúť nový balíček}
 		\label{table:1}
@@ -704,7 +704,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti výmeny, alebo informujúci o potrebe stiahnutia balíčka.\\
 			\hline
-			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na stderr.\\
+			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Zmeniť  použiťý balíček}
 		\label{table:1}
@@ -728,7 +728,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
 			\hline
-			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na stderr.\\
+			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Zmazať vybraný balíček}
 		\label{table:1}
@@ -776,7 +776,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 			\textbf{Výstup} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na stderr.\\
+			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Získať informácie o procesoch}
 		\label{table:1}
@@ -825,7 +825,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 			\textbf{Výstup} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -848,7 +848,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Premenná, ktorá je uvedená v definícii funkcie.\\
 			\hline
-			\textbf{Chyba} & V prípade zle zadefinovanej syntaxe je problém zapísaný na stderr a vykonávanie skriptu je ukončené.\\
+			\textbf{Chyba} & V prípade zle zadefinovanej syntaxe je problém zapísaný na štandardný chybový výstup a vykonávanie skriptu je ukončené.\\
 			\hline
 		\caption{Use case : Override funkcie}
 		\label{table:1}
@@ -874,7 +874,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Cyklus nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť cyklus}
 		\label{table:1}
@@ -899,7 +899,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Podmienka nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť podmienku}
 		\label{table:1}
@@ -929,7 +929,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Program si uloží premmenú a jej hodnotu ak bola definovaná.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba používateľ bude informovaný o neúspechu na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba používateľ bude informovaný o neúspechu na štandardný chybový výstup.\\
 			\hline
 			\caption{Use case : Vytvoriť premenné}
 		\label{table:1}
@@ -959,7 +959,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -988,7 +988,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -1027,7 +1027,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
 			\hline
-			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stderr> file\\
+			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stdout> file\\
 			\hline
 			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
 			\hline
