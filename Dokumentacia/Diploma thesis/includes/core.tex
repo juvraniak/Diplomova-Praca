@@ -783,6 +783,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
 			Synax pre definovanie funkcie : 
+			\newline
 			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
 			\hline
 			
@@ -807,7 +808,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & Nad funciou je potrebné zapísať @Override alebo @Override(číslo) čo prekladaču povie, že má používať práve túto verziu funkcie, v druhom prípade číslo značí prioritu pri prepisovaní. Najnižšia priorita je 1, metóda s najvžšším číslom teda s najvyššou prioritou bude použitá v skripte.\\
+			\textbf{Vstup} & Nad funciou je potrebné zapísať @Override  čo prekladaču povie, že má používať práve túto verziu funkcie.\\
 			\hline
 			
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
@@ -832,6 +833,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Vstup} & Cyklus musí byť správne zadefinovaný. 
 			Synax pre definovanie funkcie : 
+			\newline
 			for(<inicializácia premennej>;<podmienka pre spustenie>;<inkrement>){telo cyklu obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
 
@@ -857,6 +859,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Vstup} & Podmienka musí byť správne zadefinovaná. 
 			Synax pre definovanie podmienky : 
+			\newline
 			if(boolean value){telo podmienky obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
 			\textbf{Popis} & Používateľ napíše podmienku, ktorá bude prečítaná programom a zohľadnená za behu skriptu.\\ 
@@ -880,9 +883,14 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
+			\newline
 			Synax pre definovanie premennej : 
+			\newline
 			<typ> <názov premennej>; alebo 
-			 <typ> <názov premennej> = <hodnota>;, kde hodnota môže byť konkrétna hodnota alebo iná premenná rovnakého typu.\\
+			\newline
+			 <typ> <názov premennej> = <hodnota>;
+			 \newline
+			 , kde hodnota môže byť konkrétna hodnota alebo iná premenná rovnakého typu.\\
 			\hline
 			\textbf{Popis} & Používateľ napíše inicializáciu alebo definíciu premennej, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
@@ -905,9 +913,14 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
+			\newline
 			Synax pre definovanie /zmenu hodnoty premennej: 
+			\newline
 			<názov premennej> = <výraz>; alebo 
-			<typ> <názov premennej> = <výraz>;, kde výraz môže byť operácia nad číselnými hodnotami a číselnými premennými. \\
+			\newline
+			<typ> <názov premennej> = <výraz>;
+			\newline
+			, kde výraz môže byť operácia nad číselnými hodnotami a číselnými premennými. \\
 			\hline
 			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline
@@ -929,12 +942,14 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
-			Synax pre definovanie /zmenu hodnoty premennej:  
-			<názov premennej> = <výraz>; alebo 
-			<typ> <názov premennej> = <výraz>;, kde výraz môže byť operácia nad číselnými hodnotami , číselnými premennými ako aj nad pravdivostnými.
-			Vzťahy medzi číselnými hodnotami musia byť definované logickými operátormi - <, >, <=, >=, ==, !=.
-			Vzťahy medzi pravdivostnými hodnotami musia byť definované logickými operátormi - ==, !=, ||, &&.  \\
+			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. \newline
+			Synax pre definovanie /zmenu hodnoty premennej:  \newline
+			<názov premennej> = <výraz>; alebo \newline
+			<typ> <názov premennej> = <výraz>;
+			\newline
+			, kde výraz môže byť operácia nad číselnými hodnotami , číselnými premennými ako aj nad pravdivostnými.\newline
+			Vzťahy medzi číselnými hodnotami musia byť definované logickými operátormi - <, >, <=, >=, ==, !=.\newline
+			Vzťahy medzi pravdivostnými hodnotami musia byť definované logickými operátormi : ==, !=, ||, \&\&.  \\
 			\hline
 			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline

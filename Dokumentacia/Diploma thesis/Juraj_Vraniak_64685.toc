@@ -142,17 +142,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} aritmetick\IeC {\'e} oper\IeC {\'a}cie}{31}{paragraph*.110}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} logick\IeC {\'e} oper\IeC {\'a}cie}{31}{paragraph*.112}
+\contentsline {paragraph}{Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} logick\IeC {\'e} oper\IeC {\'a}cie}{32}{paragraph*.112}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Presmerova\IeC {\v t} chybov\IeC {\'y} v\IeC {\'y}stup}{32}{paragraph*.114}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Presmerova\IeC {\v t} \IeC {\v s}tandardn\IeC {\'y} v\IeC {\'y}stup}{32}{paragraph*.116}
+\contentsline {paragraph}{Presmerova\IeC {\v t} \IeC {\v s}tandardn\IeC {\'y} v\IeC {\'y}stup}{33}{paragraph*.116}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.2}V\IeC {\'y}voj\IeC {\'a}r bal\IeC {\'\i }\IeC {\v c}kov}{33}{subsubsection.118}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Implementova\IeC {\v t} vlastn\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{33}{paragraph*.119}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky}{33}{paragraph*.121}
+\contentsline {paragraph}{Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky}{34}{paragraph*.121}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Prvotn\IeC {\'y} n\IeC {\'a}strel}{34}{subsection.123}
 \defcounter {refsection}{0}\relax 
