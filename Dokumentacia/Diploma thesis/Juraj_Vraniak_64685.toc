@@ -120,7 +120,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.2.1.5}Spusti\IeC {\v t} commander pr\IeC {\'\i }kaz}{27}{paragraph.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.6}Re\IeC {\v t}azie pr\IeC {\'\i }kazov}{28}{paragraph.90}
+\contentsline {paragraph}{\numberline {3.2.1.6}Re\IeC {\v t}azenie pr\IeC {\'\i }kazov}{28}{paragraph.90}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.2.1.7}Mana\IeC {\v z}ova\IeC {\v t} bal\IeC {\'\i }\IeC {\v c}ky}{28}{paragraph.92}
 \defcounter {refsection}{0}\relax 

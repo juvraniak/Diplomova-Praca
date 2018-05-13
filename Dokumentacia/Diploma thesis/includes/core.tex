@@ -521,7 +521,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 		\hline
 		\textbf{Popis} & Konzolové rozhranie sa spustí. \\ 
 		\hline
-		\textbf{Výstp} & Konzola zobrazí základné údaje o konfigurácii.\\
+		\textbf{Výstup} & Konzola zobrazí základné údaje o konfigurácii.\\
 		\hline
 		\textbf{Chyba} & Konzola sa nespustí, musí však poskytnúť informáciu o chybe ktorá pri štarte nastala.\\
 		\hline
@@ -542,7 +542,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 		\hline
 		\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 		\hline
-		\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu.\\
+		\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu.\\
 		\hline
 		\textbf{Chyba} & V prípade zlyhania je používateľ informovaný o probléme, ktorý nastal.\\
 		\hline
@@ -563,7 +563,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 		\hline
 		\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
 		\hline
-		\textbf{Výstp} & Výstup je textový reťazec, závislý na logike skriptu.\\
+		\textbf{Výstup} & Výstup je textový reťazec, závislý na logike skriptu.\\
 		\hline
 		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na stderr chybové hlášky spolu zo základným popisom problému, tracom.\\
 		\hline
@@ -586,7 +586,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
-			\textbf{Výstp} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
+			\textbf{Výstup} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový kód.\\
 			\hline
@@ -609,7 +609,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ zadá valídny príkaz zacinajuci win alebo ext, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
-			\textbf{Výstp} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
+			\textbf{Výstup} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z príkazového riadku.\\
 			\hline
@@ -618,7 +618,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 	\end{longtable}
 \end{center}
-\paragraph{Reťazie príkazov}
+\paragraph{Reťazenie príkazov}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{14cm}|}
 
@@ -632,7 +632,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú svoje výstupy svojmu nasledovníkovy po úspešnom ukončení. Príkazy sa vykonávajú až kým nepríde na posledný príkaz v sekvencii, alebo ako počas behu príde pri niektorom z príkazov ku chybe. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
 			\hline
 
-			\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
+			\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
 			\hline
 
 			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup.\\
@@ -657,7 +657,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný balíček. \\ 
 			\hline
-			\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu - možno bude informovať o šťahovacom procese.\\
+			\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu - možno bude informovať o šťahovacom procese.\\
 			\hline
 			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup v podobe stack tracu napr. .\\
 			\hline
@@ -678,7 +678,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Program sa ako prvé pozrie do adresára balíčkov či už daný balíček nebol stiahnutý, ak nie stiahne nový balíček. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
 			\hline
-			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
+			\textbf{Výstup} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
 			\hline
 
 			\textbf{Chyba} & Vypíše chybu do stderr v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
@@ -702,7 +702,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. V prípade, že nahradzujúci balíček nieje dostupný lokálne, používateľ bude vyzvaný stiahnúť daný balíček.\\ 
 			\hline
-			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti výmeny, alebo informujúci o potrebe stiahnutia balíčka.\\
+			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti výmeny, alebo informujúci o potrebe stiahnutia balíčka.\\
 			\hline
 			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na stderr.\\
 			\hline
@@ -726,7 +726,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Popis} & Program zmaže používateľom vybraný balíček z aktívnych balíčkov a následne ho fyzicky zmaže z disku. \\
 			\hline
 
-			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
+			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
 			\hline
 			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na stderr.\\
 			\hline
@@ -749,7 +749,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o systémových informáciách ako napríklad využitie procesoru, využitie pamäte RAM, využitie oddielu swap, teplotu zariadení a podobné.\\ 
 			\hline
 					
-			\textbf{Výstp} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypísu informácie o každom z jadier.  \\
+			\textbf{Výstup} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypísu informácie o každom z jadier.  \\
 			\hline
 			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií program vypíse dôvod priamo na stdout. Tak isto tam vypíše aj akékoľvek chyby ku ktorým môže prísť počas behu.\\
 			\hline
@@ -774,7 +774,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o bežiacich procesoch, používateľoch, ktorý tieto procesy spúšťajú, koľko procesoru, pamäte RAM pouýívajú.\\ 
 			\hline
 
-			\textbf{Výstp} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
+			\textbf{Výstup} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na stderr.\\
 			\hline
@@ -796,7 +796,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše skrip, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline
-			\textbf{Výstp} & Skrip vráti výstup zo svojho beho buď na štandardný výstup alebo do súbor podľa toho ako je naimplementovaný.\\
+			\textbf{Výstup} & Skrip vráti výstup zo svojho beho buď na štandardný výstup alebo do súbor podľa toho ako je naimplementovaný.\\
 			\hline
 			\textbf{Chyba} & V prípade, že príde k menšej chybe informácia bude zobrazená používateľovi, resp. presmerovaná do súboru.\\
 			\hline
@@ -823,7 +823,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
 
-			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
+			\textbf{Výstup} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
@@ -846,7 +846,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
 			\hline
-			\textbf{Výstp} & Premenná, ktorá je uvedená v definícii funkcie.\\
+			\textbf{Výstup} & Premenná, ktorá je uvedená v definícii funkcie.\\
 			\hline
 			\textbf{Chyba} & V prípade zle zadefinovanej syntaxe je problém zapísaný na stderr a vykonávanie skriptu je ukončené.\\
 			\hline
@@ -872,7 +872,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 			\textbf{Popis} & Používateľ napíše cyklus, ktorý bude prečítaný programom a vykonaná sa.\\ 
 			\hline
-			\textbf{Výstp} & Cyklus nemá žiadny výstup.\\
+			\textbf{Výstup} & Cyklus nemá žiadny výstup.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
@@ -897,7 +897,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše podmienku, ktorá bude prečítaná programom a zohľadnená za behu skriptu.\\ 
 			\hline
-			\textbf{Výstp} & Podmienka nemá žiadny výstup.\\
+			\textbf{Výstup} & Podmienka nemá žiadny výstup.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
@@ -927,7 +927,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše inicializáciu alebo definíciu premennej, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
-			\textbf{Výstp} & Program si uloží premmenú a jej hodnotu ak bola definovaná.\\
+			\textbf{Výstup} & Program si uloží premmenú a jej hodnotu ak bola definovaná.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba používateľ bude informovaný o neúspechu na stderr.\\
 			\hline
@@ -957,7 +957,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline
-			\textbf{Výstp} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
+			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
@@ -986,7 +986,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
 			\hline
-			\textbf{Výstp} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
+			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
@@ -1009,7 +1009,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
 			\hline
-			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
+			\textbf{Výstup} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
 			\hline
 			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
@@ -1031,7 +1031,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
 			\hline
-			\textbf{Výstp} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
+			\textbf{Výstup} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
 			\hline
 			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
@@ -1058,7 +1058,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ implementuje novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov.\\ 
 			\hline
-			\textbf{Výstp} & Balíček, ktorý je možné nahrať do aplikácie a používať ako jeden z príkazov.\\
+			\textbf{Výstup} & Balíček, ktorý je možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
 			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy ho o chybe informuje prekladač jazyka v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na stout.\\
 			\hline
@@ -1081,7 +1081,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ upraví implementáciu alebo pridá novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov\\ 
 			\hline
-			\textbf{Výstp} & Po úprave je balíček možné nahrať do aplikácie a používať ako jeden z príkazov.\\
+			\textbf{Výstup} & Po úprave je balíček možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
 			\textbf{Chyba} & \\
 			\hline
@@ -1157,7 +1157,8 @@ RootParser je najpodstatnejšia trieda pre skriptovací mód. Má za úlohu nač
 \paragraph{PluginFactory}
 PluginFactory ako z jej nýzvu vyplýva je to továreň do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy, ktoré sú pre aplikáciu dotupné. Na záskavanie dostupných pluginov sa využíva trieda JarLoader. 
 \paragraph{JarLoader}
-Je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
+JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
+
 \section{Zhodnotenie výsledkov}
 Zatiaľ sa toho nespravilo hodne ale verím, že sa to tu cele zaplní.
