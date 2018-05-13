@@ -175,6 +175,14 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 		\hline
 		-z Str1	& Returns true ak reťazec je null resp. o dĺžke 0.\\
 		\hline
+	\end{tabular}
+\caption{Ukážka reťazcových prepínačov v podmienkovom výraze if \cite{shellprep}}
+\label{table:1}
+
+\end{table}
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|p{4cm}|p{13cm}|}
 		\hline
 		Numerické porovnanie	& Popis \\
 		\hline
@@ -193,7 +201,7 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 		! expr1	& Operátor "!" zneguje hodnotu premennej expr1. \\
 		\hline
 	\end{tabular}
-	\caption{Ukážka prepínačov v podmienkovom výraze if \cite{shellprep}}
+	\caption{Ukážka numerických prepínačov v podmienkovom výraze if \cite{shellprep}}
 	\label{table:1}
 	
 \end{table}
@@ -261,7 +269,7 @@ Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi pri
 \end{algorithm}
 
 \subsubsection{Python}
-\indent Do analýzy sme sa rozhodli pripojiť aj Python. Python sme si nevybrali náhodne, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.
+\indent Do analýzy sme sa rozhodli pripojiť aj Python. Python sme si nevybrali náhodne, nakoľko je jedným z najpopulárnejších programovacích jazykov súčastnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.\cite{python}
 \paragraph{Výhody}
 \begin{itemize}
 	\item Je ľahko čitateľný, tým pádom ľahšie pochopiteľný
@@ -313,7 +321,7 @@ Aj keď sme spomenuli viaceré nedostatky, asi najväčším je rýchlosť. Nvm 
 Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkúvajú funkcionality shell scriptu do Windowsu, nikeotré z nich si predstavíme.
 
 \subsubsection{ConEmu}
-\indent ConEmu je konzolový emulátor, ktorý poskytuje jednoduché GUI do ktorého je možné vložiť viacero konzol. Dokáže spúšťať jednoduché GUI aplikácie ako napríklad Putty, Cygwin. Poskytuje množstvo nastavení ako nastavenie kurzora, priehľadnosti, písma a pod. Podporuje Windows 2000 a neskoršie verzie. Neposkytuje verziu pre ine operačné systémy. 
+\indent ConEmu je konzolový emulátor, ktorý poskytuje jednoduché GUI do ktorého je možné vložiť viacero konzol. Dokáže spúšťať jednoduché GUI aplikácie ako napríklad Putty, Cygwin. Poskytuje množstvo nastavení ako nastavenie kurzora, priehľadnosti, písma a pod. Podporuje Windows 2000 a neskoršie verzie. Neposkytuje verziu pre ine operačné systémy. \cite{conemu}
 \paragraph{Skúsenosti}
 \indent ConEmu je podarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísane v ich issues logu na githube. Ale ako každý software je aj ConEmu náchylný na chyby. Podla ich issues logu sa do ich oficiálnych releasov dostávajú rôzne problémy, ktoré neboli problémom v predchadzajúcich verziách. V tomto prípade je na zvážení každého či problémy, ktoré sa môžu dostávať do jednotlivých verzií emulátora stoja za jeho použitie, resp. či jeho kladné stránky sú natoľko dobré aby prevýšili zápory.
 
@@ -325,7 +333,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \end{figure}
 \newpage
 \subsubsection{cmder}
-\indent Cmder je ďalším príkladom emulátora shell terminálu. Vychádza z troch projektov ConEmu, Clink a Git pre Windows - voľiteľná súčasť. ConEmu sme si predstavili v predcházajúcej časti s jeho kladymi a zápormi. Clink, konkrétne clink-completions je v projekte využívaný na zvýšenie komfortu pri písaní skriptov, nepridáva ďalšiu shellovú funkcionalitu. 
+\indent Cmder je ďalším príkladom emulátora shell terminálu. Vychádza z troch projektov ConEmu, Clink a Git pre Windows - voľiteľná súčasť. ConEmu sme si predstavili v predcházajúcej časti s jeho kladymi a zápormi. Clink, konkrétne clink-completions je v projekte využívaný na zvýšenie komfortu pri písaní skriptov, nepridáva ďalšiu shellovú funkcionalitu. \cite{cmder}
 \paragraph{Skúsenosti}
 \indent ConEmu je príjemný nástroj, dokáže zjednodušíť človeku prácu obzvlášť ak je zvyknutý na programovanie v shell scripte. Nakoľko cmder používa ConEmu ako emulátor shell terminálu a je úzko určený pre Windows platformu nemožno hovoriť o multiplatformovom riešení.
 \begin{figure}[!htbp]
@@ -336,7 +344,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \end{figure}
 \newpage
 \subsubsection{Babun}
-\indent Babun je ďalším z množstva emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináľa vlasné gui, ktoré dokáže zafarbovať text podla zdrojoveho jazyka, čo zvyšuje prehľadnosť. Je tam git, svn, puython, perl. Tiež má integrované sťahovanie nových packagov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor čisto pre Windows distribúcie.
+\indent Babun je ďalším z množstva emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináľa vlasné gui, ktoré dokáže zafarbovať text podla zdrojoveho jazyka, čo zvyšuje prehľadnosť. Je tam git, svn, puython, perl. Tiež má integrované sťahovanie nových packagov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor čisto pre Windows distribúcie.\cite{babun}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{img/babun.jpeg}
@@ -344,7 +352,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 	\label{fig:test}
 \end{figure}
 \subsubsection{MobaXterm}
-\indent Poskytuje množstvo funkcionality avšak je zatažený licenciou v hodnote 50 eur. 
+\indent Poskytuje množstvo funkcionality avšak je zatažený licenciou v hodnote 50 eur. \cite{mobaxterm}
 \paragraph{Neplatená verzia}
 \begin{itemize}
 	\item Plná podpora SSH a X serveru
@@ -380,7 +388,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \indent Analýza ukázala, že väčšinový podiel na trhu osobných počítačov ako aj serverov si delia medzi sebou Unix/Linux a Windows operačné systémy. Preto sme si analyzovali hlavne programovacie jazyky, ktoré sú obľúbené administrátormi daných jazykov. Tiež sme prešli rôzne dostupné riešenia problému univerzálnej konzoly, avšak ani jeden z produktov neposkytoval kompatibilitu na oboch alebo viacerých systémoch, nanjvyš kopíroval funkcie jedného systému do druhého. Na základe týchto poznatkov, ako aj poznatkov podrobnejšie rozpísaných v predchádzajúcich častiach sme sa rozhodli pokračovať v analýze prekladu jazykov a získané vedomosti pretaviť do vlastného univerzálneho platformovo nezávislého konzolového riešenia.
 
 \section{Preklad jazykov}
-\indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.[1]
+\indent Pri programovacích jazykoch nás zaujímajú ich vyjadrovacie schopnosti ako aj vlastnosti z hľadiska ich rozpoznania. Tieto vlasnosti sa týkajú programovania a prekladu, pričom obe je potrebné zohľadniť pri tvorbe jazyka. V dnešnej dobe sa používajú na programovanie hlavne takzvané vyššie programovacie jazyky, môžeme ich označiť ako zdrojové jazyky. Na to aby vykonávali čo používateľ naprogramoval je potrebné aby boli pretransformované do jazyka daného stroja. Spomínanú transformáciu zabezpečuje prekladač, prekladačom máme na mysli program, ktorý číta zdrojový jazyk a transformuje ho do cieľového jazyka, ktorému rozumie stroj.\cite{gram}
 
 \subsection{Kompilátor proces prekladu}
 Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa určitých pravidiel, ktoré vyplývajú z jazyka. Proces prekladu je možné rodeliť na 4 hlavné časti.
@@ -396,7 +404,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 	\indent Lexikálna analýza je prvou fázou kompilátora. Dopredu napísaný zdojový kód je postupne spracovávaný preprocesorom, ktorý vytvára takzvané lexémy. 
 	 \newline Lexémou nazývame postupnosť alfanumerických znakov. Tieto postupnosti znakov sú následne vkladané do lexikálneho analyzátora, ktorý ma za úlohu vytvoriť zo vstupných lexém tokeny slúžiace ako vstup pre syntaktický analyzátor. 
 	 \newline Tokeny sa vytvárajú na základe preddefinovaných pravidiel, ktoré sa v programovacích jazykoch definujú ako pattern. V prípade, že lexikálny analyátor nieje schopný nájsť  pattern pred danú lexému musí vyhlásiť chybu počas tokenizácie.  
-	 \newline Výstupom z lexikálnej analýzy sú takzvané tokeny, ktoré tvoria vyššie jednotky jazyka ako kľúčové slová jazyka, konštanty, identifikátory, operátory a iné.
+	 \newline Výstupom z lexikálnej analýzy sú takzvané tokeny, ktoré tvoria vyššie jednotky jazyka ako kľúčové slová jazyka, konštanty, identifikátory, operátory a iné.\cite{gram}
 	 
 	 \begin{figure}[!htbp]
 	 	\centering
@@ -407,7 +415,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
  \newline
  
 \subsubsection{Syntaktická analýza}
-\indent Ďalšou fázou je syntaktická analýza. Úlohou Syntaktického analyzátora je kontrola správnosti vytvorených tokenov s uchovaním niektorých získaných informácií o štruktúre skúmanej syntaktickej jednotky. Syntaktická analýza sa radí medzi bezkontextové gramatiky. Po skoncení syntaktickej analýzy prichádza na rad sémantická analýza.
+\indent Ďalšou fázou je syntaktická analýza. Úlohou Syntaktického analyzátora je kontrola správnosti vytvorených tokenov s uchovaním niektorých získaných informácií o štruktúre skúmanej syntaktickej jednotky. Syntaktická analýza sa radí medzi bezkontextové gramatiky. Po skoncení syntaktickej analýzy prichádza na rad sémantická analýza.\cite{gram}
 
  \newline
   \newline
@@ -433,7 +441,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 
 \subsubsection{Semantická  analýza}
 \indent Sémantická analýza má za úlohu interpretovať symboly, typy, ich vzťahy.Sémantická analýza rohoduje či má syntax programy význam alebo nie.
-Ako príklad zisťovania významu môžeme uviesť jednoduchú inicializáciu premennej.
+Ako príklad zisťovania významu môžeme uviesť jednoduchú inicializáciu premennej.\cite{gram}
 
 \begin{lstlisting}
 
@@ -453,13 +461,13 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \end{itemize}
 
 \subsubsection{Generovanie cieľového jazyka}
-\indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .
+\indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .\cite{gram}
 
 \section{Návrh riešenia}
 \subsection{Prípady použitia}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[scale=0.6]{img/usecase.jpg}
+	\includegraphics[width=\linewidth]{img/usecase.jpg}
 	\caption{Prípady použitia pre navrhovanú aplikáciu}
 	\label{fig:test}
 \end{figure}
@@ -470,31 +478,28 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \gls{api}. 
 \paragraph{Spustiť konzolu}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
-			\hline
-			\textbf{Use case} & Spustiť konzolu \\ 
-			\hline
-			\textbf{Podmienky} & Používateľ musí disponovať stiahnutou aplikáciou.\\
-			\hline
-			\textbf{Vstup} & Nie je potrebný žiany vstup od používateľa.\\
-			\hline
-			\textbf{Popis} & Konzolové rozhranie sa spustí. \\ 
-			\hline
-			\textbf{Výstp} & Konzola zobrazí základné údaje o konfigurácii.\\
-			\hline
-			\textbf{Chyba} & Konzola sa nespustí, musí však poskytnúť informáciu o chybe ktorá pri štarte nastala.\\
-			\hline
-		\end{tabular}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		\hline
+		\textbf{Use case} & Spustiť konzolu \\ 
+		\hline
+		\textbf{Podmienky} & Používateľ musí disponovať stiahnutou aplikáciou.\\
+		\hline
+		\textbf{Vstup} & Nie je potrebný žiany vstup od používateľa.\\
+		\hline
+		\textbf{Popis} & Konzolové rozhranie sa spustí. \\ 
+		\hline
+		\textbf{Výstp} & Konzola zobrazí základné údaje o konfigurácii.\\
+		\hline
+		\textbf{Chyba} & Konzola sa nespustí, musí však poskytnúť informáciu o chybe ktorá pri štarte nastala.\\
+		\hline
 	\caption{Use case : Spustiť konzolu}
 	\label{table:1}
-	\end{table}
+	\end{longtable}
 \end{center}
-\newpage
+
 \paragraph{Spustiť príkaz}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
 		\hline
 		\textbf{Use case} & Spustiť príkaz \\ 
 		\hline
@@ -508,38 +513,37 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		\hline
 		\textbf{Chyba} & V prípade zlyhania je používateľ informovaný o probléme, ktorý nastal.\\
 		\hline
-		\end{tabular}
-	\caption{Use case : Spustiť príkaz}
-	\label{table:1}
-	\end{table}
+		\caption{Use case : Spustiť príkaz}
+		\label{table:1}
+	\end{longtable}
+	
 \end{center}
 \paragraph{Spustiť skript}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
-			\hline
-			\textbf{Use case} & Spustiť skript \\ 
-			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
-			\hline
-			\textbf{Vstup} & Vstupom je skript, ktorý v hlavičke definuje balíčky ktoré bude používať. Za nimi môže nasledovať čokoľvek od definície premenných, funkcií. V tele skriptu musí byť zadefinovaná metóda main(String args).\\
-			\hline
-			\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
-			\hline
-			\textbf{Výstp} & Výstup je textový reťazec, závislý na logike skriptu.\\
-			\hline
-			\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na stderr chybové hlášky spolu zo základným popisom problému, tracom.\\
-			\hline
-		\end{tabular}
-	\label{table:1}
-	\caption{Use case : Spustiť skript}
-	\end{table}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		\hline
+		\textbf{Use case} & Spustiť skript \\ 
+		\hline
+		\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
+		\hline
+		\textbf{Vstup} & Vstupom je skript, ktorý v hlavičke definuje balíčky ktoré bude používať. Za nimi môže nasledovať čokoľvek od definície premenných, funkcií. V tele skriptu musí byť zadefinovaná metóda main(String args).\\
+		\hline
+		\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
+		\hline
+		\textbf{Výstp} & Výstup je textový reťazec, závislý na logike skriptu.\\
+		\hline
+		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na stderr chybové hlášky spolu zo základným popisom problému, tracom.\\
+		\hline
+		\caption{Use case : Spustiť skript}
+		\label{table:1}
+	\end{longtable}
+
 \end{center}
-\newpage
+
 \paragraph{Spustiť shell príkaz}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+
 			\hline
 			\textbf{Use case} & Spustiť shell príkaz \\ 
 			\hline
@@ -553,15 +557,16 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový kód.\\
 			\hline
-		\end{tabular}
+		\caption{Use case : Spustiť shell príkaz}
 	\label{table:1}
-	\caption{Use case : Spustiť shell príkaz}
-	\end{table}
+	
+	\end{longtable}
 \end{center}
+
 \paragraph{Spustiť commander príkaz}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+
 			\hline
 			\textbf{Use case} & Spustiť commander príkaz \\ 
 			\hline
@@ -575,16 +580,15 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z príkazového riadku.\\
 			\hline
-		\end{tabular}
-	\label{table:1}
 	\caption{Use case : Spustiť powershell príkaz}
-	\end{table}
+	\label{table:1}
+
+	\end{longtable}
 \end{center}
-\newpage
 \paragraph{Reťazie príkazov}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+
 			\hline
 			\textbf{Use case} & Reťazie príkazov \\ 
 			\hline
@@ -594,21 +598,23 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú svoje výstupy svojmu nasledovníkovy po úspešnom ukončení. Príkazy sa vykonávajú až kým nepríde na posledný príkaz v sekvencii, alebo ako počas behu príde pri niektorom z príkazov ku chybe. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
 			\hline
+
 			\textbf{Výstp} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
 			\hline
+
 			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup.\\
 			\hline
-		\end{tabular}
-	\label{table:1}
 	\caption{Use case : Reťazie príkazov}
-	\end{table}
+	\label{table:1}
+
+	\end{longtable}
 \end{center}
 
 
 \paragraph{Manažovať balíčky}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+
 			\hline
 			\textbf{Use case} & Manažovať balíčky \\ 
 			\hline
@@ -622,16 +628,14 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup v podobe stack tracu napr. .\\
 			\hline
-		\end{tabular}
-	\label{table:1}
 	\caption{Use case : Manažovať balíčky}
-	\end{table}
+	\label{table:1}
+
+	\end{longtable}
 \end{center}
-\newpage
 \paragraph{Stiahnúť nový balíček}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
 			\hline
 			\textbf{Use case} & Stiahnúť nový balíček \\ 
 			\hline
@@ -643,17 +647,19 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Výstp} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
 			\hline
+
 			\textbf{Chyba} & Vypíše chybu do stderr v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Stiahnúť nový balíček}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
+
 \paragraph{Zmeniť  použiťý balíček}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Zmeniť  použiťý balíček \\ 
 			\hline
@@ -667,16 +673,16 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na stderr.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Zmeniť  použiťý balíček}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
-\newpage
+
 \paragraph{Zmazať vybraný balíček}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Zmazať vybraný balíček \\ 
 			\hline
@@ -686,19 +692,20 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Popis} & Program zmaže používateľom vybraný balíček z aktívnych balíčkov a následne ho fyzicky zmaže z disku. \\
 			\hline
+
 			\textbf{Výstp} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
 			\hline
 			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na stderr.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Zmazať vybraný balíček}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Získať systémové informácie}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Získať systémové informácie \\ 
 			\hline
@@ -711,24 +718,18 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 					
 			\textbf{Výstp} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypísu informácie o každom z jadier.  \\
 			\hline
-		\end{tabular}
-	\end{table}
-\newpage
-\begin{table}[htbp]
-\begin{tabular}{|p{2.5cm}|p{14cm}|}
-\hline
 			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií program vypíse dôvod priamo na stdout. Tak isto tam vypíše aj akékoľvek chyby ku ktorým môže prísť počas behu.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Získať systémové informácie}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 
 \paragraph{Získať informácie o procesoch}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Získať informácie o procesoch \\ 
 			\hline
@@ -736,21 +737,23 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie informácií o procesoch. \\ 
 			\hline
+
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o bežiacich procesoch, používateľoch, ktorý tieto procesy spúšťajú, koľko procesoru, pamäte RAM pouýívajú.\\ 
 			\hline
+
 			\textbf{Výstp} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na stderr.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Získať informácie o procesoch}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Vytvoriť skript}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Vytvoriť skript \\ 
 			\hline
@@ -764,15 +767,15 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & V prípade, že príde k menšej chybe informácia bude zobrazená používateľovi, resp. presmerovaná do súboru.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Vytvoriť skript}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Vytvoriť funkciu}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Vytvoriť funkciu \\ 
 			\hline
@@ -782,22 +785,23 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			Synax pre definovanie funkcie : 
 			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
 			\hline
+			
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
+
 			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
 			\hline
 			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Vytvoriť funkciu}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
-\newpage
 \paragraph{Override funkcie}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Override funkcie \\ 
 			\hline
@@ -805,70 +809,149 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Vstup} & Nad funciou je potrebné zapísať @Override alebo @Override(číslo) čo prekladaču povie, že má používať práve túto verziu funkcie, v druhom prípade číslo značí prioritu pri prepisovaní. Najnižšia priorita je 1, metóda s najvžšším číslom teda s najvyššou prioritou bude použitá v skripte.\\
 			\hline
+			
 			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
 			\hline
 			\textbf{Výstp} & Premenná, ktorá je uvedená v definícii funkcie.\\
 			\hline
 			\textbf{Chyba} & V prípade zle zadefinovanej syntaxe je problém zapísaný na stderr a vykonávanie skriptu je ukončené.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Override funkcie}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Vytvoriť cyklus}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Vytvoriť cyklus \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
+			\textbf{Vstup} & Cyklus musí byť správne zadefinovaný. 
 			Synax pre definovanie funkcie : 
-			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
+			for(<inicializácia premennej>;<podmienka pre spustenie>;<inkrement>){telo cyklu obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
-			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
+
+			\textbf{Popis} & Používateľ napíše cyklus, ktorý bude prečítaný programom a vykonaná sa.\\ 
 			\hline
-			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
+			\textbf{Výstp} & Cyklus nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Vytvoriť cyklus}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Vytvoriť podmienku}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Vytvoriť podmienku \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
-			Synax pre definovanie funkcie : 
-			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
+			\textbf{Vstup} & Podmienka musí byť správne zadefinovaná. 
+			Synax pre definovanie podmienky : 
+			if(boolean value){telo podmienky obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
-			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná.\\ 
+			\textbf{Popis} & Používateľ napíše podmienku, ktorá bude prečítaná programom a zohľadnená za behu skriptu.\\ 
 			\hline
-			\textbf{Výstp} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
+			\textbf{Výstp} & Podmienka nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na stderr.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky program skončí a program zapíše informácie o chybe na stderr.\\
 			\hline
-		\end{tabular}
+		\caption{Use case : Vytvoriť podmienku}
 		\label{table:1}
-		\caption{Use case : Vytvoriť funkciu}
-	\end{table}
+		
+	\end{longtable}
 \end{center}
-\newpage
+\paragraph{Vytvoriť premenné}
+\begin{center}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
+			\hline
+			\textbf{Use case} & Vytvoriť premenné \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
+			Synax pre definovanie premennej : 
+			<typ> <názov premennej>; alebo 
+			 <typ> <názov premennej> = <hodnota>;, kde hodnota môže byť konkrétna hodnota alebo iná premenná rovnakého typu.\\
+			\hline
+			\textbf{Popis} & Používateľ napíše inicializáciu alebo definíciu premennej, ktorá bude prečítaná programom a vykonaná.\\ 
+			\hline
+			\textbf{Výstp} & Program si uloží premmenú a jej hodnotu ak bola definovaná.\\
+			\hline
+			\textbf{Chyba} & V prípade, že nastane chyba používateľ bude informovaný o neúspechu na stderr.\\
+			\hline
+			\caption{Use case : Vytvoriť premenné}
+		\label{table:1}
+	
+	\end{longtable}
+\end{center}
+\paragraph{Vykonať základné aritmetické operácie}
+\begin{center}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
+			\hline
+			\textbf{Use case} & Vykonať základné aritmetické operácie \\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
+			Synax pre definovanie /zmenu hodnoty premennej: 
+			<názov premennej> = <výraz>; alebo 
+			<typ> <názov premennej> = <výraz>;, kde výraz môže byť operácia nad číselnými hodnotami a číselnými premennými. \\
+			\hline
+			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
+			\hline
+			\textbf{Výstp} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
+			\hline
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
+			\hline
+		\caption{Use case : Vytvoriť funkciu}
+		\label{table:1}
+		
+	\end{longtable}
+\end{center}
+\paragraph{Vykonať základné logické operácie}
+\begin{center}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
+			\hline
+			\textbf{Use case} & Vykonať základné logické operácie\\ 
+			\hline
+			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
+			\hline
+			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
+			Synax pre definovanie /zmenu hodnoty premennej:  
+			<názov premennej> = <výraz>; alebo 
+			<typ> <názov premennej> = <výraz>;, kde výraz môže byť operácia nad číselnými hodnotami , číselnými premennými ako aj nad pravdivostnými.
+			Vzťahy medzi číselnými hodnotami musia byť definované logickými operátormi - <, >, <=, >=, ==, !=.
+			Vzťahy medzi pravdivostnými hodnotami musia byť definované logickými operátormi - ==, !=, ||, &&.  \\
+			\hline
+			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
+			\hline
+			\textbf{Výstp} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
+			\hline
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na stderr.\\
+			\hline
+		\caption{Use case : Vytvoriť funkciu}
+		\label{table:1}
+		
+	\end{longtable}
+\end{center}
+
 \paragraph{Presmerovať chybový výstup}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Presmerovať chybový výstup \\ 
 			\hline
@@ -882,15 +965,15 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Presmerovať chybový výstup}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 \paragraph{Presmerovať štandardný výstup}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Presmerovať štandardný výstup \\ 
 			\hline
@@ -904,12 +987,11 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Presmerovať štandardný výstup }
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
-\newpage
 
 
 
@@ -917,8 +999,8 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent Ako je z názvu role zjavné, tento hráč bude mať na starosti hlavne vývoj aplikácie, starať sa o jej funkcionalitim v zmysle rozširovania API, ktoré môže vývojár skriptov používať pre efektívnejšiu prácu.
 \paragraph{Implementovať vlastný balíček}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Implementovať vlastný balíček \\ 
 			\hline
@@ -932,16 +1014,16 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy ho o chybe informuje prekladač jazyka v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na stout.\\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Implementovať vlastný balíček}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
-\newpage
+
 \paragraph{Upravovať existujúce balíčky}
 \begin{center}
-	\begin{table}[htbp]
-		\begin{tabular}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+		
 			\hline
 			\textbf{Use case} & Upravovať existujúce balíčky \\ 
 			\hline
@@ -955,10 +1037,10 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Chyba} & \\
 			\hline
-		\end{tabular}
-		\label{table:1}
 		\caption{Use case : Upravovať existujúce balíčky}
-	\end{table}
+		\label{table:1}
+		
+	\end{longtable}
 \end{center}
 
 \subsection{Prvotný nástrel}

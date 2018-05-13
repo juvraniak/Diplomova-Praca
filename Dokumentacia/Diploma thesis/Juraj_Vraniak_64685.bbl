@@ -34,8 +34,8 @@
       \strng{fullhash}{8e6e5ceb66da401a308c90287fade1f4}
       \strng{authornamehash}{8e6e5ceb66da401a308c90287fade1f4}
       \strng{authorfullhash}{8e6e5ceb66da401a308c90287fade1f4}
-      \field{sortinit}{3}
-      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{sortinit}{8}
+      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -57,8 +57,8 @@
       \strng{fullhash}{e0de635ebf22124684a4b6606f655c7c}
       \strng{authornamehash}{e0de635ebf22124684a4b6606f655c7c}
       \strng{authorfullhash}{e0de635ebf22124684a4b6606f655c7c}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{PowerShell vs. the Unix Shell}
@@ -84,8 +84,8 @@
       \strng{fullhash}{c2f52cf8fbf6f645a3a6fc50f6946406}
       \strng{authornamehash}{c2f52cf8fbf6f645a3a6fc50f6946406}
       \strng{authorfullhash}{c2f52cf8fbf6f645a3a6fc50f6946406}
-      \field{sortinit}{6}
-      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{9}
@@ -107,8 +107,8 @@
       \strng{fullhash}{e11aa1bcae88a2f8911c5a6463b255f8}
       \strng{authornamehash}{e11aa1bcae88a2f8911c5a6463b255f8}
       \strng{authorfullhash}{e11aa1bcae88a2f8911c5a6463b255f8}
-      \field{sortinit}{7}
-      \field{sortinithash}{6ac7fe70cdec8cba8f65694411ce2532}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is the history of Microsoft Windows?}
@@ -127,8 +127,8 @@
       \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
       \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
-      \field{sortinit}{8}
-      \field{sortinithash}{2f1b0e69e7617f99664f1cd00bb9603c}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Windows and Windows Server Automation with Windows PowerShell}
@@ -147,8 +147,8 @@
       \strng{fullhash}{fee3fc182e02f376217580e5bfec4f51}
       \strng{authornamehash}{fee3fc182e02f376217580e5bfec4f51}
       \strng{authorfullhash}{fee3fc182e02f376217580e5bfec4f51}
-      \field{sortinit}{9}
-      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Desktop Operating System Market Share Worldwide | StatCounter Global Stats}
@@ -209,8 +209,8 @@
       \strng{fullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authornamehash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
       \strng{authorfullhash}{e4ffd39cd5d7bea68ccc1e6ee286855d}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{If / Else Statements (Shell Scripting) - Code Wiki}
@@ -234,8 +234,8 @@
       \strng{fullhash}{656021b32d31c36e09aad282d243e358}
       \strng{authornamehash}{656021b32d31c36e09aad282d243e358}
       \strng{authorfullhash}{656021b32d31c36e09aad282d243e358}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -243,6 +243,32 @@
       \field{title}{Mastering Windows PowerShell Scripting - Second Edition}
       \field{year}{2004}
       \field{pages}{s. 440}
+      \range{pages}{-1}
+    \endentry
+    \entry{python}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0542ba58c7bfe28286a04da1660aa985}{%
+           family={Payne},
+           familyi={P\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wrox, 2010}%
+      }
+      \strng{namehash}{0542ba58c7bfe28286a04da1660aa985}
+      \strng{fullhash}{0542ba58c7bfe28286a04da1660aa985}
+      \strng{authornamehash}{0542ba58c7bfe28286a04da1660aa985}
+      \strng{authorfullhash}{0542ba58c7bfe28286a04da1660aa985}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{note}{ISBN: 9780470414637}
+      \field{title}{Beginning Python®: Using Python 2.6 and Python 3.1}
+      \field{year}{2010}
+      \field{pages}{s. 624}
       \range{pages}{-1}
     \endentry
     \entry{gitspeed}{online}{}
@@ -257,8 +283,8 @@
       \strng{fullhash}{fc19c0dc057e2a02419916b39da6895b}
       \strng{authornamehash}{fc19c0dc057e2a02419916b39da6895b}
       \strng{authorfullhash}{fc19c0dc057e2a02419916b39da6895b}
-      \field{sortinit}{2}
-      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{unixpickle/Benchmarks: Some language performance comparisons.}
@@ -267,9 +293,120 @@
       \verb https://github.com/unixpickle/Benchmarks
       \endverb
     \endentry
+    \entry{conemu}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f8ff86cbe71c293b66e142ccd6d2d5c4}{%
+           family={ConEmu},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8ff86cbe71c293b66e142ccd6d2d5c4}
+      \strng{fullhash}{f8ff86cbe71c293b66e142ccd6d2d5c4}
+      \strng{authornamehash}{f8ff86cbe71c293b66e142ccd6d2d5c4}
+      \strng{authorfullhash}{f8ff86cbe71c293b66e142ccd6d2d5c4}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ConEmu - Handy Windows Terminal}
+      \field{year}{03-01-2018}
+      \verb{url}
+      \verb https://conemu.github.io/
+      \endverb
+    \endentry
+    \entry{cmder}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5a48ae3214a70d0b998bf0ffed6bad6d}{%
+           family={Vasko},
+           familyi={V\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a48ae3214a70d0b998bf0ffed6bad6d}
+      \strng{fullhash}{5a48ae3214a70d0b998bf0ffed6bad6d}
+      \strng{authornamehash}{5a48ae3214a70d0b998bf0ffed6bad6d}
+      \strng{authorfullhash}{5a48ae3214a70d0b998bf0ffed6bad6d}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cmder | Console Emulator}
+      \field{year}{03-01-2018}
+      \verb{url}
+      \verb http://cmder.net/
+      \endverb
+    \endentry
+    \entry{babun}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b82fc84e2aa40e0aee53ef68b38669de}{%
+           family={Tomek\bibnamedelima Bujok},
+           familyi={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Lukasz\bibnamedelima Pielak},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b82fc84e2aa40e0aee53ef68b38669de}
+      \strng{fullhash}{b82fc84e2aa40e0aee53ef68b38669de}
+      \strng{authornamehash}{b82fc84e2aa40e0aee53ef68b38669de}
+      \strng{authorfullhash}{b82fc84e2aa40e0aee53ef68b38669de}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Babun - a windows shell you will love!}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://babun.github.io/
+      \endverb
+    \endentry
+    \entry{mobaxterm}{online}{}
+      \name{author}{1}{}{%
+        {{hash=645116794b380c3d37a20d37b443bc86}{%
+           family={Mobatek},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{645116794b380c3d37a20d37b443bc86}
+      \strng{fullhash}{645116794b380c3d37a20d37b443bc86}
+      \strng{authornamehash}{645116794b380c3d37a20d37b443bc86}
+      \strng{authorfullhash}{645116794b380c3d37a20d37b443bc86}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Features}
+      \field{year}{03-01-2018}
+      \verb{url}
+      \verb https://mobaxterm.mobatek.net/features.html
+      \endverb
+    \endentry
+    \entry{gram}{book}{}
+      \name{author}{1}{}{%
+        {{hash=770d916a4572a2488c83cb20bef67087}{%
+           family={Ľudovít\bibnamedelima Molnár},
+           familyi={Ľ\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Bořivoj\bibnamedelima Melichar},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Milan\bibnamedelima Češka},
+           suffixi={M\bibinitperiod\bibinitdelim Č\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Bratislava : Alfa, 1987}%
+      }
+      \strng{namehash}{770d916a4572a2488c83cb20bef67087}
+      \strng{fullhash}{770d916a4572a2488c83cb20bef67087}
+      \strng{authornamehash}{770d916a4572a2488c83cb20bef67087}
+      \strng{authorfullhash}{770d916a4572a2488c83cb20bef67087}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{note}{MDT: 519.682(075.8)}
+      \field{title}{Gramatiky a jazyky}
+      \field{year}{2004}
+      \field{pages}{s. 188}
+      \range{pages}{-1}
+    \endentry
   \endsortlist
   \missing{morf}
-  \missing{W3Techs}
 \endrefsection
 \endinput
 
