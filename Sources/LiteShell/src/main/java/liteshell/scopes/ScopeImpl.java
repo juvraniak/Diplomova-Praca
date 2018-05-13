@@ -48,11 +48,5 @@ public class ScopeImpl extends AbstractScope {
     }
     return line;
   }
-
-
-  @Override
-  public ScopeVariables clone() throws CloneNotSupportedException {
-    ScopeVariables clonedObj = (ScopeVariables) super.scopeVariables.clone();
-    return clonedObj;
-  }
+  
 }

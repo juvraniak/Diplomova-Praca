@@ -1,41 +1,38 @@
-\section{Analýza stavu}
+\section{Analýza}
 \subsection{Operačné systémy}
-\indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polky dvadsiateho storočia, čo momentalne predstavuje necelých sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast či vo vývoji hardvéru alebo softwéru.  Operačný systém je základná časť akéhokoľvek počítaťového sytému, je to kus softvéru, ktorý umožnuje počítačom fungovať. Oblasť operačných systémov v poslednej dobe prechádza rapídnymi zmenami nakoľko počítače sa stali súčasťou každodenného života od malých zariadení napríklad v automobiloch až po najsofisitkovanejšie servery nadnárodných spoločností. Aj keď v dnešnej dobe poznáme mnohé operačné systémi, my sa zameriame na Windows, Mac OS, Unix a Linux.\cite{osbook}
-% tuto cast este asi rozsirim 
+\indent Informatika a informačné technológie je pomerne mladá vedná disciplína. Jej začiatky je možné datovať od druhej polovice dvadsiateho storočia, čo momentálne predstavuje takmer sedemdesiat rokov. Za tento čas informatika zaznamenala enormný rast vo vývoji hardvéru, ako aj softvéru.  Operačný systém je základná časť akéhokoľvek počítačového sytému, predstavuje softvér, ktorý umožňuje počítačom pracovať. V poslednej dobe, oblasť operačných systémov  prechádza rapídnymi zmenami, pretože počítače sa stali súčasťou každodenného života, a to od malých zariadení, napríklad v automobiloch, až po najsofisitkovanejšie servery nadnárodných spoločností. Aj napriek tomu, že v dnešnej dobe poznáme mnohé operačné systémy, v práci sa zameriame na Windows, Mac OS, Unix a Linux.\cite{osbook}
+
 \subsubsection{Windows}
-\indent Microsoft Windows uviedol svoje prvé operačné systémy v novembri roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy pre servery, ktoré prinášali novú funkcionalitu pre počítače používané ako servery.\cite{windowsHistory} Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písane v rovnomennom jazyku powershell\cite{winAutomation}.
+\indent Microsoft Windows uviedol svoje prvé operačné systémy v novembri roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy, ktoré prinášali novú funkcionalitu pre počítače používané ako servery.\cite{windowsHistory} Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písané v rovnomennom jazyku Powershell\cite{winAutomation}.
 \paragraph{Podiel na trhu}
-\indent Microsoft je aj vzhľadom na svoju históriu je najobľúbenejším operačným systémom v segmente osobných počítačov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 81,73\% resp.  88,42\%.
+\indent Microsoft je aj vzhľadom na svoju históriu najobľúbenejším operačným systémom v segmente osobných počítačov. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} má 81,73\%  \gls{resp.}  88,42\% podiel na trhu.
 \newline
-\indent Podľa stránky w3techs.com\cite{pop} je operačný systém Windows na 32.0\% počítačoch.
+\indent Podľa w3techs.com\cite{pop} je serverový operačný systém Windows používaný na 32.0\% počítačoch.
 \paragraph{Predinštalovaný softvér}
-\indent Windows operačné systémy ponúkajú len základný balík nástrojov, programov. Serverové aj neserverové verzie windowsu ponúkajú  powershell, ktorý je dostupný od inštalácie.  Oba systémy podporujú aj takzvaný "Command prompt" alebo príkazový riadok, ktorý je alernatívou k powershellu. Akékoľvek ďalšie programy je potrebné stiahnuť a doinštalovať.
-\newline
+\indent Windows operačné systémy ponúkajú základný balík nástrojov a programov. Serverové aj neserverové verzie Windowsu ponúkajú  Powershell, ktorý je dostupný od inštalácie.  Oba systémy podporujú aj takzvaný Command prompt alebo príkazový riadok, ktorý je alternatívou k Powershellu. Akékoľvek ďalšie programy je potrebné stiahnuť a doinštalovať.
+
 \subsubsection{MacOs}
-\indent  Mac tiež ponúka serverovú verziu svojho operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, unix alebo linux server. Skriptovacím jazykom pre OS X server nieje špecifický jazyk, je možné vybrať si z Pythonu, JavaSriptu, Perl, AppleScriptu, Swiftu alebo napríklad Ruby. Každý jazyk prináša určité plusy, ale zároven mínusy čo je však najpodstatnejšie nie je tam štandardizovaný skriptovací jazyk.
+\indent  Mac okrem iného ponúka serverovú verziu operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, Unix alebo Linux server. OS X server nepoužíva  špecifický skriptovací jazyk, pričom poskytuje možnosť výberu skriptovacieho jazyka, ako napríklad: Python, JavaScript, Perl, AppleScript, Swift alebo Ruby. Každý z uvedených jazykov prináša určité plusy, ako aj mínusy.
 \paragraph{Predinštalovaný softvér}
-\indent Predinštalovaný softvér pre developerov na Mac OS je python, apple script, Ruby, bash, objective-c. Donedávna bola štandardom aj Java, avšak Apple sa rozhodol pre radikálny krok vylúčiť Javu a propagovať objective-c.
+\indent Predinštalovaný softvér pre developerov na Mac OS je Python, AppleScript, Ruby, Bash, BOjective-c. Donedávna bola štandardom aj Java, avšak Apple sa rozhodol pre radikálny krok vylúčiť Javu a propagovať Objective-c.
 \paragraph{Podiel na trhu}
-\indent Populariata počítačov s predinštalovaným operačným systémom MacOs sa mierne zvyšuje čo je možné vidieť aj na obrázku na konci sekcie operačných systémov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 13,18\% resp.  9,19\%.
-\newline
-\indent Serverové verzie MacOs podľa stránky w3techs.com\cite{pop} sú iba na menej ako 0.1\% zariadeniach.
+\indent Popularita počítačov s predinštalovaným operačným systémom MacOs sa mierne zvyšuje, čo je možné vidieť aj na obrázku na konci sekcie operačných systémov. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 13,18\% resp.  9,19\% na trhu.
+\indent Serverové verzie MacOs podľa stránky w3techs.com\cite{pop} sú na menej ako 0.1\% zariadeniach.
 \subsubsection{Unix}
-\indent Patrí medzi prvé operačné systémy pre servery, ktorých vývoj začal v roku 1970 v priebehu rokov vzniklo nespočetné množstvo nových verzií Unixu. Unixové servery sa tešil veľkej obľube hlavne v minulosti momentálne sú na ústupe hlavne kvoli vyšším nákladom na ich zaobstaranie a prevázku. Pre účely unixu sa vytvoril Unix shell, oľúbený scriptovací jazyk, ktorý sa v rôznych obmenách teší veľkej obľube medzi administrátormi a automatizačnými programátormi.
+\indent Patrí medzi prvé operačné systémy pre servery, ktorého vývoj začal v roku 1970 a v priebehu rokov vzniklo veľa nových verzií Unixu a Linuxu. V minulosti boli Unixové servery veľmi obľúbené, avšak v súčasnosti sú na ústupe, a to najmä kvôli vyšším obstarávacím a prevádzkovým nákladom. Pre účely Unixu sa vytvoril Unix shell, dostupný v rôznych obmenách, ktorý je často vyhľadávaným jazykom medzi administrátormi a automatizačnými programátormi.
 \paragraph{Predinštalovaný softvér}
-\indent Na vačšine unixových systémoch je predinštalovaný shell a open JDK.
-\newline
+\indent Na vačšine unixových systémoch je predinštalovaný Shell a Open JDK.
 \paragraph{Podiel na trhu}
 \indent Podľa stránky w3techs.com\cite{pop} sa Unixové systémy používajú na rovných 68.0\% počítačov.
 \subsubsection{Linux}
-\indent  Prvé vydanie Linux  bolo 17. septembra 1991, bol rozšírený na najviac platforiem a momentálne sa pýši tým, že je jediný používany operačný systém na TOP 500 superpočítačoch(mainframoch) Skriptovací jazyk Unix shell resp. jeho najrozšírenejšia forma Bash.
+\indent  Linux je všeobecný názov pre širokú zostavu Linux distribúcií, ktoré používajú Linux Kernel. Linux Kernel bol prvýkrát verejnosti predstavený v roku 1991 a odvtedy bol rozšírený na najviac platforiem. Momentálne je jediným používaným operačným systémom na TOP 500 superpočítačoch (mainframe). Skriptovacím jazykom pre Linux je Unix Shell resp. jeho najrozšírenejšia forma Bash.
 \paragraph{Predinštalovaný softvér}
-\indent Predinštalovaný softvér vo väčšine distribúciách linuxu sú bash, Open Jdk - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .net frameworku.
+\indent Predinštalovaný softvér vo väčšine distribúciách Linuxu sú Bash, Open JDK - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .net frameworku.
 \paragraph{Podiel na trhu}
-\indent Microsoft je aj vzhľadom na svoju históriu je najobľúbenejším operačným systémom v segmente osobných počítačov. Podľla webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 1,66\% resp.  1,93\%.
-\indent Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
-\newline
+\indent Linux je k dispozícii v mnohých formách, tak aby vyhovoval rôznym potrebám, od spotrebiteľsky orientovaných systémov pre domáce použitie až po distribúcie použiteľné v špecifických odvetviach. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 1,66\% resp.  1,93\%.
+Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
 \subsubsection{Grafy}
-\indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov z ktorého sa dá čítať, že unixové a linuxové servery zvysujú svoje podiely na trhu. Naopak Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyšší rating.
+\indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov, ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov, z ktorého vidíme, že unixové a linuxové servery zvyšujú svoje podiely na trhu. Naopak, Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyššie hodnotenie.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/statcounter.png}
@@ -60,7 +57,7 @@
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{img/usage_grou_by_os_sites.png}
-	\caption{Serverové \gls{os} - podiel na trhu a rozdelenie podľa ratingu stránok podľa w3techs\cite{pop}}
+	\caption{Serverové \gls{os} - podiel na trhu a rozdelenie podľa hodnotenia stránok podľa w3techs\cite{pop}}
 	\label{fig:test}
 	
 \end{figure}
@@ -1148,6 +1145,19 @@ Aj keď náš prvotý program fungoval správne čakali sme, že počas vývoja 
 	\label{fig:test}
 \end{figure}
 \subsubsection{Stručný popis tried}
-\indent Nas
+\indent Obrázok 16 zobrazuje diagram tried aplikácie, ktoré su v nasledujúcej časti stručne predstavíme.
+\paragraph{AbstractScope}
+Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov a pochopiteľne príkazov v interaktívnom móde. Nesie informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu, exekútorovi pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda tiež nesie informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), slúži na rekurzívne volanie funkcií v skriptovacom móde a tiež  zbiehanie ich príkazov.
+\paragraph{ScopeImpl}
+Je prvá neabstraktná trieda, ktorá dedí od triedy AbstractScope, a slúži na inštanciáciu tejto triedy. 
+\paragraph{ExecutorImpl}
+Trieda ExecutorImpl implementuje rozhranie Executor a teda aj jeho triedu CommandIO execute(String command, Scope scope). Ako vstup do tejto metódy príde vstup od používateľa, a scope v ktorom ju chceme vykonať. Definovanie scopu nám slúži na informovanie jednotlivých prijímačov(Reciever) kde sa má daný príkaz vykonať. Ak by scope nebol presne definovaný aplikácia by sa nevedela rozhodnúť kde sa majú príkazy premietnuť.
+\paragraph{RootParser}
+RootParser je najpodstatnejšia trieda pre skriptovací mód. Má za úlohu načítať zdrojové súbory skriptu a následne spustiť exekúciu ak parsovanie prebehlo v poriadku.
+\paragraph{PluginFactory}
+PluginFactory ako z jej nýzvu vyplýva je to továreň do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy, ktoré sú pre aplikáciu dotupné. Na záskavanie dostupných pluginov sa využíva trieda JarLoader. 
+\paragraph{JarLoader}
+Je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
+\section{Implementácia}
 \section{Zhodnotenie výsledkov}
 Zatiaľ sa toho nespravilo hodne ale verím, že sa to tu cele zaplní.

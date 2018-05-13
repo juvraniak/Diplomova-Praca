@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 import javafx.util.Pair;
 import liteshell.commands.ios.CommandIO;
 import liteshell.exceptions.UnknownCommandException;
@@ -24,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author xvraniak@stuba.sk
  */
 @Slf4j
-public class AbstractScope implements Scope, Runnable, Cloneable {
+public class AbstractScope implements Scope, Runnable {
 
   @Setter
   protected List<String> inptutCommands;
