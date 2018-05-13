@@ -649,7 +649,7 @@
 }
              
 \newcommand\FEIintroduction[1]{ 
-    %\setcounter{page}{1}
+    %\{page}{1}
     \pagestyle{plain}
     \IfEqCase*{\FEIenglish}{
         {0}{\def\@zoznamUv{\'{U}vod}}
@@ -663,7 +663,7 @@
 }
 
 \newcommand\FEIcore[1]{
-	%\setcounter{secnumdepth}{3}
+	\setcounter{secnumdepth}{5}
 	\renewcommand*{\thesubparagraph}{\alph{subparagraph}}
     \let\stdsection\section
     \renewcommand\section{\newpage\stdsection}  
