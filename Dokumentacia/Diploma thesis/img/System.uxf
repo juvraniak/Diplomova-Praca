@@ -4,10 +4,10 @@
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
-      <w>870</w>
-      <h>570</h>
+      <x>300</x>
+      <y>50</y>
+      <w>560</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>System
 valign=top</panel_attributes>
@@ -16,8 +16,8 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>430</x>
-      <y>60</y>
+      <x>560</x>
+      <y>80</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -27,41 +27,32 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>270</x>
+      <x>630</x>
       <y>310</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>state</panel_attributes>
+    <panel_attributes>čakanie
+na príkaz</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>620</x>
-      <y>180</y>
+      <x>330</x>
+      <y>300</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>state</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>230</x>
-      <y>200</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>state</panel_attributes>
+    <panel_attributes>vykonávanie 
+príkazov</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>420</x>
-      <y>130</y>
+      <x>550</x>
+      <y>230</y>
       <w>40</w>
       <h>40</h>
     </coordinates>
@@ -72,23 +63,82 @@ type=decision</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>70</y>
+      <x>560</x>
+      <y>90</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+vstup od používateľa</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>240</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+boli zadané parametre</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>240</y>
+      <w>290</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+neboli zadané parametre</panel_attributes>
+    <additional_attributes>100.0;70.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>360</x>
+      <y>380</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>330</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>520</x>
+      <y>140</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>inicializácia
+aplikácie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>170</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>260</x>
-      <y>140</y>
-      <w>180</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;160.0;10.0</additional_attributes>
   </element>
 </diagram>

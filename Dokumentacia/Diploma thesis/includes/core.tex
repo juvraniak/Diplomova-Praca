@@ -5,7 +5,7 @@
 \subsubsection{Windows}
 \indent Microsoft Windows uviedol svoje prvé operačné systémy v novembri roku 1985 ako nadstavbu MS DOS. Jeho popularita rýchlo rástla až vyvrcholila dominantným postavením na trhu v osobných počítačoch. V roku 1993 začal vydávať špecializované operačné systémy, ktoré prinášali novú funkcionalitu pre počítače používané ako servery.\cite{windowsHistory} Pre účely automatizácie sa na Windows serveroch používajú hlavne powershell scripty, písané v rovnomennom jazyku Powershell\cite{winAutomation}.
 \paragraph{Podiel na trhu}
-\indent Microsoft je aj vzhľadom na svoju históriu najobľúbenejším operačným systémom v segmente osobných počítačov. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} má 81,73\%  \gls{resp.}  88,42\% podiel na trhu.
+\indent Microsoft je aj vzhľadom na svoju históriu najobľúbenejším operačným systémom v segmente osobných počítačov. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} má 81,73\%  \acrshort{resp.}  88,42\% podiel na trhu.
 \newline
 \indent Podľa w3techs.com\cite{pop} je serverový operačný systém Windows používaný na 32.0\% počítačoch.
 \paragraph{Predinštalovaný softvér}
@@ -36,28 +36,28 @@ Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% poč
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/statcounter.png}
-	\caption{\gls{os} - podiel na trhu podľa statcounter\cite{statcounter}}
+	\caption{\acrshort{os} - podiel na trhu podľa statcounter\cite{statcounter}}
 	\label{fig:test}
 	
 \end{figure}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/netmarketshare.png}
-	\caption{\gls{os} - podiel na trhu podľa netmarketshare\cite{netmarketshare}}
+	\caption{\acrshort{os} - podiel na trhu podľa netmarketshare\cite{netmarketshare}}
 	\label{fig:test}
 	
 \end{figure}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{img/usg_server.png}
-	\caption{Serverové \gls{os} - podiel na trhu podľa w3techs\cite{pop}}
+	\caption{Serverové \acrshort{os} - podiel na trhu podľa w3techs\cite{pop}}
 	\label{fig:test}
 	
 \end{figure}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{img/usage_grou_by_os_sites.png}
-	\caption{Serverové \gls{os} - podiel na trhu a rozdelenie podľa hodnotenia stránok podľa w3techs\cite{pop}}
+	\caption{Serverové \acrshort{os} - podiel na trhu a rozdelenie podľa hodnotenia stránok podľa w3techs\cite{pop}}
 	\label{fig:test}
 	
 \end{figure}
@@ -506,18 +506,18 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{figure}
 \newpage
 \subsection{Popis prípadov použitia}
-\indent V tejto časti sa venueme popisu jednotlivých use casov. Use case diagram spolu s popisom sú základnými prvkami na ktorých je možné špecifikovať novo vznikajúci softvér. Je dôležité aby najpodstatnejšie časti systému boli špecifikované na začiatku, aby sa pri navrhovaní aplikácie mohli prijať rozhodnutia, ktorými bude možné zaručiť, že výsledné riešenie bude to najlepšie možné, vyhovujúce špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojom nových súčastí systému, čo je zjavne vidieť aj z popisu konkrétnych prípadov použitia.
+\indent V tejto časti sa venujeme popisu jednotlivých prípadov použitia. Diagram prípadov použitia spolu s popisom sú základnými prvkami, na ktorých je možné špecifikovať novovznikajúci softvér. Je dôležité najpodstatnejšie časti systému špecifikovať na začiatku, aby pri navrhovaní aplikácie mohli byť prijaté rozhodnutia zaručujúce dosiahnutie najlepšieho výsledného riešenia vyhovujúceho špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojárom balíčkov(nových súčastí systému), čo môžeme vyčítať z popisu konkrétnych prípadov použitia.
 \subsubsection{Vývojár skriptov}
-\indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \gls{api}. 
+\indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \acrshort{api}. 
 \paragraph{Spustiť konzolu}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
 		\textbf{Use case} & Spustiť konzolu \\ 
 		\hline
 		\textbf{Podmienky} & Používateľ musí disponovať stiahnutou aplikáciou.\\
 		\hline
-		\textbf{Vstup} & Nie je potrebný žiany vstup od používateľa.\\
+		\textbf{Vstup} & Nie je potrebný žiadny vstup od používateľa.\\
 		\hline
 		\textbf{Popis} & Konzolové rozhranie sa spustí. \\ 
 		\hline
@@ -532,17 +532,17 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Spustiť príkaz}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
 		\textbf{Use case} & Spustiť príkaz \\ 
 		\hline
-		\textbf{Podmienky} & Shell aplikácia musí byť spustená \\ 
+		\textbf{Podmienky} & Shell aplikácia musí byť spustená. \\ 
 		\hline
 		\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 		\hline
-		\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
+		\textbf{Popis} & Používateľ zadá platný príkaz, následne získa výstup pre zadaný príkaz. \\ 
 		\hline
-		\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu.\\
+		\textbf{Výstup} & Textový reťazec, ktorý sa v závislosti od programu mení v dĺžke a obsahu.\\
 		\hline
 		\textbf{Chyba} & V prípade zlyhania je používateľ informovaný o probléme, ktorý nastal.\\
 		\hline
@@ -553,19 +553,19 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Spustiť skript}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
 		\textbf{Use case} & Spustiť skript \\ 
 		\hline
 		\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
 		\hline
-		\textbf{Vstup} & Vstupom je skript, ktorý v hlavičke definuje balíčky ktoré bude používať. Za nimi môže nasledovať čokoľvek od definície premenných, funkcií. V tele skriptu musí byť zadefinovaná metóda main(String args).\\
+		\textbf{Vstup} & Vstupom je skript, definujúci v hlavičke balíčky ktoré bude používať. Za nimi môže nasledovať čokoľvek od definície premenných, funkcií. V tele skriptu musí byť zadefinovaná metóda main(String args).\\
 		\hline
-		\textbf{Popis} & Vykonajú sa všetky príkazy tak ako sú napísané v zdrojovom súbore. \\ 
+		\textbf{Popis} & Vykonajú sa všetky príkazy tak, ako sú napísané v zdrojovom súbore. \\ 
 		\hline
 		\textbf{Výstup} & Výstup je textový reťazec, závislý na logike skriptu.\\
 		\hline
-		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov, alebo iných komplikácií za behu program zapisuje na štandardný chybový výstup chybové hlášky spolu zo základným popisom problému, tracom.\\
+		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov alebo iných komplikácií počas behu, program zapisuje na štandardný chybový výstup chybové hlášky spolu so základným popisom problému, tracom.\\
 		\hline
 		\caption{Use case : Spustiť skript}
 		\label{table:1}
@@ -573,20 +573,20 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \end{center}
 
-\paragraph{Spustiť shell príkaz}
+\paragraph{Spustiť Shell príkaz}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Spustiť shell príkaz \\ 
+			\textbf{Use case} & Spustiť Shell príkaz \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Taktiež musí byť v operačnom systéme ktorý podporuje shell. \\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Taktiež musí byť v operačnom systéme ktorý podporuje Shell. \\ 
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 			\hline
-			\textbf{Popis} & Používateľ zadá valídny príkaz, následne získa výstup pre zadaný príkaz. \\ 
+			\textbf{Popis} & Používateľ zadá platný príkaz, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
-			\textbf{Výstup} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
+			\textbf{Výstup} &Textový reťazec, ktorý sa v závislosti od programu mení v dĺžke a obsahu. \\
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový kód.\\
 			\hline
@@ -598,18 +598,18 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Spustiť commander príkaz}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
 			\textbf{Use case} & Spustiť commander príkaz \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný windows commander.\\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný Windows commander.\\ 
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 			\hline
-			\textbf{Popis} & Používateľ zadá valídny príkaz zacinajuci win alebo ext, následne získa výstup pre zadaný príkaz. \\ 
+			\textbf{Popis} & Používateľ zadá platný príkaz začinajúci win alebo ext, následne získa výstup pre zadaný príkaz. \\ 
 			\hline
-			\textbf{Výstup} &Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu. \\
+			\textbf{Výstup} &Textový reťazec, ktorý sa v závislosti od programu mení v dĺžke a obsahu. \\
 			\hline
 			\textbf{Chyba} & V prípade zlyhania je používateľovi vratený chybový výstup z príkazového riadku.\\
 			\hline
@@ -620,19 +620,19 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Reťazenie príkazov}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Reťazie príkazov \\ 
+			\textbf{Use case} & Reťazenie príkazov \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Vstup musí byť zadaný v správnom formáte.\\ 
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci sekvenciu príkazov, ich argumenty spojené znakom pajpy "|".\\
 			\hline
-			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú svoje výstupy svojmu nasledovníkovy po úspešnom ukončení. Príkazy sa vykonávajú až kým nepríde na posledný príkaz v sekvencii, alebo ako počas behu príde pri niektorom z príkazov ku chybe. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
+			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú  výstupy nasledovníkovi po úspešnom ukončení. Príkazy sa vykonávajú dovtedy, pokým nepríde na posledný príkaz v sekvencii, alebo ak počas behu nastane chyba. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
 			\hline
 
-			\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
+			\textbf{Výstup} & Textový reťazec, ktorý sa v závislosti od programu mení v dĺžke a obsahu, výstup bude vygenerovaný posledným príkazom sekvencie.\\
 			\hline
 
 			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup.\\
@@ -646,37 +646,37 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Manažovať balíčky}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
 			\textbf{Use case} & Manažovať balíčky \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg" alebo aky si vyberem a jeho argumenty.\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz pkg a jeho argumenty.\\
 			\hline
 			\textbf{Popis} & Používateľ bude schopný nahrať, zmazať, nahradiť vybraný balíček. \\ 
 			\hline
-			\textbf{Výstup} & Textový reťazec, ktorý v závislosti od programu variuje v dľžke a obsahu - možno bude informovať o šťahovacom procese.\\
+			\textbf{Výstup} & Textový reťazec, ktorý sa v závislosti od programu mení v dĺžke a obsahu .\\
 			\hline
-			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup v podobe stack tracu napr. .\\
+			\textbf{Chyba} & O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup.\\
 			\hline
 	\caption{Use case : Manažovať balíčky}
 	\label{table:1}
 
 	\end{longtable}
 \end{center}
-\paragraph{Stiahnúť nový balíček}
+\paragraph{Stiahnuť nový balíček}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 			\hline
-			\textbf{Use case} & Stiahnúť nový balíček \\ 
+			\textbf{Use case} & Stiahnuť nový balíček \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na stiahnutie balíčka musí byť správne zadaný.\\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg download <názov balička>"\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg download <názov balička s verziou>"\\
 			\hline
-			\textbf{Popis} & Program sa ako prvé pozrie do adresára balíčkov či už daný balíček nebol stiahnutý, ak nie stiahne nový balíček. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
+			\textbf{Popis} & Program ako prvé skontroluje adresár balíčkov, či daný balíček nebol stiahnutý, ak nie stiahne nový balíček. V opačnom prípade medzi aktívne balíčky načíta používateľom zvolený balíček.\\ 
 			\hline
 			\textbf{Výstup} & Textový reťazec  informujúci o úspešnosti sťahovania. Pre jeho načítanie je potrebný reštart aplikácie.\\
 			\hline
@@ -689,22 +689,22 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 	\end{longtable}
 \end{center}
 
-\paragraph{Zmeniť  použiťý balíček}
+\paragraph{Zmeniť  použitý balíček}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Zmeniť  použiťý balíček \\ 
+			\textbf{Use case} & Zmeniť  použitý balíček \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenenie používaného balíčka musí byť správne zadaný.\\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenu používaného balíčka musí byť správne zadaný.\\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg change <názov nahradzovaného balička> <názov nahradzujúceho balička>\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg change  <názov nahradzujúceho balíčka s verziou>\\
 			\hline
-			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. V prípade, že nahradzujúci balíček nieje dostupný lokálne, používateľ bude vyzvaný stiahnúť daný balíček.\\ 
+			\textbf{Popis} & Program zmení používaný balíček z aktuálne používaného na balíček vybratý používateľom. Táto voľba je aplikovateľná iba pre spravovanie verzií existujúcich balíčkov. V prípade, že nahradzujúci balíček nie je dostupný lokálne, používateľ bude vyzvaný stiahnúť daný balíček.\\ 
 			\hline
 			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti výmeny, alebo informujúci o potrebe stiahnutia balíčka.\\
 			\hline
-			\textbf{Chyba} & V prípade ak príde počas zmeny balíčkov k chybe, bude zapísana na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade ak dôjde počas zmeny balíčkov ku chybe, bude zapísaná na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Zmeniť  použiťý balíček}
 		\label{table:1}
@@ -714,21 +714,21 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Zmazať vybraný balíček}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Zmazať vybraný balíček \\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg delete <názov balička>.\\
+			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg delete <názov balíčka>.\\
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmazanie vybraného balíčka musí byť správne zadaný.\\ 
 			\hline
 			\textbf{Popis} & Program zmaže používateľom vybraný balíček z aktívnych balíčkov a následne ho fyzicky zmaže z disku. \\
 			\hline
 
-			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíka\\
+			\textbf{Výstup} & Textový reťazec informujúci o úspešnosti zmazania zadaného balíčka\\
 			\hline
-			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych alebo pri následnom mazaní zo súborového systému bude informácia o chybe presmerovaná na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade nesprávneho odstránenia balíčka z aktívnych balíčkov alebo pri následnom zmazaní zo súborového systému bude informácia o chybe presmerovaná na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Zmazať vybraný balíček}
 		\label{table:1}
@@ -737,21 +737,21 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Získať systémové informácie}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Získať systémové informácie \\ 
 			\hline
 			\textbf{Vstup} & Vstupom je textový reťazec "sysinfo".\\
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie systémových informácií. \\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na vyžiadanie systémových informácií. \\ 
 			\hline
-			\textbf{Popis} & Program vypíše na štandardný výstup informácie o systémových informáciách ako napríklad využitie procesoru, využitie pamäte RAM, využitie oddielu swap, teplotu zariadení a podobné.\\ 
+			\textbf{Popis} & Program vypíše na štandardný výstup informácie o využití systémových zdrojov,  ako napríklad využitie procesora, využitie pamäte RAM, využitie oddielu swap a podobne.\\ 
 			\hline
 					
-			\textbf{Výstup} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypísu informácie o každom z jadier.  \\
+			\textbf{Výstup} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia, napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypíšu informácie o každom z jadier.  \\
 			\hline
-			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií program vypíse dôvod priamo na stdout. Tak isto tam vypíše aj akékoľvek chyby ku ktorým môže prísť počas behu.\\
+			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií, program vypíše dôvod priamo na štandardný výstup. Rovnako program vypíše aj akékoľvek chyby, ku ktorým môže dôjsť počas behu.\\
 			\hline
 		\caption{Use case : Získať systémové informácie}
 		\label{table:1}
@@ -761,22 +761,22 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Získať informácie o procesoch}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Získať informácie o procesoch \\ 
 			\hline
 			\textbf{Vstup} & Vstupom je textový reťazec "processes".\\
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na vyžiadanie informácií o procesoch. \\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na vyžiadanie informácií o procesoch. \\ 
 			\hline
 
-			\textbf{Popis} & Program vypíše na štandardný výstup informácie o bežiacich procesoch, používateľoch, ktorý tieto procesy spúšťajú, koľko procesoru, pamäte RAM pouýívajú.\\ 
+			\textbf{Popis} & Program vypíše na štandardný výstup informácie o spustených procesoch, používateľoch, ktorí tieto procesy spúšťajú, koľko percent procesoru, pamäte RAM používajú.\\ 
 			\hline
 
 			\textbf{Výstup} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nieje možné získať informácie o procesoch je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nie je možné získať informácie o procesoch, je táto skutočnosť zobrazená na stdout a popis chyby sa presmeruje na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Získať informácie o procesoch}
 		\label{table:1}
@@ -785,7 +785,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vytvoriť skript}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vytvoriť skript \\ 
@@ -794,11 +794,11 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Vstup} & Vstupom musí byť správne napísaný skript. \\
 			\hline
-			\textbf{Popis} & Používateľ napíše skrip, ktorá bude prečítaný programom a vykonaný.\\ 
+			\textbf{Popis} & Používateľ napíše skrip, ktorý bude prečítaný programom a vykonaný.\\ 
 			\hline
-			\textbf{Výstup} & Skrip vráti výstup zo svojho beho buď na štandardný výstup alebo do súbor podľa toho ako je naimplementovaný.\\
+			\textbf{Výstup} & Skrip vráti výstup svojho beho buď na štandardný výstup, alebo do súboru, v závislosti od toho ako je naimplementovaný.\\
 			\hline
-			\textbf{Chyba} & V prípade, že príde k menšej chybe informácia bude zobrazená používateľovi, resp. presmerovaná do súboru.\\
+			\textbf{Chyba} & V prípade, že dôjde k menšej chybe, informácia bude zobrazená používateľovi, resp. presmerovaná do súboru.\\
 			\hline
 		\caption{Use case : Vytvoriť skript}
 		\label{table:1}
@@ -807,7 +807,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vytvoriť funkciu}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vytvoriť funkciu \\ 
@@ -815,7 +815,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Funkcia musí byť správne zadefinovaná. 
-			Synax pre definovanie funkcie : 
+			Syntax pre definovanie funkcie : 
 			\newline
 			function <návratový typ> <názov funkcie>(parametre funkcie){telo funkcie}. \\
 			\hline
@@ -825,7 +825,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 			\textbf{Výstup} & Funkcia vracia premennú s definovanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii funkcie, program skončí a zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -834,17 +834,17 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Override funkcie}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Override funkcie \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
-			\textbf{Vstup} & Nad funciou je potrebné zapísať @Override  čo prekladaču povie, že má používať práve túto verziu funkcie.\\
+			\textbf{Vstup} & Nad funkciou je potrebné zapísať @Override,  čo prekladaču povie, že má používať práve túto verziu funkcie.\\
 			\hline
 			
-			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahradzovať funkciu s rovnakým názvom.\\ 
+			\textbf{Popis} & Používateľ napíše funkciu, ktorá bude prečítaná programom a vykonaná. Navyše bude nahrádzať funkciu s rovnakým názvom.\\ 
 			\hline
 			\textbf{Výstup} & Premenná, ktorá je uvedená v definícii funkcie.\\
 			\hline
@@ -857,7 +857,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vytvoriť cyklus}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vytvoriť cyklus \\ 
@@ -865,7 +865,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Cyklus musí byť správne zadefinovaný. 
-			Synax pre definovanie funkcie : 
+			Syntax pre definovanie funkcie : 
 			\newline
 			for(<inicializácia premennej>;<podmienka pre spustenie>;<inkrement>){telo cyklu obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
@@ -874,7 +874,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Výstup} & Cyklus nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii cyklu, program skončí a zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť cyklus}
 		\label{table:1}
@@ -883,7 +883,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vytvoriť podmienku}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vytvoriť podmienku \\ 
@@ -891,15 +891,15 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Podmienka musí byť správne zadefinovaná. 
-			Synax pre definovanie podmienky : 
+			Syntax pre definovanie podmienky : 
 			\newline
 			if(boolean value){telo podmienky obsahujúce volania funkcií, príkazy, atď..}. \\
 			\hline
-			\textbf{Popis} & Používateľ napíše podmienku, ktorá bude prečítaná programom a zohľadnená za behu skriptu.\\ 
+			\textbf{Popis} & Používateľ napíše podmienku, ktorá bude prečítaná programom a zohľadnená počas behu skriptu.\\ 
 			\hline
 			\textbf{Výstup} & Podmienka nemá žiadny výstup.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri parsovaní alebo exekúcii podmienky, program skončí a zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť podmienku}
 		\label{table:1}
@@ -908,7 +908,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vytvoriť premenné}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vytvoriť premenné \\ 
@@ -917,7 +917,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
 			\newline
-			Synax pre definovanie premennej : 
+			Syntax pre definovanie premennej : 
 			\newline
 			<typ> <názov premennej>; alebo 
 			\newline
@@ -927,9 +927,9 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Popis} & Používateľ napíše inicializáciu alebo definíciu premennej, ktorá bude prečítaná programom a vykonaná.\\ 
 			\hline
-			\textbf{Výstup} & Program si uloží premmenú a jej hodnotu ak bola definovaná.\\
+			\textbf{Výstup} & Program si uloží premmenú a jej hodnotu, ak bola definovaná.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba používateľ bude informovaný o neúspechu na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba, používateľ bude informovaný o neúspechu na štandardný chybový výstup.\\
 			\hline
 			\caption{Use case : Vytvoriť premenné}
 		\label{table:1}
@@ -938,7 +938,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vykonať základné aritmetické operácie}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vykonať základné aritmetické operácie \\ 
@@ -947,7 +947,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. 
 			\newline
-			Synax pre definovanie /zmenu hodnoty premennej: 
+			Syntax pre definovanie /zmenu hodnoty premennej: 
 			\newline
 			<názov premennej> = <výraz>; alebo 
 			\newline
@@ -955,11 +955,11 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\newline
 			, kde výraz môže byť operácia nad číselnými hodnotami a číselnými premennými. \\
 			\hline
-			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
+			\textbf{Popis} & Používateľ napíše príkaz, ktorý bude prečítaný programom a vykonaný.\\ 
 			\hline
 			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu, program skončí a zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -968,7 +968,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Vykonať základné logické operácie}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Vykonať základné logické operácie\\ 
@@ -976,19 +976,19 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Premenná musí byť správne zadefinovaná. \newline
-			Synax pre definovanie /zmenu hodnoty premennej:  \newline
+			Syntax pre definovanie /zmenu hodnoty premennej:  \newline
 			<názov premennej> = <výraz>; alebo \newline
 			<typ> <názov premennej> = <výraz>;
 			\newline
-			, kde výraz môže byť operácia nad číselnými hodnotami , číselnými premennými ako aj nad pravdivostnými.\newline
+			, kde výraz môže byť operácia nad číselnými hodnotami, číselnými premennými, ako aj nad pravdivostnými.\newline
 			Vzťahy medzi číselnými hodnotami musia byť definované logickými operátormi - <, >, <=, >=, ==, !=.\newline
 			Vzťahy medzi pravdivostnými hodnotami musia byť definované logickými operátormi : ==, !=, ||, \&\&.  \\
 			\hline
-			\textbf{Popis} & Používateľ napíše príkaz, ktorá bude prečítaný programom a vykonaný.\\ 
+			\textbf{Popis} & Používateľ napíše príkaz, ktorý bude prečítaný programom a vykonaný.\\ 
 			\hline
 			\textbf{Výstup} & Príkaz nastaví hodnotu premennej s vypočítanou návratovou hodnotou.\\
 			\hline
-			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu program skončí a program zapíše informácie o chybe na štandardný chybový výstup.\\
+			\textbf{Chyba} & V prípade, že nastane chyba pri exekúcii príkazu, program skončí a zapíše informácie o chybe na štandardný chybový výstup.\\
 			\hline
 		\caption{Use case : Vytvoriť funkciu}
 		\label{table:1}
@@ -998,20 +998,20 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Presmerovať chybový výstup}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Presmerovať chybový výstup \\ 
 			\hline
 			\textbf{Vstup} & Pre presmerovanie na chybový výstup je potrebné dodržať syntax command stderr> file\\
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie chybového výstupu. \\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na presmerovanie chybového výstupu. \\ 
 			\hline
-			\textbf{Popis} & Program presmeruje chybový výstup kam mu používateľ v príkaze prikáže. \\ 
+			\textbf{Popis} & Program presmeruje chybový výstup tam, kam mu používateľ v príkaze zadefinuje. \\ 
 			\hline
 			\textbf{Výstup} & Výstup programu predstavuje textový reťazec s popisom chyby, ktorá nastala.\\
 			\hline
-			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
+			\textbf{Chyba} & Ak by došlo ku chybe, chyba sa zapíše sa do logu aplikácie.\\
 			\hline
 		\caption{Use case : Presmerovať chybový výstup}
 		\label{table:1}
@@ -1020,20 +1020,20 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \paragraph{Presmerovať štandardný výstup}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Presmerovať štandardný výstup \\ 
 			\hline
-			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží valídny príkaz na presmerovanie štandardného výstupu. \\ 
+			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na presmerovanie štandardného výstupu. \\ 
 			\hline
 			\textbf{Vstup} & Pre presmerovanie na štandardný výstup je potrebné dodržať syntax command stdout> file\\
 			\hline
-			\textbf{Popis} & Program presmeruje štandardný výstup kam mu používateľ v príkaze prikáže.\\ 
+			\textbf{Popis} & Program presmeruje štandardný výstup tam, kam mu používateľ v príkaze zadefinuje.\\ 
 			\hline
 			\textbf{Výstup} & Výstup programu predstavuje textový reťazec s výstupom zo skriptu alebo príkazu.\\
 			\hline
-			\textbf{Chyba} & Ak by došlo k chybe zaloguje sa do logu aplikácie.\\
+			\textbf{Chyba} & Ak by došlo ku chybe, chyba sa zapíše sa do logu aplikácie.\\
 			\hline
 		\caption{Use case : Presmerovať štandardný výstup }
 		\label{table:1}
@@ -1044,10 +1044,10 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 
 \subsubsection{Vývojár balíčkov}
-\indent Ako je z názvu role zjavné, tento hráč bude mať na starosti hlavne vývoj aplikácie, starať sa o jej funkcionalitim v zmysle rozširovania API, ktoré môže vývojár skriptov používať pre efektívnejšiu prácu.
+\indent Vychádzajúc z názvu role je zjavné, že tento hráč sa bude starať o vývoj aplikácie a jej funkcionalitu v zmysle rozširovania API, ktoré môže vývojár skriptov používať pre efektívnejšiu prácu.
 \paragraph{Implementovať vlastný balíček}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Implementovať vlastný balíček \\ 
@@ -1056,11 +1056,11 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Vstup} & Balíček obsahujúci všetky potrebné rozhrania, ktoré musí vývojár balíčka implementovať.\\
 			\hline
-			\textbf{Popis} & Používateľ implementuje novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov.\\ 
+			\textbf{Popis} & Používateľ implementuje novú funkcionalitu v Jave, následne všetky zdrojové súbory skompiluje a pridá do \acrshort{jar} súboru určeného na ukladanie nových balíčkov.\\ 
 			\hline
 			\textbf{Výstup} & Balíček, ktorý je možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
-			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy ho o chybe informuje prekladač jazyka v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na stout.\\
+			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy vývojára o chybe informuje prekladač jazyka, v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na štandardný výstup.\\
 			\hline
 		\caption{Use case : Implementovať vlastný balíček}
 		\label{table:1}
@@ -1070,7 +1070,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \paragraph{Upravovať existujúce balíčky}
 \begin{center}
-	\begin{longtable}{|p{2.5cm}|p{14cm}|}
+	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
 			\textbf{Use case} & Upravovať existujúce balíčky \\ 
@@ -1079,11 +1079,11 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 			\hline
 			\textbf{Vstup} & Zdrojové súbory už existujúceho balíčka.\\
 			\hline
-			\textbf{Popis} & Používateľ upraví implementáciu alebo pridá novú funkcionalitu v jave, následne všetky zdrojové súbory skompiluje a pridá do jar súboru určeného na ukladanie nových balíčkov\\ 
+			\textbf{Popis} & Používateľ upraví implementáciu alebo pridá novú funkcionalitu v Jave, následne všetky zdrojové súbory skompiluje a pridá do \acrshort{jar} súboru určeného na ukladanie nových balíčkov\\ 
 			\hline
 			\textbf{Výstup} & Po úprave je balíček možné nahrať do aplikácie a používať ako jeden z príkazov.\\
 			\hline
-			\textbf{Chyba} & \\
+			\textbf{Chyba} & Chyba môže nastať pri vytváraní balíčka, kedy vývojára o chybe informuje prekladač jazyka, v ktorom je balíček implementovaný. V prípade neúspešného načítania je používateľ informovaný priamo v konzole na štandardný výstup.\\
 			\hline
 		\caption{Use case : Upravovať existujúce balíčky}
 		\label{table:1}
@@ -1092,14 +1092,14 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{center}
 \subsection{Java}
 \indent Java je programovací jazyk a výpočtová platforma, ktorá bola vydaná spoločnosťou Sun Microsystems v roku 1995. \cite{java} 
-Java je objektovo orientovaný jazyk - v Jave je všetko objekt, ktorý je možné jednoducho rozšíriť. Je platformovo nezávislá , kompiluje vstupný kód do byte kódu, ktorý nieje špecifický pre konkrétnu platformu, ale do kódu, ktorý dokáze spustiť \gls{jvm}. Vykompilovaný kód sa potom jednoducho spustí na pc v ktorom existuje \gls{jvm}. Jednoduchú na učenie, stačí poznať základy \gls{oop} a človek sa Javu rýchlo naučí. Bezpečná keďže obsahuje  bezpečnostné baláčky a funkcie pomocou, ktorých je možné vytvoriť bezpečné aplikácie. Samozrejmosťou pre javu je podpora paralelného spúštania procesov, ktoré následne bežia vo vláknach. Je považovaná za veľmi výkonnú a dynamickú.\cite{javatut}
+Java je objektovo orientovaný jazyk - v Jave je všetko objekt, ktorý je možné jednoducho rozšíriť. Je platformovo nezávislá , kompiluje vstupný kód do byte kódu, ktorý nieje špecifický pre konkrétnu platformu, ale do kódu, ktorý dokáze spustiť \acrshort{jvm}. Vykompilovaný kód sa potom jednoducho spustí na pc v ktorom existuje \acrshort{jvm}. Jednoduchú na učenie, stačí poznať základy \acrshort{oop} a človek sa Javu rýchlo naučí. Bezpečná keďže obsahuje  bezpečnostné baláčky a funkcie pomocou, ktorých je možné vytvoriť bezpečné aplikácie. Samozrejmosťou pre javu je podpora paralelného spúštania procesov, ktoré následne bežia vo vláknach. Je považovaná za veľmi výkonnú a dynamickú.\cite{javatut}
 
 
 \subsection{Aplikácia}
 \indent Nakoľko sme sa rozhodli implementovať vlastné riešenie bolo potrebné zamyslieť sa a identifikovať na základe prípadov použitia z akých častí bude naša alikácia pozostávať. Keďže sme nechceli aby sme vytvorili jednu veľkú robustnú aplikáciu, ktorá by sa časom mohla a s najväčšou pravdepodobnosťou by sa  aj stala neudržiavateľnou. Nakoľko naše aplikácia musí byť schopná umožniť používateľom interaktívny a aj skrtiptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti umožnovať interaktívny prístup pre používateľa ako aj skriptovací modus, no funkcionality, ktoré bude podporovať externalizujeme do menších podprogramov - pluginov, ktoré sa do apikácie budu nahrávať pri štarte. Aby sme mohli docieliť požadované výsledky rozhodli sme sa použiť, návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
 
 \subsection{Komponenty aplikácie}
-\indent Po vybratí návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre správnych chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť pár pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty ktoré sme identifikovali pri vytváraní tejto ukázky funkčnosti.
+\indent Po vybratí návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre platných chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť pár pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty ktoré sme identifikovali pri vytváraní tejto ukázky funkčnosti.
 \begin{itemize}
 	\item Parser - vstupov aj vystupov
 	\item Loader - na nahrávanie  jar súborov
@@ -1159,7 +1159,15 @@ PluginFactory ako z jej nýzvu vyplýva je to továreň do ktorej sa pri štarte
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
-\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému, kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Väčšinu krokov budeme popisovať pomocou activity a class diagramu, niektoré časti obohatíme o pseudokód prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. 
+\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému, kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Väčšinu krokov budeme popisovať pomocou activity a class diagramu, niektoré časti obohatíme o pseudokód prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1, následne zistí či má na vstupe parametre ak áno vykoná ich, ak nie spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
+\newline 
+\indent Prvú spomenutú možnosť sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{img/System.jpg}
+	\caption{Activita spustenia aplikácie}
+	\label{fig:test}
+\end{figure}
 \subsection{Implement}
 \indent 
 \section{Zhodnotenie výsledkov}

@@ -4,13 +4,13 @@
 \defcounter {refsection}{0}\relax 
 \thispagestyle {empty}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces \gls {os} - podiel na trhu pod\IeC {\v l}a statcounter\cite {statcounter}\relax }}{4}{figure.caption.19}
+\contentsline {figure}{\numberline {1}{\ignorespaces \acrshort {os} - podiel na trhu pod\IeC {\v l}a statcounter\cite {statcounter}\relax }}{4}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces \gls {os} - podiel na trhu pod\IeC {\v l}a netmarketshare\cite {netmarketshare}\relax }}{4}{figure.caption.20}
+\contentsline {figure}{\numberline {2}{\ignorespaces \acrshort {os} - podiel na trhu pod\IeC {\v l}a netmarketshare\cite {netmarketshare}\relax }}{4}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Serverov\IeC {\'e} \gls {os} - podiel na trhu pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.21}
+\contentsline {figure}{\numberline {3}{\ignorespaces Serverov\IeC {\'e} \acrshort {os} - podiel na trhu pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Serverov\IeC {\'e} \gls {os} - podiel na trhu a rozdelenie pod\IeC {\v l}a hodnotenia str\IeC {\'a}nok pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.22}
+\contentsline {figure}{\numberline {4}{\ignorespaces Serverov\IeC {\'e} \acrshort {os} - podiel na trhu a rozdelenie pod\IeC {\v l}a hodnotenia str\IeC {\'a}nok pod\IeC {\v l}a w3techs\cite {pop}\relax }}{5}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka ConEmu emul\IeC {\'a}tora\relax }}{15}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
@@ -30,8 +30,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {13}{\ignorespaces Pr\IeC {\'\i }pady pou\IeC {\v z}itia pre navrhovan\IeC {\'u} aplik\IeC {\'a}ciu\relax }}{25}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Pvrv\IeC {\'e} funk\IeC {\v c}n\IeC {\'e} rie\IeC {\v s}enie\relax }}{39}{figure.caption.132}
+\contentsline {figure}{\numberline {14}{\ignorespaces Pvrv\IeC {\'e} funk\IeC {\v c}n\IeC {\'e} rie\IeC {\v s}enie\relax }}{40}{figure.caption.132}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces Class diagram pluginu\relax }}{39}{figure.caption.134}
+\contentsline {figure}{\numberline {15}{\ignorespaces Class diagram pluginu\relax }}{41}{figure.caption.134}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagram tried aplik\IeC {\'a}cie\relax }}{41}{figure.caption.136}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagram tried aplik\IeC {\'a}cie\relax }}{42}{figure.caption.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Activita spustenia aplik\IeC {\'a}cie\relax }}{44}{figure.caption.145}
