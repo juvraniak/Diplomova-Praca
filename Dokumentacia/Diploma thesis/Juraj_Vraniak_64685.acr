@@ -3,7 +3,12 @@
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossentry{api}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{23}}}\glsgroupskip
+\glsgroupheading{J}\relax \glsresetentrylist %
+\glossentry{jvm}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{34}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{oop}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{34}}}%
 \glossentry{os}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{x}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4\delimN 5}}}%

@@ -472,7 +472,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\label{fig:test}
 \end{figure}
 \newpage
-\subsection{Popis use casov}
+\subsection{Popis prípadov použitia}
 \indent V tejto časti sa venueme popisu jednotlivých use casov. Use case diagram spolu s popisom sú základnými prvkami na ktorých je možné špecifikovať novo vznikajúci software. Je dôležité aby najpodstatnejšie časti systému boli špecifikované na začiatku, aby sa pri navrhovaní aplikácie mohli prijať rozhodnutia, ktorými bude možné zaručiť, že výsledné riešenie bude to najlepšie možné, vyhovujúce špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojom nových súčastí systému, čo je zjavne vidieť aj z popisu konkrétnych prípadov použitia.
 \subsubsection{Vývojár skriptov}
 \indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \gls{api}. 
@@ -1057,15 +1057,14 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-
-\subsection{Prvotný nástrel}
-\subsection{Oddelenie štruktúry}
-
-\section{Architektúra aplikácie}
-\indent Ako sme ukázali existuje veľké množstvo skiptovacích jazykov ci, ktoré dokážu efektívne automatizovať dennodennú prácu avšak majú jeden spoločný nedostatok - nie sú multiplatformové. Táto vlastnosť môže byť  pre niekoho nepodstatná, no pri veľkých projektoch kde sa míňa množstvo prostriedkov na automatizáciu to až tak zanedbateľný fakt nie je. Stačí si len predstaviť koľko času zabere tvorba automatizovaných skriptov pre jednu platformu a pripočítať rovnaké množstvo času pre každú ďalšiu. Niekto by mohol namietať, že pre ďalšie platformy to toľko času nezabere nakoľko logika skriptov je uz definovaná. Tu treba brať ohľad na to, že nie každý jazyk poskytuje programátorovi rovnaké API a teda treba rátať s možnosťou, že niekde bude potrebné doimplementovať veci chýbajúce v jazyku. Preto vyššie spomenuté dôvody sme sa rozhodli pre vytvorenie nového jazyka, ktorý by bol jednoducho rozšíriteľný, manažovateľný, ľahko pisateľný a platformovo nezávislý. \cite{morf}
-
 \subsection{Java}
-\indent Je vyvíjaný spoločnosťou Oracle. Jeho syntax vychádza z jazykov C a C++. Zdrojové programy sa nekompilujú do strojového kódu, ale do medzistupňa, tzv. „byte-code“, ktorý nie je závislý od konkrétnej platformy. Táto vlastnosť Javy nám veľmi vyhovuje pre dosiahnutie cieľa platformovej nezávislosti. Ďalším veľmi podstatným faktom je, že v Jave programuje veľké množstvo developerov, tým pádom majú open source projekty veľkú šancu, že si ich komunita devoloperov osvojí a prispeje k ich postupnému zlepšovaniu.
+\indent Java je programovací jazyk a výpočtová platforma, ktorá bola vydaná spoločnosťou Sun Microsystems v roku 1995. \cite{java} 
+Java je objektovo orientovaný jazyk - v Jave je všetko objekt, ktorý je možné jednoducho rozšíriť. Je platformovo nezávislá , kompiluje vstupný kód do byte kódu, ktorý nieje špecifický pre konkrétnu platformu, ale do kódu, ktorý dokáze spustiť \gls{jvm}. Vykompilovaný kód sa potom jednoducho spustí na pc v ktorom existuje \gls{jvm}. Jednoduchú na učenie, stačí poznať základy \gls{oop} a človek sa Javu rýchlo naučí. Bezpečná keďže obsahuje  bezpečnostné baláčky a funkcie pomocou, ktorých je možné vytvoriť bezpečné aplikácie. Samozrejmosťou pre javu je podpora paralelného spúštania procesov, ktoré následne bežia vo vláknach. Je považovaná za veľmi výkonnú a dynamickú.\cite{javatut}
+
+
+\subsection{Aplikácie}
+\indent Nakoľko sme sa rozhodli implementovať vlastné riešenie bolo potrebné zamyslieť sa a identifikovať na základe prípadov použitia z akých častí bude naša alikácia pozostávať. Keďže sme nechceli aby sme vytvorili jednu veľkú robustnú aplikáciu, ktorá by sa časom mohla a s najväčšou pravdepodobnosťou by sa  aj stala neudržiavateľnou. Nakoľko naše aplikácia musí byť schopná umožniť používateľom interaktívny a aj skrtiptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti umožnovať interaktívny prístup pre používateľa ako aj skriptovací modus, no funkcionality, ktoré bude podporovať externalizujeme do menších podprogramov - pluginov, ktoré sa do apikácie budu nahrávať pri štarte.
+
 
 \subsection{Pouzite navrhove vzory}
 Aby sme zaručili rozšíriteľnosť, manažovateľnosť a ďalšie zásady dobrého softwéru bolo potrebné zvoliť vhodnú arhitektúru, ktorú popisujú použité návrhové vzory.
