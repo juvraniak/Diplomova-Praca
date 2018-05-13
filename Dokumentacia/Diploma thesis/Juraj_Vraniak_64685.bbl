@@ -425,27 +425,31 @@
       \verb https://www.java.com/en/download/faq/whatis_java.xml
       \endverb
     \endentry
-    \entry{javatut}{online}{}
+    \entry{javabook}{book}{}
       \name{author}{1}{}{%
-        {{hash=17c630bba78b078e4e4b5966c913d7a6}{%
-           family={Point},
-           familyi={P\bibinitperiod},
-           given={Tutorials},
-           giveni={T\bibinitperiod}}}%
+        {{hash=25853fb916418a8fc0c16fa32742cd3c}{%
+           family={Walter\bibnamedelima Savitch},
+           familyi={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Kenrick\bibnamedelima Mock},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \strng{namehash}{17c630bba78b078e4e4b5966c913d7a6}
-      \strng{fullhash}{17c630bba78b078e4e4b5966c913d7a6}
-      \strng{authornamehash}{17c630bba78b078e4e4b5966c913d7a6}
-      \strng{authorfullhash}{17c630bba78b078e4e4b5966c913d7a6}
+      \list{publisher}{1}{%
+        {Pearson, 15-04-2015}%
+      }
+      \strng{namehash}{25853fb916418a8fc0c16fa32742cd3c}
+      \strng{fullhash}{25853fb916418a8fc0c16fa32742cd3c}
+      \strng{authornamehash}{25853fb916418a8fc0c16fa32742cd3c}
+      \strng{authorfullhash}{25853fb916418a8fc0c16fa32742cd3c}
       \field{sortinit}{5}
       \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Java - Overview}
-      \field{year}{01-2018}
-      \verb{url}
-      \verb https://www.tutorialspoint.com/java/java_overview.htm
-      \endverb
+      \field{edition}{6}
+      \field{note}{ISBN: 978-0134041674}
+      \field{title}{Absolute Java}
+      \field{year}{2015}
+      \field{pages}{s. 1296}
+      \range{pages}{-1}
     \endentry
   \endsortlist
 \endrefsection

@@ -1,47 +1,47 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'Juraj_Vraniak_64685.blg'
-[37] biber-darwin:303> INFO - === Sun May 13, 2018, 21:42:26
-[57] Biber.pm:359> INFO - Reading 'Juraj_Vraniak_64685.bcf'
-[135] Biber.pm:835> INFO - Found 19 citekeys in bib section 0
-[146] Biber.pm:3670> INFO - Processing section 0
-[159] Biber.pm:3840> INFO - Looking for bibtex format file 'includes/bibliography.bib' for section 0
-[161] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[166] bibtex.pm:1292> INFO - Found BibTeX data source 'includes/bibliography.bib'
-[170] Utils.pm:164> WARN - year field '18-12-2010' in entry 'netalg' is not an integer - this will probably not sort properly.
-[176] Utils.pm:164> WARN - year field '18-01-2018' in entry 'windowsHistory' is not an integer - this will probably not sort properly.
-[177] Utils.pm:164> WARN - year field '13-04-2018' in entry 'statcounter' is not an integer - this will probably not sort properly.
-[178] Utils.pm:164> WARN - year field '13-04-2018' in entry 'netmarketshare' is not an integer - this will probably not sort properly.
-[179] Utils.pm:164> WARN - year field '13-04-2018' in entry 'pop' is not an integer - this will probably not sort properly.
-[180] Utils.pm:164> WARN - year field '11-11-2017' in entry 'shellprep' is not an integer - this will probably not sort properly.
-[182] Utils.pm:164> WARN - year field '12-04-2017' in entry 'gitspeed' is not an integer - this will probably not sort properly.
-[183] Utils.pm:164> WARN - year field '03-01-2018' in entry 'conemu' is not an integer - this will probably not sort properly.
-[184] Utils.pm:164> WARN - year field '03-01-2018' in entry 'cmder' is not an integer - this will probably not sort properly.
-[185] Utils.pm:164> WARN - year field '03-01-2018' in entry 'mobaxterm' is not an integer - this will probably not sort properly.
-[188] Utils.pm:164> WARN - year field '01-2018' in entry 'java' is not an integer - this will probably not sort properly.
-[188] Utils.pm:164> WARN - year field '01-2018' in entry 'javatut' is not an integer - this will probably not sort properly.
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 9, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 15, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 21, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 27, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 33, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 39, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 45, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 51, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 57, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 63, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 69, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 75, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 81, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 87, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 93, warning: 1 characters of junk seen at toplevel
-[189] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 102, warning: 1 characters of junk seen at toplevel
-[190] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 111, warning: 1 characters of junk seen at toplevel
-[190] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 120, warning: 1 characters of junk seen at toplevel
-[190] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 129, warning: 1 characters of junk seen at toplevel
-[190] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/48DC5JBfEx/bibliography.bib_9872.utf8, line 138, warning: 1 characters of junk seen at toplevel
-[204] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[204] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[204] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'sk-SK'
-[214] bbl.pm:608> INFO - Writing 'Juraj_Vraniak_64685.bbl' with encoding 'UTF-8'
-[216] bbl.pm:712> INFO - Output to Juraj_Vraniak_64685.bbl
-[216] Biber.pm:109> INFO - WARNINGS: 32
+[39] biber-darwin:303> INFO - === Sun May 13, 2018, 22:38:50
+[59] Biber.pm:359> INFO - Reading 'Juraj_Vraniak_64685.bcf'
+[136] Biber.pm:835> INFO - Found 19 citekeys in bib section 0
+[149] Biber.pm:3670> INFO - Processing section 0
+[161] Biber.pm:3840> INFO - Looking for bibtex format file 'includes/bibliography.bib' for section 0
+[168] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[173] bibtex.pm:1292> INFO - Found BibTeX data source 'includes/bibliography.bib'
+[179] Utils.pm:164> WARN - year field '18-12-2010' in entry 'netalg' is not an integer - this will probably not sort properly.
+[185] Utils.pm:164> WARN - year field '18-01-2018' in entry 'windowsHistory' is not an integer - this will probably not sort properly.
+[187] Utils.pm:164> WARN - year field '13-04-2018' in entry 'statcounter' is not an integer - this will probably not sort properly.
+[187] Utils.pm:164> WARN - year field '13-04-2018' in entry 'netmarketshare' is not an integer - this will probably not sort properly.
+[188] Utils.pm:164> WARN - year field '13-04-2018' in entry 'pop' is not an integer - this will probably not sort properly.
+[189] Utils.pm:164> WARN - year field '11-11-2017' in entry 'shellprep' is not an integer - this will probably not sort properly.
+[191] Utils.pm:164> WARN - year field '12-04-2017' in entry 'gitspeed' is not an integer - this will probably not sort properly.
+[192] Utils.pm:164> WARN - year field '03-01-2018' in entry 'conemu' is not an integer - this will probably not sort properly.
+[193] Utils.pm:164> WARN - year field '03-01-2018' in entry 'cmder' is not an integer - this will probably not sort properly.
+[194] Utils.pm:164> WARN - year field '03-01-2018' in entry 'mobaxterm' is not an integer - this will probably not sort properly.
+[197] Utils.pm:164> WARN - year field '01-2018' in entry 'java' is not an integer - this will probably not sort properly.
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 9, warning: 1 characters of junk seen at toplevel
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 15, warning: 1 characters of junk seen at toplevel
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 21, warning: 1 characters of junk seen at toplevel
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 27, warning: 1 characters of junk seen at toplevel
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 33, warning: 1 characters of junk seen at toplevel
+[198] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 39, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 45, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 51, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 57, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 63, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 69, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 75, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 81, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 87, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 93, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 102, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 111, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 120, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 129, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 138, warning: 1 characters of junk seen at toplevel
+[199] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/s8/zs1jk25n18v0h92_psgwwtdc0000gn/T/DFiwIVjbnn/bibliography.bib_10360.utf8, line 147, warning: 1 characters of junk seen at toplevel
+[215] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[215] UCollate.pm:68> INFO - Overriding locale 'sk-SK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[215] Biber.pm:3499> INFO - Sorting list 'none/global/' of type 'entry' with scheme 'none' and locale 'sk-SK'
+[224] bbl.pm:608> INFO - Writing 'Juraj_Vraniak_64685.bbl' with encoding 'UTF-8'
+[226] bbl.pm:712> INFO - Output to Juraj_Vraniak_64685.bbl
+[227] Biber.pm:109> INFO - WARNINGS: 32
