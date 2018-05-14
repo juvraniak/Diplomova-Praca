@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import javafx.util.Pair;
 import liteshell.exceptions.MethodMissingEception;
 import liteshell.keywords.Keyword;
@@ -150,12 +151,12 @@ public class RootParser implements Parser {
 //          .filter(line -> line.trim().startsWith(INCLUDE))
           .filter(line -> !line.isEmpty())
           .collect(Collectors.toList());
-      String firstLine = CONTENT.get(0);
+//      String firstLine = CONTENT.get(0);
       CONTENT = CONTENT.stream().filter(line -> !line.trim().startsWith(COMMENT))
           .collect(Collectors.toList());
-      if (firstLine.startsWith("#!")) {
-        CONTENT.add(0, firstLine);
-      }
+//      if (firstLine.startsWith("#!")) {
+//        CONTENT.add(0, firstLine);
+//      }
       List<String> plugins = CONTENT.stream().filter(line -> line.startsWith("use"))
           .collect(Collectors.toList());
 

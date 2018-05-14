@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -177,108 +178,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AbstractScope.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="101" column="33" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExecutorImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/commands/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Receiver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/receivers/Receiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-              <folding>
-                <element signature="docComment;class#PluginFactory#0" />
-                <element signature="method#unloadPlugin#0;class#PluginFactory#0" />
-                <element signature="method#listLoadedPlugin#0;class#PluginFactory#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScopeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShellClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/ShellClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-              <folding>
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RootParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="537">
+              <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForScope.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.lsh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -297,8 +222,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>handl</find>
-      <find>exec</find>
       <find>function</find>
       <find>string</find>
       <find>listOfScopes.</find>
@@ -327,6 +250,8 @@
       <find>execute</find>
       <find>loader</find>
       <find>executesc</find>
+      <find>parse</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
       <replace>ls</replace>
@@ -2246,7 +2171,6 @@
         <option value="$PROJECT_DIR$/src/test/java/liteshell/arithmetic/ShittyArithmeticTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/EchoReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/parser/Parser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/ArithmeticReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/receivers/GetVariableReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java" />
@@ -2260,6 +2184,7 @@
         <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" />
       </list>
     </option>
   </component>
@@ -2919,7 +2844,7 @@
       <workItem from="1525977756544" duration="33922000" />
       <workItem from="1526140079391" duration="2724000" />
       <workItem from="1526151984440" duration="7481000" />
-      <workItem from="1526280249261" duration="10394000" />
+      <workItem from="1526280249261" duration="14682000" />
     </task>
     <servers />
   </component>
@@ -2956,7 +2881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503958000" />
+    <option name="totallyTimeSpent" value="508246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2991,7 +2916,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" visible="true" weight="0.47236705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" weight="0.49944875" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32998747" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32873276" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3544776" />
@@ -3337,13 +3262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/receivers/Receiver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -3453,23 +3371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/commands/ChangeDirectoryCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -3519,31 +3420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/ShellClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/loaders/JarLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -3551,26 +3427,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        <state relative-caret-position="208">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding>
-            <element signature="docComment;class#PluginFactory#0" />
-            <element signature="method#unloadPlugin#0;class#PluginFactory#0" />
-            <element signature="method#listLoadedPlugin#0;class#PluginFactory#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -3588,6 +3458,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="56" column="42" lean-forward="true" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readProcessOutputs#0;class#ExecutorImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="606">
@@ -3595,17 +3476,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/PluginFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="430">
+          <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;class#PluginFactory#0" />
+            <element signature="method#unloadPlugin#0;class#PluginFactory#0" />
+            <element signature="method#listLoadedPlugin#0;class#PluginFactory#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        <state relative-caret-position="208">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/utils/ShellClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/test1.lsh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

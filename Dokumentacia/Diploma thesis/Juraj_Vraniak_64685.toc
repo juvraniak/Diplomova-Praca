@@ -4,230 +4,242 @@
 \defcounter {refsection}{0}\relax 
 \thispagestyle {empty}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\'{U}vod}{1}{section*.3}
+\contentsline {section}{\'{U}vod}{1}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Anal\IeC {\'y}za}{2}{section.4}
+\contentsline {section}{\numberline {1}Anal\IeC {\'y}za}{2}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Opera\IeC {\v c}n\IeC {\'e} syst\IeC {\'e}my}{2}{subsection.5}
+\contentsline {subsection}{\numberline {1.1}Opera\IeC {\v c}n\IeC {\'e} syst\IeC {\'e}my}{2}{subsection.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.1}Windows}{2}{subsubsection.6}
+\contentsline {subsubsection}{\numberline {1.1.1}Windows}{2}{subsubsection.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.1.1}Podiel na trhu}{2}{paragraph.7}
+\contentsline {paragraph}{\numberline {1.1.1.1}Podiel na trhu}{2}{paragraph.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.1.2}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{2}{paragraph.8}
+\contentsline {paragraph}{\numberline {1.1.1.2}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{2}{paragraph.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.2}MacOs}{2}{subsubsection.9}
+\contentsline {subsubsection}{\numberline {1.1.2}MacOs}{2}{subsubsection.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.2.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.10}
+\contentsline {paragraph}{\numberline {1.1.2.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.2.2}Podiel na trhu}{3}{paragraph.11}
+\contentsline {paragraph}{\numberline {1.1.2.2}Podiel na trhu}{3}{paragraph.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.3}Unix}{3}{subsubsection.12}
+\contentsline {subsubsection}{\numberline {1.1.3}Unix}{3}{subsubsection.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.3.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.13}
+\contentsline {paragraph}{\numberline {1.1.3.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.3.2}Podiel na trhu}{3}{paragraph.14}
+\contentsline {paragraph}{\numberline {1.1.3.2}Podiel na trhu}{3}{paragraph.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.4}Linux}{3}{subsubsection.15}
+\contentsline {subsubsection}{\numberline {1.1.4}Linux}{3}{subsubsection.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.4.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.16}
+\contentsline {paragraph}{\numberline {1.1.4.1}Predin\IeC {\v s}talovan\IeC {\'y} softv\IeC {\'e}r}{3}{paragraph.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.4.2}Podiel na trhu}{3}{paragraph.17}
+\contentsline {paragraph}{\numberline {1.1.4.2}Podiel na trhu}{3}{paragraph.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.5}Porovnanie podielov opera\IeC {\v c}n\IeC {\'y}ch syst\IeC {\'e}mov}{4}{subsubsection.18}
+\contentsline {subsubsection}{\numberline {1.1.5}Porovnanie podielov opera\IeC {\v c}n\IeC {\'y}ch syst\IeC {\'e}mov}{4}{subsubsection.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Programovacie jazyky}{4}{subsection.23}
+\contentsline {subsection}{\numberline {1.2}Programovacie jazyky}{4}{subsection.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.1}Shell}{6}{subsubsection.24}
+\contentsline {subsubsection}{\numberline {1.2.1}Shell}{6}{subsubsection.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.1.1}V\IeC {\'y}hody}{6}{paragraph.25}
+\contentsline {paragraph}{\numberline {1.2.1.1}V\IeC {\'y}hody}{6}{paragraph.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.1.2}Nev\IeC {\'y}hody}{6}{paragraph.26}
+\contentsline {paragraph}{\numberline {1.2.1.2}Nev\IeC {\'y}hody}{6}{paragraph.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.1.3}Popis a zhodnotenie jazyka}{7}{paragraph.27}
+\contentsline {paragraph}{\numberline {1.2.1.3}Popis a zhodnotenie jazyka}{7}{paragraph.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.2}Powershel/Classic command line}{10}{subsubsection.32}
+\contentsline {subsubsection}{\numberline {1.2.2}Powershel/Classic command line}{10}{subsubsection.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.2.1}V\IeC {\'y}hody}{10}{paragraph.33}
+\contentsline {paragraph}{\numberline {1.2.2.1}V\IeC {\'y}hody}{10}{paragraph.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.2.2}Nev\IeC {\'y}hody}{11}{paragraph.34}
+\contentsline {paragraph}{\numberline {1.2.2.2}Nev\IeC {\'y}hody}{11}{paragraph.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.2.3}Popis a zhodnotenie jazyka}{11}{paragraph.35}
+\contentsline {paragraph}{\numberline {1.2.2.3}Popis a zhodnotenie jazyka}{11}{paragraph.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.3}Python}{12}{subsubsection.37}
+\contentsline {subsubsection}{\numberline {1.2.3}Python}{12}{subsubsection.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.3.1}V\IeC {\'y}hody}{12}{paragraph.38}
+\contentsline {paragraph}{\numberline {1.2.3.1}V\IeC {\'y}hody}{12}{paragraph.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.3.2}Nev\IeC {\'y}hody}{13}{paragraph.39}
+\contentsline {paragraph}{\numberline {1.2.3.2}Nev\IeC {\'y}hody}{13}{paragraph.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.2.3.3}Popis a zhodnotenie jazyka}{13}{paragraph.40}
+\contentsline {paragraph}{\numberline {1.2.3.3}Popis a zhodnotenie jazyka}{13}{paragraph.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Existuj\IeC {\'u}ce rie\IeC {\v s}enia}{14}{subsection.42}
+\contentsline {subsection}{\numberline {1.3}Existuj\IeC {\'u}ce rie\IeC {\v s}enia}{14}{subsection.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1}ConEmu}{14}{subsubsection.43}
+\contentsline {subsubsection}{\numberline {1.3.1}ConEmu}{14}{subsubsection.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.1.1}Sk\IeC {\'u}senosti}{14}{paragraph.44}
+\contentsline {paragraph}{\numberline {1.3.1.1}Sk\IeC {\'u}senosti}{14}{paragraph.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2}cmder}{15}{subsubsection.46}
+\contentsline {subsubsection}{\numberline {1.3.2}cmder}{15}{subsubsection.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.2.1}Sk\IeC {\'u}senosti}{15}{paragraph.47}
+\contentsline {paragraph}{\numberline {1.3.2.1}Sk\IeC {\'u}senosti}{15}{paragraph.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3}Babun}{16}{subsubsection.49}
+\contentsline {subsubsection}{\numberline {1.3.3}Babun}{16}{subsubsection.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}MobaXterm}{17}{subsubsection.51}
+\contentsline {subsubsection}{\numberline {1.3.4}MobaXterm}{17}{subsubsection.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.4.1}Neplaten\IeC {\'a} verzia}{17}{paragraph.52}
+\contentsline {paragraph}{\numberline {1.3.4.1}Neplaten\IeC {\'a} verzia}{17}{paragraph.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.3.4.2}Platen\IeC {\'a} verzia}{17}{paragraph.53}
+\contentsline {paragraph}{\numberline {1.3.4.2}Platen\IeC {\'a} verzia}{17}{paragraph.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4}Zhodnotenie analyzovan\IeC {\'y}ch technol\IeC {\'o}gi\IeC {\'\i }}{18}{subsection.54}
+\contentsline {subsection}{\numberline {1.4}Zhodnotenie analyzovan\IeC {\'y}ch technol\IeC {\'o}gi\IeC {\'\i }}{18}{subsection.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Preklad jazykov}{19}{section.55}
+\contentsline {section}{\numberline {2}Preklad jazykov}{19}{section.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Kompil\IeC {\'a}tor proces prekladu}{19}{subsection.56}
+\contentsline {subsection}{\numberline {2.1}Kompil\IeC {\'a}tor proces prekladu}{19}{subsection.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Lexik\IeC {\'a}lna anal\IeC {\'y}za}{19}{subsubsection.57}
+\contentsline {subsubsection}{\numberline {2.1.1}Lexik\IeC {\'a}lna anal\IeC {\'y}za}{19}{subsubsection.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Syntaktick\IeC {\'a} anal\IeC {\'y}za}{20}{subsubsection.59}
+\contentsline {subsubsection}{\numberline {2.1.2}Syntaktick\IeC {\'a} anal\IeC {\'y}za}{20}{subsubsection.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Limit\IeC {\'a}cia syntaktickej anal\IeC {\'y}zy}{21}{subsubsection.61}
+\contentsline {subsubsection}{\numberline {2.1.3}Limit\IeC {\'a}cia syntaktickej anal\IeC {\'y}zy}{21}{subsubsection.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.4}Semantick\IeC {\'a} anal\IeC {\'y}za}{21}{subsubsection.62}
+\contentsline {subsubsection}{\numberline {2.1.4}Semantick\IeC {\'a} anal\IeC {\'y}za}{21}{subsubsection.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.5}Generovanie cie\IeC {\v l}ov\IeC {\'e}ho jazyka}{21}{subsubsection.68}
+\contentsline {subsubsection}{\numberline {2.1.5}Generovanie cie\IeC {\v l}ov\IeC {\'e}ho jazyka}{21}{subsubsection.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}N\IeC {\'a}vrh rie\IeC {\v s}enia}{22}{section.69}
+\contentsline {section}{\numberline {3}N\IeC {\'a}vrh rie\IeC {\v s}enia}{22}{section.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Pr\IeC {\'\i }pady pou\IeC {\v z}itia}{22}{subsection.70}
+\contentsline {subsection}{\numberline {3.1}Pr\IeC {\'\i }pady pou\IeC {\v z}itia}{22}{subsection.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Popis pr\IeC {\'\i }padov pou\IeC {\v z}itia}{23}{subsection.72}
+\contentsline {subsection}{\numberline {3.2}Popis pr\IeC {\'\i }padov pou\IeC {\v z}itia}{23}{subsection.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}V\IeC {\'y}voj\IeC {\'a}r skriptov}{23}{subsubsection.73}
+\contentsline {subsubsection}{\numberline {3.2.1}V\IeC {\'y}voj\IeC {\'a}r skriptov}{23}{subsubsection.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.1}UC1\_Spusti\IeC {\v t} konzolu}{23}{paragraph.74}
+\contentsline {paragraph}{\numberline {3.2.1.1}UC1\_Spusti\IeC {\v t} konzolu}{23}{paragraph.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.2}UC2\_Spusti\IeC {\v t} pr\IeC {\'\i }kaz}{23}{paragraph.76}
+\contentsline {paragraph}{\numberline {3.2.1.2}UC2\_Spusti\IeC {\v t} pr\IeC {\'\i }kaz}{23}{paragraph.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.3}UC3\_Spusti\IeC {\v t} skript}{24}{paragraph.78}
+\contentsline {paragraph}{\numberline {3.2.1.3}UC3\_Spusti\IeC {\v t} skript}{24}{paragraph.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.4}UC4\_Spusti\IeC {\v t} Shell pr\IeC {\'\i }kaz}{24}{paragraph.80}
+\contentsline {paragraph}{\numberline {3.2.1.4}UC4\_Spusti\IeC {\v t} Shell pr\IeC {\'\i }kaz}{24}{paragraph.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.5}UC5\_Spusti\IeC {\v t} commander pr\IeC {\'\i }kaz}{25}{paragraph.82}
+\contentsline {paragraph}{\numberline {3.2.1.5}UC5\_Spusti\IeC {\v t} commander pr\IeC {\'\i }kaz}{25}{paragraph.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.6}UC6\_Re\IeC {\v t}azenie pr\IeC {\'\i }kazov}{25}{paragraph.84}
+\contentsline {paragraph}{\numberline {3.2.1.6}UC6\_Re\IeC {\v t}azenie pr\IeC {\'\i }kazov}{25}{paragraph.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.7}UC7\_Mana\IeC {\v z}ova\IeC {\v t} bal\IeC {\'\i }\IeC {\v c}ky}{26}{paragraph.86}
+\contentsline {paragraph}{\numberline {3.2.1.7}UC7\_Mana\IeC {\v z}ova\IeC {\v t} bal\IeC {\'\i }\IeC {\v c}ky}{26}{paragraph.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.8}UC8\_Stiahnu\IeC {\v t} nov\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{26}{paragraph.88}
+\contentsline {paragraph}{\numberline {3.2.1.8}UC8\_Stiahnu\IeC {\v t} nov\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{26}{paragraph.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.9}UC9\_Zmeni\IeC {\v t} pou\IeC {\v z}it\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{27}{paragraph.90}
+\contentsline {paragraph}{\numberline {3.2.1.9}UC9\_Zmeni\IeC {\v t} pou\IeC {\v z}it\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{27}{paragraph.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.10}UC10\_Zmaza\IeC {\v t} vybran\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{27}{paragraph.92}
+\contentsline {paragraph}{\numberline {3.2.1.10}UC10\_Zmaza\IeC {\v t} vybran\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{27}{paragraph.91}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.11}UC11\_Z\IeC {\'\i }ska\IeC {\v t} syst\IeC {\'e}mov\IeC {\'e} inform\IeC {\'a}cie}{28}{paragraph.94}
+\contentsline {paragraph}{\numberline {3.2.1.11}UC11\_Z\IeC {\'\i }ska\IeC {\v t} syst\IeC {\'e}mov\IeC {\'e} inform\IeC {\'a}cie}{28}{paragraph.93}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.12}UC12\_Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch}{28}{paragraph.96}
+\contentsline {paragraph}{\numberline {3.2.1.12}UC12\_Z\IeC {\'\i }ska\IeC {\v t} inform\IeC {\'a}cie o procesoch}{28}{paragraph.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.13}UC13\_Vytvori\IeC {\v t} skript}{29}{paragraph.98}
+\contentsline {paragraph}{\numberline {3.2.1.13}UC13\_Vytvori\IeC {\v t} skript}{29}{paragraph.97}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.14}UC14\_Vytvori\IeC {\v t} funkciu}{29}{paragraph.100}
+\contentsline {paragraph}{\numberline {3.2.1.14}UC14\_Vytvori\IeC {\v t} funkciu}{29}{paragraph.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.15}UC15\_Override funkcie}{30}{paragraph.102}
+\contentsline {paragraph}{\numberline {3.2.1.15}UC15\_Override funkcie}{30}{paragraph.101}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.16}UC16\_Vytvori\IeC {\v t} cyklus}{30}{paragraph.104}
+\contentsline {paragraph}{\numberline {3.2.1.16}UC16\_Vytvori\IeC {\v t} cyklus}{30}{paragraph.103}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.17}UC17\_Vytvori\IeC {\v t} podmienku}{31}{paragraph.106}
+\contentsline {paragraph}{\numberline {3.2.1.17}UC17\_Vytvori\IeC {\v t} podmienku}{31}{paragraph.105}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.18}UC18\_Vytvori\IeC {\v t} premenn\IeC {\'e}}{31}{paragraph.108}
+\contentsline {paragraph}{\numberline {3.2.1.18}UC18\_Vytvori\IeC {\v t} premenn\IeC {\'e}}{31}{paragraph.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.19}UC19\_Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} aritmetick\IeC {\'e} oper\IeC {\'a}cie}{32}{paragraph.110}
+\contentsline {paragraph}{\numberline {3.2.1.19}UC19\_Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} aritmetick\IeC {\'e} oper\IeC {\'a}cie}{32}{paragraph.109}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.20}UC20\_Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} logick\IeC {\'e} oper\IeC {\'a}cie}{33}{paragraph.112}
+\contentsline {paragraph}{\numberline {3.2.1.20}UC20\_Vykona\IeC {\v t} z\IeC {\'a}kladn\IeC {\'e} logick\IeC {\'e} oper\IeC {\'a}cie}{33}{paragraph.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.21}UC21\_Presmerova\IeC {\v t} chybov\IeC {\'y} v\IeC {\'y}stup}{33}{paragraph.114}
+\contentsline {paragraph}{\numberline {3.2.1.21}UC21\_Presmerova\IeC {\v t} chybov\IeC {\'y} v\IeC {\'y}stup}{33}{paragraph.113}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.1.22}UC22\_Presmerova\IeC {\v t} \IeC {\v s}tandardn\IeC {\'y} v\IeC {\'y}stup}{34}{paragraph.116}
+\contentsline {paragraph}{\numberline {3.2.1.22}UC22\_Presmerova\IeC {\v t} \IeC {\v s}tandardn\IeC {\'y} v\IeC {\'y}stup}{34}{paragraph.115}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}V\IeC {\'y}voj\IeC {\'a}r bal\IeC {\'\i }\IeC {\v c}kov}{34}{subsubsection.118}
+\contentsline {subsubsection}{\numberline {3.2.2}V\IeC {\'y}voj\IeC {\'a}r bal\IeC {\'\i }\IeC {\v c}kov}{34}{subsubsection.117}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.2.1}UC23\_Implementova\IeC {\v t} vlastn\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{34}{paragraph.119}
+\contentsline {paragraph}{\numberline {3.2.2.1}UC23\_Implementova\IeC {\v t} vlastn\IeC {\'y} bal\IeC {\'\i }\IeC {\v c}ek}{34}{paragraph.118}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.2.2.2}UC24\_Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky}{35}{paragraph.121}
+\contentsline {paragraph}{\numberline {3.2.2.2}UC24\_Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky}{35}{paragraph.120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}V\IeC {\'y}ber programovacieho jazyka}{35}{subsection.123}
+\contentsline {subsection}{\numberline {3.3}V\IeC {\'y}ber programovacieho jazyka}{35}{subsection.122}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}N\IeC {\'a}vrhov\IeC {\'e} vzory}{36}{subsection.124}
+\contentsline {subsection}{\numberline {3.4}N\IeC {\'a}vrhov\IeC {\'e} vzory}{36}{subsection.123}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Factory - tov\IeC {\'a}re\IeC {\v n}}{36}{subsubsection.125}
+\contentsline {subsubsection}{\numberline {3.4.1}Factory - tov\IeC {\'a}re\IeC {\v n}}{36}{subsubsection.124}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Command - pr\IeC {\'\i }kaz}{36}{subsubsection.127}
+\contentsline {subsubsection}{\numberline {3.4.2}Command - pr\IeC {\'\i }kaz}{36}{subsubsection.126}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Aplik\IeC {\'a}cia}{38}{subsection.130}
+\contentsline {subsection}{\numberline {3.5}Aplik\IeC {\'a}cia}{38}{subsection.129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Komponenty aplik\IeC {\'a}cie}{38}{subsection.131}
+\contentsline {subsection}{\numberline {3.6}Komponenty aplik\IeC {\'a}cie}{38}{subsection.130}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Plugin}{39}{subsection.133}
+\contentsline {subsection}{\numberline {3.7}Plugin}{39}{subsection.132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8}Diagram tried aplik\IeC {\'a}cie}{41}{subsection.135}
+\contentsline {subsection}{\numberline {3.8}Diagram tried aplik\IeC {\'a}cie}{41}{subsection.134}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.8.1}Stru\IeC {\v c}n\IeC {\'y} popis tried}{41}{subsubsection.137}
+\contentsline {subsubsection}{\numberline {3.8.1}Stru\IeC {\v c}n\IeC {\'y} popis tried}{41}{subsubsection.136}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.1}ScopeImpl}{41}{paragraph.138}
+\contentsline {paragraph}{\numberline {3.8.1.1}ScopeImpl}{41}{paragraph.137}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.2}AbstractExecutor}{42}{paragraph.139}
+\contentsline {paragraph}{\numberline {3.8.1.2}AbstractExecutor}{42}{paragraph.138}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.3}ParserImpl}{42}{paragraph.140}
+\contentsline {paragraph}{\numberline {3.8.1.3}ParserImpl}{42}{paragraph.139}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.4}PluginFactory}{42}{paragraph.141}
+\contentsline {paragraph}{\numberline {3.8.1.4}PluginFactory}{42}{paragraph.140}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.5}JarLoader}{42}{paragraph.142}
+\contentsline {paragraph}{\numberline {3.8.1.5}JarLoader}{42}{paragraph.141}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{43}{section.143}
+\contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{43}{section.142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Hlavn\IeC {\'a} trieda aplik\IeC {\'a}cie - AbstractScope}{43}{subsection.144}
+\contentsline {subsection}{\numberline {4.1}Hlavn\IeC {\'a} trieda aplik\IeC {\'a}cie - AbstractScope}{43}{subsection.143}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}run}{43}{subsubsection.145}
+\contentsline {subsubsection}{\numberline {4.1.1}run}{43}{subsubsection.144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}executeScript}{43}{subsubsection.146}
+\contentsline {subsubsection}{\numberline {4.1.2}executeScript}{43}{subsubsection.145}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}\IeC {\v S}tart aplik\IeC {\'a}cie}{44}{subsection.148}
+\contentsline {subsection}{\numberline {4.2}\IeC {\v S}tart aplik\IeC {\'a}cie}{44}{subsection.147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}\IeC {\v S}tart s parametrami}{45}{subsubsection.150}
+\contentsline {subsubsection}{\numberline {4.2.1}\IeC {\v S}tart s parametrami}{45}{subsubsection.149}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Inicializ\IeC {\'a}cia aplik\IeC {\'a}cie}{46}{subsection.151}
+\contentsline {subsection}{\numberline {4.3}Inicializ\IeC {\'a}cia aplik\IeC {\'a}cie}{46}{subsection.150}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Na\IeC {\v c}\IeC {\'\i }tanie pluginov}{46}{subsubsection.153}
+\contentsline {subsubsection}{\numberline {4.3.1}Na\IeC {\v c}\IeC {\'\i }tanie pluginov}{46}{subsubsection.152}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.1}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z disku}{46}{paragraph.154}
+\contentsline {paragraph}{\numberline {4.3.1.1}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z disku}{46}{paragraph.153}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.2}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z aplik\IeC {\'a}cie}{47}{paragraph.156}
+\contentsline {paragraph}{\numberline {4.3.1.2}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z aplik\IeC {\'a}cie}{47}{paragraph.155}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.3}Fin\IeC {\'a}lne na\IeC {\v c}\IeC {\'\i }tanie pluginov}{47}{paragraph.157}
+\contentsline {paragraph}{\numberline {4.3.1.3}Fin\IeC {\'a}lne na\IeC {\v c}\IeC {\'\i }tanie pluginov}{47}{paragraph.156}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazov}{47}{subsection.158}
+\contentsline {subsection}{\numberline {4.4}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazov}{47}{subsection.157}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazu}{49}{subsubsection.160}
+\contentsline {subsubsection}{\numberline {4.4.1}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazu}{49}{subsubsection.159}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Vykon\IeC {\'a}va\IeC {\v c} pajpy}{49}{subsubsection.161}
+\contentsline {subsubsection}{\numberline {4.4.2}Vykon\IeC {\'a}va\IeC {\v c} pajpy}{49}{subsubsection.160}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Vykon\IeC {\'a}va\IeC {\v c} skriptu}{49}{subsubsection.162}
+\contentsline {subsubsection}{\numberline {4.4.3}Vykon\IeC {\'a}va\IeC {\v c} skriptu}{49}{subsubsection.161}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Parser skriptov}{50}{section.163}
+\contentsline {subsection}{\numberline {4.5}Parser skriptov}{49}{subsection.162}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Implementovan\IeC {\'e} pluginy}{51}{section.164}
+\contentsline {subsubsection}{\numberline {4.5.1}Predspracovanie}{49}{subsubsection.163}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Zhodnotenie v\IeC {\'y}sledkov}{52}{section.165}
+\contentsline {subsubsection}{\numberline {4.5.2}Parsovanie}{50}{subsubsection.164}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'{a}ver}{53}{section*.166}
+\contentsline {subsubsection}{\numberline {4.5.3}Parsovanie funkci\IeC {\'\i }}{50}{subsubsection.165}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{54}{section*.167}
+\contentsline {subsubsection}{\numberline {4.5.4}Parsovanie for cyklov}{51}{subsubsection.166}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pr\'{i}lohy}{I}{section*.168}
+\contentsline {subsubsection}{\numberline {4.5.5}Parsovanie podmienok}{51}{subsubsection.167}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.170}
+\contentsline {subsubsection}{\numberline {4.5.6}V\IeC {\'y}sledok parsovania}{51}{subsubsection.168}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.173}
+\contentsline {subsection}{\numberline {4.6}Implementovan\IeC {\'e} pluginy}{51}{subsection.170}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.176}
+\contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{53}{section.171}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.180}
+\contentsline {section}{Z\'{a}ver}{54}{section*.172}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{55}{section*.173}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.174}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.176}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.179}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.182}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.186}

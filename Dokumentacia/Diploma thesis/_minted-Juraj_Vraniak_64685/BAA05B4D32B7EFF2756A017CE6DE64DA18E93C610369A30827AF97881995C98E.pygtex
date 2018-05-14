@@ -5,16 +5,16 @@
 \PYG{x}{	if (command.startsWith(\PYGZdq{}sh \PYGZdq{})}
 \PYG{x}{	|| command.startsWith(\PYGZdq{}win \PYGZdq{})}
 \PYG{x}{	|| command.startsWith(\PYGZdq{}ext \PYGZdq{}))\PYGZob{}}
-\PYG{x}{	out = executeNativeCommand(command);}
+\PYG{x}{	  out = executeNativeCommand(command);}
 \PYG{x}{	\PYGZcb{}else if (command.startsWith(\PYGZdq{}./\PYGZdq{})\PYGZob{}}
-\PYG{x}{	out = loadAndExecuteScript(command, scope);}
+\PYG{x}{	  out = loadAndExecuteScript(command, scope);}
 \PYG{x}{	\PYGZcb{}else if (command.startsWith(\PYGZdq{}\PYGZdl{}\PYGZob{}\PYGZdq{})) \PYGZob{}}
-\PYG{x}{	out = getVariable(command, scope);}
+\PYG{x}{	  out = getVariable(command, scope);}
 \PYG{x}{	\PYGZcb{}else if (command.startsWith(\PYGZdq{}\PYGZdl{}(\PYGZdq{}))\PYGZob{}}
 \PYG{x}{	if(isPipe)\PYGZob{}}
-\PYG{x}{	executeCommandAsPipe(command, scope);}
+\PYG{x}{	  executeCommandAsPipe(command, scope);}
 \PYG{x}{	\PYGZcb{}else\PYGZob{}}
-\PYG{x}{	executeCommand(command, scope);}
+\PYG{x}{	  executeCommand(command, scope);}
 \PYG{x}{	\PYGZcb{}}
 \PYG{x}{	\PYGZcb{}}
 \PYG{x}{	!writeStd ? saveToFile(out.getStdOut()) : out;}

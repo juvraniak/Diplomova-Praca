@@ -1264,16 +1264,16 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	if (command.startsWith("sh ") 
 	|| command.startsWith("win ") 
 	|| command.startsWith("ext ")){
-	out = executeNativeCommand(command);
+	  out = executeNativeCommand(command);
 	}else if (command.startsWith("./"){
-	out = loadAndExecuteScript(command, scope);
+	  out = loadAndExecuteScript(command, scope);
 	}else if (command.startsWith("${")) {
-	out = getVariable(command, scope);
+	  out = getVariable(command, scope);
 	}else if (command.startsWith("$(")){
 	if(isPipe){
-	executeCommandAsPipe(command, scope);
+	  executeCommandAsPipe(command, scope);
 	}else{
-	executeCommand(command, scope);
+	  executeCommand(command, scope);
 	}
 	}
 	!writeStd ? saveToFile(out.getStdOut()) : out;
@@ -1291,9 +1291,42 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \subsubsection{Vykonávač skriptu}
 \indent je popísaný v časti 4.1.2 tejto práce. Pre detailné pochopenie tejto metódy je potrebné aby si človek prezrel priložené zdojové kódy aplikácie.
 
-\section{Parser skriptov}
-\indent
-\section{Implementované pluginy}
+\subsection{Parser skriptov}
+\indent Parser ako parameter berie jeden parameter a to cestu k skpritu, ktorý je potrebné vykonať. Parser skriptov pozostáva z 2 častí : 
+\begin{itemize}
+	\item Predspracovania
+	\item Parsovanie predspracovaného vstupu
+\end{itemize}
+\subsubsection{Predspracovanie}
+\indent Predspracovanie má za úlohu načítať zdrojový kód skriptu, vyčistiť ho od komentárov, ako aj vykonať vyfiltrovať metódy, zistiť či skript obsahuje funkciu main, prípadne zmeniť používané pluginy. Ale pekne po poriadku ako prvé sa parser pokúsi načítať súbuor po riadkoch ako stream s Stringov. Následne z nich vyfiltruje všetky prázdne riadky ako aj riadky ktoré obsahujú komentáre, inak povedané začínaú sa znakom mriežky. Z vyfiltrovaných riadkov následne vyfiltrujeme iba tie, ktoré sa začínajú slovom use. Use slúži ako kľúčové slovo pre použitie pluginov v skriptoch. Pomocou týchto riadkov sa pokúsi vyžiadať od PluginFactory pluginy definované v use. Ak sa ich nepodarí nájsť aplikácia použije príkazy, ktoré ma aktuálne k dispozícii, ale je pravdepodobné, že v tomto prípade dôjde ku chybe počas behu skriptu. Tieto riadky sa následne vymažú. Ďalší proces je filtrovanie riadkov, ktoré začínajú na kľúčové slovo include. Tieto riadky špecifikujú ktoré ďalšie súbory sú použité v skripte. Rovnako ako s use riadky načítame do listu a zmažeme ich z hlavného contentu. Nasledne načítame, všetky súbory definované v include a pripojíme ich k tým ktoré sme mali zo zdrojového skriptu. Načítavanie pomocou include sa deje cyklicky, avšak si pamätáme, ktoré súbory sme už načítali aby sme zabránili zacykleniu aplikácie a jej následnému pádu. Na záver si ešte vyfiltrujeme riadky začínajúce sa na function a zistíme unikátne mená definovaných funkcií. V prípade, že aplikácia nenájde funkciu main vyhodí výnimku a beh skriptu sa ukončí. Samozrejme používateľ je o tejto udalosti upozornený. Po predspracovaní nasleduje parsovanie.
+\subsubsection{Parsovanie}
+\indent Aby sme si parsovanie skriptu vedeli jednoducho predstaviť, povedzme, že máme jeden for cyklus ktorý prechádza cez všetky načítané riadky z súborov. V tomto cykle následne definujeme rozhodovací mechanizmus, ktorý sa na základe prečítaného vstupu rozhodne čo spraviť. Parser má za úlohu vytvárať scopy a pre vytvorené scopy získať podstatné informácie. Ale poďme po rade, parser očakáva, že ak máme akékoľvek globálne príkazy v našom skripte budú definované na začiatku skriptu. V momente ako parser narazí na prvú funkciu nenačítava príkazy do globálneho alebo skriptového scopu ale do scopu konkrétnej funkcie. Parser tiež kontroluje či daná funkcia nemá pred sebou anotáciu @Override v tomto prípade nastaví pre takúto funkciu príznak, že je prepísana a mala by sa zobrať funkcia  označená s @Override a nie pôvodná. Parser povoľuje aj viac násobné prepísanie funkcie, do behu sa zoberie vždy tá, ktorá bola načítaná ako posledná. 
+\subsubsection{Parsovanie funkcií}
+\indent V momente, kedy parser narazí na funkciu odovzdá riadenie ďalšej funkcii zodpovednej za správne načítanie funkcie. Parsovanie funkcie je zložitejší proces nakoľko môže dôjsť k rôznym situáciám. V prvom kroku sa načíta prvý riadok, z neho sa vyparsuje návratová hodnota funkcie, meno funkcie a tiež parametre funkcie, konroluje sa aj otváracia zátvorka pre scope, ktorá musí byť na riadku kde bola definovaná funkcia. Ďalšie riadky funkcie sa načítavajú v cykle a kontroluje sa nasledovné : 
+\begin{itemize}	
+	\item kontroluje sa správne ukončenie riakov pomocou bodkočiarky. 
+	\item v prípade ,že riadok bopl ukončený bodkočiarkou zisťuje sa či je na riadku definované volanie funkcie, ak áno je tento riadok označený ako fcall s príslušným volaním funkcie a jej parametrami. V prípade, že nejde o volanie funkcie riadko sa označí ako volanie príkazu a to pomocou \$(),
+	\item v prípade, že je riadok ukončený s \\ parser pripojí k riadku nasledujúce riadky pokým nenarazí na bodkočiarku.
+	\item v prípade, že narazí na if odovzdá kontrolu parseru pre If scope no predtým zapíše do aktuálneho scopu fcall s unikátnim identifikátorom podmienky.
+	\item v prípade, že narazí na for odovzdá kontrolu parseru pre for scope no predtým zapíše do aktuálneho scopu fcall s unikátnim identifikátorom cyklu.
+	\item v prípade, že narazí na return vytvorí príkaz, ktorý bude poskladaný z \$typ_vracanej hodnoty returnType = hodnota za returnom;.
+	\item  v prípade, že riadok obsahuje ukončovaciu kučeravú zátvorku, ukončí načítanie.
+	\end{itemize} 
+\subsubsection{Parsovanie for cyklov}
+\indent Ak hlavný parser odovzdá kontrolu parseru pre For cyklus, spustí sa preProcess funkcia v tomto scope, kde sa načítava rozdielne iba prvý riadok.
+Z prvého riadku sa uložia tri parametre pre úspešný beh cyklu - počiatočná hodnota, podmienka, ktorá sa bude kontrolovať a inkrement. Pre vykonanie tejto úlhoy je v scope vytvorená nová premenná, s unikátnym menom aby sa predišlo prepisovaniu premenných.
+\subsubsection{Parsovanie podmienok}
+\indent Ak hlavný parser odovzdá kontrolu parseru pre If podmienku, spustí sa preProcess funkcia v tomto scope, kde sa načítava rozdielne iba prvý riadok.
+Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude vždy vyhodnocovať.
+\subsubsection{Výsledok parsovania}
+\indent Výsledkom parsovania je štruktúra zobrazená na obrázku nižšie. V aplikačnom scope sa vytvorí scope skriptový ktorý bude rodičom pre všetky ostatné scopy, ktoré sa vytvoria. Každý scope obsahuje stack príkazov, ktoré má vykonať počas behu. Tento stack môže obsahovať aj funkčné volania ako je to ukázané na obrázku.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{img/scopeStruct.jpg}
+	\caption{Diagram tried rozhrní aplikácie}
+	\label{fig:test}
+\end{figure}
+\subsection{Implementované pluginy}
 \indent V tejto sekcii si stručne predstavíme naimplementované pluginy.
 \section{Zhodnotenie výsledkov}
 \indent Počas testovania aplikácie sme nenarazili na žiadne závažné problémy pokiaľ sme sa držali zásad popísaných v práci. 
