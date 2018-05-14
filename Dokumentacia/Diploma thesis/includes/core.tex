@@ -472,11 +472,11 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent V tejto časti sa venujeme popisu jednotlivých prípadov použitia. Diagram prípadov použitia spolu s popisom sú základnými prvkami, na ktorých je možné špecifikovať novovznikajúci softvér. Je dôležité najpodstatnejšie časti systému špecifikovať na začiatku, aby pri navrhovaní aplikácie mohli byť prijaté rozhodnutia zaručujúce dosiahnutie najlepšieho výsledného riešenia vyhovujúceho špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojárom balíčkov(nových súčastí systému), čo môžeme vyčítať z popisu konkrétnych prípadov použitia.
 \subsubsection{Vývojár skriptov}
 \indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \acrshort{api}. 
-\paragraph{Spustiť konzolu}
+\paragraph{UC1\_Spustiť konzolu}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
-		\textbf{Use case} & Spustiť konzolu \\ 
+		\textbf{Use case} & UC1\_Spustiť konzolu \\ 
 		\hline
 		\textbf{Podmienky} & Používateľ musí disponovať stiahnutou aplikáciou.\\
 		\hline
@@ -493,11 +493,11 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Spustiť príkaz}
+\paragraph{UC2\_Spustiť príkaz}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
-		\textbf{Use case} & Spustiť príkaz \\ 
+		\textbf{Use case} & UC2\_Spustiť príkaz \\ 
 		\hline
 		\textbf{Podmienky} & Shell aplikácia musí byť spustená. \\ 
 		\hline
@@ -514,11 +514,11 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 	
 \end{center}
-\paragraph{Spustiť skript}
+\paragraph{UC3\_Spustiť skript}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		\hline
-		\textbf{Use case} & Spustiť skript \\ 
+		\textbf{Use case} & UC3\_Spustiť skript \\ 
 		\hline
 		\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný.\\ 
 		\hline
@@ -536,12 +536,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 \end{center}
 
-\paragraph{Spustiť Shell príkaz}
+\paragraph{UC4\_Spustiť Shell príkaz}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Spustiť Shell príkaz \\ 
+			\textbf{Use case} & UC4\_Spustiť Shell príkaz \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Taktiež musí byť v operačnom systéme ktorý podporuje Shell. \\ 
 			\hline
@@ -559,12 +559,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Spustiť commander príkaz}
+\paragraph{UC5\_Spustiť commander príkaz}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Spustiť commander príkaz \\ 
+			\textbf{Use case} & UC5\_Spustiť commander príkaz \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená a skript správne napísaný. Systém musí mať nainštalovaný Windows commander.\\ 
 			\hline
@@ -581,12 +581,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 	\end{longtable}
 \end{center}
-\paragraph{Reťazenie príkazov}
+\paragraph{UC6\_Reťazenie príkazov}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Reťazenie príkazov \\ 
+			\textbf{Use case} & UC6\_Reťazenie príkazov \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Vstup musí byť zadaný v správnom formáte.\\ 
 			\hline
@@ -607,12 +607,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \end{center}
 
 
-\paragraph{Manažovať balíčky}
+\paragraph{UC7\_Manažovať balíčky}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 
 			\hline
-			\textbf{Use case} & Manažovať balíčky \\ 
+			\textbf{Use case} & UC7\_Manažovať balíčky \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená.\\ 
 			\hline
@@ -629,11 +629,11 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 	\end{longtable}
 \end{center}
-\paragraph{Stiahnuť nový balíček}
+\paragraph{UC8\_Stiahnuť nový balíček}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 			\hline
-			\textbf{Use case} & Stiahnuť nový balíček \\ 
+			\textbf{Use case} & UC8\_Stiahnuť nový balíček \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na stiahnutie balíčka musí byť správne zadaný.\\ 
 			\hline
@@ -652,12 +652,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Zmeniť  použitý balíček}
+\paragraph{UC9\_Zmeniť  použitý balíček}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Zmeniť  použitý balíček \\ 
+			\textbf{Use case} & UC9\_Zmeniť  použitý balíček \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Príkaz na zmenu používaného balíčka musí byť správne zadaný.\\ 
 			\hline
@@ -675,12 +675,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Zmazať vybraný balíček}
+\paragraph{UC10\_Zmazať vybraný balíček}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Zmazať vybraný balíček \\ 
+			\textbf{Use case} & UC10\_Zmazať vybraný balíček \\ 
 			\hline
 			\textbf{Vstup} & Textový reťazec obsahujúci príkaz "pkg delete <názov balíčka>.\\
 			\hline
@@ -698,12 +698,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Získať systémové informácie}
+\paragraph{UC11\_Získať systémové informácie}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Získať systémové informácie \\ 
+			\textbf{Use case} & UC11\_Získať systémové informácie \\ 
 			\hline
 			\textbf{Vstup} & Vstupom je textový reťazec "sysinfo".\\
 			\hline
@@ -722,12 +722,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Získať informácie o procesoch}
+\paragraph{UC12\_Získať informácie o procesoch}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Získať informácie o procesoch \\ 
+			\textbf{Use case} & UC12\_Získať informácie o procesoch \\ 
 			\hline
 			\textbf{Vstup} & Vstupom je textový reťazec "processes".\\
 			\hline
@@ -746,12 +746,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vytvoriť skript}
+\paragraph{UC13\_Vytvoriť skript}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vytvoriť skript \\ 
+			\textbf{Use case} & UC13\_Vytvoriť skript \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -768,12 +768,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vytvoriť funkciu}
+\paragraph{UC14\_Vytvoriť funkciu}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vytvoriť funkciu \\ 
+			\textbf{Use case} & UC14\_Vytvoriť funkciu \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -795,12 +795,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Override funkcie}
+\paragraph{UC15\_Override funkcie}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Override funkcie \\ 
+			\textbf{Use case} & UC15\_Override funkcie \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -818,12 +818,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vytvoriť cyklus}
+\paragraph{UC16\_Vytvoriť cyklus}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vytvoriť cyklus \\ 
+			\textbf{Use case} & UC16\_Vytvoriť cyklus \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -844,12 +844,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vytvoriť podmienku}
+\paragraph{UC17\_Vytvoriť podmienku}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vytvoriť podmienku \\ 
+			\textbf{Use case} & UC17\_Vytvoriť podmienku \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -869,12 +869,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vytvoriť premenné}
+\paragraph{UC18\_Vytvoriť premenné}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vytvoriť premenné \\ 
+			\textbf{Use case} & UC18\_Vytvoriť premenné \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -899,12 +899,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	
 	\end{longtable}
 \end{center}
-\paragraph{Vykonať základné aritmetické operácie}
+\paragraph{UC19\_Vykonať základné aritmetické operácie}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vykonať základné aritmetické operácie \\ 
+			\textbf{Use case} & UC19\_Vykonať základné aritmetické operácie \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -929,12 +929,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Vykonať základné logické operácie}
+\paragraph{UC20\_Vykonať základné logické operácie}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Vykonať základné logické operácie\\ 
+			\textbf{Use case} & UC20\_Vykonať základné logické operácie\\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať prístup k akémukoľvek textovému editoru.  \\ 
 			\hline
@@ -959,12 +959,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Presmerovať chybový výstup}
+\paragraph{UC21\_Presmerovať chybový výstup}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Presmerovať chybový výstup \\ 
+			\textbf{Use case} & UC21\_Presmerovať chybový výstup \\ 
 			\hline
 			\textbf{Vstup} & Pre presmerovanie na chybový výstup je potrebné dodržať syntax command stderr> file\\
 			\hline
@@ -981,12 +981,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
-\paragraph{Presmerovať štandardný výstup}
+\paragraph{UC22\_Presmerovať štandardný výstup}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Presmerovať štandardný výstup \\ 
+			\textbf{Use case} & UC22\_Presmerovať štandardný výstup \\ 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na presmerovanie štandardného výstupu. \\ 
 			\hline
@@ -1008,12 +1008,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 \subsubsection{Vývojár balíčkov}
 \indent Vychádzajúc z názvu role je zjavné, že tento hráč sa bude starať o vývoj aplikácie a jej funkcionalitu v zmysle rozširovania \acrshort{api}, ktoré môže vývojár skriptov používať pre efektívnejšiu prácu.
-\paragraph{Implementovať vlastný balíček}
+\paragraph{UC23\_Implementovať vlastný balíček}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Implementovať vlastný balíček \\ 
+			\textbf{Use case} & UC23\_Implementovať vlastný balíček \\ 
 			\hline
 			\textbf{Podmienky} & Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
@@ -1031,12 +1031,12 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\end{longtable}
 \end{center}
 
-\paragraph{Upravovať existujúce balíčky}
+\paragraph{UC24\_Upravovať existujúce balíčky}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
 		
 			\hline
-			\textbf{Use case} & Upravovať existujúce balíčky \\ 
+			\textbf{Use case} & UC24\_Upravovať existujúce balíčky \\ 
 			\hline
 			\textbf{Podmienky} &  Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
@@ -1289,5 +1289,18 @@ if (command.startsWith("sh ")
 \subsubsection{Vykonávač pajpy}
 \indent Ak aplikácia rozoná, že v príkaze ide o pajpu, príkaz putuje do triedy PipeExecutor, kde sa rozparsuje na parciálne príkazy. Po rozprarsovaní príkazov sa každému príkazu nastaví nasledujúci príkaz, ktorý sa má vykonať. Posledný príkaz neobsahuje žiadnen ďalší. Po takomto prednastavení exekútora sa spustí vykonávanie prvého príkazu, jeho výstup je pri úspešnom ukončení presmerovaný ďalšiemu príkazu. Tento kolobeh pokračuje až kým sa nedostane k poslednému príkazu. Ten následne vracia svoj výstup exekútoru z 4.1.
 \subsubsection{Vykonávač skriptu}
+\indent je popísaný v časti 4.1.2 tejto práce. Pre detailné pochopenie tejto metódy je potrebné aby si človek prezrel priložené zdojové kódy aplikácie.
+
+\section{Parser skriptov}
+\indent
+\section{Implementované pluginy}
+\indent V tejto sekcii si stručne predstavíme naimplementované pluginy.
 \section{Zhodnotenie výsledkov}
-Zatiaľ sa toho nespravilo hodne ale verím, že sa to tu cele zaplní.
+\indent Počas testovania aplikácie sme nenarazili na žiadne závažné problémy pokiaľ sme sa držali zásad popísaných v práci. 
+\newline
+\indent Aplikácia je schopná fungovať v troch rôznych režimoch a to interaktívnom, skriptovacom a tiež v móde spúštania príkazov a skriptov priamo z konzoly pomocou parametrov. Taktiež je plne funkčná pri práci s premennými, skriptami, vykonávaním funkcií, cyklov a nami definovaných podmienok.
+\newline
+\indent  Podpora základných dátových typov je bezproblémová. Aritmetické operácie, ktoré je nad nimi možné vykonávať su mierne okresané. Jje možné definovať  operácie nad numerickými dátovými typmi ako +, -, *, /, \%, no nieje možné definovať ich prioritu. Rovnako to platí aj pre logické operátory ako \&\&, ||. Dobrou správou však je, že aj tieto funkcionality boli implementované pomocou pluginou a tým pádom je možné ich kedykoľvek nahradiť sofistikovanejšími riešeniami. 
+\newline
+\indent Tým, že je aplikácia postavená na Jave, je plne funkčná na každom \acrshort{pc}, ktorý má \acrshort{os} podporovaný touto platformou. Ako je možné vidieť z príručky, na spustenie aplikácie je potrebné iba nainštalovať si Java JRE 8 , nastaviť si Path aby smerovala na nainštalovanú Javu a spustiť predpripravený skript. Pre úplnosť sme si pripravili nasledovné grafy, ktoré zobrazujú efektivitu areitmetických operácii. 
+% sem prídu obrázke
