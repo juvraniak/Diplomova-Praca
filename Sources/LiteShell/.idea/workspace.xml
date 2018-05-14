@@ -5,23 +5,12 @@
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acr" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.alg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.alg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bbl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.blg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pri" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pri" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/attachmentC.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/attachmentC.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/src/Resources/Plugin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/src/Resources/Plugin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/src/Resources/Plugin.ucls" beforeDir="false" afterPath="$PROJECT_DIR$/../Commons/src/Resources/Plugin.ucls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/loaders/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Commons/src/main/java/liteshell/regex/ShellRegex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -195,11 +184,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AbstractScope.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractScope.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="27">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -217,7 +206,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Commons/src/main/java/liteshell/commands/Command.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
@@ -2293,7 +2282,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1079" />
@@ -2934,7 +2923,7 @@
       <workItem from="1525977756544" duration="33922000" />
       <workItem from="1526140079391" duration="2724000" />
       <workItem from="1526151984440" duration="7481000" />
-      <workItem from="1526280249261" duration="6960000" />
+      <workItem from="1526280249261" duration="7569000" />
     </task>
     <servers />
   </component>
@@ -2971,7 +2960,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="500524000" />
+    <option name="totallyTimeSpent" value="501133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2983,7 +2972,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1079" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -3009,7 +2998,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" weight="0.47278547" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32998747" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32873276" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4064792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3544776" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32998747" />
       <window_info anchor="bottom" id="SonarLint" order="12" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873276" />
@@ -3561,13 +3550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ScopeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -3627,6 +3609,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
         </state>
       </provider>
     </entry>
