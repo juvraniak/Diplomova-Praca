@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{try} \PYG{o}{\PYGZob{}}
+	\PYG{n}{URLClassLoader} \PYG{n}{cl} \PYG{o}{=} \PYG{n}{URLClassLoader}\PYG{o}{.}\PYG{n+na}{newInstance}\PYG{o}{(}\PYG{n}{urls}\PYG{o}{);}
+	\PYG{n}{JarInputStream} \PYG{n}{jarFile} \PYG{o}{=} \PYG{k}{new} \PYG{n}{JarInputStream}\PYG{o}{(}\PYG{k}{new} \PYG{n}{FileInputStream}\PYG{o}{(}\PYG{n}{jarPath}
+	\PYG{o}{.}\PYG{n+na}{toFile}\PYG{o}{()));}
+	\PYG{k}{while} \PYG{o}{(}\PYG{k+kc}{true}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+	\PYG{n}{jarEntry} \PYG{o}{=} \PYG{n}{jarFile}\PYG{o}{.}\PYG{n+na}{getNextJarEntry}\PYG{o}{();}
+	\PYG{k}{if} \PYG{o}{(}\PYG{n}{jarEntry} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+	\PYG{k}{break}\PYG{o}{;}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{k}{if} \PYG{o}{(}\PYG{n}{jarEntry}\PYG{o}{.}\PYG{n+na}{getName}\PYG{o}{().}\PYG{n+na}{endsWith}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}.class\PYGZdq{}}\PYG{o}{))} \PYG{o}{\PYGZob{}}
+	\PYG{n}{String} \PYG{n}{className} \PYG{o}{=} \PYG{n}{jarEntry}\PYG{o}{.}\PYG{n+na}{getName}\PYG{o}{()}
+	\PYG{o}{.}\PYG{n+na}{substring}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{,} \PYG{n}{jarEntry}\PYG{o}{.}\PYG{n+na}{getName}\PYG{o}{().}\PYG{n+na}{length}\PYG{o}{()} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{6}\PYG{o}{);}
+	\PYG{n}{className} \PYG{o}{=} \PYG{n}{className}\PYG{o}{.}\PYG{n+na}{replace}\PYG{o}{(}\PYG{l+s+sc}{\PYGZsq{}/\PYGZsq{}}\PYG{o}{,} \PYG{l+s+sc}{\PYGZsq{}.\PYGZsq{}}\PYG{o}{);}
+	\PYG{n}{Class} \PYG{n}{c} \PYG{o}{=} \PYG{n}{cl}\PYG{o}{.}\PYG{n+na}{loadClass}\PYG{o}{(}\PYG{n}{className}\PYG{o}{);}
+	\PYG{n}{Object} \PYG{n}{obj} \PYG{o}{=} \PYG{n}{c}\PYG{o}{.}\PYG{n+na}{newInstance}\PYG{o}{();}
+	\PYG{k}{if} \PYG{o}{(}\PYG{n}{obj} \PYG{k}{instanceof} \PYG{n}{ShellPlugin}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+	\PYG{k}{return} \PYG{n}{Optional}\PYG{o}{.}\PYG{n+na}{of}\PYG{o}{((}\PYG{n}{ShellPlugin}\PYG{o}{)} \PYG{n}{obj}\PYG{o}{);}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{o}{\PYGZcb{}}
+	\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

@@ -1158,48 +1158,48 @@ PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
-\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Každý krok budeme popisovať jednou z nasledovných možností alebo kombináciou : pomocou diagramu aktivít, diagramu tried, pseudokódom prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Rozhrania používané aplikáciou sú uvedené v prílohe C.
+\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu problematiky jednotnej platformy určenej na vytváranie skrípt. Kapitola postupne definuje jednotlivé kroky implementácie riešenia. Každý krok je popísaný jednou z nasledovných možností alebo ich kombináciou: pomocou diagramu aktivít, diagramu tried, pseudokódom, prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rozdelili na základe toho, akými smermi sa môže aplikácia uberať. Rozhrania, ktoré aplikácia používa, sú uvedené v prílohe C.
 \subsection{Hlavná trieda aplikácie - AbstractScope}
-Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov, a tiež príkazov v interaktívnom móde. Obsahuje informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu a inštanciu exekútora, pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda má tiež informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov pre vstupné parametre funkcií ako aj ich návratová hodnota. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), ktorá slúži na rekurzívne volanie funkcií v skriptovacom móde a  spúšťanie ich príkazov.
-Implementuje funkciu runInputCommands() pomocou ktorej je aplikácia spustená ak na vstupe akékoľvek vstupné parametre. Túto funkcionalitu sme pridali z dôvodu integrácie s inými aplikáciami. 
+Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov, ako aj príkazov v interaktívnom móde. Obsahuje informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu a inštanciu exekútora, pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda má tiež informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov pre vstupné parametre funkcií, ako aj ich návratová hodnota. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), ktorá slúži na rekurzívne volanie funkcií v skriptovacom móde a spúšťanie ich príkazov.
+Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená ak má na vstupe akékoľvek vstupné parametre. Túto funkcionalitu sme pridali z dôvodu integrácie s inými aplikáciami. 
 \subsubsection{run}
-\indent Táto metóda sa volá iba raz a to po štarte aplikácie. V cykle si od používateľa získava vstupy, ktoré sa následne pokúša vykonať. Ak aplikácia nedokáže príkaz vykonať vypíše chybu do konzoly.
+\indent Táto metóda sa volá iba raz a to po štarte aplikácie. V cykle od používateľa získava vstupy, ktoré sa následne pokúša vykonať. Ak aplikácia nedokáže príkaz vykonať, vypíše chybu do konzoly.
 \subsubsection{executeScript}
-\indent Je funkcia pomocou ktorej sa spúšta beh jednotlivých funkcií skriptu. Je definovaná všeobecne pre akýkoľvek scope, samozrejme v prípade, že novému scopu rozsah metódy nepostačuje je potrebné ju prepísať v triede ktorá je odvodená od AbstractScope. Základný algoritmus pre beh skriptov je popísaný v nižšie priloženom pseudokóde.
+\indent Je funkcia, pomocou ktorej sa spúšta beh jednotlivých funkcií skriptu. Je definovaná všeobecne pre akýkoľvek scope, samozrejme v prípade, ak novému scopu rozsah metódy nepostačuje je potrebné ju prepísať v triede, ktorá je odvodená od AbstractScope. Základný algoritmus pre beh skriptov je opísaný v nižšie priloženom pseudokóde.
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
-executeScript(String function, ScopeVariables scopeVariables) {
-  executeGlobalCommands();
-  fName = getFunctionName();
-  Scope parent =  this.getParent();
-
-  Scope functionScope = parent.functions.get(fName);
-  setFunctionscopeVariables(scopeVariables.clone());
-
-  for (String command : functionScope.stack) {
+	executeScript(String function, ScopeVariables scopeVariables) {
+	executeGlobalCommands();
+	fName = getFunctionName();
+	Scope parent =  this.getParent();
+	
+	Scope functionScope = parent.functions.get(fName);
+	setFunctionscopeVariables(scopeVariables.clone());
+	
+	for (String command : functionScope.stack) {
 	if (command.startsWith("$(")) {
-		out = executor.execute(command, functionScope);
-		if (command.contains("returnValue = ")) {
-			setReturnValue();
-		}else{
-		  writeOutputs(out);
-		}
-	} else if (command.startsWith("fcall ")) {
-		if(functionHasReturnValue(command)){
-		  setCallParameters();
-		  executeScript(function, getVariables());
-		  getReturnValue();
-		}else{
-		  executeScript(function, getVariables());
-		}
+	out = executor.execute(command, functionScope);
+	if (command.contains("returnValue = ")) {
+	setReturnValue();
+	}else{
+	writeOutputs(out);
 	}
-}
-\end{minted}
-\caption{Pseudokód všeobecnej implementácie spúšťania funkcií}
-\label{alg:gen}
+	} else if (command.startsWith("fcall ")) {
+	if(functionHasReturnValue(command)){
+	setCallParameters();
+	executeScript(function, getVariables());
+	getReturnValue();
+	}else{
+	executeScript(function, getVariables());
+	}
+	}
+	}
+	\end{minted}
+	\caption{Pseudokód všeobecnej implementácie spúšťania funkcií}
+	\label{alg:gen}
 \end{algorithm}
 \subsection{Štart aplikácie}
-\indent  Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.3. Po inicializácii premenných sa nám vytvorí inštancia triedy ScopeImpl,ktorá je implenáciou AbstractScope tiredy, ktorú sme si predstavili v predchádzajúcej sekcii práce. V ďalšom kroku aplikácia zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
+\indent  Na nasledujúcom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu, aplikácia sa najprv nainicializuje, čo vysvetlíme v sekcii 4.3. Po inicializácii premenných sa vytvorí inštancia triedy ScopeImpl, ktorá je implementáciou AbstractScope triedy, charakterizovaná v predchádzajúcej sekcii práce. V ďalšom kroku aplikácia overí, či má na vstupe parametre. V prípade, ak áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti popíšeme čo sa deje v prvom prípade, a teda že máme zadané parametre. 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/System.jpg}
@@ -1207,10 +1207,10 @@ executeScript(String function, ScopeVariables scopeVariables) {
 	\label{fig:test}
 \end{figure}
 \subsubsection{Štart s parametrami}
-\indent Možnosť s parametrami na vstupe sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. Tie môžu buď čítať výstupy priamo z konzoly alebo si ich môžu presmerovať do súboru. Novo vytvorený súbor si následne môžu načítať a vykonať nad ním potrebné operácie.
+\indent Možnosť s parametrami na vstupe sme implementovali z dôvodu aby sa aplikácia dala integrovať s inými enterprise aplikáciami, ktoré môžu buď čítať výstupy priamo z konzoly, alebo ich môžu presmerovať do súboru. Novovytvorený súbor je následne možné načítať a vykonať nad ním potrebné operácie.
 \newpage
 \subsection{Inicializácia aplikácie}
-\indent Inicializácia pozostáva z dvoch krokov :
+\indent Inicializácia pozostáva z dvoch krokov:
 \begin{itemize}
 	\item Nahranie dostupných pluginov z disku,
 	\item Získanie inštancie exekútora - ExecutorImpl.
@@ -1221,73 +1221,73 @@ executeScript(String function, ScopeVariables scopeVariables) {
 	\caption{Activita inicializácie aplikácie}
 	\label{fig:test}
 \end{figure}
-\subsubsection{Nahrávanie pluginov}
-\indent Nahrávanie pluginov má na starosti trieda PluginFactory a JarLoader, proces nahratia pozostáva z troch krokov.\newline
-\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom, ktoré musia byť uložene na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde pokúsi sa z nej vytvoriť inštanciu pomocou reflexie a takto vytvorenú inštanciu následne vracia triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
+\subsubsection{Načítanie pluginov}
+\indent Načítanie pluginov sa uskutočňuje pomocou triedy PluginFactory a JarLoader, kde tento proces pozostáva z troch krokov.\newline
+\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
-try {
- URLClassLoader cl = URLClassLoader.newInstance(urls);
- JarInputStream jarFile = new JarInputStream(new FileInputStream(jarPath
- .toFile()));
-   while (true) {
-   jarEntry = jarFile.getNextJarEntry();
-   if (jarEntry == null) {
-     break;
-   }
-   if (jarEntry.getName().endsWith(".class")) {
-     String className = jarEntry.getName()
-     .substring(0, jarEntry.getName().length() - 6);
-     className = className.replace('/', '.');
-     Class c = cl.loadClass(className);
-     Object obj = c.newInstance();
-     if (obj instanceof ShellPlugin) {
-       return Optional.of((ShellPlugin) obj);
-     }
-   }
-}
+	try {
+	URLClassLoader cl = URLClassLoader.newInstance(urls);
+	JarInputStream jarFile = new JarInputStream(new FileInputStream(jarPath
+	.toFile()));
+	while (true) {
+	jarEntry = jarFile.getNextJarEntry();
+	if (jarEntry == null) {
+	break;
+	}
+	if (jarEntry.getName().endsWith(".class")) {
+	String className = jarEntry.getName()
+	.substring(0, jarEntry.getName().length() - 6);
+	className = className.replace('/', '.');
+	Class c = cl.loadClass(className);
+	Object obj = c.newInstance();
+	if (obj instanceof ShellPlugin) {
+	return Optional.of((ShellPlugin) obj);
+	}
+	}
+	}
 	\end{minted}
-	\caption{Ukážka loadovania balíčka z disku počítača}
+	\caption{Ukážka načítania balíčka z disku počítača}
 	\label{alg:gen}
 \end{algorithm}
 \paragraph{Načítanie dostupých pluginov z aplikácie}
-\indent Pluginy môžu byť definované priamov a plikácii. V tomto prípade priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informáciách o nich. 
+\indent Pluginy môžu byť definované priamo v aplikácii. V takom prípade, priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informácie o nich. 
 \paragraph{Finálne načítanie pluginov}
-\indent Používateľ môže počas využívania aplikácie, stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohoto dôvodu sme naimplementovali  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
+\indent Používateľ môže počas využívania aplikácie stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohto dôvodu sme navrhli  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
 \subsection{Vykonávač príkazov}
-\indent Všetky príkazy, ktoré sa majú pomocou aplikácie vykonať sa spúšťajú pomocou triedy ExecutorImpl, ktorá implementuje metódu rozhrania Executor CommandIO execute(String command, Scope scope). Rozhodovacia logika ako sa príkazy od používateľa budú vykonávať je implementovaná práve v tejto metóde. Pre zjednodušenie opisu si pomôžem pseudokódom rozhodovacieho algoritmu. Zo pseudokódu jasne vidieť, že exekútor si najskôr zistí či príkaz neobsahuje znaky pajpy, presmerovania štandardného vstupu/výstupu. Následne identifikuje čím sa príkaz začína a vyberie vhodnú metódu pre zadaný príkaz. Po vykonaní príkazu sa zistuje či sa má výstup z programu zapísať mimo štandardného vstupu alebo výstupu. Ak áno program očakáva valídnu cestu za oddeľovačmi stdout> \acrshort{resp.} stderr> kde sa pokúsi zapísať svoj výstup do súboru. Diagram tried je uvedený v prílohe D.
+\indent Všetky príkazy, ktoré sa majú pomocou aplikácie vykonať sa spúšťajú pomocou triedy ExecutorImpl, ktorá implementuje metódu rozhrania Executor CommandIO execute(String command, Scope scope). Rozhodovacia logika, ako sa príkazy od používateľa budú vykonávať, je implementovaná práve v tejto metóde. Pre zjednodušenie opisu si pomôžeme pseudokódom rozhodovacieho algoritmu. Zo pseudokódu je zrejmé, že exekútor najskôr zistí, či príkaz neobsahuje znaky pajpy, presmerovania štandardného vstupu/výstupu. Následne identifikuje čím sa príkaz začína a vyberie vhodnú metódu pre zadaný príkaz. Po vykonaní príkazu zisťuje či sa má výstup z programu zapísať mimo štandardného vstupu alebo výstupu. Ak áno, program očakáva platnú cestu za oddeľovačmi stdout> \acrshort{resp.} stderr>, kde sa pokúsi zapísať svoj výstup do súboru. Diagram tried je uvedený v prílohe D.
 \begin{algorithm}[H]
 	\begin{minted}[]{php}
-isPipe = isPipe(command);
-writeStd = shouldWriteStd(command);
-writeErr = shouldWriteErr(command);
-if (command.startsWith("sh ") 
-|| command.startsWith("win ") 
-|| command.startsWith("ext ")){
-  out = executeNativeCommand(command);
-}else if (command.startsWith("./"){
-  out = loadAndExecuteScript(command, scope);
-}else if (command.startsWith("${")) {
-  out = getVariable(command, scope);
-}else if (command.startsWith("$(")){
-  if(isPipe){
-    executeCommandAsPipe(command, scope);
-  }else{
-    executeCommand(command, scope);
-  }
-}
-!writeStd ? saveToFile(out.getStdOut()) : out;
-!writeErr ? saveToFile(out.getErrOut()) : out;
+	isPipe = isPipe(command);
+	writeStd = shouldWriteStd(command);
+	writeErr = shouldWriteErr(command);
+	if (command.startsWith("sh ") 
+	|| command.startsWith("win ") 
+	|| command.startsWith("ext ")){
+	out = executeNativeCommand(command);
+	}else if (command.startsWith("./"){
+	out = loadAndExecuteScript(command, scope);
+	}else if (command.startsWith("${")) {
+	out = getVariable(command, scope);
+	}else if (command.startsWith("$(")){
+	if(isPipe){
+	executeCommandAsPipe(command, scope);
+	}else{
+	executeCommand(command, scope);
+	}
+	}
+	!writeStd ? saveToFile(out.getStdOut()) : out;
+	!writeErr ? saveToFile(out.getErrOut()) : out;
 	\end{minted}
 	\caption{Ukážka pseudokódu exekútora. }
 	\label{alg:gen}
 \end{algorithm}
 \newpage
 \subsubsection{Vykonávač príkazu}
-\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zobere command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope). Command následne predspracuje vstupy v metóde parseCommand(Stream<String> var). Metóda execute následne vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy.
+\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope). Command následne spracuje vstupy v metóde parseCommand(Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy.
 
 \subsubsection{Vykonávač pajpy}
-\indent Ak aplikácia rozoná, že v príkaze ide o pajpu, príkaz putuje do triedy PipeExecutor, kde sa rozparsuje na parciálne príkazy. Po rozprarsovaní príkazov sa každému príkazu nastaví nasledujúci príkaz, ktorý sa má vykonať. Posledný príkaz neobsahuje žiadnen ďalší. Po takomto prednastavení exekútora sa spustí vykonávanie prvého príkazu, jeho výstup je pri úspešnom ukončení presmerovaný ďalšiemu príkazu. Tento kolobeh pokračuje až kým sa nedostane k poslednému príkazu. Ten následne vracia svoj výstup exekútoru z 4.1.
+\indent Ak aplikácia rozozná, že v príkaze ide o pajpu, príkaz putuje do triedy PipeExecutor, kde sa rozparsuje na parciálne príkazy. Po rozparsovaní príkazov sa každému príkazu nastaví nasledujúci príkaz, ktorý sa má vykonať. Posledný príkaz neobsahuje žiadny ďalší. Po takomto prednastavení exekútora sa spustí vykonávanie prvého príkazu, jeho výstup je pri úspešnom ukončení presmerovaný ďalšiemu príkazu. Tento kolobeh pokračuje až kým sa nedostane k poslednému príkazu. Ten následne vracia svoj výstup exekútorovi z 4.1.
 \subsubsection{Vykonávač skriptu}
 \indent je popísaný v časti 4.1.2 tejto práce. Pre detailné pochopenie tejto metódy je potrebné aby si človek prezrel priložené zdojové kódy aplikácie.
 
