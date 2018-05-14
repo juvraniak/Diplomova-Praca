@@ -1369,15 +1369,23 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \subsubsection{Package plugin}
 \indent Package plugin je, rovnako ako Variable, príkladom kde na základe výstupov z command parsera aplikácia dokáže určiť, ktorý receiver použiť. Package command pozná tri receivery : download, change a delete. Download dokáže stiahnuť nový \acrshort{jar} súbor zo servera na základe vstupu od používateľa. Na jeho následné načítanie je potrebný reštart aplikácie. Change sa stará o manažovanie existujúcich pluginov. Ak je vstup zadaný v tvare pkg change <názov balíčka> <verzia> a balíček sa na \acrshort{pc} nachádza,  spolu s PluginFactory triedou zabezpečia, aby sa počas ďalšieho behu aplikácie používal špecifikovaný balíček. Delete receiver slúži na dočasné vypnutie špecifikovaného pluginu, nemá za úlohu fyzicky zmazať \acrshort{jar} z disku \acrshort{pc}. 
 \subsubsection{Grep plugin}
+\indent Plugin je momentálne implementovaný nasledovne : Command očakáva príkaz v tvare grep <filter> <riadky reťazcov>, jeho parser tieto riadky pospája do stringu a pošle Grep receiveru na filtráciu. Aktuálne sa príkaz spolieha, že na vstupe dostane riadky reťazcov, avšak v budúcnosti by bolo dobré aby tento receiver dokázal rozoznať aj príkazy, premenné, prípane cestu k súboru.
 \subsubsection{Echo plugin}
-\subsubsection{Copy plugin}
+\indent Tento plugin slúži na výpis do konzoly. Jeho syntax je echo (<vstupy>). Pod vstupmi môžeme rozumieť premenné, príkazy alebo textové reťazce, ktoré sú označené úvodzovkami. 
 \subsubsection{Change directory plugin}
+\indent  Tento plugin slúži na jednoduché presúvanie sa v adresárovom strome \acrshort{pc}. Presúvanie sa je pre používaťeľov Windowsu aj Linuxu intuitívne, nakoľko je implementované úplne rovnako ako na spomenutých \acrshort{os}.
 \subsubsection{Pwd plugin}
+\indent  Tento plugin sa používa  na vypísanie cesty aktuálneho adresára, v ktorom sa nachádzame.
 \subsubsection{List directory plugin}
+\indent  Tento plugin slúži na vypísanie obsahu adresára, v ktorom sa nachádzame, ale ak ako parameter vložíme platnú cestu vypíše obsah špecifikovaného súboru. V prípade, že plugin nedostane inštanciu scopu, ktorý obsahuje informáciu o aktuálnom adresári, je naprogramovaný aby vypísal obsah domovského adresára používateľa.
 \subsubsection{Copy plugin}
+\indent  Tento plugin slúži na jednoduché kopírovanie súborov z jedného miesta na druhé na disku \acrshort{pc}. Momentálna implementácia vyžaduje aby bol príkaz zadaný v tvare copy <zdrojová adresa> <cieľová adresa>. Neumožňuje kopírovanie viacerých súborov alebo adresárov naraz.
 \subsubsection{Move plugin}
+\indent  Tento plugin slúži na jednoduché presúvanie súborov z jedného miesta na druhé na disku \acrshort{pc}. Momentálna implementácia vyžaduje aby bol príkaz zadaný v tvare copy <zdrojová adresa> <cieľová adresa>. Neumožňuje presúvanie viacerých súborov alebo adresárov naraz.
 \subsubsection{Get processes plugin}
+\indent Tento plugin je naimplementovaný tak, aby po zadaní príkazu ps dokázal vypísať všetky bežiace procesy na \acrshort{pc}.
 \subsubsection{Get system information plugin}
+\indent Tento plugin je naimplementovaný tak, aby po zadaní príkazu getinfo dokázal vypísať čo možno najviac informácií o systéme, na ktorom beží. Informácie sa môžu na rôznych počítačoch odlišovať.
 \section{Zhodnotenie výsledkov}
 \indent Počas testovania aplikácie sme nenarazili na žiadne závažné problémy, pokiaľ sme dodržiavali zásady vymedzené v práci. 
 \newline
