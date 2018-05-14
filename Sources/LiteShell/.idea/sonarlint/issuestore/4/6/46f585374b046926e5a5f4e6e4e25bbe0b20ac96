@@ -1,10 +1,3 @@
 
-Gsquid:S3010"&Remove this assignment of "scopeName".(ÙÎ‚öüÿÿÿÿ8 šÃ£,
-Fsquid:S3010"*Remove this assignment of "pluginFactory".(æÀƒ¡8 šÃ£,
-Fsquid:S3010"%Remove this assignment of "executor".(ªÇÄ†ùÿÿÿÿ8 šÃ£,
-ksquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(†„Ñ8 šÃ£,
-Qsquid:S2209"5Change this instance-reference to a static reference.(î Ú‰8 šÃ£,
-Vsquid:S2209"5Change this instance-reference to a static reference.(ªÇÄ†ùÿÿÿÿ8 šÃ£,
-Qsquid:S2209"5Change this instance-reference to a static reference.(æÀƒ¡8 šÃ£,
-Bsquid:S3010"&Remove this assignment of "callStack".(î Ú‰8 šÃ£,
-Vsquid:S2209"5Change this instance-reference to a static reference.(ÙÎ‚öüÿÿÿÿ8 šÃ£,
+Œ"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Ó÷8«ºüÏµ,
+isquid:S1192"HDefine a constant instead of duplicating this literal "return " 4 times.(ÃÓ®üÿÿÿÿ8«ºüÏµ,

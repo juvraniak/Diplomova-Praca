@@ -1,0 +1,8 @@
+
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(÷À©8È¹µ¯µ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÊÃáûÿÿÿÿ8È¹µ¯µ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(çíÅ€ûÿÿÿÿ8È¹µ¯µ,
+Psquid:S3655"4Call "scope.isPresent()" before accessing the value.(èË®ó8È¹µ¯µ,
+Osquid:S1481"3Remove this unused "isScopePresent" local variable.(8È¹µ¯µ,
+_squid:S3358"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_8È¹µ¯µ,
+^squid:S1854"BRemove this useless assignment to local variable "isScopePresent".(8È¹µ¯µ,

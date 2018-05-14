@@ -1159,7 +1159,7 @@ PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
-\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Väčšinu krokov budeme popisovať pomocou activity a class diagramu, niektoré časti obohatíme o pseudokód prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1. V ďalšom kroku zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
+\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Každý krok budeme popisovať jednou z nasledovných možností alebo kombináciou : pomocou diagramu aktivít, diagramu tried, pseudokódom prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1. V ďalšom kroku zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
 \newline 
 \indent Možnosť s parametrami na vstupe sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. Tie môžu buď čítať výstupy priamo z konzoly alebo si ich môžu presmerovať do súboru. Novo vytvorený súbor si následne môžu načítať a vykonať nad ním potrebné operácie.
 \begin{figure}[!htbp]
@@ -1169,12 +1169,50 @@ JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplik
 	\label{fig:test}
 \end{figure}
 \subsection{Inicializácia aplikácie}
-\indent Pri inicializácii sa 
+\indent Inicializácia pozostáva z dvoch krokov :
+\begin{itemize}
+	\item Nahranie dostupných pluginov z disku,
+	\item Získanie inštancie exekútora - ExecutorImpl.
+\end{itemize}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=\linewidth]{img/System.jpg}
+	\includegraphics[width=\linewidth]{img/initialization.jpg}
 	\caption{Activita spustenia aplikácie}
 	\label{fig:test}
 \end{figure}
+\subsubsection{Nahrávanie pluginov}
+\indent Nahrávanie pluginov má na starosti trieda PluginFactory a JarLoader, proces nahratia pozostáva z troch krokov.\newline
+\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom, ktoré musia byť uložene na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde pokúsi sa z nej vytvoriť inštanciu pomocou reflexie a takto vytvorenú inštanciu následne vracia triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
+\begin{algorithm}
+	\begin{minted}[]{java}
+try {
+ URLClassLoader cl = URLClassLoader.newInstance(urls);
+ JarInputStream jarFile = new JarInputStream(new FileInputStream(jarPath
+ .toFile()));
+   while (true) {
+   jarEntry = jarFile.getNextJarEntry();
+   if (jarEntry == null) {
+     break;
+   }
+   if (jarEntry.getName().endsWith(".class")) {
+     String className = jarEntry.getName()
+     .substring(0, jarEntry.getName().length() - 6);
+     className = className.replace('/', '.');
+     Class c = cl.loadClass(className);
+     Object obj = c.newInstance();
+     if (obj instanceof ShellPlugin) {
+       return Optional.of((ShellPlugin) obj);
+     }
+   }
+}
+
+	\end{minted}
+	\caption{Ukážka loadovania balíčka z disku počítača}
+	\label{alg:gen}
+\end{algorithm}
+\paragraph{Načítanie dostupých pluginov z aplikácie}
+\indent Pluginy môžu byť definované priamov a plikácii. V tomto prípade priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informáciách o nich. 
+\paragraph{Finálne načítanie pluginov}
+\indent Používateľ môže počas využívania aplikácie, stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohoto dôvodu sme naimplementovali  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
 \section{Zhodnotenie výsledkov}
 Zatiaľ sa toho nespravilo hodne ale verím, že sa to tu cele zaplní.
