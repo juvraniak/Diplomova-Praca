@@ -9,12 +9,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import sk.stuba.dependency.DependencyResolver;
-import sk.stuba.plugins.JarLoader;
+import sk.stuba.executor.AbstractExecutor;
+
 import sk.stuba.plugins.PluginFactory;
 import terminal.common.scopes.Scope;
 
 public class ParserImpl implements Parser {
-
+	private static AbstractExecutor executor;
     @Override
     public void parse(String command, Scope scope) {
         if (command.startsWith("./")) {
@@ -28,7 +29,7 @@ public class ParserImpl implements Parser {
     	//added to generate class diagram
     	DependencyResolver dr = new DependencyResolver();
     	//in case there are some unknown dependencies we need to load them so JarLoader needed here as well.
-    	JarLoader.loadJar(Paths.get("", ""));
+    	
         Path path = Paths.get(command.substring(2, command.length() - 1));
         try (BufferedReader r = Files.newBufferedReader(path, Charset.defaultCharset())) {
             r.lines().forEach(System.out::println);

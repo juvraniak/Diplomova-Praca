@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 import javafx.util.Pair;
 import liteshell.commands.VariableCommand;
 import liteshell.commands.ios.CommandIO;
@@ -25,6 +26,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ExecutorImpl implements Executor {
 
+  boolean writeToStdOut;
+  boolean writeToStdErr;
+
   /**
    * use in not piped command
    *
@@ -39,7 +43,7 @@ public class ExecutorImpl implements Executor {
       executeCommand(command.substring(3));
     } else if (command.startsWith("win ") || command.startsWith("ext ")) {
       executeCommand(command.substring(4));
-    } else if (command.startsWith("./") && command.endsWith(".lsh")) {
+    } else if (command.startsWith("./")) {
       String path = validatePath(command.substring(1), scope);
       try {
         if (path == null) {

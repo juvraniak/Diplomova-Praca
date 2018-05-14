@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{	//telo skriptu}
+\PYG{x}{	\PYGZsh{}!/bin/bash}
+\PYG{x}{	i=0}
+\PYG{x}{	for cities}
+\PYG{x}{	do}
+\PYG{x}{	echo \PYGZdq{}City \PYGZdl{}((i++)) is: \PYGZdl{}cities\PYGZdq{}}
+\PYG{x}{	done}
+\PYG{x}{	exit 0}
+
+\PYG{x}{	//následné volanie z konzoly}
+\PYG{x}{	./for\PYGZhy{}pair\PYGZhy{}input.sh}
+\PYG{x}{	Belfast Redwood Milan Paris}
+\PYG{x}{	City 0 is: Belfast}
+\PYG{x}{	City 1 is: Redwood}
+\PYG{x}{	City 2 is: Milan}
+\PYG{x}{	City 3 is: Paris}
+\end{Verbatim}

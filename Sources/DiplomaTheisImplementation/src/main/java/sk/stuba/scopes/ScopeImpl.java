@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Map;
 import java.util.Stack;
 
+import sk.stuba.executor.AbstractExecutor;
 import sk.stuba.parser.ParserImpl;
 import sk.stuba.plugins.PluginFactory;
 import terminal.common.scopes.Scope;
@@ -17,7 +18,8 @@ import terminal.common.scopes.ScopeData;
  */
 
 public class ScopeImpl implements Scope {
-
+	private static ScopeData scopeData;
+	private static AbstractExecutor executor;
     private static String scopeName;
     private static Stack callStack;
     private static PluginFactory pluginFactory;
@@ -63,6 +65,10 @@ public class ScopeImpl implements Scope {
         }
     }
 
+    public void executeScript(String function, ScopeData scopeVariables) {
+    	
+    }
+    
     @Override
     public terminal.common.scopes.ScopeData getScopeData() {
         return scopeData;
