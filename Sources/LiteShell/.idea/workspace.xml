@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/bibliography.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -181,17 +185,29 @@
       <file leaf-file-name="RootParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+            <state relative-caret-position="1447">
+              <caret line="131" column="29" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForScope.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ForScope.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="291">
+              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IfScope.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -250,8 +266,8 @@
       <find>execute</find>
       <find>loader</find>
       <find>executesc</find>
-      <find>parse</find>
       <find>for</find>
+      <find>parse</find>
     </findStrings>
     <replaceStrings>
       <replace>ls</replace>
@@ -2203,7 +2219,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1079" />
@@ -2844,7 +2860,7 @@
       <workItem from="1525977756544" duration="33922000" />
       <workItem from="1526140079391" duration="2724000" />
       <workItem from="1526151984440" duration="7481000" />
-      <workItem from="1526280249261" duration="14682000" />
+      <workItem from="1526280249261" duration="16152000" />
     </task>
     <servers />
   </component>
@@ -2881,7 +2897,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508246000" />
+    <option name="totallyTimeSpent" value="509716000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2893,7 +2909,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1079" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -2919,7 +2935,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" weight="0.49944875" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32998747" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32873276" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3544776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4064792" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32998747" />
       <window_info anchor="bottom" id="SonarLint" order="12" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873276" />
@@ -3332,16 +3348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="95" column="28" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/scopes/ScopeVariables.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -3525,15 +3531,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+        <state relative-caret-position="1447">
+          <caret line="131" column="29" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/ForScope.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="291">
+          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/scopes/IfScope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

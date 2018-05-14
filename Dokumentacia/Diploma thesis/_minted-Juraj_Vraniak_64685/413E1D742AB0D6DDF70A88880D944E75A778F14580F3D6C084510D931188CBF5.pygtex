@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{if} \PYG{o}{(}\PYG{n}{evalueateCondition}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+	  \PYG{c+c1}{// For cyklus z abstract scopu obohatený o break}
+	\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

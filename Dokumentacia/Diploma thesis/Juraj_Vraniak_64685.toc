@@ -168,78 +168,82 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.7}Plugin}{39}{subsection.132}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8}Diagram tried aplik\IeC {\'a}cie}{41}{subsection.134}
+\contentsline {subsection}{\numberline {3.8}Diagram tried aplik\IeC {\'a}cie}{42}{subsection.134}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.8.1}Stru\IeC {\v c}n\IeC {\'y} popis tried}{41}{subsubsection.136}
+\contentsline {subsubsection}{\numberline {3.8.1}Stru\IeC {\v c}n\IeC {\'y} popis tried}{42}{subsubsection.136}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.1}ScopeImpl}{41}{paragraph.137}
+\contentsline {paragraph}{\numberline {3.8.1.1}ScopeImpl}{42}{paragraph.137}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.2}AbstractExecutor}{42}{paragraph.138}
+\contentsline {paragraph}{\numberline {3.8.1.2}AbstractExecutor}{43}{paragraph.138}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.3}ParserImpl}{42}{paragraph.139}
+\contentsline {paragraph}{\numberline {3.8.1.3}ParserImpl}{43}{paragraph.139}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.4}PluginFactory}{42}{paragraph.140}
+\contentsline {paragraph}{\numberline {3.8.1.4}PluginFactory}{43}{paragraph.140}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {3.8.1.5}JarLoader}{42}{paragraph.141}
+\contentsline {paragraph}{\numberline {3.8.1.5}JarLoader}{43}{paragraph.141}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{43}{section.142}
+\contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{44}{section.142}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Hlavn\IeC {\'a} trieda aplik\IeC {\'a}cie - AbstractScope}{43}{subsection.143}
+\contentsline {subsection}{\numberline {4.1}Hlavn\IeC {\'a} trieda aplik\IeC {\'a}cie - AbstractScope}{44}{subsection.143}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}run}{43}{subsubsection.144}
+\contentsline {subsubsection}{\numberline {4.1.1}run}{44}{subsubsection.144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}executeScript}{43}{subsubsection.145}
+\contentsline {subsubsection}{\numberline {4.1.2}executeScript}{44}{subsubsection.145}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}\IeC {\v S}tart aplik\IeC {\'a}cie}{44}{subsection.147}
+\contentsline {subsubsection}{\numberline {4.1.3}ForScope}{45}{subsubsection.147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}\IeC {\v S}tart s parametrami}{45}{subsubsection.149}
+\contentsline {subsubsection}{\numberline {4.1.4}IfScope}{46}{subsubsection.149}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Inicializ\IeC {\'a}cia aplik\IeC {\'a}cie}{46}{subsection.150}
+\contentsline {subsection}{\numberline {4.2}\IeC {\v S}tart aplik\IeC {\'a}cie}{46}{subsection.151}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}Na\IeC {\v c}\IeC {\'\i }tanie pluginov}{46}{subsubsection.152}
+\contentsline {subsubsection}{\numberline {4.2.1}\IeC {\v S}tart s parametrami}{47}{subsubsection.153}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.1}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z disku}{46}{paragraph.153}
+\contentsline {subsection}{\numberline {4.3}Inicializ\IeC {\'a}cia aplik\IeC {\'a}cie}{48}{subsection.154}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.2}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z aplik\IeC {\'a}cie}{47}{paragraph.155}
+\contentsline {subsubsection}{\numberline {4.3.1}Na\IeC {\v c}\IeC {\'\i }tanie pluginov}{48}{subsubsection.156}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.3.1.3}Fin\IeC {\'a}lne na\IeC {\v c}\IeC {\'\i }tanie pluginov}{47}{paragraph.156}
+\contentsline {paragraph}{\numberline {4.3.1.1}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z disku}{48}{paragraph.157}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazov}{47}{subsection.157}
+\contentsline {paragraph}{\numberline {4.3.1.2}Na\IeC {\v c}\IeC {\'\i }tanie dostup\IeC {\'y}ch pluginov z aplik\IeC {\'a}cie}{49}{paragraph.159}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazu}{49}{subsubsection.159}
+\contentsline {paragraph}{\numberline {4.3.1.3}Fin\IeC {\'a}lne na\IeC {\v c}\IeC {\'\i }tanie pluginov}{49}{paragraph.160}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Vykon\IeC {\'a}va\IeC {\v c} pajpy}{49}{subsubsection.160}
+\contentsline {subsection}{\numberline {4.4}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazov}{49}{subsection.161}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Vykon\IeC {\'a}va\IeC {\v c} skriptu}{49}{subsubsection.161}
+\contentsline {subsubsection}{\numberline {4.4.1}Vykon\IeC {\'a}va\IeC {\v c} pr\IeC {\'\i }kazu}{51}{subsubsection.163}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Parser skriptov}{49}{subsection.162}
+\contentsline {subsubsection}{\numberline {4.4.2}Vykon\IeC {\'a}va\IeC {\v c} pajpy}{51}{subsubsection.164}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.1}Predspracovanie}{49}{subsubsection.163}
+\contentsline {subsubsection}{\numberline {4.4.3}Vykon\IeC {\'a}va\IeC {\v c} skriptu}{51}{subsubsection.165}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.2}Parsovanie}{50}{subsubsection.164}
+\contentsline {subsection}{\numberline {4.5}Parser skriptov}{51}{subsection.166}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.3}Parsovanie funkci\IeC {\'\i }}{50}{subsubsection.165}
+\contentsline {subsubsection}{\numberline {4.5.1}Predspracovanie}{51}{subsubsection.167}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.4}Parsovanie for cyklov}{51}{subsubsection.166}
+\contentsline {subsubsection}{\numberline {4.5.2}Parsovanie}{52}{subsubsection.168}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.5}Parsovanie podmienok}{51}{subsubsection.167}
+\contentsline {subsubsection}{\numberline {4.5.3}Parsovanie funkci\IeC {\'\i }}{52}{subsubsection.169}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.6}V\IeC {\'y}sledok parsovania}{51}{subsubsection.168}
+\contentsline {subsubsection}{\numberline {4.5.4}Parsovanie for cyklov}{53}{subsubsection.170}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6}Implementovan\IeC {\'e} pluginy}{51}{subsection.170}
+\contentsline {subsubsection}{\numberline {4.5.5}Parsovanie podmienok}{53}{subsubsection.171}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{53}{section.171}
+\contentsline {subsubsection}{\numberline {4.5.6}V\IeC {\'y}sledok parsovania}{53}{subsubsection.172}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'{a}ver}{54}{section*.172}
+\contentsline {subsection}{\numberline {4.6}Implementovan\IeC {\'e} pluginy}{53}{subsection.174}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{55}{section*.173}
+\contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{54}{section.175}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pr\'{i}lohy}{I}{section*.174}
+\contentsline {section}{Z\'{a}ver}{56}{section*.176}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.176}
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{57}{section*.177}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.179}
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.178}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.182}
+\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.180}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.186}
+\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.183}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.186}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.190}

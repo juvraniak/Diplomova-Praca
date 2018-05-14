@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{setScopeVariables}\PYG{o}{(}\PYG{n}{scopeVariables}\PYG{o}{);}
+\PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{getStart}\PYG{o}{();} \PYG{n}{evalueateCondition}\PYG{o}{();} \PYG{n}{i} \PYG{o}{=} \PYG{n}{evalueateIncremet}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+  \PYG{c+c1}{// for cyklus z abstract scopu obohatený o break}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}
