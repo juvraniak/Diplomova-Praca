@@ -1,4 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{\PYGZsh{}!/bin/bash}
 \PYG{x}{// prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu}
 \PYG{x}{for placeholder in list\PYGZus{}of\PYGZus{}items}
 \PYG{x}{do}

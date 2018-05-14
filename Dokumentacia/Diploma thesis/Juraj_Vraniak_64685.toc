@@ -34,9 +34,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {1.1.4.2}Podiel na trhu}{3}{paragraph.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.5}Grafy}{4}{subsubsection.18}
+\contentsline {subsubsection}{\numberline {1.1.5}Porovnanie podielov opera\IeC {\v c}n\IeC {\'y}ch syst\IeC {\'e}mov}{4}{subsubsection.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Programovacie jazyky}{6}{subsection.23}
+\contentsline {subsection}{\numberline {1.2}Programovacie jazyky}{4}{subsection.23}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.1}Shell}{6}{subsubsection.24}
 \defcounter {refsection}{0}\relax 
@@ -160,7 +160,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.2.2.2}Upravova\IeC {\v t} existuj\IeC {\'u}ce bal\IeC {\'\i }\IeC {\v c}ky}{38}{paragraph.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Java}{38}{subsection.129}
+\contentsline {subsection}{\numberline {3.3}V\IeC {\'y}ber programovacieho jazyka}{38}{subsection.129}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4}Aplik\IeC {\'a}cia}{39}{subsection.130}
 \defcounter {refsection}{0}\relax 
@@ -186,16 +186,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Implement\IeC {\'a}cia}{44}{section.144}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Implement}{44}{subsection.146}
+\contentsline {subsection}{\numberline {4.1}Inicializ\IeC {\'a}cia aplik\IeC {\'a}cie}{45}{subsection.146}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{45}{section.147}
+\contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{46}{section.148}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'{a}ver}{46}{section*.148}
+\contentsline {section}{Z\'{a}ver}{47}{section*.149}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{47}{section*.149}
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{48}{section*.150}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pr\'{i}lohy}{I}{section*.150}
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.151}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou}{II}{section.152}
+\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou}{II}{section.153}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.155}
+\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.156}

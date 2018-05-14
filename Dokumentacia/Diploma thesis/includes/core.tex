@@ -27,12 +27,12 @@
 \subsubsection{Linux}
 \indent  Linux je všeobecný názov pre širokú zostavu Linux distribúcií, ktoré používajú Linux Kernel. Linux Kernel bol prvýkrát verejnosti predstavený v roku 1991 a odvtedy bol rozšírený na najviac platforiem. Momentálne je jediným používaným operačným systémom na TOP 500 superpočítačoch (mainframe). Skriptovacím jazykom pre Linux je Unix Shell resp. jeho najrozšírenejšia forma Bash.
 \paragraph{Predinštalovaný softvér}
-\indent Predinštalovaný softvér vo väčšine distribúciách Linuxu sú Bash, Open JDK - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .net frameworku.
+\indent Predinštalovaný softvér vo väčšine distribúciách Linuxu sú Bash, Open JDK - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .NET frameworku.
 \paragraph{Podiel na trhu}
 \indent Linux je k dispozícii v mnohých formách, tak aby vyhovoval rôznym potrebám, od spotrebiteľsky orientovaných systémov pre domáce použitie až po distribúcie použiteľné v špecifických odvetviach. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 1,66\% resp.  1,93\%.
 Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
-\subsubsection{Grafy}
-\indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov, ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov, z ktorého vidíme, že unixové a linuxové servery zvyšujú svoje podiely na trhu. Naopak, Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyššie hodnotenie.
+\subsubsection{Porovnanie podielov operačných systémov}
+\indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov, ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov, z ktorého vidíme, že unixové a linuxové servery zvyšujú svoje podiely na trhu. Naopak, Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyššie hodnotenie. Je potrebné dodať, že percentá na posledných dvoch obrázkoch pre Unix a Linux, nemožeme sčítavať, nakoľko na w3techs berú Linux ako podmnožinu Unix \acrshort{os}. Teda napríklad štatistika z predposledného obrázku hovorí, že podiel Unixu na trhu je 68\% z toho väčšiu časť tvorí práve \acrshort{os} Linux s 41.1\% podielom.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/statcounter.png}
@@ -63,7 +63,7 @@ Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% poč
 \end{figure}
 
 \subsection{Programovacie jazyky}
-\indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stoji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
+\indent S príchodom osobných počítačov no najmä serverov, sa programátori zaujímali o automatizáciu procesov, ktoré na danom stroji bolo spočiatku potrebné spúšťať manuálne. Nakoľko tieto úlohy neboli na toľko komplexné ako samotné programy, ktoré spúštali bolo vhodné na tieto úlohy využiť/vytvoriť skriptovacie jazyky. V nasledujúcej časti si priblížime zopár programovacích jazykov, ktoré sa v dnešnej dobe bežne používajú na tvorbu automatizovaných skriptov.
 
 \subsubsection{Shell}
 \indent
@@ -72,7 +72,7 @@ Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznym
 \paragraph{Výhody}
 \begin{itemize}
 	\item automatizácia často opakujúcich sa úloh
-	\item dokáže zbiehať zloťité zloťené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov
+	\item dokáže zbiehať zložité zložené príkazy ako jednoriadkový príkaz  - tzv. reťazenie príkazov
 	\item ľahký na používanie
 	\item výborné manuálové stránky
 	\item ak hovoríme o Unix shelli je portabilný naprieč platformami linuxu-unixu
@@ -81,28 +81,29 @@ Je skriptovacím jazykom pre unixové distribúcie. Počas rokov prešiel roznym
 \end{itemize}
 \paragraph{Nevýhody}
 \begin{itemize}
-	\item asi najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existuju iba rozne emulátory a nástroje tretích strán, ktoré sprostredkujú jeho funkcionalitu.
-	\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi
-	\item nový proces pre skoro každý spustený príkaz
-	\item zložitejší na pamatanie si rôznych prepínačov, ktoré dané príkazy podporujú
-	\item nejednotnosť prepínočov(hoc to by asi ani nešlo)
-	\item neprenosný medzi platformami
-	\item shell nepridáva vlastné príkazy, používa iba tie, ktoré sú dostupné na konkrétnom počítači
+	\item najväčšou nevýhodou je ze natívne nefunguje pod windowsom, existujú iba rôzne emulátory a nástroje tretích strán, ktoré sprostredkujú jeho funkcionalitu,
+	\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi,
+	\item nový proces pre skoro každý spustený príkaz,
+	\item zložitejší na pamätanie si rôznych prepínačov, ktoré dané príkazy podporujú,
+	\item nejednotnosť prepínočov(hoc to by asi ani nešlo),
+	\item neprenosný medzi platformami,
+	\item shell nepridáva vlastné príkazy, používa iba tie, ktoré sú dostupné na konkrétnom počítači.
 \end{itemize}
 \paragraph{Popis a zhodnotenie jazyka}
 \indent
-Unix Shell je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky linuxove, unixové servery využívajú práve tento jazyk ako svoj primárny. V nasledujujucich častiach budem popisovať Bash, ktorý je najrozšírenejšia verzia Unix shellu. Medzi jeho silné stránky patrí jednoduchá manipulácia s crontable, pomocou ktorej vie admin jednoducho planovať beh procesov. Ďalšou zaujímavou vymoženosťou jazyka je pajpa. Pajpa je klasickým príkladom vnútro-procesorovej komunikácie : odovzdáva štandardný výstup "stdout" procesu na štandardný vstup "stdin"iného procesu, viď príklad.
+Unix Shell je obľúbeným scriptovacím jazykom, vhodným na automatizovanie každodenných operácií. Je jedným z najpoužívanejších skriptovacích jazykou vôbec, nakoľko všetky Linuxové, Unixové servery využívajú práve tento jazyk ako svoj primárny. V nasledujújucich častiach budem popisovať Bash, ktorý je najrozšírenejšia verzia Unix shellu. Zaujímavou vymoženosťou jazyka je pajpa. Pajpa je klasickým príkladom vnútro-procesorovej komunikácie : odovzdáva štandardný výstup "stdout" procesu na štandardný vstup "stdin" iného procesu, viď príklad.
 \begin{minted}[]{php}
 	zarrelli:~\$ ls -lah | wc -l
 	35
 \end{minted}
-V uvedenom príklade sme vylistovali obsah adresára v ktorom sa práve nachádzame a výstupom z programu sme naplnili štandardný vstup aplikácie "wc" ktorá spočíta, koľko riadkov sa nachádza vo vstupe, ktorý jej bol dodaný. Príkaz za znakom pajpy "|" beží v subshelli, čo znamená, že nebude schopný zmodifikované hodnoty v rodičovskom procese. Zlyhanie príkazu v pajpe vedie k takzvanej "zlomenej pajpe", v tomto prípade exekúcia príkazov skončí. \cite{mbash}
+V uvedenom príklade sme vylistovali obsah adresára v ktorom sa práve nachádzame a výstupom z programu sme naplnili štandardný vstup aplikácie "wc" ktorá spočíta, koľko riadkov sa nachádza na vstupe, ktorý jej bol dodaný. Príkaz za znakom pajpy "|" beží v subshelli, čo znamená, že nebude schopný zmodifikovať hodnoty v rodičovskom procese. Zlyhanie príkazu v pajpe vedie k takzvanej "zlomenej pajpe", v tomto prípade exekúcia príkazov skončí. \cite{mbash}
 \newpage
 Taktiež niektoré často používané príkazy majú pozmenený spôsob zápisu.
 Ako príklad si uvedieme príkaz for, pri ktorom bash používa nsledovnú syntax:
 
 \begin{algorithm}
 	\begin{minted}{php}
+#!/bin/bash
 // prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
 for placeholder in list_of_items
 do
@@ -206,19 +207,16 @@ Najvačsia nevýhoda je, že ani shell script nieje jazyk, ktorý by bol multipl
 
 \subsubsection{Powershel/Classic command line}
 \indent  
-Command line je zakladnym skriptovacim jazykom pre windows distribucie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell. Powershell je kombináciou príkazového riadku, funkcionálneho programovania a objektovo orentovaného programovania. Je založený na .NET frameworku, ktorý mu dáva istú mieru flexibility, ktorá v 
-
-TODO: dpoisat dake sprostosti
-
-Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
+Command line je základným skriptovacím jazykom pre windows distribúcie, ktorý poskytuje malé API  pre svojich používateľov. Aj kôli tomu Miscrosoft prišiel s novým jazykom Powershell. Powershell je kombináciou príkazového riadku, funkcionálneho programovania a objektovo orentovaného programovania. Je založený na .NET frameworku, ktorý mu dáva istú mieru flexibility. 
+Jeho výhody a nevýhody si popíšeme v nasledujujúcich častiach.
 
 \paragraph{Výhody}
 \begin{itemize}
 	\item bohaté api
-	\item výborne riešeny run-time 
+	\item výborne riešený run-time 
 	\item flexibilný
 	\item veľmi jednoduché prepnúť z .NET frameworku
-	\item dokáže pridávať funkcionalitu používaním tired a funkcií z .net knižníc
+	\item dokáže pridávať funkcionalitu používaním tired a funkcií z .NET knižníc
 	\newline 
 \end{itemize}
 \paragraph{Nevýhody}
@@ -231,7 +229,7 @@ Jeho vyhody a nevyhody si popiseme v nasledujujucich castiach.
 \end{itemize}
 
 \paragraph{Popis a zhodnotenie jazyka}
-Powershell je obľúbený medzi programátormi a administrátormi, ktorý pracujú pod operačným systémom Windowsu. Do nedávna kým Pewrshell bežal na .NET frameworku ho nebolo možné používať mimo operačných systémov Windows, avšak s príchodom frameworku .NET Core sa situácia zmenila. Tento frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je doň možné prispievať. Okrem iného podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script a poskytuje v niektorých prípadoch rovnaké príkazy ako napríklad : mv, cp, rm, ls. Jednen zo zásadných rozdielov medzi Shellom a Powrshellom je ten, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať v Powershelli je všetko presúvané ako objekt. Po preštudovaní si materiálov jazyka z Mastering Windows PowerShell Scripting - Second Edition \cite{psbook}, ide o najzásadnejší rozdiel, nakoľko ostatné veci boli zrejme navrhované v spolupráci s používateľmi Shell scriptu.
+Powershell je obľúbený medzi programátormi a administrátormi, ktorý pracujú pod operačným systémom Windowsu. Do nedávna kým Pewrshell bežal na .NET frameworku ho nebolo možné používať mimo operačných systémov Windows, avšak s príchodom frameworku .NET Core sa situácia zmenila. Tento frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je doň možné prispievať. Okrem iného podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script a poskytuje v niektorých prípadoch rovnaké príkazy ako napríklad : mv, cp, rm, ls. Jednen zo zásadných rozdielov medzi Shellom a Powrshellom je ten, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať v Powershelli je všetko presúvané ako objekt. Ide o najzásadnejší rozdiel, nakoľko ostatné veci boli zrejme navrhované v spolupráci s používateľmi Shell scriptu. \cite{psbook}
 
 Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi prikladám nasledovný príklad.
 \newpage
@@ -288,7 +286,7 @@ Pre demonštráciu rozdielov pri odovzdávaní si parametrov medzi príkazmi pri
 \end{itemize}
 
 \paragraph{Popis a zhodnotenie jazyka}
-\indent Ako sme spomínali Python je jeden z najobľúbenejších jazykov súčastnosti, veľkú časť tejto komunity tvoria vedci, ktorý nemajú rozsiahle programátorské znalosti. Práve jednoduchosť, čitateľnosť a pochopiteľnosť jazyka sa nemalou mierou podieľajú na tomto fakte. Taktiež tu nieje nutné manažovať pamäť a iné netriviálne záležitosti ničších programovacích jazykov. Jazyk je síce objektovo orientovaný no jednoducho sa v ňom píšu aj skripty.  Jazyk poskytuje štruktúry ako pipa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Veľkou výhodou tohoto jazyka je, že je open source s veľkou komunitou, ktorá rada testuje nové vydania, nahlasujú problímy a tým pádom sa jazyk rýchlejšie a kvalitnejšie vyvíja. Na Pythone vznikli zaujímave webové framworky ako napríklad Django. Každá strana má dve mince a ani Python nie je stopercentný. Tým, že je to interpretovaný jazyk neprekypuje rýchlosťou. Veľa ľudí sa zaoberá rýchlosťou jazykov, zisťujú efektívnosť pri rôznych úkonoch ako napríklad cykly, volania funkcií, aritmetika, prístup k pamäti, vytváranie objektov. V nasledujúcich tabuľkách je vidno rozdiel v rýchlosti jednotlivých testov. 
+\indent Ako sme spomínali Python je jeden z najobľúbenejších jazykov súčastnosti, veľkú časť tejto komunity tvoria vedci, ktorý nemajú rozsiahle programátorské znalosti. Práve jednoduchosť, čitateľnosť a pochopiteľnosť jazyka sa nemalou mierou podieľajú na tomto fakte. Taktiež tu nieje nutné manažovať pamäť a iné netriviálne záležitosti ničších programovacích jazykov. Jazyk je síce objektovo orientovaný no jednoducho sa v ňom píšu aj skripty.  Jazyk poskytuje štruktúry ako pajpa, dokážeme v ňom jednoducho pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a odsymulovať rôzne problémy. Veľkou výhodou tohoto jazyka je, že je open source s veľkou komunitou, ktorá rada testuje nové vydania, nahlasujú problímy a tým pádom sa jazyk rýchlejšie a kvalitnejšie vyvíja. Na Pythone vznikli zaujímave webové framworky ako napríklad Django. Každá strana má dve mince a ani Python nie je stopercentný. Tým, že je to interpretovaný jazyk neprekypuje rýchlosťou. Veľa ľudí sa zaoberá rýchlosťou jazykov, zisťujú efektívnosť pri rôznych úkonoch ako napríklad cykly, volania funkcií, aritmetika, prístup k pamäti, vytváranie objektov. V nasledujúcich tabuľkách je vidno rozdiel v rýchlosti jednotlivých testov. 
 \begin{center}
 	\begin{table}[htbp]
 		\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
@@ -341,7 +339,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \end{figure}
 \newpage
 \subsubsection{Babun}
-\indent Babun je ďalším z množstva emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináľa vlasné gui, ktoré dokáže zafarbovať text podla zdrojoveho jazyka, čo zvyšuje prehľadnosť. Je tam git, svn, puython, perl. Tiež má integrované sťahovanie nových packagov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor čisto pre Windows distribúcie.\cite{babun}
+\indent Babun je ďalším z množstva emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináľa vlasné gui, ktoré dokáže zafarbovať text podla zdrojoveho jazyka, čo zvyšuje prehľadnosť. Obsahuje git, svn, puython, perl. Tiež má integrované sťahovanie nových packagov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor čisto pre Windows distribúcie.\cite{babun}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.4]{img/babun.jpeg}
@@ -1090,7 +1088,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 		
 	\end{longtable}
 \end{center}
-\subsection{Java}
+\subsection{Výber programovacieho jazyka}
 \indent Java je programovací jazyk a výpočtová platforma, ktorá bola vydaná spoločnosťou Sun Microsystems v roku 1995. \cite{java} 
 Programy v Jave sú prvotne preložené do tzv. byte-code, ktorý je rovnaký pre všetky \acrshort{pc}. Pomocou jednoduchého programu je byte-code preložený do jazyka, ktorému rozumie konrétny \acrshort{pc}.
 Java je objektovo-orientovaný programovací jazyk, čo znamená že rovnako ako v živote, aj v Jave je všetko tvorené objektami. Obsahuje široké spektrum knižníc, ktoré slúžia nielen na vývoj webových, ale aj desktopových aplikácií.
@@ -1098,16 +1096,16 @@ Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počí
 
 
 \subsection{Aplikácia}
-\indent Nakoľko sme sa rozhodli implementovať vlastné riešenie bolo potrebné zamyslieť sa a identifikovať na základe prípadov použitia z akých častí bude naša alikácia pozostávať. Keďže sme nechceli aby sme vytvorili jednu veľkú robustnú aplikáciu, ktorá by sa časom mohla a s najväčšou pravdepodobnosťou by sa  aj stala neudržiavateľnou. Nakoľko naše aplikácia musí byť schopná umožniť používateľom interaktívny a aj skrtiptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti umožnovať interaktívny prístup pre používateľa ako aj skriptovací modus, no funkcionality, ktoré bude podporovať externalizujeme do menších podprogramov - pluginov, ktoré sa do apikácie budu nahrávať pri štarte. Aby sme mohli docieliť požadované výsledky rozhodli sme sa použiť, návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
+\indent Pre implementáciu vlastného riešenia bolo potrebné na základe prípadov použitia identifikovať časti, z ktorých bude aplikácia pozostávať. Naším zámerom nebolo vytvorenie jednej veľkej aplikácie, ktorá by sa mohla časom stať neudržiavateľnou, ale aplikácia, ktorá umožní používateľom interaktívny aj skriptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti interaktívny prístup pre používateľa rovnako aj skriptovací módus, avšak funkcionality, ktoré bude podporovať, zabezpečia menšie externé podprogrami - pluginy, ktoré sa do apikácie nahrajú pri štarte. Pre dosiahnutie požadovaných výsledkov použijeme návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
 
 \subsection{Komponenty aplikácie}
-\indent Po vybratí návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre platných chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť pár pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty ktoré sme identifikovali pri vytváraní tejto ukázky funkčnosti.
+\indent Po vybratí návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre správny chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť niekoľko pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný, rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty, ktoré sme identifikovali pri vytváraní tejto ukážky funkčnosti : 
 \begin{itemize}
-	\item Parser - vstupov aj vystupov
-	\item Loader - na nahrávanie  jar súborov
-	\item Sťahovač dependencií - jarka ktoré momentálne produkt neobsahuje napr. cusotm riešenia
-	\item Scope - scope je oblasť kde sa definujú premenné, funkcie a pod. a tento komponent mal slúžiť na vytváranie scopov vrámci aplikácie.
-	\item ScopeData - ktoré majú slúžiť na udržovanie dát v jednotlivých scopoch.
+	\item Parser - vstupov aj výstupov,
+	\item Loader - na nahrávanie  \acrshort{jar} súborov,
+	\item Sťahovač závislostí - \acrshort{jar} súbory, ktoré momentálne produkt neobsahuje napr. vlastné riešenia,
+	\item Scope - je oblasť kde sa definujú premenné, funkcie a pod., tento komponent slúži na vytváranie scopov v rámci aplikácie,
+	\item ScopeData - ktoré majú slúžiť na udržovanie dát v jednotlivých scopoch,
 	\item ShellPlugin - komponent, ktorý nesie implementáciu príkazov.
 \end{itemize}
 
@@ -1119,24 +1117,26 @@ Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počí
 \end{figure}
 \newline
 \subsection{Plugin}
-\indent Z nasledovného class diagramu nebolo na prvý pohľad zreteľne viditeľné aké komponenty v programe existujú preto bolo potrebné zamyslieť sa ako by sa dali tieto časti rozumne rodeliť. Z prvotného návrhu sme vytiahli plugin, ktorý bude slúžiť na nahrávanie nových funkcionalít do programu.  Class diagram implementácie rozhraní a konkrétnych tried  je viditeľný na nasledovnom obrázku. 
+\indent Z nasledovného diagramu tried nebolo na prvý pohľad zjavné aké komponenty v programe existujú, preto bolo potrebné tieto komponenty rozumne rodeliť. Z prvotného návrhu sme vytiahli plugin, ktorý bude slúžiť na nahrávanie nových funkcionalít do programu.  Diagram implementácie rozhraní a konkrétnych tried  je viditeľný na nasledovnom obrázku. 
+\newpage
  \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/plugin_class.jpg}
-	\caption{Class diagram pluginu}
+	\caption{Plugin - diagram tried}
 	\label{fig:test}
 \end{figure}
 \newline
-\indent Ako vidieť z diagramu Plugin pozostáva z nasledovných častí.
+\indent Ako vidieť z diagramu, Plugin pozostáva z nasledovných častí :
 \begin{itemize}
-	\item ShellPlugin - je rozhranie 
-	\item Loader - na nahrávanie  jar súborov
-	\item Sťahovač dependencií - jarka ktoré momentálne produkt neobsahuje napr. cusotm riešenia
-	\item Scope - scope je oblasť kde sa definujú premenné, funkcie a pod. a tento komponent mal slúžiť na vytváranie scopov vrámci aplikácie.
-	\item ScopeData - ktoré majú slúžiť na udržovanie dát v jednotlivých scopoch.
-	\item ShellPlugin - komponent, ktorý nesie implementáciu príkazov.
+	\item ShellPlugin - je rozhranie, ktoré slúži na získavanie inštancií commandu, ako aj informáciách o plugine, 
+	\item Command - rozhranie, slúžiace na komunikáciu s receivermi,
+	\item Receiver - triedy, ktoré implementujú receiver špecifikujú funkcionalitu pluginu,
+	\item CommandParser - obsahuje parser vstupov,
+	\item CommandOutput - rozhranie pre výstupy z commandu,
+	\item CommandInput - rozhranie pre vstupy z commandu,
+	\item  PluginMeta - nesie základné informácie o plugine.
 \end{itemize}
-Aj keď náš prvotý program fungoval správne čakali sme, že počas vývoja ešte môže dôjsť k obmenám tried a rozhraní, nakoľko málo kedy sa podarí odhadnúť  všetky kľúčové časti už počas návrhu.
+Aj keď náš prvotý program fungoval správne čakali sme, že počas vývoja ešte môže dôjsť k obmenám tried a rozhraní, nakoľko málokedy sa podarí odhadnúť  všetky kľúčové časti už počas návrhu.
 
 \newpage
 \subsection{Diagram tried aplikácie}
@@ -1147,30 +1147,36 @@ Aj keď náš prvotý program fungoval správne čakali sme, že počas vývoja 
 	\label{fig:test}
 \end{figure}
 \subsubsection{Stručný popis tried}
-\indent Obrázok 16 zobrazuje diagram tried aplikácie, ktoré su v nasledujúcej časti stručne predstavíme.
+\indent Obrázok 16 zobrazuje diagram tried aplikácie, ktoré v nasledujúcej časti stručne predstavíme.
 \paragraph{AbstractScope}
-Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov a pochopiteľne príkazov v interaktívnom móde. Nesie informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu, exekútorovi pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda tiež nesie informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), slúži na rekurzívne volanie funkcií v skriptovacom móde a tiež  zbiehanie ich príkazov.
+Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov a pochopiteľne príkazov v interaktívnom móde. Obsahuje informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu a inštanciu exekútora, pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda má tiež informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), ktorá slúži na rekurzívne volanie funkcií v skriptovacom móde a  spúšťanie ich príkazov.
 \paragraph{ScopeImpl}
 Je prvá neabstraktná trieda, ktorá dedí od triedy AbstractScope, a slúži na inštanciáciu tejto triedy. 
 \paragraph{ExecutorImpl}
-Trieda ExecutorImpl implementuje rozhranie Executor a teda aj jeho triedu CommandIO execute(String command, Scope scope). Ako vstup do tejto metódy príde vstup od používateľa, a scope v ktorom ju chceme vykonať. Definovanie scopu nám slúži na informovanie jednotlivých prijímačov(Reciever) kde sa má daný príkaz vykonať. Ak by scope nebol presne definovaný aplikácia by sa nevedela rozhodnúť kde sa majú príkazy premietnuť.
+Trieda ExecutorImpl implementuje rozhranie Executor, a teda aj jeho triedu CommandIO execute(String command, Scope scope). Vstupom do tejto metódy je príkaz od používateľa a scope v ktorom ho chce vykonať. Definovanie scopu nám slúži na informovanie jednotlivých prijímačov(Reciever), kde sa má daný príkaz vykonať. Ak by scope nebol presne definovaný, aplikácia by sa nevedela rozhodnúť kde sa majú príkazy premietnuť a vyhodila by chybu.
 \paragraph{RootParser}
-RootParser je najpodstatnejšia trieda pre skriptovací mód. Má za úlohu načítať zdrojové súbory skriptu a následne spustiť exekúciu ak parsovanie prebehlo v poriadku.
+RootParser je najpodstatnejšia trieda pre skriptovací mód. Jej úlohou je načítať zdrojové súbory skriptu a následne spustiť exekúciu, ak parsovanie prebehlo v poriadku.
 \paragraph{PluginFactory}
-PluginFactory ako z jej nýzvu vyplýva je to továreň do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy, ktoré sú pre aplikáciu dotupné. Na záskavanie dostupných pluginov sa využíva trieda JarLoader. 
+PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy dostupné z disku. Na získavanie dostupných pluginov sa používa trieda JarLoader. 
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
-\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému, kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Väčšinu krokov budeme popisovať pomocou activity a class diagramu, niektoré časti obohatíme o pseudokód prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1, následne zistí či má na vstupe parametre ak áno vykoná ich, ak nie spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
+\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Väčšinu krokov budeme popisovať pomocou activity a class diagramu, niektoré časti obohatíme o pseudokód prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1. V ďalšom kroku zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
 \newline 
-\indent Prvú spomenutú možnosť sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. 
+\indent Možnosť s parametrami na vstupe sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. Tie môžu buď čítať výstupy priamo z konzoly alebo si ich môžu presmerovať do súboru. Novo vytvorený súbor si následne môžu načítať a vykonať nad ním potrebné operácie.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/System.jpg}
 	\caption{Activita spustenia aplikácie}
 	\label{fig:test}
 \end{figure}
-\subsection{Implement}
-\indent 
+\subsection{Inicializácia aplikácie}
+\indent Pri inicializácii sa 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=\linewidth]{img/System.jpg}
+	\caption{Activita spustenia aplikácie}
+	\label{fig:test}
+\end{figure}
 \section{Zhodnotenie výsledkov}
 Zatiaľ sa toho nespravilo hodne ale verím, že sa to tu cele zaplní.
