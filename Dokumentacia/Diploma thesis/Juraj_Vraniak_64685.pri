@@ -1,8 +1,8 @@
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {A} CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{priloh.165}
+\contentsline {priloh}{\numberline {A} CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{priloh.168}
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {B} N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{priloh.168}
+\contentsline {priloh}{\numberline {B} N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{priloh.171}
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {C} Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{priloh.171}
+\contentsline {priloh}{\numberline {C} Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{priloh.174}
 \defcounter {refsection}{0}\relax 
-\contentsline {priloh}{\numberline {D} Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{priloh.175}
+\contentsline {priloh}{\numberline {D} Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{priloh.178}

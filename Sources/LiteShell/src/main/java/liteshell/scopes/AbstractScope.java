@@ -235,11 +235,14 @@ public class AbstractScope implements Scope, Runnable {
     CommandIO commandIO;
     printLine();
     String userInput = "";
-    while (true) {
+    while (!userInput.equals("$(exit);")) {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
       try {
         userInput = prepareInput(br.readLine());
+        if (userInput.equals("$(exit);")) {
+          System.exit(0);
+        }
 //        Instant start = Instant.now();
         commandIO = executor.execute(userInput, getScope());
 //        Instant end = Instant.now();
@@ -264,9 +267,6 @@ public class AbstractScope implements Scope, Runnable {
         log.error("There was issue with following command: \n {}", ex.getMessage());
       } catch (IOException ex) {
         log.error("Problem reading from command line:\n {}", ex.getMessage());
-      }
-      if (userInput.equals("$(exit);")) {
-        System.exit(0);
       }
       printLine();
     }

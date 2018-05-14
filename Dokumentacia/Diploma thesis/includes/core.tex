@@ -1158,10 +1158,46 @@ PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
-\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Každý krok budeme popisovať jednou z nasledovných možností alebo kombináciou : pomocou diagramu aktivít, diagramu tried, pseudokódom prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať.
+\indent V tejto kapitole sa budeme venovať konkrétnemu riešeniu daného problému. Kapitola nás postupne prevedie cez jednotlivé kroky implementácie riešenia. Každý krok budeme popisovať jednou z nasledovných možností alebo kombináciou : pomocou diagramu aktivít, diagramu tried, pseudokódom prípadne útržkami zdrojového kódu z fungujúcej aplikácie. Jednotlivé sekcie práce sme rodelili na základe toho akými smermi sa môže aplikácia uberať. Rozhrania používané aplikáciou sú uvedené v prílohe C.
 \subsection{Hlavná trieda aplikácie - AbstractScope}
-Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov a pochopiteľne príkazov v interaktívnom móde. Obsahuje informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu a inštanciu exekútora, pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda má tiež informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov pre vstupné parametre funkcií ako aj ich návratová hodnota. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), ktorá slúži na rekurzívne volanie funkcií v skriptovacom móde a  spúšťanie ich príkazov.
+Táto trieda je jednou z najhlavnejších celého programu, tvorí základný pilier pre tvorbu akýchkoľvek scopov aplikácie, beh skriptov, a tiež príkazov v interaktívnom móde. Obsahuje informácie o všetkých pluginoch, ktoré sa nahrali pri štarte aplikácie, názov scopu a inštanciu exekútora, pomocou ktorého sa vykonávajú všetky operácie v aplikácii. Trieda má tiež informácie o vstupných parametroch, výstupných hodnotách a funkciách, ktoré sú v danom scope definované. Spomenuté hodnoty sa využívajú pri vytváraní a behu skriptov pre vstupné parametre funkcií ako aj ich návratová hodnota. Implementuje rozhrania Scope, Runnable. Implementuje metódy run() pre zabezpečenie interaktívneho módu, kde sa však môžu spúšťať aj skripty. Tiež implementuje metódu executeScript(String function, ScopeVariables scopeVariables), ktorá slúži na rekurzívne volanie funkcií v skriptovacom móde a  spúšťanie ich príkazov.
 Implementuje funkciu runInputCommands() pomocou ktorej je aplikácia spustená ak na vstupe akékoľvek vstupné parametre. Túto funkcionalitu sme pridali z dôvodu integrácie s inými aplikáciami. 
+\subsubsection{run}
+\indent Táto metóda sa volá iba raz a to po štarte aplikácie. V cykle si od používateľa získava vstupy, ktoré sa následne pokúša vykonať. Ak aplikácia nedokáže príkaz vykonať vypíše chybu do konzoly.
+\subsubsection{executeScript}
+\indent Je funkcia pomocou ktorej sa spúšta beh jednotlivých funkcií skriptu. Je definovaná všeobecne pre akýkoľvek scope, samozrejme v prípade, že novému scopu rozsah metódy nepostačuje je potrebné ju prepísať v triede ktorá je odvodená od AbstractScope. Základný algoritmus pre beh skriptov je popísaný v nižšie priloženom pseudokóde.
+\begin{algorithm}
+	\begin{minted}[]{java}
+executeScript(String function, ScopeVariables scopeVariables) {
+  executeGlobalCommands();
+  fName = getFunctionName();
+  Scope parent =  this.getParent();
+
+  Scope functionScope = parent.functions.get(fName);
+  setFunctionscopeVariables(scopeVariables.clone());
+
+  for (String command : functionScope.stack) {
+	if (command.startsWith("$(")) {
+		out = executor.execute(command, functionScope);
+		if (command.contains("returnValue = ")) {
+			setReturnValue();
+		}else{
+		  writeOutputs(out);
+		}
+	} else if (command.startsWith("fcall ")) {
+		if(functionHasReturnValue(command)){
+		  setCallParameters();
+		  executeScript(function, getVariables());
+		  getReturnValue();
+		}else{
+		  executeScript(function, getVariables());
+		}
+	}
+}
+\end{minted}
+\caption{Pseudokód všeobecnej implementácie spúšťania funkcií}
+\label{alg:gen}
+\end{algorithm}
 \subsection{Štart aplikácie}
 \indent  Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1. Po inicializácii premenných sa nám vytvorí inštancia triedy ScopeImpl,ktorá je implenáciou AbstractScope tired, ktorú sme si predstavili v predchádzajúcej sekciipráce. V ďalšom kroku zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
 \newline 
@@ -1184,7 +1220,6 @@ Implementuje funkciu runInputCommands() pomocou ktorej je aplikácia spustená a
 	\caption{Activita inicializácie aplikácie}
 	\label{fig:test}
 \end{figure}
-\newpage
 \subsubsection{Nahrávanie pluginov}
 \indent Nahrávanie pluginov má na starosti trieda PluginFactory a JarLoader, proces nahratia pozostáva z troch krokov.\newline
 \paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom, ktoré musia byť uložene na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde pokúsi sa z nej vytvoriť inštanciu pomocou reflexie a takto vytvorenú inštanciu následne vracia triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
