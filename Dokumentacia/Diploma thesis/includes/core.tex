@@ -1309,7 +1309,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\item v prípade, že je riadok ukončený s \\ parser pripojí k riadku nasledujúce riadky pokým nenarazí na bodkočiarku.
 	\item v prípade, že narazí na if odovzdá kontrolu parseru pre If scope no predtým zapíše do aktuálneho scopu fcall s unikátnim identifikátorom podmienky.
 	\item v prípade, že narazí na for odovzdá kontrolu parseru pre for scope no predtým zapíše do aktuálneho scopu fcall s unikátnim identifikátorom cyklu.
-	\item v prípade, že narazí na return vytvorí príkaz, ktorý bude poskladaný z \$typ_vracanej hodnoty returnType = hodnota za returnom;.
+	\item v prípade, že narazí na return vytvorí príkaz, ktorý bude poskladaný z typ\_vracanej hodnoty returnType = hodnota za returnom;.
 	\item  v prípade, že riadok obsahuje ukončovaciu kučeravú zátvorku, ukončí načítanie.
 	\end{itemize} 
 \subsubsection{Parsovanie for cyklov}
