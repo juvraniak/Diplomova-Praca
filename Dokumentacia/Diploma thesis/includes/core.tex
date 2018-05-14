@@ -1353,26 +1353,31 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \subsection{Implementované pluginy}
 \indent V tejto sekcii si stručne predstavíme naimplementované pluginy.
 \subsubsection{Variable plugin}
-\indent Premenné sú nutnosťou každého programovacieho jazyka, my sme sa rozhodli, že chceme mať premenné, ktorým vieme určiť typ. Preto pre prvotnú implementáciu sme si dali za cieľ implementovať premenné typu int, double, boolean a string. V budúcnosti by sme radi rozšírili implementáciu minimálne o list, mapu a set. Variable plugin je jeden z pluginov, ktorý sme neexternalizovali avšak nebol by to problém. Plugin sme implementovali pomocou command návrhového vzoru ako všetky ostatné, avšak tento ako jeden z mála obsahuje zložitejší parser vstupov, na základe čoho rozhodne čo sa má vykonať. 
+\indent Premenné sú nevyhnutné pre každý programovací jazyk, pričom sme sa rozhodli, že budeme mať premenné, pre ktoré vieme určiť typ. Pre prvotnú implementáciu bola naším cieľom realizácia premennej typu int, double, boolean a string. V budúcnosti by sme radi implementáciu rozšírili minimálne o list, mapu a set. Variable plugin je jeden z pluginov, ktorý sme neexternalizovali, pričom by to nepredstavovalo zásadný problém. Plugin bol implementovaný pomocou command návrhového vzoru tak, ako všetky ostatné, avšak tento ako jeden z mála obsahuje zložitejší parser vstupov, na základe čoho rozhodne čo sa má vykonať. 
 \newline 
 \indent Parser pluginu dokáže na základe vstupu rozpoznať a spusťiť vykonávanie príkazu na nasledujúcich receiveroch : int, double, boolean, string, change, get, arithmetic, stringPrep, booleanPrep. 
 \newline 
-\indent Prvé štyri receiveri iba inicializujú premennú, ak nieje definovaná jej hodnota int sa inicializuje na 0, double na 0D, boolean na false a string na prázdny reťazec. 
+\indent Prvé štyri receivre inicializujú premennú, ak nieje definovaná jej hodnota, int sa inicializuje na 0, double na 0D, boolean na false a string na prázdny reťazec. 
 \newline 
-\indent Receiver change je schopný zmeniť hodnotu akejkoľvek premennej v scope. Rovnako get receiver je shopný vytiahnuť hodnotu z akejkošvek premennej scopu. 
+\indent Receiver change je schopný zmeniť hodnotu akejkoľvek premennej v scope. Rovnako get receiver je schopný vytiahnuť hodnotu z ktorejkoľvek premennej scopu. 
 \newline 
-\indent Arithmetic je receiver, ktorým sme zabezpečili jednoduché zmeny numerických hodnôt. Podporované operácie sú +, -, *, /, \%. ArithmeticPrep receiver ako prvé rozseká premenné, príkazy a hodnoty do poľa v ktorom medzi ne vkladá znamienka s operáciou ako ju vyparsoval zo stupného stringu. V prvom kroku vyhodnotí všetky príkazy, premenné a následne začne vyhodnocovať výraz z ľava do prava. Momenálna implementácia neumožňuje stanoviť prioritu výpočtu. 
+\indent Arithmetic je receiver, ktorým sme zabezpečili jednoduché zmeny numerických hodnôt. Podporované operácie sú +, -, *, /, \%. ArithmeticPrep receiver ako prvé rozdelí premenné, príkazy a hodnoty do poľa, v ktorom medzi ne vkladá znamienka s operáciou ako ju vyparsoval zo vstupného stringu. V prvom kroku vyhodnotí všetky príkazy, premenné a následne začne vyhodnocovať výraz z ľava do prava. Momenálna implementácia neumožňuje stanoviť prioritu výpočtu. 
 \newline 
 \indent StringPrep je receiver, ktorý zo vstupných parametrov vyskladá výsledný string, môzeme mu spájať premenné akéhokoľvek typu ako aj vkladať nové reťazce, ktoré ale musia byť označené úvodzovkami. Operácia pre spájanie stringov je + podobne ako v Jave. 
 \newline 
-\indent Posledným z implementovaných receiverov je booleanPrep, ktorý funguje v dvoch krokoch. V prvom kroku zadaný vstup rozseká na operácie operátorov \&\& a ||. Následne vyhodnotí premenné, príkazy medzi tymito operátormi a ich pravdivostné hodnoty vráti spať logickým operátorom, ktoré sa vykonávajú z lava do prava. Nieje možné určovať prioritu vykonávania, teda aspoň v tejto verzii receivera.
+\indent Posledným z implementovaných receiverov je booleanPrep, ktorý funguje v dvoch krokoch. V prvom kroku zadaný vstup rozseká na operácie operátorov \&\& a ||. Následne vyhodnotí premenné, príkazy medzi tymito operátormi a ich pravdivostné hodnoty vráti spať logickým operátorom, ktoré sa vykonávajú z ľava do prava. Nie je možné určovať prioritu vykonávania, teda aspoň v tejto verzii receivera.
 \subsubsection{Package plugin}
-\indent Package plugin je rovnako ako Variable príkladom kde na základe výstupov z command parsera aplikácia vie ktorý receiver použiť. 
-\subsubsection{title}
-\subsubsection{title}
-\subsubsection{title}
-\subsubsection{title}
-\subsubsection{title}
+\indent Package plugin je, rovnako ako Variable, príkladom kde na základe výstupov z command parsera aplikácia dokáže určiť, ktorý receiver použiť. Package command pozná tri receivery : download, change a delete. Download dokáže stiahnuť nový \acrshort{jar} súbor zo servera na základe vstupu od používateľa. Na jeho následné načítanie je potrebný reštart aplikácie. Change sa stará o manažovanie existujúcich pluginov. Ak je vstup zadaný v tvare pkg change <názov balíčka> <verzia> a balíček sa na \acrshort{pc} nachádza,  spolu s PluginFactory triedou zabezpečia, aby sa počas ďalšieho behu aplikácie používal špecifikovaný balíček. Delete receiver slúži na dočasné vypnutie špecifikovaného pluginu, nemá za úlohu fyzicky zmazať \acrshort{jar} z disku \acrshort{pc}. 
+\subsubsection{Grep plugin}
+\subsubsection{Echo plugin}
+\subsubsection{Copy plugin}
+\subsubsection{Change directory plugin}
+\subsubsection{Pwd plugin}
+\subsubsection{List directory plugin}
+\subsubsection{Copy plugin}
+\subsubsection{Move plugin}
+\subsubsection{Get processes plugin}
+\subsubsection{Get system information plugin}
 \section{Zhodnotenie výsledkov}
 \indent Počas testovania aplikácie sme nenarazili na žiadne závažné problémy, pokiaľ sme dodržiavali zásady vymedzené v práci. 
 \newline
