@@ -458,42 +458,6 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \subsubsection{Generovanie cieľového jazyka}
 \indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .\cite{gram}
 
-\subsection{Návrhové vzory}
-\indent Návrhové vzory sú všeobecne opakovaným riešním pre všeobecne opakujúci sa problém pri dizajnovaní softwéru. Návrhový vzor nie je nemenný dizajn, vždy je potrebné aby si ho programátori uspôsobili podľa vlstných potrieb. Návrhové vzory sa delia do troch základných skupín vytváracie vzory, štrukturálne vzory a vzory správania. 
-
-\subsubsection{Factory - továreň}
-\indent Factory návrhový vzor patrí do sekcie vytváracích vzorov, pomocou tohoto vzoru budeme schopný vytvárať objekty bez toho aby sme prezradili logiku ich vytvárania klientovi.
-Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=10cm]{img/factory_design_pattern.jpg}
-	\caption{Class diagram Factory návrhového vzoru}
-	\label{fig:test}
-\end{figure}
-\newline
-\subsubsection{Command - príkaz}
-\indent Command pattern je známy behaviorálny návrhový vzor, používa sa najmä na menežovanie algoritmov, vzťahov a zodpovednosti medzi objektami. 
-Cieľom vzoru je zapúzdriť požiadavku(request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=10cm]{img/command_pattern_class.jpg}
-	\caption{Class diagram Command návrhového vzoru}
-	\label{fig:test}
-\end{figure}
-\newline
-Command vzor deklaruje rozhranie pre všetky budúce commandy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
-Receiver je objekt, ktorý vie ako požadovanú operáciu splniť. Invoker pozná command a pomocou implementovanej execute() metódy dokáže vyvolať požadovanú operáciu.
-Klient potrebuje implemenotvaž ConcreteCommand a nastavit Receiver pre command. ConcreteCommand definuje spojenie medzi action a receiver. Keď Invoker zavolá execute() metódu na ConcreteCommand spustí tým jednu alebo viac akcií, ktoré budú bežať pomocou Receivera.
-
-Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=10cm]{img/command_seq.jpg}
-	\caption{Sekvenčný diagram Command návrhového vzoru}
-	\label{fig:test}
-\end{figure}
-\newline
-
 \section{Návrh riešenia}
 \subsection{Prípady použitia}
 \begin{figure}[!htbp]
@@ -1093,7 +1057,41 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 Programy v Jave sú prvotne preložené do tzv. byte-code, ktorý je rovnaký pre všetky \acrshort{pc}. Pomocou jednoduchého programu je byte-code preložený do jazyka, ktorému rozumie konrétny \acrshort{pc}.
 Java je objektovo-orientovaný programovací jazyk, čo znamená že rovnako ako v živote, aj v Jave je všetko tvorené objektami. Obsahuje široké spektrum knižníc, ktoré slúžia nielen na vývoj webových, ale aj desktopových aplikácií.
 Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počítače s viacjadrovým procesorom.\cite{javabook}
+\subsection{Návrhové vzory}
+\indent Návrhové vzory sú všeobecne opakovaným riešním pre všeobecne opakujúci sa problém pri dizajnovaní softwéru. Návrhový vzor nie je nemenný dizajn, vždy je potrebné aby si ho programátori uspôsobili podľa vlstných potrieb. Návrhové vzory sa delia do troch základných skupín vytváracie vzory, štrukturálne vzory a vzory správania. 
 
+\subsubsection{Factory - továreň}
+\indent Factory návrhový vzor patrí do sekcie vytváracích vzorov, pomocou tohoto vzoru budeme schopný vytvárať objekty bez toho aby sme prezradili logiku ich vytvárania klientovi.
+Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=10cm]{img/factory_design_pattern.jpg}
+	\caption{Class diagram Factory návrhového vzoru}
+	\label{fig:test}
+\end{figure}
+\newline
+\subsubsection{Command - príkaz}
+\indent Command pattern je známy behaviorálny návrhový vzor, používa sa najmä na menežovanie algoritmov, vzťahov a zodpovednosti medzi objektami. 
+Cieľom vzoru je zapúzdriť požiadavku(request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=10cm]{img/command_pattern_class.jpg}
+	\caption{Class diagram Command návrhového vzoru}
+	\label{fig:test}
+\end{figure}
+\newline
+Command vzor deklaruje rozhranie pre všetky budúce commandy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
+Receiver je objekt, ktorý vie ako požadovanú operáciu splniť. Invoker pozná command a pomocou implementovanej execute() metódy dokáže vyvolať požadovanú operáciu.
+Klient potrebuje implemenotvaž ConcreteCommand a nastavit Receiver pre command. ConcreteCommand definuje spojenie medzi action a receiver. Keď Invoker zavolá execute() metódu na ConcreteCommand spustí tým jednu alebo viac akcií, ktoré budú bežať pomocou Receivera.
+
+Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=10cm]{img/command_seq.jpg}
+	\caption{Sekvenčný diagram Command návrhového vzoru}
+	\label{fig:test}
+\end{figure}
+\newline
 
 \subsection{Aplikácia}
 \indent Pre implementáciu vlastného riešenia bolo potrebné na základe prípadov použitia identifikovať časti, z ktorých bude aplikácia pozostávať. Naším zámerom nebolo vytvorenie jednej veľkej aplikácie, ktorá by sa mohla časom stať neudržiavateľnou, ale aplikácia, ktorá umožní používateľom interaktívny aj skriptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti interaktívny prístup pre používateľa rovnako aj skriptovací módus, avšak funkcionality, ktoré bude podporovať, zabezpečia menšie externé podprogrami - pluginy, ktoré sa do apikácie nahrajú pri štarte. Pre dosiahnutie požadovaných výsledkov použijeme návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
