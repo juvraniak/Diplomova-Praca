@@ -101,7 +101,7 @@ V uvedenom príklade sme vylistovali obsah adresára, v ktorom sa práve nachád
 Taktiež niektoré často používané príkazy majú zmenený spôsob zápisu.
 Ako príklad si uvedieme príkaz for, pri ktorom bash používa následovnú Syntax:
 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}{php}
 	#!/bin/bash
 	// prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
@@ -132,7 +132,7 @@ Ako príklad si uvedieme príkaz for, pri ktorom bash používa následovnú Syn
 
 Ako vidíme z príkladu, for používa podobnú Syntax ako ostatné jazyky, a ďalej ju rozširuje. Vyššie spomenuté použitia niesú jediné, kde druhý spôsob môže uľahčiť prácu napríklad pri prototypovaní skriptu, v ktorom Shell poskytuje možnosť vložiť parametre pre cyklus priamo z konzoly ako v nasledujúcom príklade.
 \newpage
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}{php}
 	//telo skriptu
 	#!/bin/bash
@@ -233,7 +233,7 @@ Powershell je obľúbený medzi programátormi a administrátormi, ktorí pracuj
 
 Pre demonštráciu rozdielov pri odovzdávaní parametrov medzi príkazmi uvádzame príklad.
 \newpage
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}[]{php}
 	function changeName(\$myObject)
 	{
@@ -1166,7 +1166,7 @@ Implementuje funkciu runInputCommands() pomocou ktorej je aplikácia spustená a
 \indent Táto metóda sa volá iba raz a to po štarte aplikácie. V cykle si od používateľa získava vstupy, ktoré sa následne pokúša vykonať. Ak aplikácia nedokáže príkaz vykonať vypíše chybu do konzoly.
 \subsubsection{executeScript}
 \indent Je funkcia pomocou ktorej sa spúšta beh jednotlivých funkcií skriptu. Je definovaná všeobecne pre akýkoľvek scope, samozrejme v prípade, že novému scopu rozsah metódy nepostačuje je potrebné ju prepísať v triede ktorá je odvodená od AbstractScope. Základný algoritmus pre beh skriptov je popísaný v nižšie priloženom pseudokóde.
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}[]{java}
 executeScript(String function, ScopeVariables scopeVariables) {
   executeGlobalCommands();
@@ -1199,15 +1199,16 @@ executeScript(String function, ScopeVariables scopeVariables) {
 \label{alg:gen}
 \end{algorithm}
 \subsection{Štart aplikácie}
-\indent  Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.1. Po inicializácii premenných sa nám vytvorí inštancia triedy ScopeImpl,ktorá je implenáciou AbstractScope tired, ktorú sme si predstavili v predchádzajúcej sekciipráce. V ďalšom kroku zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
-\newline 
-\indent Možnosť s parametrami na vstupe sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. Tie môžu buď čítať výstupy priamo z konzoly alebo si ich môžu presmerovať do súboru. Novo vytvorený súbor si následne môžu načítať a vykonať nad ním potrebné operácie.
+\indent  Na nasledovnom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu aplikácia sa najprv nainicializuje, čo to znamená si povieme v sekcii 4.3. Po inicializácii premenných sa nám vytvorí inštancia triedy ScopeImpl,ktorá je implenáciou AbstractScope tiredy, ktorú sme si predstavili v predchádzajúcej sekcii práce. V ďalšom kroku aplikácia zistí či má na vstupe parametre. V prípade, že áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti si popíšeme čo sa deje v prvom prípade a teda, že máme zadané parametre. 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=\linewidth]{img/System.jpg}
 	\caption{Activita spustenia aplikácie}
 	\label{fig:test}
 \end{figure}
+\subsubsection{Štart s parametrami}
+\indent Možnosť s parametrami na vstupe sme potrebovali implementovať kvôli tomu aby sa dala aplikácia integrovať s inými enterprise aplikáciami. Tie môžu buď čítať výstupy priamo z konzoly alebo si ich môžu presmerovať do súboru. Novo vytvorený súbor si následne môžu načítať a vykonať nad ním potrebné operácie.
+\newpage
 \subsection{Inicializácia aplikácie}
 \indent Inicializácia pozostáva z dvoch krokov :
 \begin{itemize}
@@ -1223,7 +1224,7 @@ executeScript(String function, ScopeVariables scopeVariables) {
 \subsubsection{Nahrávanie pluginov}
 \indent Nahrávanie pluginov má na starosti trieda PluginFactory a JarLoader, proces nahratia pozostáva z troch krokov.\newline
 \paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom, ktoré musia byť uložene na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde pokúsi sa z nej vytvoriť inštanciu pomocou reflexie a takto vytvorenú inštanciu následne vracia triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}[]{java}
 try {
  URLClassLoader cl = URLClassLoader.newInstance(urls);
@@ -1255,8 +1256,7 @@ try {
 \indent Používateľ môže počas využívania aplikácie, stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohoto dôvodu sme naimplementovali  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
 \subsection{Vykonávač príkazov}
 \indent Všetky príkazy, ktoré sa majú pomocou aplikácie vykonať sa spúšťajú pomocou triedy ExecutorImpl, ktorá implementuje metódu rozhrania Executor CommandIO execute(String command, Scope scope). Rozhodovacia logika ako sa príkazy od používateľa budú vykonávať je implementovaná práve v tejto metóde. Pre zjednodušenie opisu si pomôžem pseudokódom rozhodovacieho algoritmu. Zo pseudokódu jasne vidieť, že exekútor si najskôr zistí či príkaz neobsahuje znaky pajpy, presmerovania štandardného vstupu/výstupu. Následne identifikuje čím sa príkaz začína a vyberie vhodnú metódu pre zadaný príkaz. Po vykonaní príkazu sa zistuje či sa má výstup z programu zapísať mimo štandardného vstupu alebo výstupu. Ak áno program očakáva valídnu cestu za oddeľovačmi stdout> \acrshort{resp.} stderr> kde sa pokúsi zapísať svoj výstup do súboru. Diagram tried je uvedený v prílohe D.
-\newpage
-\begin{algorithm}
+\begin{algorithm}[H]
 	\begin{minted}[]{php}
 isPipe = isPipe(command);
 writeStd = shouldWriteStd(command);
