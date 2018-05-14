@@ -1199,25 +1199,25 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\label{alg:gen}
 \end{algorithm}
 \subsubsection{ForScope}
-\indent For cyklus má oproti hlavnému scopu pár rozdielov. Ako prvé si môžeme všimúť, že For scope si kopíruje referenciu premenných scopu, naopak funkcie si vytvárali hlbokú kópiu, aby sa zmeny v rôznych funkciách nepremietli do pôvodných. Zmeny sa vo funkciách dajú aplikovať iba pomocou vracania hodnôt z funkcií. Ďalšia vec navyše je cyklus v ktorom je vnorený rovnaký For cyklus ako v AbstractScope abšak obohatený o funkciu break, ako je možné vidieť v nasledujúcom kóde :
+\indent For cyklus má oproti hlavnému scopu niekoľko rozdielov. Ako prvé si môžeme všimúť, že For scope kopíruje referenciu premenných scopu, naopak funkcie vytvárali hlbokú kópiu, aby sa zmeny v rôznych funkciách nepremietli do pôvodných. Zmeny sa vo funkciách dajú aplikovať iba pomocou vracania hodnôt z funkcií. Ďalšia vec navyše je cyklus, v ktorom je vnorený rovnaký For cyklus ako v AbstractScope avšak obohatený o funkciu break, ako je možné vidieť v nasledujúcom kóde :
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
 	setScopeVariables(scopeVariables);
-for (int i = getStart(); evalueateCondition(); i = evalueateIncremet()) {
-  // for cyklus z abstract scopu obohatený o break
-}
-
+	for (int i = getStart(); evalueateCondition(); i = evalueateIncremet()) {
+	// for cyklus z abstract scopu obohatený o break
+	}
+	
 	\end{minted}
 	\caption{Kód implementácie spúšťania funkcie For}
 	\label{alg:gen}
 \end{algorithm}
-\indent Cyklus je tam pridaný aby sme dokázali evaluovať vstupy zadané v skripte. Ako prvé sa do premennej i nainicializuje výsledok exekúcie príkazu zo skriptu. Následne sa rovnakým spôsobom vyhodnotí podmienka a ak je všetko ok For cyklus sa začne vykonávať. Následne sa rovnako ako v predchádzajúcom prípade preiteruje cez celý stack For cyklu. Momentálnou limitáciou tohoto prístupu je možnosť inicializovať a iterovať iba cez premenné numerického typu. Avšak v budúcnosti je tento koncept ľahko rozšíriteľny aj pre premenné iných typov. For cyklus obsahuje tiež príkaz break, ktorý je bežnou súčasťou tejto štruktúry.
+\indent Cyklus je pridaný preto, aby sme dokázali vyhodnotiť vstupy zadané v skripte. Ako prvé sa do premennej i nainicializuje výsledok exekúcie príkazu zo skriptu. Následne sa rovnakým spôsobom vyhodnotí podmienka, a ak je všetko v poriadku, For cyklus sa začne vykonávať. Ďalej sa rovnako ako v predchádzajúcom prípade zopakuje cez celý stack For cyklu. Momentálnou limitáciou tohto prístupu je možnosť inicializovať a iterovať iba cez premenné numerického typu. Avšak v budúcnosti je tento koncept ľahko rozšíriteľný aj pre premenné iných typov. For cyklus obsahuje aj príkaz break, ktorý je bežnou súčasťou tejto štruktúry.
 \subsubsection{IfScope}
 \indent If scope je jednoduchšou implementáciou scopu ako bol For, nakoľko neobsahuje ďalšie cykly iba podmienku, ktorá ak sa vyhodnotí ako pravdivá, vykoná sa aj stack, ktorý if scope obsahuje. Na evaluáciu podmienok, priraďovanie hodnôt premenným ako aj iteráciu boli použité nami vopred naimplementované pluginy, ktoré dokážu pracovať s primitívnymi premennými Javy. 
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
 	if (evalueateCondition()) {
-	  // For cyklus z abstract scopu obohatený o break
+	// For cyklus z abstract scopu obohatený o break
 	}
 	\end{minted}
 	\caption{Kód implementácie spúšťania funkcie For}
@@ -1352,6 +1352,16 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \end{figure}
 \subsection{Implementované pluginy}
 \indent V tejto sekcii si stručne predstavíme naimplementované pluginy.
+\subsubsection{Variable plugin}
+\indent Premenné sú nutnosťou každého programovacieho jazyka, my sme sa rozhodli, že chceme mať premenné, ktorým vieme určiť typ. Preto pre prvotnú implementáciu sme si dali za cieľ implementovať premenné typu int, double, boolean a string. V budúcnosti by sme radi rozšírili implementáciu minimálne o list, mapu a set. Variable plugin je jeden z pluginov, ktorý sme neexternalizovali avšak nebol by to problém. Plugin sme implementovali pomocou command návrhového vzoru ako všetky ostatné, avšak tento ako jeden z mála obsahuje zložitejší parser vstupov, na základe čoho rozhodne čo sa má vykonať. 
+\newline 
+\indent Parser pluginu dokáže na základe vstupu rozpoznať a spusťiť vykonávanie príkazu na nasledujúcich receiveroch : int, double, boolean, string, change, get, arithmetic, stringPrep, booleanPrep. Prvé štyri receiveri iba inicializujú premennú, ak nieje definovaná jej hodnota int sa inicializuje na 0, double na 0D, boolean na false a string na prázdny reťazec. Receiver change je schopný zmeniť hodnotu akejkoľvek premennej v scope. Rovnako get receiver je shopný vytiahnuť hodnotu z akejkošvek premennej scopu. Arithmetic je receiver, ktorým sme zabezpečili jednoduché zmeny numerických hodnôt. Podporované operácie sú +, -, *, /, \%. StringPrep je receiver, ktorý zo vstupných parametrov vyskladá výsledný string, môzeme mu spájať premenné akéhokoľvek typu ako aj vkladať nové reťazce, ktoré ale musia byť označené úvodzovkami. Operácia pre spájanie stringov je + podobne ako v Jave. Posledným z implementovaných receiverov je booleanPrep, ktorý funguje v dvoch krokoch. V prvom kroku zadaný vstup rozseká na operácie operátorov \&\& a ||. Následne vyhodnotí premenné, príkazy medzi tymito operátormi a ich pravdivostné hodnoty vráti spať logickým operátorom, ktoré sa vykonávajú z lava do prava. Nieje možné určovať prioritu vykonávania, teda aspoň v tejto verzii receivera.
+\subsubsection{title}
+\subsubsection{title}
+\subsubsection{title}
+\subsubsection{title}
+\subsubsection{title}
+\subsubsection{title}
 \section{Zhodnotenie výsledkov}
 \indent Počas testovania aplikácie sme nenarazili na žiadne závažné problémy, pokiaľ sme dodržiavali zásady vymedzené v práci. 
 \newline

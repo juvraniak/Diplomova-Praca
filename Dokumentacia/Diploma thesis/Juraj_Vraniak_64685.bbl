@@ -425,33 +425,34 @@
       \verb https://www.java.com/en/download/faq/whatis_java.xml
       \endverb
     \endentry
-    \entry{javabook}{book}{}
+    \entry{designpattern}{book}{}
       \name{author}{1}{}{%
-        {{hash=25853fb916418a8fc0c16fa32742cd3c}{%
-           family={Walter\bibnamedelima Savitch},
-           familyi={W\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Kenrick\bibnamedelima Mock},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3db236823e2b9f7ed9bbbc0d332527a9}{%
+           family={William\bibnamedelimb C.\bibnamedelimi Wake},
+           familyi={W\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Steven\bibnamedelimb John\bibnamedelima Metsker},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Pearson, 15-04-2015}%
+        {Addison-Wesley Professional, 04-2006}%
       }
-      \strng{namehash}{25853fb916418a8fc0c16fa32742cd3c}
-      \strng{fullhash}{25853fb916418a8fc0c16fa32742cd3c}
-      \strng{authornamehash}{25853fb916418a8fc0c16fa32742cd3c}
-      \strng{authorfullhash}{25853fb916418a8fc0c16fa32742cd3c}
+      \strng{namehash}{3db236823e2b9f7ed9bbbc0d332527a9}
+      \strng{fullhash}{3db236823e2b9f7ed9bbbc0d332527a9}
+      \strng{authornamehash}{3db236823e2b9f7ed9bbbc0d332527a9}
+      \strng{authorfullhash}{3db236823e2b9f7ed9bbbc0d332527a9}
       \field{sortinit}{5}
       \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{6}
-      \field{note}{ISBN: 978-0134041674}
-      \field{title}{Absolute Java}
-      \field{year}{2015}
-      \field{pages}{s. 1296}
+      \field{edition}{2}
+      \field{note}{ISBN: 9780321630483}
+      \field{title}{Design Patterns in Java™}
+      \field{year}{2006}
+      \field{pages}{s. 461}
       \range{pages}{-1}
     \endentry
   \endsortlist
+  \missing{javabook}
 \endrefsection
 \endinput
 
