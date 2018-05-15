@@ -89,7 +89,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{9}
-      \field{note}{ISBN: 978-1118063330}
+      \field{note}{ISBN: 9781118063330}
       \field{title}{Operating System Concepts - Ninth Edition}
       \field{year}{2012}
       \field{pages}{s. 976}
@@ -440,8 +440,8 @@
       \strng{fullhash}{3db236823e2b9f7ed9bbbc0d332527a9}
       \strng{authornamehash}{3db236823e2b9f7ed9bbbc0d332527a9}
       \strng{authorfullhash}{3db236823e2b9f7ed9bbbc0d332527a9}
-      \field{sortinit}{5}
-      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -452,7 +452,6 @@
       \range{pages}{-1}
     \endentry
   \endsortlist
-  \missing{javabook}
 \endrefsection
 \endinput
 
