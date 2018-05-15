@@ -1060,16 +1060,20 @@ Java je objektovo-orientovaný programovací jazyk, čo znamená že rovnako ako
 Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počítače s viacjadrovým procesorom.\cite{java}
 
 \subsubsection{Rozhranie}
-\indent Rohranie, prináša do jazyka nový referenčný typ, ktorý môže obsahovať triedy, rozhrania, konštanty a metódy. Pomocou rozhrania je možné definovať minimálne požiadavky na triedu, ktorá rozhranie implementuje. V práci rozhrania používame veľmi často, aby sme definovali aké metódy dané metódy poskytujú. Taktiež sme definovali takzvané metódy s označením default, pomocou ktorých, definujeme základnú logiku metódy. Výhodou tohoto prístupu je, že sa zbavíme opakovaniu zdrojového kódu, a v prípade núdze je možné túto funkciu prepísať v konkrétnej triede, ktorá bude rozhranie implementovať. 
+\indent Rohranie, prináša do jazyka nový referenčný typ, ktorý môže obsahovať triedy, rozhrania, konštanty a metódy. Pomocou rozhrania je možné definovať minimálne požiadavky na triedu, ktorá rozhranie implementuje. \cite{javabook} V práci rozhrania používame veľmi často, aby sme definovali aké metódy dané metódy poskytujú.  Taktiež sme definovali metódy s začínajúce slovom default, ktoré je možné v rozhraní definovať a pomocou ktorých, definujeme základnú logiku metódy. Výhodou tohoto prístupu je, že sa zbavíme opakovaniu zdrojového kódu, a v prípade núdze je možné túto funkciu prepísať novou s rozdielnou logikou, v triede ktorá bude rozhranie implementovať. V aplikácii využívame aj štandardné rozhrania Javy ako Runable na spúštanie funkcie run() ako aj rozhranie Clonable - na vytváranie klonov triedy ScopeVariable.
 
 \subsubsection{Abstraktná trieda}
-\indent Abstraktná trieda je typ triedy, ktorú je potrebné doprogramovať. Táto trieda nemôže byť inštanciovaná čím núti vývojára aby doimplementoval nenaprogramované časti a to metódy označené ako abstraktné, prípadne metódy, ktoré obsahuje kvoli implementácii rozhrania. Spomenutý typ triedy sme použili pre implementáciu základného scopu - AbstractScope, ktorý nie je sám o sebe kompletný, a preto je ho potrebné rozšíriť aby zabezpečil potrebú funkcionalitu. \cite{javabook}
+\indent Abstraktná trieda je typ triedy, ktorú je potrebné doprogramovať. Táto trieda nemôže byť inštanciovaná čím núti vývojára aby doimplementoval nenaprogramované časti a to metódy označené ako abstraktné, prípadne metódy, ktoré obsahuje kvoli implementácii rozhrania. \cite{javabook}  Spomenutý typ triedy sme použili pre implementáciu základného scopu - AbstractScope, ktorý nie je sám o sebe kompletný, a preto je ho potrebné rozšíriť aby zabezpečil potrebú funkcionalitu.
 
 \subsubsection{Dátové štruktúry}
 \indent Java podporuje širokú škálu dátových štruktúr, ktoré vo veľkej miere využívame pri vývoji aplikácie ako Collections, List, String alebo Optional. \newline
-\indent Optional, bol predstavený v Jave 8 ako reakcia na častý výskyt NullPointerException. Vďaka tejto triede je možné špecifikovať, že volanie metódy nemusí vrátiť požadovaný objekt a programátor, ktorý túto metódu volá by sa mal ďalší beh aplikácie uspôsobiť tomuto faktu. 
+\indent Optional, bol predstavený v Jave 8 ako reakcia na častý výskyt NullPointerExceptionpočas behu aplikácií. \cite{javabook}  Pomocou tejto triedy je možné špecifikovať, že volanie metódy nemusí vrátiť požadovanú referenciu na objekt, resp. vráti žiadnu a v takom príade programátor, ktorý túto metódu volá by mal logiku aplikácie prispôsobiť tomuto faktu.
 \newline
-\indent Z dátových štruktú
+\indent Z dátových štruktú využívame mapy obzvlášť hešovacie mapy (HashMap). Túto dátovú štuktúru, využívame vo všetkých častiach aplikácie, napríklad v PluginFactory, kde všetky dostupné aj používane pluginy držíme v inštanciách tejto triedy.
+\newline
+\indent Rovnako používame  výhody triedy String. Triedu používame hlavne pri predspracovaní vstupných skriptov, počas ktorého využívame aj bohaté \acrshort{api}, ktoré táto trieda poskytuje. Na spravocanie textu a jeho ukladanie využívame triedu StringBuilder pomocou, ktorého predpripravujeme vstupy pre konzolu. 
+\newline
+\indent Samozrejme snažili sme sa využiť všetkých aspektov jazyka Java avšak spomenuté triedy sme využívali najintenzívnejšie.
 
 \subsubsection{Nahrávanie tried v Jave}
 \indent doplniť
@@ -1264,7 +1268,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{figure}
 \subsubsection{Načítanie pluginov}
 \indent Načítanie pluginov sa uskutočňuje pomocou triedy PluginFactory a JarLoader, kde tento proces pozostáva z troch krokov.\newline
-\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
+\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste, v akresári libs v koreňovom adresári aplikácie. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, ktoré sme si popísali v , kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
 	try {
@@ -1325,7 +1329,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{algorithm}
 \newpage
 \subsubsection{Vykonávač príkazu}
-\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope). Command následne spracuje vstupy v metóde parseCommand(Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy.
+\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope{)}. Command následne spracuje vstupy v metóde \newline parseCommand{(}Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy.
 
 \subsubsection{Vykonávač pajpy}
 \indent Ak aplikácia rozozná, že v príkaze ide o pajpu, príkaz putuje do triedy PipeExecutor, kde sa rozparsuje na parciálne príkazy. Po rozparsovaní príkazov sa každému príkazu nastaví nasledujúci príkaz, ktorý sa má vykonať. Posledný príkaz neobsahuje žiadny ďalší. Po takomto prednastavení exekútora sa spustí vykonávanie prvého príkazu, jeho výstup je pri úspešnom ukončení presmerovaný ďalšiemu príkazu. Tento kolobeh pokračuje až kým sa nedostane k poslednému príkazu. Ten následne vracia svoj výstup exekútorovi z 4.1.
