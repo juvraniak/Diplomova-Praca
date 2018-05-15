@@ -1,9 +1,9 @@
 
-?squid:S1148"#Use a logger to log this exception.(Ç’Çê8ÚîÆ×µ,
-Xsquid:S2629"7Use the built-in formatting to construct this argument.(²Å©ùÿÿÿÿ8ÚîÆ×µ,
-Gsquid:S3010"&Remove this assignment of "LIBS_PATH".(î”®Úÿÿÿÿÿ8ÚîÆ×µ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ªƒ‰ÿ8ÚîÆ×µ,
-`squid:S1134"DTake the required action to fix the issue indicated by this comment.(Ï¸ ë8ÚîÆ×µ,
-psquid:S3008"TRename this field "LIBS_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°—Õ8ÚîÆ×µ,
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬“ãB8ÚîÆ×µ,
-esquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ŞûøÏıÿÿÿÿ8ƒš´Úµ,
+Gsquid:S3010"&Remove this assignment of "LIBS_PATH".(î”®Úÿÿÿÿÿ8ê±êôµ,
+?squid:S1148"#Use a logger to log this exception.(Ç’Çê8ê±êôµ,
+Xsquid:S2629"7Use the built-in formatting to construct this argument.(²Å©ùÿÿÿÿ8ê±êôµ,
+esquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ŞûøÏıÿÿÿÿ8ê±êôµ,
+`squid:S1134"DTake the required action to fix the issue indicated by this comment.(Ï¸ ë8ê±êôµ,
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬“ãB8ê±êôµ,
+psquid:S3008"TRename this field "LIBS_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°—Õ8ê±êôµ,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ªƒ‰ÿ8ê±êôµ,

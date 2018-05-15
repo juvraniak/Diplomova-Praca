@@ -1,18 +1,18 @@
 
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(‰¸ëÂ8¾È·Úµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–éóõþÿÿÿÿ8¾È·Úµ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê†¿¸8¾È·Úµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éøÌ·ÿÿÿÿÿ8¾È·Úµ,
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¬£T8¾È·Úµ,
-`squid:S1134"DTake the required action to fix the issue indicated by this comment.(•ÔÔ×8¾È·Úµ,
-esquid:S1134"DTake the required action to fix the issue indicated by this comment.(åÏµÒþÿÿÿÿ8¾È·Úµ,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Œóò8¾È·Úµ,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(æ¨¤’8¾È·Úµ,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(îåõ÷8¾È·Úµ,
-^squid:S2259"BA "NullPointerException" could be thrown; "temp" is nullable here.(ÏÉš³8¾È·Úµ,
-Fsquid:S00108")Either remove or fill this block of code.(å¥ž‡8¾È·Úµ,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8¾È·Úµ,
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ý8¾È·Úµ,
-Hsquid:S1612",Replace this lambda with a method reference.(æ¨¤’8¾È·Úµ,
-Xsquid:S1854"7Remove this useless assignment to local variable "out".(·¹£Ùþÿÿÿÿ8¾È·Úµ,
-€squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Òž¨ïýÿÿÿÿ8¾È·Úµ,
+Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(îåõ÷8æÍÕíµ,
+€squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Òž¨ïýÿÿÿÿ8æÍÕíµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éøÌ·ÿÿÿÿÿ8æÍÕíµ,
+esquid:S1134"DTake the required action to fix the issue indicated by this comment.(åÏµÒþÿÿÿÿ8æÍÕíµ,
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Œóò8æÍÕíµ,
+`squid:S1134"DTake the required action to fix the issue indicated by this comment.(•ÔÔ×8æÍÕíµ,
+Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(æ¨¤’8æÍÕíµ,
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¬£T8æÍÕíµ,
+Fsquid:S00108")Either remove or fill this block of code.(å¥ž‡8æÍÕíµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(‰¸ëÂ8æÍÕíµ,
+Xsquid:S1854"7Remove this useless assignment to local variable "out".(·¹£Ùþÿÿÿÿ8æÍÕíµ,
+^squid:S2259"BA "NullPointerException" could be thrown; "temp" is nullable here.(ÏÉš³8æÍÕíµ,
+Hsquid:S1612",Replace this lambda with a method reference.(æ¨¤’8æÍÕíµ,
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ý8æÍÕíµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–éóõþÿÿÿÿ8æÍÕíµ,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê†¿¸8æÍÕíµ,
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8æÍÕíµ,

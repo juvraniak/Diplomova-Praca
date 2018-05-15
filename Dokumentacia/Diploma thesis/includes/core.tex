@@ -14,7 +14,7 @@
 \subsubsection{MacOs}
 \indent  Mac okrem iného ponúka serverovú verziu operačného systému pod názvom OS X Server, ktorý začal písať svoju históriu v roku 2001, avšak neteší sa takej obľube ako Windows, Unix alebo Linux server. OS X server nepoužíva  špecifický skriptovací jazyk, pričom poskytuje možnosť výberu skriptovacieho jazyka, ako napríklad: Python, JavaScript, Perl, AppleScript, Swift alebo Ruby. Každý z uvedených jazykov prináša určité plusy, ako aj mínusy.
 \paragraph{Predinštalovaný softvér}
-\indent Predinštalovaný softvér pre developerov na Mac OS je Python, AppleScript, Ruby, Bash, BOjective-c. Donedávna bola štandardom aj Java, avšak Apple sa rozhodol pre radikálny krok vylúčiť Javu a propagovať Objective-c.
+\indent Predinštalovaný softvér pre developerov na Mac OS je Python, AppleScript, Ruby, Bash, Ojective-c. Donedávna bola štandardom aj Java, avšak Apple sa rozhodol pre radikálny krok vylúčiť Javu a propagovať Objective-c.
 \paragraph{Podiel na trhu}
 \indent Popularita počítačov s predinštalovaným operačným systémom MacOs sa mierne zvyšuje, čo je možné vidieť aj na obrázku na konci sekcie operačných systémov. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 13,18\% resp.  9,19\% na trhu.
 \indent Serverové verzie MacOs podľa stránky w3techs.com\cite{pop} sú na menej ako 0.1\% zariadeniach.
@@ -81,12 +81,11 @@ Je skriptovací jazyk pre unixové distribúcie, ktorý do súčasnosti prešiel
 \end{itemize}
 \paragraph{Nevýhody}
 \begin{itemize}
-	\item najväčšou nevýhodou je skutočnosť, že prirodzene nefunguje pod Windows OS, pričom na sprostredkovanie funkcionality používa rôzne emulátory a nástroje tretích strán,
+	\item najväčšou nevýhodou je skutočnosť, že prirodzene nefunguje pod Windows OS, vo všeobecnosti je neprenosný medzi platformami, pričom na sprostredkovanie funkcionality používa rôzne emulátory a nástroje tretích strán,
 	\item pomalé vykonávanie príkazov pri porovnaní s inými programovacími jazykmi,
 	\item nový proces pre skoro každý spustený príkaz,
 	\item zložitejší na zapamätanie rôznych prepínačov, ktoré dané príkazy podporujú,
 	\item nejednotnosť prepínačov,
-	\item neprenosný medzi platformami,
 	\item Shell nepridáva vlastné príkazy, používa len tie, ktoré sú dostupné na konkrétnom počítači.
 \end{itemize}
 \paragraph{Popis a zhodnotenie jazyka}
@@ -99,25 +98,25 @@ zarrelli:~\$ ls -lah | wc -l
 V uvedenom príklade sme vylistovali obsah adresára, v ktorom sa práve nachádzame, a výstupom z programu sme naplnili štandardný vstup aplikácie "wc", ktorá spočíta, koľko riadkov sa nachádza na vstupe, ktorý jej bol dodaný. Príkaz za znakom pajpy | zbieha v Subshell-i, čo znamená, že nebude schopný zmodifikovať hodnoty v rodičovskom procese. Zlyhanie príkazu v pajpe vedie k takzvanej "zlomenej pajpe", v tomto prípade exekúcia príkazov skončí. \cite{mbash}
 \newpage
 Taktiež niektoré často používané príkazy majú zmenený spôsob zápisu.
-Ako príklad si uvedieme príkaz for, pri ktorom bash používa následovnú Syntax:
+Ako príklad si uvedieme príkaz for, pri ktorom bash používa následovnú syntax:
 
 \begin{algorithm}[H]
 	\begin{minted}{php}
 	#!/bin/bash
-	// prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
+	# prvý spôsob zápisu podobná vylepšenej verzii z predchádzajúceho príkladu
 	for placeholder in list_of_items
 	do
 	action_1 \$placeholder
 	action_2 \$placeholder
 	action_n \$placeholder
 	done
-	//kolekcia vo fore môze byť reprezentovaná vymenovaním prvkov 
-	//priamo za "in" časťou
+	#kolekcia vo fore môze byť reprezentovaná vymenovaním prvkov 
+	#priamo za "in" časťou
 	for i in 1 2 3 4 5
 	do
 	echo "\$i"
 	done
-	// c-like prístup
+	# c-like prístup
 	for ((i=20;i > 0;i--))
 	{
 	if (( i % 2 == 0 ))
@@ -134,7 +133,7 @@ Ako vidíme z príkladu, for používa podobnú Syntax ako ostatné jazyky, a ď
 \newpage
 \begin{algorithm}[H]
 	\begin{minted}{php}
-	//telo skriptu
+	#telo skriptu
 	#!/bin/bash
 	i=0
 	for cities 
@@ -143,7 +142,7 @@ Ako vidíme z príkladu, for používa podobnú Syntax ako ostatné jazyky, a ď
 	done
 	exit 0
 	
-	//následné volanie z konzoly
+	#následné volanie z konzoly
 	./for-pair-input.sh 
 	Belfast Redwood Milan Paris
 	City 0 is: Belfast
@@ -156,8 +155,8 @@ Ako vidíme z príkladu, for používa podobnú Syntax ako ostatné jazyky, a ď
 \end{algorithm}
 
 Syntax jazyka je náročnejšia na učenie, pretože používa rôzne prepínače, ktoré novému používateľovi nemusia byť sprvu jasné. 
-V tabuľke uvádzame príklad prepínačov pre if, ktorý pre podmienkovú časť používa hranaté zátvorky namiesto okrúhlych, na ktoré sme zvyknutí z väčšiny programovacích jazykov. Je potrebné spomenúť, že napríklad Unix shell nepoužíva žiadne zátvorky v podmienkovej časti príkazu, na ukončenie podmienkovej časti sa používa bodkočiarka, čo spôsobuje problémy pri prenositeľnosti. If ponúka aj ďalšie prepínače, no zhodnotili sme, že pre ilustráciu budú postačovať aj príklady uvedené v tabuľke.
-Najvačsia nevýhoda je, že Shell script nie je multiplatformový jazyk, a teda ak by sme mali prostredie, v ktorom servery bežia na rôznych operačných systémoch, potrebovali by sme poznať ďalší jazyk, ktorým by sme docielili rovnaké alebo aspoň podobné výsledky.
+V tabuľke uvádzame príklad prepínačov pre if, ktorý pre podmienkovú časť používa hranaté zátvorky namiesto okrúhlych, na ktoré sme zvyknutí z väčšiny programovacích jazykov. Je potrebné spomenúť, že napríklad Unix shell nepoužíva žiadne zátvorky v podmienkovej časti príkazu, na ukončenie podmienkovej časti sa používa bodkočiarka, čo spôsobuje problémy pri prenositeľnosti. If ponúka aj ďalšie prepínače, no zhodnotili sme, že pre ilustráciu budú postačovať aj príklady uvedené v tabuľke č. 1 a tabuľke č. 2.
+Najväčšia nevýhoda je, že Shell script nie je multiplatformový jazyk, a teda ak by sme mali prostredie, v ktorom servery bežia na rôznych operačných systémoch, potrebovali by sme poznať ďalší jazyk, ktorým by sme docielili rovnaké alebo aspoň podobné výsledky.
 \newline
 \begin{table}[h!]
 	\centering
@@ -229,7 +228,7 @@ Výhody a nevýhody Powershell zhrnieme v nasledujúcich častiach.
 \end{itemize}
 
 \paragraph{Popis a zhodnotenie jazyka}
-Powershell je obľúbený medzi programátormi a administrátormi, ktorí pracujú pod operačným systémom Windows. Donedávna, kým Powershell fungoval na .NET frameworku, ho nebolo možné používať mimo operačných systémov Windows. Avšak s príchodom frameworku .NET Core sa situácia zmenila. Spomenutý frawework je momentálne open source, jeho zdrojové kódy boli zverejnené a je možné do neho prispievať. Okrem iného, podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script. V niektorých prípadoch poskytuje rovnaké príkazy, napríklad: mv, cp, rm, ls. Jedným zo zásadných rozdielov medzi Shellom a Powershellom je skutočnosť, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať, v Powershelli je všetko presúvané ako objekt. Ide o najzásadnejší rozdiel, nakoľko ostatné veci boli pravdepodobne navrhované v spolupráci s používateľmi Shell scriptu. \cite{psbook}
+Powershell je obľúbený medzi programátormi a administrátormi, ktorí pracujú pod operačným systémom Windows. Donedávna, kým Powershell fungoval na .NET frameworku, ho nebolo možné používať mimo operačných systémov Windows. Avšak s príchodom frameworku .NET Core sa situácia zmenila. Spomenutý frawework je momentálne Open source, jeho zdrojové kódy boli zverejnené a je možné do neho prispievať. Okrem iného, podporuje rovnaké alebo aspoň podobné štruktúry ako Shell script. V niektorých prípadoch poskytuje rovnaké príkazy, napríklad: mv, cp, rm, ls. Jedným zo zásadných rozdielov medzi Shellom a Powershellom je skutočnosť, že kým v Shelli sú pre vstup aj výstup používané textové reťazce, ktoré je potrebné rozparsovať a interpretovať, v Powershelli je všetko presúvané ako objekt. Ide o najzásadnejší rozdiel, nakoľko ostatné veci boli pravdepodobne navrhované v spolupráci s používateľmi Shell scriptu. \cite{psbook}
 
 Pre demonštráciu rozdielov pri odovzdávaní parametrov medzi príkazmi uvádzame príklad.
 \newpage
@@ -264,11 +263,11 @@ Pre demonštráciu rozdielov pri odovzdávaní parametrov medzi príkazmi uvádz
 \end{algorithm}
 
 \subsubsection{Python}
-\indent Do analýzy sme zahrnuli aj programovací jazyk Python. Výber Python-u nebol náhodný, kedže je jedným z najpopulárnejších programovacích jazykov súčasnosti. Je viacúčelový, patrí mezi vyššie programovacie jazyky, objektovo-orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.\cite{python}
+\indent Do analýzy sme zahrnuli aj programovací jazyk Python. Výber Python-u nebol náhodný, kedže je jedným z najpopulárnejších programovacích jazykov súčasnosti. Je viac-účelový, patrí mezi vyššie programovacie jazyky, objektovo-orientovaný, interaktívny, interpretovaný a extrémne používateľsky prijateľný.\cite{python}
 \paragraph{Výhody}
 \begin{itemize}
 	\item je ľahko čitateľný, tým pádom ľahšie pochopiteľný,
-	\item Syntax orientovaná na produktivitu,
+	\item syntax orientovaná na produktivitu,
 	\item multiplatformový - po inštalácii interpretera,
 	\item obsahuje množstvo rôznych knižníc,
 	\item Open source.
@@ -286,7 +285,7 @@ Pre demonštráciu rozdielov pri odovzdávaní parametrov medzi príkazmi uvádz
 \end{itemize}
 
 \paragraph{Popis a zhodnotenie jazyka}
-\indent Ako už bolo spomenuté, Python je jedným z najobľúbenejších jazykov súčasnosti, kde prevažnú časť komunity tvoria vedci, ktorí nemajú rozsiahle programátorské znalosti. Práve jednoduchosť, čitateľnosť a pochopiteľnosť jazyka sa značnou mierou podieľajú na tomto fakte. Rovnako Python nevyžaduje manažovať pamäť a iné netriviálne záležitosti nižších programovacích jazykov. Aj napriek tomu, že jazyk je objektovo-orientovaný, skripty sa v ňom píšu jednoducho. Poskytuje štruktúry ako pajpa, možnosť pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a simulovať rôzne problémy. Veľkou výhodou tohto jazyka je, že je open source s veľkou komunitou, ktorá rada testuje nové vydania, nahlasuje problémy, tým pádom je jazyk rýchlejšie a kvalitnejšie vyvíjaný. Na Python-e vznikli zaujímavé webové frameworky, ako napríklad Django. Každá strana má dve mince, a ani Python nie je stopercentný. Tým, že predstavuje interpretovaný jazyk, neprekypuje rýchlosťou. Veľa ľudí sa zaoberá rýchlosťou jazykov, zisťujú efektívnosť pri rôznych úkonoch, ako napríklad cykly, volania funkcií, aritmetika, prístup k pamäti, vytváranie objektov. V nasledujúcich tabuľkách je možné porovnať rozdiel v rýchlosti jednotlivých testov. 
+\indent Ako už bolo spomenuté, Python je jedným z najobľúbenejších jazykov súčasnosti, kde prevažnú časť komunity tvoria vedci, ktorí nemajú rozsiahle programátorské znalosti. Práve jednoduchosť, čitateľnosť a pochopiteľnosť jazyka sa značnou mierou podieľajú na tomto fakte. Rovnako Python nevyžaduje manažovať pamäť a iné netriviálne záležitosti nižších programovacích jazykov. Aj napriek tomu, že jazyk je objektovo-orientovaný, skripty sa v ňom píšu jednoducho. Poskytuje štruktúry ako pajpa, možnosť pracovať s procesmi, vytvárať triedy, inštancie, jednoducho prototypovať a simulovať rôzne problémy. Veľkou výhodou tohto jazyka je, že je Open source s veľkou komunitou, ktorá rada testuje nové vydania, nahlasuje problémy, tým pádom je jazyk rýchlejšie a kvalitnejšie vyvíjaný. Na Python-e vznikli zaujímavé webové frameworky, ako napríklad Django. Každá strana má dve mince, a ani Python nie je stopercentný. Tým, že predstavuje interpretovaný jazyk, neprekypuje rýchlosťou. Veľa ľudí sa zaoberá rýchlosťou jazykov, zisťujú efektívnosť pri rôznych úkonoch, ako napríklad cykly, volania funkcií, aritmetika, prístup k pamäti, vytváranie objektov. V nasledujúcich tabuľkách je možné porovnať rozdiel v rýchlosti jednotlivých testov, uvádzané v sekundách, nižšie hodnota znamená lepší výsledok. 
 \begin{center}
 	\begin{table}[htbp]
 		\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
@@ -306,7 +305,7 @@ Pre demonštráciu rozdielov pri odovzdávaní parametrov medzi príkazmi uvádz
 			Python 3&880.7&1466&81.143\\
 			\hline
 		\end{tabular}
-		\caption{Porovnanie rýchlostí rôznych jazykov\cite{gitspeed}}
+		\caption{Porovnanie rýchlostí rôznych jazykov v sekundách\cite{gitspeed}}
 		\label{table:1}
 	\end{table}
 \end{center}
@@ -318,7 +317,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \subsubsection{ConEmu}
 \indent ConEmu je konzolový emulátor, ktorý poskytuje jednoduché \acrshort{gui}, do ktorého je možné vložiť viacero konzol. Dokáže spúšťať jednoduché \acrshort{gui} aplikácie, ako napríklad Putty, Cygwin. Obsahuje množstvo nastavení, ako nastavenie kurzora, priehľadnosti, písma a pod. Podporuje Windows 2000 a neskoršie verzie. Neposkytuje verziu pre iné operačné systémy. \cite{conemu}
 \paragraph{Skúsenosti}
-\indent ConEmu je vydarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísané v issues logu na Githube. Tak ako každý softvér, aj ConEmu je náchylný na chyby. Podľa issues logu sa do oficiálnych vydaní dostávajú rôzne problémy, ktoré neboli zahrnuté v predchadzajúcich verziách. V tomto prípade je na zvážení každého používateľa, či aj napriek problémom, ktoré sa môžu dostávať do jednotlivých verzií emulátora, použije ConEmu, resp. či jeho kladné stránky prekonajú tie záporné.
+\indent ConEmu je vydarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísané v zozname nevyriešených chýb na Githube. Tak ako každý softvér, aj ConEmu je náchylný na chyby. Podľa issues logu sa do oficiálnych vydaní dostávajú rôzne problémy, ktoré neboli zahrnuté v predchadzajúcich verziách. V tomto prípade je na zvážení každého používateľa, či aj napriek problémom, ktoré sa môžu dostávať do jednotlivých verzií emulátora, použije ConEmu, resp. či jeho kladné stránky prekonajú tie záporné.
 
 \begin{figure}[!htbp]
 	\centering
@@ -397,7 +396,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 \indent Podrobnejšie si stručne popíšeme všetky štyri časti, ktoré majú pre nás z hľadiska prekladu najväčší zmysel.
 \newline
 \subsubsection{Lexikálna analýza}
-	\indent Lexikálna analýza je prvou fázou kompilátora. Dopredu napísaný zdojový kód je postupne spracovávaný preprocesorom, ktorý vytvára takzvané lexémy. 
+	\indent Lexikálna analýza je prvou fázou kompilátora. Dopredu napísaný zdrojový kód je postupne spracovávaný preprocesorom, ktorý vytvára takzvané lexémy. 
 	 \newline Lexémou nazývame postupnosť alfanumerických znakov. Tieto postupnosti znakov sú následne vkladané do lexikálneho analyzátora, ktorý ma za úlohu vytvoriť zo vstupných lexém tokeny slúžiace ako vstup pre syntaktický analyzátor. 
 	 \newline Tokeny sa vytvárajú na základe preddefinovaných pravidiel, ktoré sa v programovacích jazykoch definujú ako pattern. V prípade, že lexikálny analyátor nieje schopný nájsť  pattern pred danú lexému musí vyhlásiť chybu počas tokenizácie.  
 	 \newline Výstupom z lexikálnej analýzy sú takzvané tokeny, ktoré tvoria vyššie jednotky jazyka ako kľúčové slová jazyka, konštanty, identifikátory, operátory a iné.\cite{gram}
@@ -424,7 +423,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
  \newline
  \newpage
 \subsubsection{Limitácia syntaktickej analýzy}
-\indent Syntaktický analyzátor ziska vstup z tokenu, ktorý vytvorí lexikálny analyzátor. Lexikálne analyzátory sú zodpovedné za validitu tokenu.Syntaktické analyzátory majú nasledovné limitácie.
+\indent Syntaktický analyzátor získa vstup z tokenu, ktorý vytvorí lexikálny analyzátor. Lexikálne analyzátory sú zodpovedné za validitu tokenu. Syntaktické analyzátory majú nasledovné limitácie.
 
 \begin{itemize}
 	\item nedokážu zistiť validitu tokenu
@@ -436,7 +435,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 
 
 \subsubsection{Semantická  analýza}
-\indent Sémantická analýza má za úlohu interpretovať symboly, typy, ich vzťahy.Sémantická analýza rohoduje či má syntax programy význam alebo nie.
+\indent Sémantická analýza má za úlohu interpretovať symboly, typy, ich vzťahy. Sémantická analýza rohoduje či má syntax programy význam alebo nie.
 Ako príklad zisťovania významu môžeme uviesť jednoduchú inicializáciu premennej.\cite{gram}
 
 \begin{lstlisting}
@@ -453,7 +452,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 	\item kontrola typov
 	\item deklaracia premenných
 	\item definícia premenných
-	\item viacnásobná deklarácia premenných v jedno scope
+	\item viacnásobná deklarácia premenných v jednom scope
 \end{itemize}
 
 \subsubsection{Generovanie cieľového jazyka}
@@ -469,7 +468,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \end{figure}
 \newpage
 \subsection{Popis prípadov použitia}
-\indent V tejto časti sa venujeme popisu jednotlivých prípadov použitia. Diagram prípadov použitia spolu s popisom sú základnými prvkami, na ktorých je možné špecifikovať novovznikajúci softvér. Je dôležité najpodstatnejšie časti systému špecifikovať na začiatku, aby pri navrhovaní aplikácie mohli byť prijaté rozhodnutia zaručujúce dosiahnutie najlepšieho výsledného riešenia vyhovujúceho špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojárom balíčkov(nových súčastí systému), čo môžeme vyčítať z popisu konkrétnych prípadov použitia.
+\indent V tejto časti sa venujeme popisu jednotlivých prípadov použitia. Diagram prípadov použitia spolu s popisom sú základnými prvkami, na ktorých je možné špecifikovať novovznikajúci softvér. Je dôležité najpodstatnejšie časti systému špecifikovať na začiatku, aby pri navrhovaní aplikácie mohli byť prijaté rozhodnutia zaručujúce dosiahnutie najlepšieho výsledného riešenia vyhovujúceho špecifikácii. Ako je zjavné aj z priloženého diagramu prípadov použitia, pre aplikáciu sme identifikovali dvoch hráčov : Vývojár skriptov a Vývojár balíčkov. Títo hráči majú jednu spoločnú črtu - pre obe platí, že hráč je vývojár. Avšak je rozdiel medzi vývojárom skriptu a vývojárom balíčkov (nových súčastí systému), čo môžeme vyčítať z popisu konkrétnych prípadov použitia.
 \subsubsection{Vývojár skriptov}
 \indent Rola sa zameriava hlavne na používanie hotovej aplikácie, prácu s balíčkami, vytváranie skriptov, efektívne využívanie dostupného \acrshort{api}. 
 \paragraph{UC1\_Spustiť konzolu}
@@ -528,7 +527,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		\hline
 		\textbf{Výstup} & Výstup je textový reťazec, závislý na logike skriptu.\\
 		\hline
-		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov alebo iných komplikácií počas behu, program zapisuje na štandardný chybový výstup chybové hlášky spolu so základným popisom problému, tracom.\\
+		\textbf{Chyba} & V prípade chyby pri sťahovaní závislostí, exekúcie príkazov alebo iných komplikácií počas behu, program zapisuje na štandardný chybový výstup chybové hlášky spolu so základným popisom problému.\\
 		\hline
 		\caption{Use case : Spustiť skript}
 		\label{table:1}
@@ -590,7 +589,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 			\hline
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Vstup musí byť zadaný v správnom formáte.\\ 
 			\hline
-			\textbf{Vstup} & Textový reťazec obsahujúci sekvenciu príkazov, ich argumenty spojené znakom pajpy "|".\\
+			\textbf{Vstup} & Textový reťazec obsahujúci sekvenciu príkazov, ich argumenty spojené znakom pajpy "|" .\\
 			\hline
 			\textbf{Popis} & Systém rozozná, že ide o zreťazený príkaz a následne začne vykonávať príkazy v poradí v akom boli zadané. Jednotlivé príkazy odovzdajú  výstupy nasledovníkovi po úspešnom ukončení. Príkazy sa vykonávajú dovtedy, pokým nepríde na posledný príkaz v sekvencii, alebo ak počas behu nastane chyba. O chybe je používateľ oboznámený a chyba je zapísaná na štandardný chybový výstup. \\ 
 			\hline
@@ -646,7 +645,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 			\textbf{Chyba} & Vypíše chybu na štandardný chybový výstup v prípade, že daný balíček na servery neexistuje, používateľ nemá internetové pripojenie.\\
 			\hline
-		\caption{Use case : Stiahnúť nový balíček}
+		\caption{Use case : Stiahnuť nový balíček}
 		\label{table:1}
 		
 	\end{longtable}
@@ -869,6 +868,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 		
 	\end{longtable}
 \end{center}
+\newpage
 \paragraph{UC18\_Vytvoriť premenné}
 \begin{center}
 	\begin{longtable}{|p{2.5cm}|p{12.2cm}|}
@@ -1057,12 +1057,17 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent Java je programovací jazyk a výpočtová platforma, ktorá bola vydaná spoločnosťou Sun Microsystems v roku 1995. \cite{java} 
 Programy v Jave sú prvotne preložené do tzv. byte-code, ktorý je rovnaký pre všetky \acrshort{pc}. Pomocou jednoduchého programu je byte-code preložený do jazyka, ktorému rozumie konrétny \acrshort{pc}.
 Java je objektovo-orientovaný programovací jazyk, čo znamená že rovnako ako v živote, aj v Jave je všetko tvorené objektami. Obsahuje široké spektrum knižníc, ktoré slúžia nielen na vývoj webových, ale aj desktopových aplikácií.
-Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počítače s viacjadrovým procesorom.\cite{javabook}
+Java rovanko podporuje dátové štruktúry, ktoré vo veľkej miere využívame pri vývoji aplikácie ako Collections, List, Annotation, String alebo Optional. 
+Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počítače s viacjadrovým procesorom.\cite{java}
+
+\subsubsection{Nahrávanie tried v Jave}
+doplniť
+
 \subsection{Návrhové vzory}
-\indent Návrhové vzory sú všeobecne opakovaným riešním pre všeobecne opakujúci sa problém pri dizajnovaní softwéru. Návrhový vzor nie je nemenný dizajn, vždy je potrebné aby si ho programátori uspôsobili podľa vlstných potrieb. Návrhové vzory sa delia do troch základných skupín vytváracie vzory, štrukturálne vzory a vzory správania. \cite{designpattern}
+\indent Návrhové vzory sú všeobecne opakovaným riešním pre všeobecne opakujúci sa problém pri dizajnovaní softwéru. Návrhový vzor nie je nemenný dizajn, vždy je potrebné aby si ho programátori prispôsobil podľa vlastných potrieb. Návrhové vzory sa delia do troch základných skupín vytváracie vzory, štrukturálne vzory a vzory správania. \cite{designpattern}
 
 \subsubsection{Factory - továreň}
-\indent Factory návrhový vzor patrí do sekcie vytváracích vzorov, pomocou tohoto vzoru budeme schopný vytvárať objekty bez toho aby sme prezradili logiku ich vytvárania klientovi.\cite{designpattern}
+\indent Factory návrhový vzor patrí do sekcie vytváracích vzorov. Pomocou tohoto vzoru budeme schopný vytvárať objekty bez toho aby sme prezradili logiku ich vytvárania klientovi.\cite{designpattern}
 Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
 \begin{figure}[!htbp]
 	\centering
@@ -1072,8 +1077,8 @@ Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
 \end{figure}
 \newline
 \subsubsection{Command - príkaz}
-\indent Command pattern je známy behaviorálny návrhový vzor, používa sa najmä na menežovanie algoritmov, vzťahov a zodpovednosti medzi objektami. 
-Cieľom vzoru je zapúzdriť požiadavku(request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.\cite{designpattern}
+\indent Command pattern je známy behaviorálny návrhový vzor, používa sa najmä na správu algoritmov, vzťahov a zodpovednosti medzi objektami. 
+Cieľom vzoru je zapúzdriť požiadavku (request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.\cite{designpattern}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=10cm]{img/command_pattern_class.jpg}
@@ -1081,7 +1086,7 @@ Cieľom vzoru je zapúzdriť požiadavku(request) ako objekt tým pádom paramet
 	\label{fig:test}
 \end{figure}
 \newline
-Command vzor deklaruje rozhranie pre všetky budúce commandy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
+Command vzor deklaruje rozhranie pre všetky budúce príkazy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
 Receiver je objekt, ktorý vie ako požadovanú operáciu splniť. Invoker pozná command a pomocou implementovanej execute() metódy dokáže vyvolať požadovanú operáciu.
 Klient potrebuje implemenotvaž ConcreteCommand a nastavit Receiver pre command. ConcreteCommand definuje spojenie medzi action a receiver. Keď Invoker zavolá execute() metódu na ConcreteCommand spustí tým jednu alebo viac akcií, ktoré budú bežať pomocou Receivera.\cite{designpattern}
 
@@ -1098,7 +1103,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \indent Pre implementáciu vlastného riešenia bolo potrebné na základe prípadov použitia identifikovať časti, z ktorých bude aplikácia pozostávať. Naším zámerom nebolo vytvorenie jednej veľkej aplikácie, ktorá by sa mohla časom stať neudržiavateľnou, ale aplikácia, ktorá umožní používateľom interaktívny aj skriptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti interaktívny prístup pre používateľa rovnako aj skriptovací módus, avšak funkcionality, ktoré bude podporovať, zabezpečia menšie externé podprogrami - pluginy, ktoré sa do apikácie nahrajú pri štarte. Pre dosiahnutie požadovaných výsledkov použijeme návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
 
 \subsection{Komponenty aplikácie}
-\indent Po vybratí návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre správny chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť niekoľko pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný, rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty, ktoré sme identifikovali pri vytváraní tejto ukážky funkčnosti : 
+\indent Pomocou command dizajnového návrhového vzoru sme prešli na identifikáciu komponentov aplikácie. V prvom návrhu sme identifikovali niekoľko komponentov, ktoré považujeme za podstatné a potrebné pre správny chod programu. Z týchto komponentov sme následne vytvorili malý projekt, kde sme sa pokúsili vytvoriť niekoľko pluginov implementovaných pomocou command dizajnového návrhu na demonštrovanie funkčnosti. Nakoľko bol model funkčný, rozhodli sme sa pokračovať s jeho vývojom. Uvádzame aj komponenty, ktoré sme identifikovali pri vytváraní tejto ukážky funkčnosti : 
 \begin{itemize}
 	\item Parser - vstupov aj výstupov,
 	\item Loader - na nahrávanie  \acrshort{jar} súborov,
@@ -1108,10 +1113,10 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 	\item ShellPlugin - komponent, ktorý nesie implementáciu príkazov.
 \end{itemize}
 
- \begin{figure}[!htbp]
+ \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{img/first_attemp_class_diag.jpg}
-	\caption{Pvrvé funkčné riešenie}
+	\caption{Prvé funkčné riešenie}
 	\label{fig:test}
 \end{figure}
 \newline
@@ -1129,13 +1134,13 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \begin{itemize}
 	\item ShellPlugin - je rozhranie, ktoré slúži na získavanie inštancií commandu, ako aj informáciách o plugine, 
 	\item Command - rozhranie, slúžiace na komunikáciu s receivermi,
-	\item Receiver - triedy, ktoré implementujú receiver špecifikujú funkcionalitu pluginu,
+	\item Receiver - triedy, ktoré implementujú receiver špecifikujú funkcionalitu pluginu, viď zodpovednosť receiveru v popise command návrhovího vzoru,
 	\item CommandParser - obsahuje parser vstupov,
 	\item CommandOutput - rozhranie pre výstupy z commandu,
 	\item CommandInput - rozhranie pre vstupy z commandu,
 	\item  PluginMeta - nesie základné informácie o plugine.
 \end{itemize}
-Aj keď náš prvotý program fungoval správne čakali sme, že počas vývoja ešte môže dôjsť k obmenám tried a rozhraní, nakoľko málokedy sa podarí odhadnúť  všetky kľúčové časti už počas návrhu.
+Vytvorili sme solídny základ pre vývoj aplikácie, jednoduché rozšérenie funkcionalít, avšak je možné, že bude potrebné aby príšlo k menším zmenám tried a rozhraní, nakoľko nie vždy sa podarí odhadnúť  všetky kľúčové časti systímu už počas návrhu.
 
 \newpage
 \subsection{Diagram tried aplikácie}
@@ -1154,7 +1159,7 @@ Trieda AbstractExecutor je abstraktná trieda poskytujúca abstraktnú metódu, 
 \paragraph{ParserImpl}
 RootParser je najpodstatnejšia trieda pre skriptovací mód. Jej úlohou je načítať zdrojové súbory skriptu a následne spustiť exekúciu, ak parsovanie prebehlo v poriadku.
 \paragraph{PluginFactory}
-PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy dostupné z disku. Na získavanie dostupných pluginov sa používa trieda JarLoader. 
+PluginFactory, ako z jej názvu vyplýva, je továreň, do ktorej sa pri štarte aplikácie nahrávajú všetky pluginy dostupné z disku. Trieda je vytvorená na základe popisu v kapitole 3.4.1 Návrhove vzory. Na získavanie dostupných pluginov sa používa trieda JarLoader. 
 \paragraph{JarLoader}
 JarLoade je trieda, ktorá pomocou class loadera nahráva nové pluginy do aplikácie.
 \section{Implementácia}
@@ -1212,7 +1217,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\label{alg:gen}
 \end{algorithm}
 \indent Cyklus je pridaný preto, aby sme dokázali vyhodnotiť vstupy zadané v skripte. Ako prvé sa do premennej i nainicializuje výsledok exekúcie príkazu zo skriptu. Následne sa rovnakým spôsobom vyhodnotí podmienka, a ak je všetko v poriadku, For cyklus sa začne vykonávať. Ďalej sa rovnako ako v predchádzajúcom prípade zopakuje cez celý stack For cyklu. Momentálnou limitáciou tohto prístupu je možnosť inicializovať a iterovať iba cez premenné numerického typu. Avšak v budúcnosti je tento koncept ľahko rozšíriteľný aj pre premenné iných typov. For cyklus obsahuje aj príkaz break, ktorý je bežnou súčasťou tejto štruktúry.
-\subsubsection{IfScope}
+\subsubsection{If Scope}
 \indent If scope je jednoduchšou implementáciou scopu ako bol For, nakoľko neobsahuje ďalšie cykly iba podmienku, ktorá ak sa vyhodnotí ako pravdivá, vykoná sa aj stack, ktorý if scope obsahuje. Na evaluáciu podmienok, priraďovanie hodnôt premenným ako aj iteráciu boli použité nami vopred naimplementované pluginy, ktoré dokážu pracovať s primitívnymi premennými Javy. 
 \begin{algorithm}[H]
 	\begin{minted}[]{java}

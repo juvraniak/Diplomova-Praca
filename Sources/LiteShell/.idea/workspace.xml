@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666707d9-4e4e-43f1-9318-2e7209f19d44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acn" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acr" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.acr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.bcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.lot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/Juraj_Vraniak_64685.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/_minted-Juraj_Vraniak_64685/57DA36E78C1A4CB46F2CCC7AD5D4EE7118E93C610369A30827AF97881995C98E.pygtex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/_minted-Juraj_Vraniak_64685/CA55CA5E50D96E15276D4424C2DC440B18E93C610369A30827AF97881995C98E.pygtex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/bibliography.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/core.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/glossary.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/glossary.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Dokumentacia/Diploma thesis/includes/introduction.tex" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -278,8 +293,8 @@
       <find>execute</find>
       <find>loader</find>
       <find>executesc</find>
-      <find>for</find>
       <find>parse</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
       <replace>ls</replace>
@@ -2162,7 +2177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Commons/src/main/java/liteshell/executors/Executor.java" />
         <option value="$PROJECT_DIR$/../Commands/ListDir/src/main/java/liteshell/v1/receivers/ListDirectoryReceiver.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/commands/GrepCommand.java" />
         <option value="$PROJECT_DIR$/src/test/java/liteshell/parser/ImportTest.java" />
@@ -2213,6 +2227,7 @@
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/AbstractScope.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/scopes/ClientApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/liteshell/executors/RootParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/liteshell/plugins/FunctionPlugin.java" />
       </list>
     </option>
   </component>
@@ -2872,7 +2887,7 @@
       <workItem from="1525977756544" duration="33922000" />
       <workItem from="1526140079391" duration="2724000" />
       <workItem from="1526151984440" duration="7481000" />
-      <workItem from="1526280249261" duration="18467000" />
+      <workItem from="1526280249261" duration="19177000" />
     </task>
     <servers />
   </component>
@@ -2909,7 +2924,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512031000" />
+    <option name="totallyTimeSpent" value="512741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2922,7 +2937,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="11" />
@@ -2947,7 +2961,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49780703" weight="0.49944875" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32998747" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32873276" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.47636104" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47636104" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32998747" />
       <window_info anchor="bottom" id="SonarLint" order="12" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32873276" />
@@ -3210,13 +3224,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/EchoPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Runnable.java" />
     <entry file="jar://$PROJECT_DIR$/../Commons/build/libs/terminal-commons-1.0.jar!/liteshell/keywords/Keyword.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -3558,6 +3565,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/plugins/FunctionPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

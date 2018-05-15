@@ -1,49 +1,48 @@
 
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(»°­ø8«¦ýÏµ,
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(þóÐ’8«¦ýÏµ,
-gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(½¿ö­øÿÿÿÿ8«¦ýÏµ,
-Msquid:S1612",Replace this lambda with a method reference.(ˆ¥ûçþÿÿÿÿ8«¦ýÏµ,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8«¦ýÏµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(º‰ºúÿÿÿÿ8«¦ýÏµ,
-gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(·ÛÖÀúÿÿÿÿ8«¦ýÏµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤™æúÿÿÿÿ8«¦ýÏµ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8«¦ýÏµ,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(“–ýþ8«¦ýÏµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ´«úÿÿÿÿ8«¦ýÏµ,
-asquid:HiddenFieldCheck":Rename "parent" which hides the field declared at line 41.(×¾§•8«¦ýÏµ,
-Xsquid:S1854"7Remove this useless assignment to local variable "key".(Î…ÅÎûÿÿÿÿ8«¦ýÏµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8«¦ýÏµ,
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8«¦ýÏµ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¨«Üž8«¦ýÏµ,
-Isquid:S1481"(Remove this unused "key" local variable.(Î…ÅÎûÿÿÿÿ8«¦ýÏµ,
+Xsquid:S1854"7Remove this useless assignment to local variable "key".(Î…ÅÎûÿÿÿÿ8ˆÂéôµ,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ˆÂéôµ,
+¸%squid:RedundantThrowsDeclarationCheck"}Remove the declaration of thrown exception 'java.lang.CloneNotSupportedException', as it cannot be thrown from method's body.(éÞ’¿úÿÿÿÿ8ˆÂéôµ,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ8«¦ýÏµ,
-Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8«¦ýÏµ,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¿•–ÿÿÿÿÿ8ˆÂéôµ,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8«¦ýÏµ,
-Œ"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Ó÷8«¦ýÏµ,
-Fsquid:S00108")Either remove or fill this block of code.(”ý¾8«¦ýÏµ,
-Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8«¦ýÏµ,
-nsquid:S1192"MDefine a constant instead of duplicating this literal "returnValue" 11 times.(ü¡±îùÿÿÿÿ8«¦ýÏµ,
-Fsquid:S00108")Either remove or fill this block of code.(”ý¾8«¦ýÏµ,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨«Üž8ˆÂéôµ,
+Isquid:S1481"(Remove this unused "key" local variable.(Î…ÅÎûÿÿÿÿ8ˆÂéôµ,
+esquid:S3358"DExtract this nested ternary operation into an independent statement.(Ú‡¯¡úÿÿÿÿ8ˆÂéôµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8ˆÂéôµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ´«úÿÿÿÿ8ˆÂéôµ,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(»°­ø8ˆÂéôµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ýæáòûÿÿÿÿ8ˆÂéôµ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8ˆÂéôµ,
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(“–ýþ8¢§îôµ,
+gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(½¿ö­øÿÿÿÿ8ˆÂéôµ,
+Fsquid:S00108")Either remove or fill this block of code.(”ý¾8ˆÂéôµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(þóÐ’8ˆÂéôµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¤™æúÿÿÿÿ8ˆÂéôµ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8ˆÂéôµ,
+nsquid:S1192"MDefine a constant instead of duplicating this literal "returnValue" 11 times.(ü¡±îùÿÿÿÿ8ˆÂéôµ,
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ÿ×¨8ˆÂéôµ,
+gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(·ÛÖÀúÿÿÿÿ8ˆÂéôµ,
+Œ"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Ó÷8ˆÂéôµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(º‰ºúÿÿÿÿ8ˆÂéôµ,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¿•–ÿÿÿÿÿ8«¦ýÏµ,
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8«¦ýÏµ,
-Csquid:S2189""Add an end condition to this loop.(˜ïˆžÿÿÿÿÿ8«¦ýÏµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ýæáòûÿÿÿÿ8«¦ýÏµ,
-Fsquid:S00108")Either remove or fill this block of code.(”ý¾8«¦ýÏµ,
-hsquid:S1192"GDefine a constant instead of duplicating this literal "fcall " 3 times.(ÍŒ›¿ùÿÿÿÿ8«¦ýÏµ,
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ8ˆÂéôµ,
+Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ˆÂéôµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8ˆÂéôµ,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8«¦ýÏµ,
-Fsquid:S00108")Either remove or fill this block of code.(”ý¾8«¦ýÏµ,
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8«¦ýÏµ,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ÿ×¨8«¦ýÏµ,
-esquid:S3358"DExtract this nested ternary operation into an independent statement.(Ú‡¯¡úÿÿÿÿ8«¦ýÏµ,
-¸%squid:RedundantThrowsDeclarationCheck"}Remove the declaration of thrown exception 'java.lang.CloneNotSupportedException', as it cannot be thrown from method's body.(éÞ’¿úÿÿÿÿ8«¦ýÏµ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8«¦ýÏµ,
-Msquid:S1602",Remove useless curly braces around statement(Ž³Ç·ûÿÿÿÿ8«¦ýÏµ,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8ˆÂéôµ,
+Msquid:S1602",Remove useless curly braces around statement(Ž³Ç·ûÿÿÿÿ8ˆÂéôµ,
+Fsquid:S00108")Either remove or fill this block of code.(”ý¾8ˆÂéôµ,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ˆÂéôµ,
 Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8«¦ýÏµ,
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8ˆÂéôµ,
+Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ˆÂéôµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8ˆÂéôµ,
+hsquid:S1192"GDefine a constant instead of duplicating this literal "fcall " 3 times.(ÍŒ›¿ùÿÿÿÿ8ˆÂéôµ,
+asquid:HiddenFieldCheck":Rename "parent" which hides the field declared at line 41.(×¾§•8ˆÂéôµ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¦€ß8ˆÂéôµ,
+Fsquid:S00108")Either remove or fill this block of code.(”ý¾8ˆÂéôµ,
+Msquid:S1612",Replace this lambda with a method reference.(ˆ¥ûçþÿÿÿÿ8ˆÂéôµ,
+Fsquid:S00108")Either remove or fill this block of code.(”ý¾8ˆÂéôµ,

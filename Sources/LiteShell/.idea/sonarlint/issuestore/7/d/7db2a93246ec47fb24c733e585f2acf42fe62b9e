@@ -1,26 +1,28 @@
 
-`squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(πέτ¥ώÿÿÿÿ
-`squid:S3027"FPut single-quotes around ')' to use the faster "indexOf(char)" method.(πέτ¥ώÿÿÿÿ
-[squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ΤΨ
-[squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ΤΨ
-[squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ι†¶Ψ
-‚ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ
-‚ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(«γ«»
-‚ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ
-‚ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ
-‡ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(άίΘÿÿÿÿÿ
-‡ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(ώÿÿÿÿ
-asquid:S1192"GDefine a constant instead of duplicating this literal "fcall " 3 times.(Λ‰ύ¦ϋÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ΠΖωϊÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(κ£©
-=squid:S1125"(Remove the literal "true" boolean value.(“±ι
-Gsquid:S1135"2Complete the task associated to this TODO comment.(κ£©
-Asquid:S1905",Remove this unnecessary cast to "ScopeImpl".(Λ‰Μ‚
-Dsquid:S1481"/Remove this unused "correctEnd" local variable.(¬υΑ
-;squid:S1481"&Remove this unused "v" local variable.(€Σ Β
-gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ψήγΝ
-Fsquid:S1612",Replace this lambda with a method reference.(Πβ•ώÿÿÿÿ
-Ssquid:S1854">Remove this useless assignment to local variable "correctEnd".(¬υΑ
-msquid:S00116"RRename this field "CONTENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ϋϋϋÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ
+gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(πέτ¥ώÿÿÿÿ8κ±κτµ,
+‰ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ8κ±κτµ,
+hsquid:S1192"GDefine a constant instead of duplicating this literal "fcall " 3 times.(Λ‰ύ¦ϋÿÿÿÿ8κ±κτµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·ξςζϋÿÿÿÿ8ΏΨωϋµ,
+‰ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ8κ±κτµ,
+ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(άίΘÿÿÿÿÿ8κ±κτµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ΤΨ8κ±κτµ,
+Dsquid:S1125"(Remove the literal "true" boolean value.(“±ι8κ±κτµ,
+Ksquid:S1481"/Remove this unused "correctEnd" local variable.(¬υΑ8κ±κτµ,
+ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(ώÿÿÿÿ8κ±κτµ,
+Bsquid:S1481"&Remove this unused "v" local variable.(€Σ Β8κ±κτµ,
+gsquid:S3027"FPut single-quotes around ')' to use the faster "indexOf(char)" method.(πέτ¥ώÿÿÿÿ8κ±κτµ,
+‰ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(«γ«»8κ±κτµ,
+Hsquid:S1905",Remove this unnecessary cast to "ScopeImpl".(Λ‰Μ‚8κ±κτµ,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8κ±κτµ,
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ψήγΝ8κ±κτµ,
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8κ±κτµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ι†¶Ψ8κ±κτµ,
+Msquid:S1612",Replace this lambda with a method reference.(Πβ•ώÿÿÿÿ8κ±κτµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ΠΖωϊÿÿÿÿ8κ±κτµ,
+bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ΤΨ8κ±κτµ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Μ¤ΈΏωÿÿÿÿ8ίΆϋϋµ,
+tsquid:S00116"RRename this field "CONTENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ϋϋϋÿÿÿÿ8κ±κτµ,
+Zsquid:S1854">Remove this useless assignment to local variable "correctEnd".(¬υΑ8κ±κτµ,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(κ£©8κ±κτµ,
+Nsquid:S1135"2Complete the task associated to this TODO comment.(κ£©8κ±κτµ,
+‰ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Μ‚Μ8κ±κτµ,

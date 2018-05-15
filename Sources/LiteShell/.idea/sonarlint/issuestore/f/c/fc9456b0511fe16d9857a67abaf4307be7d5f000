@@ -1,0 +1,33 @@
+
+[squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è
+[squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è
+`squid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(³•Îşÿÿÿÿ
+[squid:S1192"GDefine a constant instead of duplicating this literal "fcall " 6 times.(ù‚¼z
+Esquid:S1068"+Remove this unused "isBreak" private field.(Œ¸úûÿÿÿÿ
+psquid:S1450"VRemove the "isBreak" field and declare it as a local variable in the relevant methods.(Œ¸úûÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ê£Œ©
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(û«ƒÜşÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ
+Lsquid:S1135"2Complete the task associated to this TODO comment.(åÌèÊıÿÿÿÿ
+Gsquid:S1135"2Complete the task associated to this TODO comment.(ê£Œ©
+Asquid:S1905",Remove this unnecessary cast to "ScopeImpl".(ÕòÕ
+Asquid:S1905",Remove this unnecessary cast to "ScopeImpl".(é‡¹÷
+Isquid:S1481"/Remove this unused "callParams" local variable.(ıúŞŠúÿÿÿÿ
+Ssquid:S1481"9Remove this unused "afterExecuteRetValue" local variable.(’×ƒœøÿÿÿÿ
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Å„ÃÍøÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÿ×¨
+Ksquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ùö«Y
+Ksquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ùö«Y
+>squid:S00108")Either remove or fill this block of code.(¿ ùl
+Xsquid:S3358"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_

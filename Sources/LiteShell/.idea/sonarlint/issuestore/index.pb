@@ -45,3 +45,15 @@ a
 1src/main/java/liteshell/scopes/AbstractScope.java,f/0/f0fd44f39bb8775682dc1953bffe3f25ebd6fa77
 ^
 .src/main/java/liteshell/utils/ShellClient.java,4/c/4c9ac654c42cc467d6cfe08154e182439465f1ac
+j
+:../Commons/src/main/java/liteshell/receivers/Receiver.java,a/4/a4f7e598d017e6e1f55a6f91d84d2412bc874ab2
+h
+8../Commons/src/main/java/liteshell/commands/Command.java,4/1/41bb6d7b4898b8ee97ca7de8294469190f082836
+\
+,src/main/java/liteshell/scopes/ForScope.java,1/d/1ddf5fd791b17423fb3144289faca7a172c6efc3
+Z
+*src/main/java/liteshell/parser/Parser.java,a/3/a3abc942f9dbbc5d5d8f5bd05b5c0053a7d5a097
+L
+src/test/resources/test1.lsh,6/0/6075b633c5b8acab9f4b2482700de6ec304999b5
+[
++src/main/java/liteshell/scopes/IfScope.java,f/c/fc9456b0511fe16d9857a67abaf4307be7d5f000

@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{x}{	//telo skriptu}
+\PYG{x}{	\PYGZsh{}telo skriptu}
 \PYG{x}{	\PYGZsh{}!/bin/bash}
 \PYG{x}{	i=0}
 \PYG{x}{	for cities}
@@ -8,7 +8,7 @@
 \PYG{x}{	done}
 \PYG{x}{	exit 0}
 
-\PYG{x}{	//následné volanie z konzoly}
+\PYG{x}{	\PYGZsh{}následné volanie z konzoly}
 \PYG{x}{	./for\PYGZhy{}pair\PYGZhy{}input.sh}
 \PYG{x}{	Belfast Redwood Milan Paris}
 \PYG{x}{	City 0 is: Belfast}
