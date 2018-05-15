@@ -1,4 +1,4 @@
 
-Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ê²×Öÿÿÿÿÿ8«ïÿÏµ,
-Xsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(¡¿…³þÿÿÿÿ8«ïÿÏµ,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(§ïÁ³8«ïÿÏµ,
+Z"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ê²×Öÿÿÿÿÿ8­õå™¶,
+Xsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(¡¿…³þÿÿÿÿ8­õå™¶,
+Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(§ïÁ³8­õå™¶,

@@ -14,8 +14,6 @@ X
 ]
 -src/main/java/liteshell/scopes/ScopeImpl.java,4/6/46f585374b046926e5a5f4e6e4e25bbe0b20ac96
 c
-3src/main/java/liteshell/plugins/FunctionPlugin.java,e/3/e33713c59a238fac87c84ec08306c42a3d86963b
-c
 3src/main/java/liteshell/executors/ExecutorImpl.java,8/6/864c14e47004659c9616e618f96ea2660ce64367
 e
 5src/main/java/liteshell/commands/VariableCommand.java,6/c/6c3c56b318ae75c9cca215863ebc82dc0483b5d3
