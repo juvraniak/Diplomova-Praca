@@ -2188,10 +2188,11 @@
     <bcf:citekey order="58">javabook</bcf:citekey>
     <bcf:citekey order="59">javabook</bcf:citekey>
     <bcf:citekey order="60">javabook</bcf:citekey>
-    <bcf:citekey order="61">designpattern</bcf:citekey>
+    <bcf:citekey order="61">classloader</bcf:citekey>
     <bcf:citekey order="62">designpattern</bcf:citekey>
     <bcf:citekey order="63">designpattern</bcf:citekey>
     <bcf:citekey order="64">designpattern</bcf:citekey>
+    <bcf:citekey order="65">designpattern</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global/" type="entry" sortscheme="none" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

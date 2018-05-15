@@ -425,6 +425,26 @@
       \verb https://www.java.com/en/download/faq/whatis_java.xml
       \endverb
     \endentry
+    \entry{classloader}{online}{}
+      \name{author}{1}{}{%
+        {{hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ClassLoader (Java Platform SE 8 )}
+      \field{year}{03-01-2018}
+      \verb{url}
+      \verb https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html
+      \endverb
+    \endentry
     \entry{designpattern}{book}{}
       \name{author}{1}{}{%
         {{hash=3db236823e2b9f7ed9bbbc0d332527a9}{%

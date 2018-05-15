@@ -1,36 +1,36 @@
 
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8¬õå™¶,
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8¬õå™¶,
-gsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(³•Îşÿÿÿÿ8¬õå™¶,
-bsquid:S1192"GDefine a constant instead of duplicating this literal "fcall " 6 times.(ù‚¼z8¬õå™¶,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ê£Œ©8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(û«ƒÜşÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ8¬õå™¶,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8¬õå™¶,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8¬õå™¶,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(åÌèÊıÿÿÿÿ8¬õå™¶,
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ÌÛ»8¬õå™¶,
-Nsquid:S1135"2Complete the task associated to this TODO comment.(ê£Œ©8¬õå™¶,
-Hsquid:S1905",Remove this unnecessary cast to "ScopeImpl".(ÕòÕ8¬õå™¶,
-Hsquid:S1905",Remove this unnecessary cast to "ScopeImpl".(é‡¹÷8¬õå™¶,
-Psquid:S1481"/Remove this unused "callParams" local variable.(ıúŞŠúÿÿÿÿ8¬õå™¶,
-Zsquid:S1481"9Remove this unused "afterExecuteRetValue" local variable.(’×ƒœøÿÿÿÿ8¬õå™¶,
-Gsquid:S1481"&Remove this unused "i" local variable.(äŞ…Ñüÿÿÿÿ8¬õå™¶,
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Å„ÃÍøÿÿÿÿ8¬õå™¶,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÿ×¨8­õå™¶,
-Rsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
-Rsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
-Esquid:S00108")Either remove or fill this block of code.(¿ ùl8­õå™¶,
-Vsquid:S1854"5Remove this useless assignment to local variable "i".(äŞ…Ñüÿÿÿÿ8­õå™¶,
-Vsquid:S1854"5Remove this useless assignment to local variable "i".(äŞ…Ñüÿÿÿÿ8­õå™¶,
-^squid:S1854"=Remove this useless assignment to local variable "commandIO".(§Á¼ùûÿÿÿÿ8­õå™¶,
-_squid:S3358"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_8­õå™¶,
+osquid:CommentedOutCodeLine“"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
+\
+squid:S106„"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ8¬õå™¶,
+Ksquid:S1905’",Remove this unnecessary cast to "ScopeImpl".(ÕòÕ8¬õå™¶,
+osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
+usquid:S3776'"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Å„ÃÍøÿÿÿÿ8¬õå™¶,
+bsquid:S3358Û"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_8­õå™¶,
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
+jsquid:S3027Ë"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(³•Îşÿÿÿÿ8¬õå™¶,
+Usquid:S1135,"2Complete the task associated to this TODO comment.(åÌèÊıÿÿÿÿ8¬õå™¶,
+]squid:S1481‹"9Remove this unused "afterExecuteRetValue" local variable.(’×ƒœøÿÿÿÿ8¬õå™¶,
+osquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
+Xsquid:S1854v"5Remove this useless assignment to local variable "i".(äŞ…Ñüÿÿÿÿ8­õå™¶,
+isquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(ê£Œ©8¬õå™¶,
+esquid:S3027š"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8¬õå™¶,
+Psquid:S11351"2Complete the task associated to this TODO comment.(ÌÛ»8¬õå™¶,
+Ksquid:S1905›",Remove this unnecessary cast to "ScopeImpl".(é‡¹÷8¬õå™¶,
+osquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¬õå™¶,
+nsquid:CommentedOutCodeLineT"<This block of commented-out lines of code should be removed.(û«ƒÜşÿÿÿÿ8¬õå™¶,
+Ssquid:S1481Š"/Remove this unused "callParams" local variable.(ıúŞŠúÿÿÿÿ8¬õå™¶,
+Psquid:S1135Q"2Complete the task associated to this TODO comment.(ê£Œ©8¬õå™¶,
+esquid:S3027‘"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8¬õå™¶,
+psquid:S3776r"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÿ×¨8­õå™¶,
+Gsquid:S00108}")Either remove or fill this block of code.(¿ ùl8­õå™¶,
+Xsquid:S1854v"5Remove this useless assignment to local variable "i".(äŞ…Ñüÿÿÿÿ8­õå™¶,
+osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8¬õå™¶,
+\
+squid:S106†"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8¬õå™¶,
+Usquid:S3655Ò"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
+Usquid:S3655Ò"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
+asquid:S1854´"=Remove this useless assignment to local variable "commandIO".(§Á¼ùûÿÿÿÿ8­õå™¶,
+dsquid:S1192G"GDefine a constant instead of duplicating this literal "fcall " 6 times.(ù‚¼z8¬õå™¶,
+Isquid:S1481v"&Remove this unused "i" local variable.(äŞ…Ñüÿÿÿÿ8¬õå™¶,
+\
+squid:S106ª"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8¬õå™¶,

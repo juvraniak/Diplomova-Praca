@@ -1,4 +1,4 @@
 
-hsquid:S2095"LUse try-with-resources or close this "JarInputStream" in a "finally" clause.(‹˚Ñ∏8›óΩ∂°,
-Bsquid:S1168"&Return an empty array instead of null.(•πÔç8›óΩ∂°,
-hsquid:S2095"LUse try-with-resources or close this "URLClassLoader" in a "finally" clause.(‡Óô“8›óΩ∂°,
+jsquid:S2095"LUse try-with-resources or close this "URLClassLoader" in a "finally" clause.(‡Óô“8›óΩ∂°,
+jsquid:S2095"LUse try-with-resources or close this "JarInputStream" in a "finally" clause.(‹˚Ñ∏8›óΩ∂°,
+Dsquid:S1168:"&Return an empty array instead of null.(•πÔç8›óΩ∂°,

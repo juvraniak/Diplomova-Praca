@@ -33,28 +33,28 @@
 Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
 \subsubsection{Porovnanie podielov operačných systémov}
 \indent Nasledujúce grafy zobrazujú podiel operačných systémov na trhu v segmente osobných počítačov, ako aj v segmente serverov. Zaujímavý graf je vývoj trendu využívania serverových operačných systémov, z ktorého vidíme, že unixové a linuxové servery zvyšujú svoje podiely na trhu. Naopak, Windows v posledných mesiacoch stratil pár percent. Taktiež je vidieť, že linuxové a unixové systémy pokrývajú viac ako polovicu web stránok, ktoré majú najvyššie hodnotenie. Je potrebné dodať, že percentá na posledných dvoch obrázkoch pre Unix a Linux, nemožeme sčítavať, nakoľko na w3techs berú Linux ako podmnožinu Unix \acrshort{os}. Teda napríklad štatistika z predposledného obrázku hovorí, že podiel Unixu na trhu je 68\% z toho väčšiu časť tvorí práve \acrshort{os} Linux s 41.1\% podielom.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/statcounter.png}
 	\caption{\acrshort{os} - podiel na trhu podľa statcounter\cite{statcounter}}
 	\label{fig:test}
 	
 \end{figure}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/netmarketshare.png}
 	\caption{\acrshort{os} - podiel na trhu podľa netmarketshare\cite{netmarketshare}}
 	\label{fig:test}
 	
 \end{figure}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{img/usg_server.png}
 	\caption{Serverové \acrshort{os} - podiel na trhu podľa w3techs\cite{pop}}
 	\label{fig:test}
 	
 \end{figure}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{img/usage_grou_by_os_sites.png}
 	\caption{Serverové \acrshort{os} - podiel na trhu a rozdelenie podľa hodnotenia stránok podľa w3techs\cite{pop}}
@@ -319,7 +319,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \paragraph{Skúsenosti}
 \indent ConEmu je vydarený emulátor, ktorý je schopný vykonávať akýkoľvek skript. Používaním sme neprišli na závažné nedostatky, ktoré by neboli popísané v zozname nevyriešených chýb na Githube. Tak ako každý softvér, aj ConEmu je náchylný na chyby. Podľa issues logu sa do oficiálnych vydaní dostávajú rôzne problémy, ktoré neboli zahrnuté v predchadzajúcich verziách. V tomto prípade je na zvážení každého používateľa, či aj napriek problémom, ktoré sa môžu dostávať do jednotlivých verzií emulátora, použije ConEmu, resp. či jeho kladné stránky prekonajú tie záporné.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{img/conEmuImg.jpg}
 	\caption{Ukážka ConEmu emulátora}
@@ -330,7 +330,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \indent Cmder je ďalším príkladom emulátora Shell terminálu. Vychádza z troch projektov ConEmu, Clink a Git pre Windows - voliteľná súčasť. ConEmu sme si predstavili v predcházajúcej časti spolu s jeho kladmi a zápormi. Clink, konkrétne Clink-completions je v projekte využívaný na zvýšenie komfortu pri písaní skriptov, nepridáva ďalšiu Shell funkcionalitu. \cite{cmder}
 \paragraph{Skúsenosti}
 \indent ConEmu je príjemný nástroj, dokáže zjednodušiť prácu, obzvlášť ak je používateľ zvyknutý na programovanie v Shell scripte. Keďže Cmder používa ConEmu ako emulátor Shell terminálu, a je určený pre Windows platformu, nemožno hovoriť o multiplatformovom riešení.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{img/cmder.jpg}
 	\caption{Ukážka Cmder emulátora}
@@ -339,7 +339,7 @@ Existuje množstvo emulátorov a nástrojov tretích strán, ktoré sprostredkú
 \newpage
 \subsubsection{Babun}
 \indent Babun je jedným z mnohých emulátorov pre Windows, ktorý je nadstavbou cygwinu. Vo svojom jadre používa zshell a bash, ktoré sme popísali ako populárne medzi komunitou. Prináša vlastné \acrshort{gui}, ktoré dokáže zafarbovať text podľa zdrojového jazyka, čo zvyšuje prehľadnosť. Obsahuje git, svn, python, perl. Tiež má integrované sťahovanie nových balíčkov, ktoré ponúka cygwin pomocou kľúčového slova pact. Prenositeľnosť skriptov z unixových strojov je zabezpečená tým, že používa bash a zsh, avšak je to emulátor výhradne pre Windows distribúcie.\cite{babun}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{img/babun.jpeg}
 	\caption{Ukážka Babun emulátora}
@@ -401,7 +401,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 	 \newline Tokeny sa vytvárajú na základe preddefinovaných pravidiel, ktoré sa v programovacích jazykoch definujú ako pattern. V prípade, že lexikálny analyátor nieje schopný nájsť  pattern pred danú lexému musí vyhlásiť chybu počas tokenizácie.  
 	 \newline Výstupom z lexikálnej analýzy sú takzvané tokeny, ktoré tvoria vyššie jednotky jazyka ako kľúčové slová jazyka, konštanty, identifikátory, operátory a iné.\cite{gram}
 	 
-	 \begin{figure}[!htbp]
+	 \begin{figure}[H]
 	 	\centering
 	 	\includegraphics[width=15cm]{img/lexical_analysis.jpg}
 	 	\caption{Ukážka práce lexikálneho analyzátora}
@@ -414,7 +414,7 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 
  \newline
   \newline
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{img/syntax_analyzer.jpg}
 	\caption{Ukážka práce syntaktickeho  analyzátora}
@@ -460,7 +460,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 
 \section{Návrh riešenia}
 \subsection{Prípady použitia}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/usecase.jpg}
 	\caption{Prípady použitia pre navrhovanú aplikáciu}
@@ -1055,28 +1055,28 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \end{center}
 \subsection{Java}
 \indent Java je programovací jazyk a výpočtová platforma, ktorá bola vydaná spoločnosťou Sun Microsystems v roku 1995. \cite{java} 
-Programy v Jave sú prvotne preložené do tzv. byte-code, ktorý je rovnaký pre všetky \acrshort{pc}. Pomocou jednoduchého programu je byte-code preložený do jazyka, ktorému rozumie konrétny \acrshort{pc}.
-Java je objektovo-orientovaný programovací jazyk, čo znamená že rovnako ako v živote, aj v Jave je všetko tvorené objektami. Obsahuje široké spektrum knižníc, ktoré slúžia nielen na vývoj webových, ale aj desktopových aplikácií. 
+Programy v Jave sú prvotne preložené do tzv. byte-code, ktorý je rovnaký pre všetky \acrshort{pc}. Pomocou jednoduchého programu je byte-code preložený do jazyka, ktorému rozumie konkrétny \acrshort{pc}.
+Java je objektovo-orientovaný programovací jazyk, čo znamená, že rovnako ako v živote, aj v Jave je všetko tvorené objektami. Obsahuje široké spektrum knižníc, ktoré slúžia nielen na vývoj webových, ale aj desktopových aplikácií. 
 Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počítače s viacjadrovým procesorom.\cite{java}
 
 \subsubsection{Rozhranie}
-\indent Rohranie, prináša do jazyka nový referenčný typ, ktorý môže obsahovať triedy, rozhrania, konštanty a metódy. Pomocou rozhrania je možné definovať minimálne požiadavky na triedu, ktorá rozhranie implementuje. \cite{javabook} V práci rozhrania používame veľmi často, aby sme definovali aké metódy dané metódy poskytujú.  Taktiež sme definovali metódy s začínajúce slovom default, ktoré je možné v rozhraní definovať a pomocou ktorých, definujeme základnú logiku metódy. Výhodou tohoto prístupu je, že sa zbavíme opakovaniu zdrojového kódu, a v prípade núdze je možné túto funkciu prepísať novou s rozdielnou logikou, v triede ktorá bude rozhranie implementovať. V aplikácii využívame aj štandardné rozhrania Javy ako Runable na spúštanie funkcie run() ako aj rozhranie Clonable - na vytváranie klonov triedy ScopeVariable.
+\indent Rozhranie, prináša do jazyka nový referenčný typ, ktorý môže obsahovať triedy, rozhrania, konštanty a metódy. Pomocou rozhrania je možné definovať minimálne požiadavky na triedu, ktorá rozhranie implementuje. \cite{javabook} V práci, rozhrania používame veľmi často, aby sme definovali aké metódy dané triedy poskytujú. Taktiež sme pridali metódy začínajúce slovom default, ktoré je možné v rozhraní implementovať, a pomocou ktorých určíme základnú logiku metódy. Výhodou uvedeného prístupu je, že zabránime opakovaniu zdrojového kódu. V prípade núdze, je možné danú funkciu prepísať novou s rozdielnou logikou v triede, ktorá bude rozhranie implementovať. V aplikácii využívame aj štandardné rozhrania Javy, napríklad Runable na spúštanie funkcie run(), ako aj rozhranie Clonable, na vytváranie klonov triedy ScopeVariable.
 
 \subsubsection{Abstraktná trieda}
-\indent Abstraktná trieda je typ triedy, ktorú je potrebné doprogramovať. Táto trieda nemôže byť inštanciovaná čím núti vývojára aby doimplementoval nenaprogramované časti a to metódy označené ako abstraktné, prípadne metódy, ktoré obsahuje kvoli implementácii rozhrania. \cite{javabook}  Spomenutý typ triedy sme použili pre implementáciu základného scopu - AbstractScope, ktorý nie je sám o sebe kompletný, a preto je ho potrebné rozšíriť aby zabezpečil potrebú funkcionalitu.
+\indent Abstraktná trieda je typ triedy, ktorú je potrebné doprogramovať. Táto trieda nemôže byť inštanciovaná, čím núti vývojára, aby doimplementoval nenaprogramované časti, a to metódy označené ako abstraktné, prípadne metódy, ktoré obsahuje kvôli implementácii rozhrania. \cite{javabook}  Spomenutý typ triedy sme použili pre implementáciu základného scopu - AbstractScope, ktorý nie je sám o sebe kompletný, a preto je ho potrebné rozšíriť, aby zabezpečil danú funkcionalitu.
 
 \subsubsection{Dátové štruktúry}
-\indent Java podporuje širokú škálu dátových štruktúr, ktoré vo veľkej miere využívame pri vývoji aplikácie ako Collections, List, String alebo Optional. \newline
-\indent Optional, bol predstavený v Jave 8 ako reakcia na častý výskyt NullPointerExceptionpočas behu aplikácií. \cite{javabook}  Pomocou tejto triedy je možné špecifikovať, že volanie metódy nemusí vrátiť požadovanú referenciu na objekt, resp. vráti žiadnu a v takom príade programátor, ktorý túto metódu volá by mal logiku aplikácie prispôsobiť tomuto faktu.
+\indent Java podporuje širokú škálu dátových štruktúr, ktoré vo veľkej miere využívame pri vývoji aplikácie, ako Collections, List, String alebo Optional. \newline
+\indent Optional, bol predstavený v Jave 8 ako reakcia na častý výskyt NullPointerException počas behu aplikácií. \cite{javabook}  Pomocou tejto triedy je možné špecifikovať, že volanie metódy nemusí vrátiť požadovanú referenciu na objekt, resp. vráti žiadnu a v takom prípade by mal programátor, ktorý túto metódu volá, prispôsobiť logiku aplikácie uvedenému faktu.
 \newline
-\indent Z dátových štruktú využívame mapy obzvlášť hešovacie mapy (HashMap). Túto dátovú štuktúru, využívame vo všetkých častiach aplikácie, napríklad v PluginFactory, kde všetky dostupné aj používane pluginy držíme v inštanciách tejto triedy.
+\indent Z dátových štruktúr používame mapy, obzvlášť hešovacie mapy (HashMap). Táto dátová štuktúra je zúžitkovaná vo všetkých častiach aplikácie, napríklad v PluginFactory, kde dostupné aj používané pluginy držíme v inštanciách tejto triedy.
 \newline
-\indent Rovnako používame  výhody triedy String. Triedu používame hlavne pri predspracovaní vstupných skriptov, počas ktorého využívame aj bohaté \acrshort{api}, ktoré táto trieda poskytuje. Na spravocanie textu a jeho ukladanie využívame triedu StringBuilder pomocou, ktorého predpripravujeme vstupy pre konzolu. 
+\indent Ďalšou z použitých tried je trieda String. Slúži hlavne na predspracovanie vstupných skriptov, počas ktorého využívame aj bohaté \acrshort{api}, ktoré táto trieda poskytuje. Na spracovanie a ukladanie textu využívame triedu StringBuilder, pomocou ktorej predpripravujeme vstupy pre konzolu. 
 \newline
-\indent Samozrejme snažili sme sa využiť všetkých aspektov jazyka Java avšak spomenuté triedy sme využívali najintenzívnejšie.
+\indent Našou snahou bolo využiť všetky aspekty jazyka Java, avšak spomenuté triedy sme uplatňovali naintenzívnejšie.
 
 \subsubsection{Nahrávanie tried v Jave}
-\indent doplniť
+\indent ClassLoader je abstraktná trieda zodpovedná za nahrávanie tried do programu. Každý objekt triedy obsahuje ClassLoader, ktorý ho definuje. Aplikácie vo všeobecnosti implementujú podtriedy ClassLoadera, aby zabezpečili spôsob dynamického nahrávania tried. \cite{classloader} V aplikácii sme na nahrávanie pluginov zbalených v \acrshort{jar} súboroch použili URL ClassLoader.
 
 \subsection{Návrhové vzory}
 \indent Návrhové vzory sú všeobecne opakovaným riešním pre všeobecne opakujúci sa problém pri dizajnovaní softwéru. Návrhový vzor nie je nemenný dizajn, vždy je potrebné aby si ho programátori prispôsobil podľa vlastných potrieb. Návrhové vzory sa delia do troch základných skupín vytváracie vzory, štrukturálne vzory a vzory správania. \cite{designpattern}
@@ -1084,36 +1084,34 @@ Podporuje multitrading, čo umožňuje vytvárať efektívne programy pre počí
 \subsubsection{Factory - továreň}
 \indent Factory návrhový vzor patrí do sekcie vytváracích vzorov. Pomocou tohoto vzoru budeme schopný vytvárať objekty bez toho aby sme prezradili logiku ich vytvárania klientovi.\cite{designpattern}
 Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{img/factory_design_pattern.jpg}
 	\caption{Class diagram Factory návrhového vzoru}
 	\label{fig:test}
 \end{figure}
-\newline
+
 \subsubsection{Command - príkaz}
 \indent Command pattern je známy behaviorálny návrhový vzor, používa sa najmä na správu algoritmov, vzťahov a zodpovednosti medzi objektami. 
 Cieľom vzoru je zapúzdriť požiadavku (request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.\cite{designpattern}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{img/command_pattern_class.jpg}
 	\caption{Class diagram Command návrhového vzoru}
 	\label{fig:test}
 \end{figure}
-\newline
+
 Command vzor deklaruje rozhranie pre všetky budúce príkazy a zároveň execute() metódu, ktorú s vypýta Receiver commandu aby splnil požadovanú operáciu.
 Receiver je objekt, ktorý vie ako požadovanú operáciu splniť. Invoker pozná command a pomocou implementovanej execute() metódy dokáže vyvolať požadovanú operáciu.
 Klient potrebuje implemenotvaž ConcreteCommand a nastavit Receiver pre command. ConcreteCommand definuje spojenie medzi action a receiver. Keď Invoker zavolá execute() metódu na ConcreteCommand spustí tým jednu alebo viac akcií, ktoré budú bežať pomocou Receivera.\cite{designpattern}
 
 Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{img/command_seq.jpg}
 	\caption{Sekvenčný diagram Command návrhového vzoru}
 	\label{fig:test}
 \end{figure}
-\newline
-
 \subsection{Aplikácia}
 \indent Pre implementáciu vlastného riešenia bolo potrebné na základe prípadov použitia identifikovať časti, z ktorých bude aplikácia pozostávať. Naším zámerom nebolo vytvorenie jednej veľkej aplikácie, ktorá by sa mohla časom stať neudržiavateľnou, ale aplikácia, ktorá umožní používateľom interaktívny aj skriptovací módus. Rozhodli sme sa, že navrhneme jednu hlavnú aplikáciu, ktorá bude mať na starosti interaktívny prístup pre používateľa rovnako aj skriptovací módus, avšak funkcionality, ktoré bude podporovať, zabezpečia menšie externé podprogrami - pluginy, ktoré sa do apikácie nahrajú pri štarte. Pre dosiahnutie požadovaných výsledkov použijeme návrhový vzor Command. Ako ďalšie sme definovali komponenty aplikácie.
 
@@ -1159,7 +1157,7 @@ Vytvorili sme solídny základ pre vývoj aplikácie, jednoduché rozšérenie f
 
 \newpage
 \subsection{Diagram tried aplikácie}
- \begin{figure}[!htbp]
+ \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{img/ClassApplication.jpg}
 	\caption{Diagram tried aplikácie}
@@ -1245,7 +1243,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{algorithm}
 \subsection{Štart aplikácie}
 \indent  Na nasledujúcom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu, aplikácia sa najprv nainicializuje, čo vysvetlíme v sekcii 4.3. Po inicializácii premenných sa vytvorí inštancia triedy ScopeImpl, ktorá je implementáciou AbstractScope triedy, charakterizovaná v predchádzajúcej sekcii práce. V ďalšom kroku aplikácia overí, či má na vstupe parametre. V prípade, ak áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti popíšeme čo sa deje v prvom prípade, a teda že máme zadané parametre. 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/System.jpg}
 	\caption{Activita spustenia aplikácie}
@@ -1260,7 +1258,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\item Nahranie dostupných pluginov z disku,
 	\item Získanie inštancie exekútora - ExecutorImpl.
 \end{itemize}
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{img/initialization.jpg}
 	\caption{Activita inicializácie aplikácie}
@@ -1329,7 +1327,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{algorithm}
 \newpage
 \subsubsection{Vykonávač príkazu}
-\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope{)}. Command následne spracuje vstupy v metóde \newline parseCommand{(}Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy.
+\indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope{)}. Command následne spracuje vstupy v metóde \newline parseCommand{(}Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy. Počas exekúcie príkazov skriptu dochádza k vyvolávaniu jednotlivých commandov, ktoré majú okrem vykonania funkcie za úlohu zistiť spávnosť vstupov, čo je proces, ktorý sme popísali v časti Sémantickej analýzý 2.1.4.
 
 \subsubsection{Vykonávač pajpy}
 \indent Ak aplikácia rozozná, že v príkaze ide o pajpu, príkaz putuje do triedy PipeExecutor, kde sa rozparsuje na parciálne príkazy. Po rozparsovaní príkazov sa každému príkazu nastaví nasledujúci príkaz, ktorý sa má vykonať. Posledný príkaz neobsahuje žiadny ďalší. Po takomto prednastavení exekútora sa spustí vykonávanie prvého príkazu, jeho výstup je pri úspešnom ukončení presmerovaný ďalšiemu príkazu. Tento kolobeh pokračuje až kým sa nedostane k poslednému príkazu. Ten následne vracia svoj výstup exekútorovi z 4.1.
@@ -1342,9 +1340,9 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\item Parsovanie predspracovaného vstupu
 \end{itemize}
 \subsubsection{Predspracovanie}
-\indent Úlohou predspracovania je načítať zdrojový kód skriptu, vyčistiť ho od komentárov, ako aj vyfiltrovať metódy, zistiť či skript obsahuje funkciu main, prípadne zmeniť používané pluginy. Predspracovanie pozostáva z viacerých krokov, ako prvé sa parser pokúsi načítať súbor po riadkoch ako stream zo Stringov. Ďalej zo súboru vyfiltruje všetky prázdne riadky, riadky obsahujúce komentáre, inak povedané začínajúce znakom mriežky. Z už vyfiltrovaných riadkov následne vyfiltrujeme iba tie, ktoré sa začínajú slovom use. Use slúži ako kľúčové slovo pre použitie pluginov v skriptoch. Pomocou týchto riadkov sa pokúsi vyžiadať od PluginFactory pluginy definované v use. Ak sa ich nepodarí nájsť aplikácia použije príkazy, ktoré má aktuálne k dispozícii, ale je pravdepodobné, že v tomto prípade dôjde ku chybe počas behu skriptu. Tieto riadky sa následne vymažú. Ďalší proces je filtrovanie riadkov, ktoré začínajú na kľúčové slovo include. Tieto riadky špecifikujú, ktoré ďalšie súbory sú použité v skripte. Rovnako ako pri use, riadky načítame do listu a zmažeme ich z hlavného obsahu. Ďalej načítame všetky súbory definované v include a pripojíme ich k tým, ktoré sme mali zo zdrojového skriptu. Načítavanie pomocou include sa deje cyklicky, avšak pamätáme si, ktoré súbory sme už načítali aby sme zabránili zacykleniu aplikácie a jej následnému pádu. Na záver si ešte vyfiltrujeme riadky začínajúce na function a zistíme unikátne mená definovaných funkcií. V prípade, že aplikácia nenájde funkciu main vyhodí výnimku a beh skriptu sa ukončí. Samozrejme používateľ je na túto skutočnosť upozornený. Po predspracovaní nasleduje parsovanie.
+\indent Úlohou predspracovania je načítať zdrojový kód skriptu, vyčistiť ho od komentárov, ako aj vyfiltrovať metódy, zistiť či skript obsahuje funkciu main, prípadne zmeniť používané pluginy. Predspracovanie pozostáva z viacerých krokov, ako prvé sa parser pokúsi načítať súbor po riadkoch ako stream zo Stringov. Ďalej zo súboru vyfiltruje všetky prázdne riadky, riadky obsahujúce komentáre, inak povedané začínajúce znakom mriežky. Z už vyfiltrovaných riadkov následne vyfiltrujeme iba tie, ktoré sa začínajú slovom use. Use slúži ako kľúčové slovo pre použitie pluginov v skriptoch. Pomocou týchto riadkov sa pokúsi vyžiadať od PluginFactory pluginy definované v use. Ak sa ich nepodarí nájsť aplikácia použije príkazy, ktoré má aktuálne k dispozícii, ale je pravdepodobné, že v tomto prípade dôjde ku chybe počas behu skriptu. Tieto riadky sa následne vymažú. Ďalší proces je filtrovanie riadkov, ktoré začínajú na kľúčové slovo include. Tieto riadky špecifikujú, ktoré ďalšie súbory sú použité v skripte. Rovnako ako pri use, riadky načítame do listu a zmažeme ich z hlavného obsahu. Ďalej načítame všetky súbory definované v include a pripojíme ich k tým, ktoré sme mali zo zdrojového skriptu. Načítavanie pomocou include sa deje cyklicky, avšak pamätáme si, ktoré súbory sme už načítali aby sme zabránili zacykleniu aplikácie a jej následnému pádu. Na záver si ešte vyfiltrujeme riadky začínajúce na function a zistíme unikátne mená definovaných funkcií. V prípade, že aplikácia nenájde funkciu main vyhodí výnimku a beh skriptu sa ukončí. Samozrejme používateľ je na túto skutočnosť upozornený. Predspracovanie je podobný proces ako lexikálna analýza zo sekcie 2.1.1, kde sa zo vstupných znakov, v tomto prípade načítaných riadkov vytvárajú tokeny pre Syntaktickú analýzu, my tento proces nazývame parsovanie.
 \subsubsection{Parsovanie}
-\indent Aby sme si parsovanie skriptu vedeli jednoducho predstaviť, povedzme, že máme jeden for cyklus, ktorý prechádza cez všetky načítané riadky zo súborov. V tomto cykle následne definujeme rozhodovací mechanizmus, ktorý sa na základe prečítaného vstupu rozhodne čo má vykonať. Parser má za úlohu vytvárať scopy a pre vytvorené scopy získať podstatné informácie. Parser očakáva, že ak máme akékoľvek globálne príkazy v našom skripte, budú definované na začiatku skriptu. V momente ako parser narazí na prvú funkciu nenačítava príkazy do globálneho alebo skriptového scopu, ale do scopu konkrétnej funkcie. Parser tiež kontroluje či daná funkcia nemá pred sebou anotáciu @Override, v tomto prípade nastaví pre takúto funkciu príznak, že je prepísaná a mala by sa zobrať funkcia označená s @Override a nie pôvodná. Parser povoľuje aj viacnásobné prepísanie funkcie, do behu sa zoberie vždy tá, ktorá bola načítaná ako posledná. 
+\indent Pred tým ako vysvetlíme proces parsovania v aplikácii, spomeňme, že tento proces je veľmi podobný tom zo sekcie 2.1.2 Syntaktická analýza. V tomto kroku sa na základe určitých pravidiel rozhodujem ako vytvoríme tokeny pre úspešné spracovanie skriptov. Aby sme si parsovanie skriptu vedeli jednoducho predstaviť, uvedieme príklad na for cyklus, ktorý prechádza cez všetky načítané riadky zo súborov. V tomto cykle následne definujeme rozhodovací mechanizmus, ktorý sa na základe prečítaného vstupu rozhodne čo má vykonať. Parser má za úlohu vytvárať scopy a pre vytvorené scopy získať podstatné informácie. Parser očakáva, že ak máme akékoľvek globálne príkazy v našom skripte, budú definované na začiatku skriptu. V momente ako parser narazí na prvú funkciu nenačítava príkazy do globálneho alebo skriptového scopu, ale do scopu konkrétnej funkcie. Parser tiež kontroluje či daná funkcia nemá pred sebou anotáciu @Override, v tomto prípade nastaví pre takúto funkciu príznak, že je prepísaná a mala by sa zobrať funkcia označená s @Override a nie pôvodná. Parser povoľuje aj viacnásobné prepísanie funkcie, do behu sa zoberie vždy tá, ktorá bola načítaná ako posledná. 
 \subsubsection{Parsovanie funkcií}
 \indent V momente, keď parser narazí na funkciu odovzdá riadenie ďalšej funkcii zodpovednej za správne načítanie funkcie. Parsovanie funkcie je zložitejší proces nakoľko môže dôjsť k rôznym situáciám. Na začiatku sa načíta prvý riadok, z neho sa vyparsuje návratová hodnota funkcie, meno funkcie a tiež parametre funkcie, kontroluje sa aj otváracia zátvorka pre scope, ktorá musí byť na riadku kde bola definovaná funkcia. Ďalšie riadky funkcie sa načítavajú v cykle a kontroluje sa nasledovné: 
 \begin{itemize}	
@@ -1364,7 +1362,7 @@ Z prvého riadku sa uložia tri parametre pre úspešný beh cyklu - počiatočn
 Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude vždy vyhodnocovať.
 \subsubsection{Výsledok parsovania}
 \indent Výsledkom parsovania je štruktúra zobrazená na obrázku nižšie. V aplikačnom scope sa vytvorí scope skriptový, ktorý bude rodičom pre všetky ostatné scopy, ktoré sa vytvoria. Každý scope obsahuje stack príkazov, ktoré má vykonať počas behu. Tento stack môže obsahovať aj funkčné volania, ako je znázornené na obrázku. Po úspešnom ukončení parsovania sa na script scope zavolá funkcia main, ktorá spustí exekúciu skriptu.
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/scopeStruct.jpg}
 	\caption{Diagram tried rozhraní aplikácie}
@@ -1381,7 +1379,7 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \newline 
 \indent Receiver change je schopný zmeniť hodnotu akejkoľvek premennej v scope. Rovnako get receiver je schopný vytiahnuť hodnotu z ktorejkoľvek premennej scopu. 
 \newline 
-\indent Arithmetic je receiver, ktorým sme zabezpečili jednoduché zmeny numerických hodnôt. Podporované operácie sú +, -, *, /, \%. ArithmeticPrep receiver ako prvé rozdelí premenné, príkazy a hodnoty do poľa, v ktorom medzi ne vkladá znamienka s operáciou ako ju vyparsoval zo vstupného stringu. V prvom kroku vyhodnotí všetky príkazy, premenné a následne začne vyhodnocovať výraz z ľava do prava. Momenálna implementácia neumožňuje stanoviť prioritu výpočtu. 
+\indent Arithmetic je receiver, ktorým sme zabezpečili jednoduché zmeny numerických hodnôt. Podporované operácie sú +, -, *, /, \%. ArithmeticPrep receiver ako prvé rozdelí premenné, príkazy a hodnoty do poľa, v ktorom medzi ne vkladá znamienka s operáciou ako ju vyparsoval zo vstupného stringu. V prvom kroku vyhodnotí všetky príkazy, premenné a následne začne vyhodnocovať výraz z ľava do prava. Momentálna implementácia neumožňuje stanoviť prioritu výpočtu. 
 \newline 
 \indent StringPrep je receiver, ktorý zo vstupných parametrov vyskladá výsledný string, môzeme mu spájať premenné akéhokoľvek typu ako aj vkladať nové reťazce, ktoré ale musia byť označené úvodzovkami. Operácia pre spájanie stringov je + podobne ako v Jave. 
 \newline 
@@ -1413,4 +1411,4 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \newline
 \indent  Podpora základných dátových typov je bezproblémová. Aritmetické operácie, ktoré je nad nimi možné vykonávať sú mierne okresané. Je možné definovať  operácie nad numerickými dátovými typmi ako +, -, *, /, \%, no nie je možné definovať ich prioritu. Rovnako to platí aj pre logické operátory ako \&\&, ||. Dobrou správou však je, že aj tieto funkcionality boli implementované pomocou pluginov a tým pádom je možné ich kedykoľvek nahradiť sofistikovanejšími riešeniami. 
 \newline
-\indent Tým, že je aplikácia postavená na Jave, je plne funkčná na každom \acrshort{pc}, ktorý má \acrshort{os} podporovaný touto platformou. Ako je možné vidieť z príručky, na spustenie aplikácie je potrebné iba nainštalovať Java JRE 8 , nastaviť Path aby smerovala na nainštalovanú Javu a spustiť predpripravený skript. Pre úplnosť sme pripravili nasledovné grafy, ktoré zobrazujú efektivitu aritmetických operácií.
+\indent Tým, že je aplikácia postavená na Jave, je plne funkčná na každom \acrshort{pc}, ktorý má \acrshort{os} podporovaný touto platformou. Ako je možné vidieť z príručky, na spustenie aplikácie je potrebné iba nainštalovať Java JRE 8, nastaviť Path aby smerovala na nainštalovanú Javu a spustiť predpripravený skript. Pre úplnosť sme pripravili nasledovné grafy, ktoré zobrazujú efektivitu aritmetických operácií.
