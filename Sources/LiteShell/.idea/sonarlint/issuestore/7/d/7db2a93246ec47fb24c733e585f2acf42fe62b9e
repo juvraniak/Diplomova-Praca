@@ -1,28 +1,28 @@
 
-jsquid:S1192b"GDefine a constant instead of duplicating this literal "fcall " 3 times.(Ë‰ı¦ûÿÿÿÿ8¬õå™¶,
-Psquid:S1612·",Replace this lambda with a method reference.(Ğâ•şÿÿÿÿ8¬õå™¶,
-dsquid:S3027L"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8¬õå™¶,
-isquid:S3027J"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8¬õå™¶,
-esquid:S3027Å"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(É†¶Ø8¬õå™¶,
-‹ squid:ForLoopCounterChangedCheck3"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
- squid:ForLoopCounterChangedCheckz"XRefactor the code in order to not assign to this loop counter from within the loop body.(ÜßÈŠÿÿÿÿÿ8¬õå™¶,
-Psquid:S1135o"2Complete the task associated to this TODO comment.(ê£Œ©8¬õå™¶,
-Gsquid:S1148Û"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬õå™¶,
-‹ squid:ForLoopCounterChangedCheck9"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
-‹ squid:ForLoopCounterChangedCheck>"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
-osquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(Ì¤¸¿ùÿÿÿÿ8¬õå™¶,
 Msquid:S1481K"/Remove this unused "correctEnd" local variable.(¬õÁ8¬õå™¶,
-vsquid:S00116 "RRename this field "CONTENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ûûûÿÿÿÿ8¬õå™¶,
 Jsquid:S1905R",Remove this unnecessary cast to "ScopeImpl".(Ë‰Ì‚8¬õå™¶,
-esquid:S3027®"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8¬õå™¶,
-psquid:S3776G"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(øŞãÍ8¬õå™¶,
-isquid:S3027J"FPut single-quotes around ')' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8¬õå™¶,
-‘ squid:ForLoopCounterChangedCheck„"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ÿşÿÿÿÿ8¬õå™¶,
-isquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(ê£Œ©8¬õå™¶,
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·îòæûÿÿÿÿ8¬õå™¶,
+‹ squid:ForLoopCounterChangedCheck9"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
 nsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(£ĞÆùúÿÿÿÿ8¬õå™¶,
 \squid:S1854K">Remove this useless assignment to local variable "correctEnd".(¬õÁ8¬õå™¶,
-Gsquid:S1125Ä"(Remove the literal "true" boolean value.(“±é8¬õå™¶,
-Esquid:S1481Ã"&Remove this unused "v" local variable.(€Ó Â8¬õå™¶,
+ squid:ForLoopCounterChangedCheckz"XRefactor the code in order to not assign to this loop counter from within the loop body.(ÜßÈŠÿÿÿÿÿ8¬õå™¶,
+‹ squid:ForLoopCounterChangedCheck>"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
+isquid:S3027J"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8¬õå™¶,
+jsquid:S1192b"GDefine a constant instead of duplicating this literal "fcall " 3 times.(Ë‰ı¦ûÿÿÿÿ8¬õå™¶,
 Gsquid:S1148»"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬õå™¶,
+esquid:S3027®"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8¬õå™¶,
+dsquid:S3027L"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(ÔØŸ8¬õå™¶,
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·îòæûÿÿÿÿ8¬õå™¶,
+Gsquid:S1125Ä"(Remove the literal "true" boolean value.(“±é8¬õå™¶,
+vsquid:S00116 "RRename this field "CONTENT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ûûûÿÿÿÿ8¬õå™¶,
+osquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(Ì¤¸¿ùÿÿÿÿ8¬õå™¶,
+isquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(ê£Œ©8¬õå™¶,
+Esquid:S1481Ã"&Remove this unused "v" local variable.(€Ó Â8¬õå™¶,
+‹ squid:ForLoopCounterChangedCheck3"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ8¬õå™¶,
+Gsquid:S1148Û"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬õå™¶,
+esquid:S3027Å"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(É†¶Ø8¬õå™¶,
+psquid:S3776G"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(øŞãÍ8¬õå™¶,
+‘ squid:ForLoopCounterChangedCheck„"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ÿşÿÿÿÿ8¬õå™¶,
+Psquid:S1135o"2Complete the task associated to this TODO comment.(ê£Œ©8¬õå™¶,
 ‹ squid:ForLoopCounterChangedCheck5"XRefactor the code in order to not assign to this loop counter from within the loop body.(«ã«»8¬õå™¶,
+Psquid:S1612·",Replace this lambda with a method reference.(Ğâ•şÿÿÿÿ8¬õå™¶,
+isquid:S3027J"FPut single-quotes around ')' to use the faster "indexOf(char)" method.(ğİô¥şÿÿÿÿ8¬õå™¶,

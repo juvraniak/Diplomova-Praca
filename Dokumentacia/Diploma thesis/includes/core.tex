@@ -455,7 +455,7 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .\cite{gram}
 
 \section{Návrh riešenia}
-V tejto sekcii stručne popíšeme aké rozhodnutia bolo potrebné uskutočniť pre úspešnú implementáciu novo navrhovaného jazyka. Prvé časti sa venujú syntatickej stránke jazyka následne identifikujeme prípady použitia, ktoré popíšeme v diagrame aj slovne. Taktiež charakterizujeme technológie, v ktorých budeme zadanie vyvíjať a špecifikujeme najpoužívanejšie prvky jazyka. Ďalej opíšeme návrhové vzory, ktoré nám umožnia jednoduchú implementáciu. Nakoniec špecifikujeme navrhnuté komponenty výslednej aplikácie.
+V tejto sekcii stručne popíšeme aké rozhodnutia bolo potrebné uskutočniť pre úspešnú implementáciu novo navrhovaného jazyka. Prvé časti sa venujú syntaktickej stránke jazyka následne identifikujeme prípady použitia, ktoré popíšeme v diagrame aj slovne. Taktiež charakterizujeme technológie, v ktorých budeme zadanie vyvíjať a špecifikujeme najpoužívanejšie prvky jazyka. Ďalej opíšeme návrhové vzory, ktoré nám umožnia jednoduchú implementáciu. Nakoniec špecifikujeme navrhnuté komponenty výslednej aplikácie.
 \subsection{Premenné}
 \indent Každý programovací jazyk potrebuje pre svoje fungovanie premenné. Preto sme potrebovali urobiť tri zásadné rozhodnutia. 
 \newline
@@ -467,10 +467,10 @@ V tejto sekcii stručne popíšeme aké rozhodnutia bolo potrebné uskutočniť 
 \subsection{Príkazy}
 \indent Aby jazyk dokázal zabezpečiť rôznorodú funkcionalitu, je potrebné definovať ako sa do programu zadávajú príkazy pre ich jednoduché rozpoznanie a vykonanie. Preto sme sa rozhodli, že prvý príkaz nie je potrebné uzatvoriť akýmkoľvek reťazcom, avšak akýkoľvek ďalší príkaz musí byť zaobalený v \${príkaz}.
 \subsection{Aritmetika premenných}
-\indent Pre zmenu hodnoty premenných, inak ako priraďovaním implicitnej hodnoty, je potrebné definovať operácie, ktoré s nimi môžu byť vykonané. Pre numerické premenné typu integer a double je nevyhnutné implementovať operácie +, -, *, / a \%. Pre reťazcové premenné definujeme operáciu +, ktorá slúži na spájanie reťazcov a pre premenné typu boolean je potrebné definovať operácie \&\&, ||, >, <, =>, =<, ==, !=.
+\indent Pre zmenu hodnoty premenných, inak ako priraďovaním implicitnej hodnoty, je potrebné definovať operácie, ktoré s nimi môžu byť vykonané. Pre numerické premenné typu integer a double je nevyhnutné implementovať operácie +, -, *, / a \%(modulo). Pre reťazcové premenné definujeme operáciu +, ktorá slúži na spájanie reťazcov a pre premenné typu boolean je potrebné definovať operácie \&\&, ||, >, <, =>, =<, ==, !=.
 \subsection{Funkcie}
 \indent Funkcie sa budú definovať pomocou kľúčového slova function, nasledované typom vracajúcej hodnoty, menom funkcie a medzi okrúhlymi zátvorkami špecifikujeme parametre funkcie.
-Definovanie začiatku funkcie zabezpečí znak \{, ktorý musí byť na riadku definovania funkcie. Ukončovacím znakom funkcie je \}, ktorý musí stáť na samostatnom riadku. Funkcie môžu byť prepisované, a to v prípade, že pred funkciu priradíme text @Override, ktorý je programátorom známy. Override nemusí rozlišovať medzi prepisom a preťažením funkcie. 
+Definovanie začiatku funkcie zabezpečí znak \{, ktorý musí byť na riadku definovania funkcie. Ukončovacím znakom funkcie je \}, ktorý musí stáť na samostatnom riadku. Funkcie môžu byť prepisované, a to v prípade, že pred funkciu priradíme text @Override, ktorý je Java programátorom známy. Override nemusí rozlišovať medzi prepisom a preťažením funkcie. 
 \subsection{Include}
 \indent Aby sme docielili rozdelenie zdrojových súborov, a tým pádom sa vyhli dlhosiahlym vstupným súborom, rozhodli sme sa definovať kľúčové slovo include, ktoré bude ako parameter brať cestu k súboru, ktorý sa má nahrať. 
 \subsection{Use}
