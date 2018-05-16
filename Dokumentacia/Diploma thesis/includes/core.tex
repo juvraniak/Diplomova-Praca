@@ -407,21 +407,17 @@ Aby bol preklad možný, musí byť zdrojový kód programu napísaný podľa ur
 	 	\caption{Ukážka práce lexikálneho analyzátora}
 	 	\label{fig:test}
 	 \end{figure}
- \newline
+
  
 \subsubsection{Syntaktická analýza}
 \indent Ďalšou fázou je syntaktická analýza. Úlohou Syntaktického analyzátora je kontrola správnosti vytvorených tokenov s uchovaním niektorých získaných informácií o štruktúre skúmanej syntaktickej jednotky. Syntaktická analýza sa radí medzi bezkontextové gramatiky. Po skoncení syntaktickej analýzy prichádza na rad sémantická analýza.\cite{gram}
-
- \newline
-  \newline
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{img/syntax_analyzer.jpg}
 	\caption{Ukážka práce syntaktickeho  analyzátora}
 	\label{fig:test}
 \end{figure}
- \newline
- \newpage
+
 \subsubsection{Limitácia syntaktickej analýzy}
 \indent Syntaktický analyzátor získa vstup z tokenu, ktorý vytvorí lexikálny analyzátor. Lexikálne analyzátory sú zodpovedné za validitu tokenu. Syntaktické analyzátory majú nasledovné limitácie.
 
@@ -459,36 +455,38 @@ Oba príklady by mali prejsť cez lexikálnu a syntaktickú analýzu. Je až na 
 \indent Generovanie cieľového jazyka môžeme považovať za poslednú fázu kompilátora. V tejto fáze sa preklápa jazyk z vyššieho jazyka do strojového jazyka, ktorý úspešne prešiel cez analyzačné časti .\cite{gram}
 
 \section{Návrh riešenia}
-V tejto sekcii si stručne popíšeme aké rozhodnutia bolo potrebné spraviť pre úspešnú implementáciu novo navrhovaného jazyka. Prvé časti sa venujú syntatickej stánke jazyka následne sa venujeme identifikácii prípadov použitia, ktoré popíšeme v diagrame aj slovne. Taktiež popíšeme technológie v ktorých budeme zadanie vyvíjať a veci, ktoré sme z neho využívali najčastejšie. Popíšeme si aj návrhové vzory, ktoré nám umožnia jednoduchú implementáciu. Nakoniec špecifikujeme navrhnuté komponenty výslednej aplikácie.
+V tejto sekcii stručne popíšeme aké rozhodnutia bolo potrebné uskutočniť pre úspešnú implementáciu novo navrhovaného jazyka. Prvé časti sa venujú syntatickej stránke jazyka následne identifikujeme prípady použitia, ktoré popíšeme v diagrame aj slovne. Taktiež charakterizujeme technológie, v ktorých budeme zadanie vyvíjať a špecifikujeme najpoužívanejšie prvky jazyka. Ďalej opíšeme návrhové vzory, ktoré nám umožnia jednoduchú implementáciu. Nakoniec špecifikujeme navrhnuté komponenty výslednej aplikácie.
 \subsection{Premenné}
 \indent Každý programovací jazyk potrebuje pre svoje fungovanie premenné. Preto sme potrebovali urobiť tri zásadné rozhodnutia. 
 \newline
-\indent Prvým bolo či premenné v programe budú typovo orientované alebo sa bude typ premennej určovať dynamicky podľa vloženého obsahu. Pre jednoduchšiu implementáciu sme sa rozhodli pre typové premenné, čo nám šerí čas pri zistovaní typu. 
+\indent Najprv bolo potrebné rozhodnúť či premenné v programe budú typovo orientované alebo sa bude typ premennej určovať dynamicky, podľa vloženého obsahu. Pre jednoduchšiu implementáciu sme sa rozhodli pre typové premenné, čo ušetrí čas pri zisťovaní typu. 
 \newline
-\indent Druhou zásadnou otázkou bolo, ktoré typy premenných budeme podporovať. Rozhodnutie padlo, že v prvotne sa pokúsime o implementáciu základných typov ako je integer, double, boolean a string. Pomocou týchto štyroch typov by sme mali byť schopný podporiť akúkoľvek funkcionalitu programu. 
+\indent Druhou zásadnou otázkou bolo, ktoré typy premenných budeme podporovať. V prvom návrhu sa pokúsime o implementáciu základných typov, ako je integer, double, boolean a string. Pomocou uvedených typov by sme mali byť schopný zabezpečiť akúkoľvek funkcionalitu programu. 
 \newline
-\indent Poslednou dôležitou otázkou bolo ako zabezpečiť jednoduché parsovanie jazyka preto sme sa rozhodli, že inicializácia premenných bude v tvare <typ> meno. V prípade definície premennej teda v procese kde priraďujeme premennej hodnotu musí byť synax nasledovná <typ> meno = <hodnota, príkaz, iná premenná>. V prípade zmeny hodnoty premennej alebo v prípade, že premennú chceme použiť v konzole alebo skripte je potrebné názov premennej zaobaliť do \${názov premennej}.
+\indent Pre jednoduché parsovanie jazyka sme rozhodli, že inicializácia premenných bude v tvare <typ> meno. V prípade definície premennej, v procese kde priraďujeme premennej hodnotu, musí byť syntax nasledovná <typ> meno = <hodnota, príkaz, iná premenná>. V prípade zmeny hodnoty premennej alebo v prípade, že premennú chceme použiť v konzole alebo skripte je potrebné názov premennej zaobaliť do \${názov premennej}.
 \subsection{Príkazy}
-\indent Aby jazyk dokázal zabezpečiť rôznorodú funkcionalitu je potrebné definovať ako sa do programu zadávajú príkazy pre ich jednoduché rozpoznanie a vykonanie. Preto sme sa rozhodli, že prvý príkaz nieje potrebné uzatvoriť akýmkoľvek reťazcom, avšak akýkoľvek ďalší príkaz musí byť zaobalený v \${príkaz}. Jasne je to vidieť v ukážke skriptu.
+\indent Aby jazyk dokázal zabezpečiť rôznorodú funkcionalitu, je potrebné definovať ako sa do programu zadávajú príkazy pre ich jednoduché rozpoznanie a vykonanie. Preto sme sa rozhodli, že prvý príkaz nie je potrebné uzatvoriť akýmkoľvek reťazcom, avšak akýkoľvek ďalší príkaz musí byť zaobalený v \${príkaz}.
 \subsection{Aritmetika premenných}
-\indent Aby bolo možné meniť hodnoty premenných inak ako priraďovaním inplicitnej hodnoty, je potrebné definovať operácie, ktoré s nimi môžu byť vykonané. Pre numerické premenné typu integer a double je potrebé implementovať operácie +, -, *, / a \%. Pre reťazcové premenné definujeme operáciu +, ktorá slúži na spájanie reťazcov. A pre premenné typu boolean je potrebné definovať operácie \&\&, ||, >, <, =>, =<, ==, !=.
+\indent Pre zmenu hodnoty premenných, inak ako priraďovaním implicitnej hodnoty, je potrebné definovať operácie, ktoré s nimi môžu byť vykonané. Pre numerické premenné typu integer a double je nevyhnutné implementovať operácie +, -, *, / a \%. Pre reťazcové premenné definujeme operáciu +, ktorá slúži na spájanie reťazcov a pre premenné typu boolean je potrebné definovať operácie \&\&, ||, >, <, =>, =<, ==, !=.
 \subsection{Funkcie}
-\indent Funkcie sa budú definovať pomocou kľúčového slova function, nasledované typom vracajúcej hodnoty, menom funkcie a medzi okrúhlymi zátvorkami špecifikujeme parametre funkcie. Funkcie budú môcť byt prepisované a to v prípade, že pred funkciu pridíme text @Override, ktorý je programátorom známi. Override nemusí rozlišovať medzi prepisom a preťažením funkcie. 
+\indent Funkcie sa budú definovať pomocou kľúčového slova function, nasledované typom vracajúcej hodnoty, menom funkcie a medzi okrúhlymi zátvorkami špecifikujeme parametre funkcie.
+Definovanie začiatku funkcie zabezpečí znak \{, ktorý musí byť na riadku definovania funkcie. Ukončovacím znakom funkcie je \}, ktorý musí stáť na samostatnom riadku. Funkcie môžu byť prepisované, a to v prípade, že pred funkciu priradíme text @Override, ktorý je programátorom známy. Override nemusí rozlišovať medzi prepisom a preťažením funkcie. 
 \subsection{Include}
-\indent Aby sme docielili rozdelenie zdrojových súborov a vyhli sa dlhosiahlym vstupným súborom rozhodli sme sa definovať kľúčové slovo include, ktoré bude ako parameter brať cestu k súboru, ktorý sa má nahrať. 
+\indent Aby sme docielili rozdelenie zdrojových súborov, a tým pádom sa vyhli dlhosiahlym vstupným súborom, rozhodli sme sa definovať kľúčové slovo include, ktoré bude ako parameter brať cestu k súboru, ktorý sa má nahrať. 
 \subsection{Use}
-\indent Aby bolo možné pred behom skriptu zmeniť používané balíčky, definujeme kľúčové slovo use, ktoré bude ako argument potrebovať názov balíka a jeho verziu. 
+\indent Pre dosiahnutie zmeny používaných balíčkov pred behom skriptu, definujeme kľúčové slovo use, ktoré bude ako argument potrebovať názov balíka a jeho verziu. 
 \subsection{If a For}
-\indent V programe budeme očakávať rovnakú štruktúru zápisu if a for aký používa Java teda pre if - if(podmienka){príkazy} a pre for - for(inicializácia;podmienka;iterácia){príkazy}. Oba If aj For musia na riadku kde sú definované končiť { a príkazy budú pokračovať až v nasledovnom riadku. Ukončovací znak musí byť umiestnený na samostatnom riadku.
+\indent V programe očakávame rovnakú štruktúru zápisu if a for aký používa Java, pre if - if(podmienka){príkazy} a pre for - for(inicializácia;podmienka;iterácia){príkazy}. Oba If aj For musia na riadku kde sú definované končiť { a príkazy budú pokračovať až v nasledovnom riadku. Ukončovací znak musí byť umiestnený na samostatnom riadku.
 \subsection{Komentáre}
 \indent	Komentáre sa v skriptoch budú definovať znakom mriežky.
-\subsection{Spájanie viac riadkových príkazov}
-\indent Často sa stáva, že skripty obsahujú dlhé nečitateľné príkazy, preto zabezpečíme aby v prípade, že sú na konci riadku zadané znaky \ pokračujeme v načítavaní príkazu až kým nenarazí na znak bodkočiarku, ktrorá je v skriptovacom móde povinným ukončovateľom príkazov aj priradení.
+\subsection{Spájanie viacriadkových príkazov}
+\indent Často sa stáva, že skripty obsahujú dlhé nečitateľné príkazy, preto zabezpečíme aby v prípade, že je na konci riadku zadaný znak \textbackslash, pokračujeme v načítavaní príkazu až kým nenarazí na znak bodkočiarku, ktorá je v skriptovacom móde povinným ukončovateľom príkazov aj priradení.
 \subsection{Skriptovací mód}
-\indent Funkcionalita ako include,  funkcie, komentáre, use, spájanie viacriadkových príkazov, budú  dostupné iba v skriptovacom móde.
+\indent Funkcionality ako include, funkcie, komentáre, use, spájanie viacriadkových príkazov, budú dostupné iba v skriptovacom móde.
 \subsection{Interaktívny mód}
-\indent Z interaktívneho módu bude možné spúštať skripty aj príkazy. Nieje za nimi potrebné zadávať bodkočiarku. 
+\indent Z interaktívneho módu bude možné spúštať skripty aj príkazy. Nie je za nimi potrebné zadávať bodkočiarku. 
 \subsection{Ukážka skriptu}
+\indent Všetky vyššie popisované prvky jazyka je na príklade možné vidieť na algoritme č. 4.
 \begin{algorithm}[H]
 	\begin{minted}[]{php}
 use copy 1.0;
@@ -513,6 +511,8 @@ function int test(){
 return 4;
 }
 	\end{minted}
+		\caption{Ukážka skriptu}
+	\label{alg:gen}
 	\end{algorithm}
 \newpage
 \subsection{Prípady použitia}
@@ -555,7 +555,7 @@ return 4;
 		\hline
 		\textbf{Use case} & UC2\_Spustiť príkaz \\ 
 		\hline
-		\textbf{Podmienky} & Shell aplikácia musí byť spustená. \\ 
+		\textbf{Podmienky} & Shell apliká	cia musí byť spustená. \\ 
 		\hline
 		\textbf{Vstup} & Textový reťazec obsahujúci príkaz a jeho argumenty.\\
 		\hline
@@ -1153,7 +1153,7 @@ Diagram návrhového vzoru je mozné vidieť na nasledujúcom obrázku.
 Cieľom vzoru je zapúzdriť požiadavku (request) ako objekt tým pádom parametrizovať klienta s rôznymi požiadavkami a zabezpečiť operáciu spať.\cite{designpattern}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{img/command_pattern_class.jpg}
+	\includegraphics[width=9cm]{img/command_pattern_class.jpg}
 	\caption{Class diagram Command návrhového vzoru}
 	\label{fig:test}
 \end{figure}
@@ -1192,7 +1192,7 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 
 \subsection{Plugin}
 \indent Z nasledovného diagramu tried nebolo na prvý pohľad zjavné aké komponenty v programe existujú, preto bolo potrebné tieto komponenty rozumne rodeliť. Z prvotného návrhu sme vytiahli plugin, ktorý bude slúžiť na nahrávanie nových funkcionalít do programu.  Diagram implementácie rozhraní a konkrétnych tried  je viditeľný na nasledovnom obrázku. 
-\newpage
+
  \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{img/plugin_class.jpg}
@@ -1212,7 +1212,6 @@ Pre lepšie pochopenie je proces zobrazený aj na sekvenčnom diagrame.
 \end{itemize}
 Vytvorili sme solídny základ pre vývoj aplikácie, jednoduché rozšérenie funkcionalít, avšak je možné, že bude potrebné aby príšlo k menším zmenám tried a rozhraní, nakoľko nie vždy sa podarí odhadnúť  všetky kľúčové časti systímu už počas návrhu.
 
-\newpage
 \subsection{Diagram tried aplikácie}
  \begin{figure}[H]
 	\centering
@@ -1302,13 +1301,13 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \indent  Na nasledujúcom obrázku je zobrazená aktivita spustenia konzoly. Ako vidieť z diagramu, aplikácia sa najprv nainicializuje, čo vysvetlíme v sekcii 4.3. Po inicializácii premenných sa vytvorí inštancia triedy ScopeImpl, ktorá je implementáciou AbstractScope triedy, charakterizovaná v predchádzajúcej sekcii práce. V ďalšom kroku aplikácia overí, či má na vstupe parametre. V prípade, ak áno vykoná ich, inak spustí konzolu, ktorá čaká na vstup od používateľa. V tejto časti popíšeme čo sa deje v prvom prípade, a teda že máme zadané parametre. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{img/System.jpg}
+	\includegraphics[width=13cm]{img/System.jpg}
 	\caption{Activita spustenia aplikácie}
 	\label{fig:test}
 \end{figure}
 \subsubsection{Štart s parametrami}
 \indent Možnosť s parametrami na vstupe sme implementovali z dôvodu aby sa aplikácia dala integrovať s inými enterprise aplikáciami, ktoré môžu buď čítať výstupy priamo z konzoly, alebo ich môžu presmerovať do súboru. Novovytvorený súbor je následne možné načítať a vykonať nad ním potrebné operácie.
-\newpage
+
 \subsection{Inicializácia aplikácie}
 \indent Inicializácia pozostáva z dvoch krokov:
 \begin{itemize}
@@ -1323,7 +1322,11 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{figure}
 \subsubsection{Načítanie pluginov}
 \indent Načítanie pluginov sa uskutočňuje pomocou triedy PluginFactory a JarLoader, kde tento proces pozostáva z troch krokov.\newline
-\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste, v akresári libs v koreňovom adresári aplikácie. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, ktoré sme si popísali v , kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. 
+\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste, v akresári libs v koreňovom adresári aplikácie. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, ktoré sme si popísali v , kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. Algoritmus načítania pluginov je zobrazený na nasledujúcej strane - Algoritmus č. 7.
+\paragraph{Načítanie dostupých pluginov z aplikácie}
+\indent Pluginy môžu byť definované priamo v aplikácii. V takom prípade, priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informácie o nich. 
+\paragraph{Finálne načítanie pluginov}
+\indent Používateľ môže počas využívania aplikácie stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohto dôvodu sme navrhli  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
 \begin{algorithm}[H]
 	\begin{minted}[]{java}
 	try {
@@ -1347,13 +1350,10 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	}
 	}
 	\end{minted}
-	\caption{Ukážka načítania balíčka z disku počítača}
+	\caption{Ukážka načítania pluginu z disku počítača}
 	\label{alg:gen}
 \end{algorithm}
-\paragraph{Načítanie dostupých pluginov z aplikácie}
-\indent Pluginy môžu byť definované priamo v aplikácii. V takom prípade, priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informácie o nich. 
-\paragraph{Finálne načítanie pluginov}
-\indent Používateľ môže počas využívania aplikácie stiahnuť alebo naprogramovať viaceré verzie rovnakého pluginu. Z tohto dôvodu sme navrhli  krok, ktorý má za úlohu načítať všetky balíčky s jedinečným menom a najvyššou možnou verziou pre daný balíček. Následne načítanie končí a vráti sa inštancia tejto továrne pre pluginy.
+
 \subsection{Vykonávač príkazov}
 \indent Všetky príkazy, ktoré sa majú pomocou aplikácie vykonať sa spúšťajú pomocou triedy ExecutorImpl, ktorá implementuje metódu rozhrania Executor CommandIO execute(String command, Scope scope). Rozhodovacia logika, ako sa príkazy od používateľa budú vykonávať, je implementovaná práve v tejto metóde. Pre zjednodušenie opisu si pomôžeme pseudokódom rozhodovacieho algoritmu. Zo pseudokódu je zrejmé, že exekútor najskôr zistí, či príkaz neobsahuje znaky pajpy, presmerovania štandardného vstupu/výstupu. Následne identifikuje čím sa príkaz začína a vyberie vhodnú metódu pre zadaný príkaz. Po vykonaní príkazu zisťuje či sa má výstup z programu zapísať mimo štandardného vstupu alebo výstupu. Ak áno, program očakáva platnú cestu za oddeľovačmi stdout> \acrshort{resp.} stderr>, kde sa pokúsi zapísať svoj výstup do súboru. Diagram tried je uvedený v prílohe D.
 \begin{algorithm}[H]
@@ -1382,7 +1382,6 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	\caption{Ukážka pseudokódu exekútora. }
 	\label{alg:gen}
 \end{algorithm}
-\newpage
 \subsubsection{Vykonávač príkazu}
 \indent Vykonávač príkazu si v prvom kroku vyžiada od PluginFactory plugin, ktorý by dokázal daný príkaz vykonať. Ak factory úspešne vráti plugin, exekútor si z pluginu zoberie command a zavolá na ňom metódu execute(CommandIO commandInput, Optional<Scope> scope{)}. Command následne spracuje vstupy v metóde \newline parseCommand{(}Stream<String> var). Metóda execute potom vyberie receiver, ktorý daný príkaz dokáže vykonať. Receiver následne vykoná príkaz a vráti rozhranie CommandIO, ktoré nesie informáciu o úspešnosti behu ako aj výstupy. Počas exekúcie príkazov skriptu dochádza k vyvolávaniu jednotlivých commandov, ktoré majú okrem vykonania funkcie za úlohu zistiť spávnosť vstupov, čo je proces, ktorý sme popísali v časti Sémantickej analýzý 2.1.4.
 
