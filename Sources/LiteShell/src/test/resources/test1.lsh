@@ -1,12 +1,12 @@
-use copy 1.0;
-use move 1.0;
+#use copy 1.0;
+#use move 1.0;
 #include(/home/jv/Documents/Skola/Diplomova-Praca/Sources/LiteShell/src/test/resources/test2.lsh);
 # zeby bol aj daky komentaris
     # zeby bol aj daky komentaris aj s odsadenim
 
 
-int globalVar = \
-8;
+#int globalVar = \
+#8;
 
 function void main(string arg){
 #  echo ("globalVar ",${globalVar});
@@ -28,17 +28,17 @@ int a = 5;
 #    echo (true);
    for(int i = 0; $(${i}<4);$(${i} = $(${i}+1))){
 #          echo ("globalVar in 1 for",${globalVar});
-          echo ("running -------------------> ",${i});
-          if(true){
+ #         echo ("running -------------------> ",${i});
+  #        if(true){
 #            echo (true);
-          }
+   #       }
            for(int i = 0; $(${i}<999999);$(${i} = $(${i}+1))){
 #              echo ("in 2 globalVar ",${globalVar});
 #${globalVar} = 2;
 #              echo ("i ",${i});
  #             echo ("in 2 globalVar ",${globalVar});
               int a = $(${i}*${i});
-              #echo (${a});
+              echo (${a});
            }
 
       }

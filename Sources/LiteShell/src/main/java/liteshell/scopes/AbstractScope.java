@@ -3,6 +3,8 @@ package liteshell.scopes;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -243,10 +245,10 @@ public class AbstractScope implements Scope, Runnable {
         if (userInput.equals("$(exit);")) {
           System.exit(0);
         }
-//        Instant start = Instant.now();
+        Instant start = Instant.now();
         commandIO = executor.execute(userInput, getScope());
-//        Instant end = Instant.now();
-//        System.out.println(Duration.between(start, end));
+        Instant end = Instant.now();
+        System.out.println(Duration.between(start, end));
 
         if (commandIO.getCommandOutput().isPresent() && commandIO.getReturnCode() == 0) {
           try {
