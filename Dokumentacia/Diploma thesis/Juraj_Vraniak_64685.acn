@@ -8,6 +8,8 @@
 \glossaryentry{JVM?\glossentry{jvm}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{JVM?\glossentry{jvm}|setentrycounter[]{page}\glsnumberformat}{1}
 \glossaryentry{resp.?\glossentry{resp.}|setentrycounter[]{page}\glsnumberformat}{2}
+\glossaryentry{JDK?\glossentry{jdk}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{JDK?\glossentry{jdk}|setentrycounter[]{page}\glsnumberformat}{3}
 \glossaryentry{OS?\glossentry{os}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{OS?\glossentry{os}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{OS?\glossentry{os}|setentrycounter[]{page}\glsnumberformat}{4}
@@ -22,8 +24,12 @@
 \glossaryentry{GUI?\glossentry{gui}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{GUI?\glossentry{gui}|setentrycounter[]{page}\glsnumberformat}{17}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}\glsnumberformat}{26}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}\glsnumberformat}{31}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}\glsnumberformat}{32}
 \glossaryentry{API?\glossentry{api}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{SDK?\glossentry{sdk}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{38}
+\glossaryentry{SDK?\glossentry{sdk}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{PC?\glossentry{pc}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{PC?\glossentry{pc}|setentrycounter[]{page}\glsnumberformat}{39}
@@ -31,6 +37,8 @@
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{40}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{43}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{52}
+\glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{52}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{52}
 \glossaryentry{resp.?\glossentry{resp.}|setentrycounter[]{page}\glsnumberformat}{53}
 \glossaryentry{jar?\glossentry{jar}|setentrycounter[]{page}\glsnumberformat}{59}

@@ -21,13 +21,13 @@
 \subsubsection{Unix}
 \indent Patrí medzi prvé operačné systémy pre servery, ktorého vývoj začal v roku 1970 a v priebehu rokov vzniklo veľa nových verzií Unixu a Linuxu. V minulosti boli Unixové servery veľmi obľúbené, avšak v súčasnosti sú na ústupe, a to najmä kvôli vyšším obstarávacím a prevádzkovým nákladom. Pre účely Unixu sa vytvoril Unix shell, dostupný v rôznych obmenách, ktorý je často vyhľadávaným jazykom medzi administrátormi a automatizačnými programátormi.
 \paragraph{Predinštalovaný softvér}
-\indent Na vačšine unixových systémoch je predinštalovaný Shell a Open JDK.
+\indent Na vačšine unixových systémoch je predinštalovaný Shell a Open \acrshort{jdk}.
 \paragraph{Podiel na trhu}
 \indent Podľa stránky w3techs.com\cite{pop} sa Unixové systémy používajú na rovných 68.0\% počítačov.
 \subsubsection{Linux}
 \indent  Linux je všeobecný názov pre širokú zostavu Linux distribúcií, ktoré používajú Linux Kernel. Linux Kernel bol prvýkrát verejnosti predstavený v roku 1991 a odvtedy bol rozšírený na najviac platforiem. Momentálne je jediným používaným operačným systémom na TOP 500 superpočítačoch (mainframe). Skriptovacím jazykom pre Linux je Unix Shell resp. jeho najrozšírenejšia forma Bash.
 \paragraph{Predinštalovaný softvér}
-\indent Predinštalovaný softvér vo väčšine distribúciách Linuxu sú Bash, Open JDK - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .NET frameworku.
+\indent Predinštalovaný softvér vo väčšine distribúciách Linuxu sú Bash, Open \acrshort{jdk} - Java, niektoré distribúcie ponúkajú Python. RedHat začína s podporou .NET frameworku.
 \paragraph{Podiel na trhu}
 \indent Linux je k dispozícii v mnohých formách, tak aby vyhovoval rôznym potrebám, od spotrebiteľsky orientovaných systémov pre domáce použitie až po distribúcie použiteľné v špecifických odvetviach. Podľa webovej stránky statcounter.com\cite{statcounter} a netmarketshare.com\cite{netmarketshare} mu patrí 1,66\% resp.  1,93\%.
 Podľa stránky w3techs.com\cite{pop} je operačný systém Linux na 41.0\% počítačoch.
@@ -768,7 +768,7 @@ return 4;
 			\textbf{Popis} & Program vypíše na štandardný výstup informácie o využití systémových zdrojov,  ako napríklad využitie procesora, využitie pamäte RAM, využitie oddielu swap a podobne.\\ 
 			\hline
 					
-			\textbf{Výstup} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia, napr. CPU, ďalší riadok RAM atď.. V prípade viac jadrového procesora sa vypíšu informácie o každom z jadier.  \\
+			\textbf{Výstup} & Výstupom je textový reťazec, formátovaný do riadkov. Každému riadku prislúcha jedna informácia, napr. CPU, ďalší riadok\acrshort{ram}atď.. V prípade viac jadrového procesora sa vypíšu informácie o každom z jadier.  \\
 			\hline
 			\textbf{Chyba} & V prípade, že používateľ nemá právo na získanie informácií, program vypíše dôvod priamo na štandardný výstup. Rovnako program vypíše aj akékoľvek chyby, ku ktorým môže dôjsť počas behu.\\
 			\hline
@@ -790,7 +790,7 @@ return 4;
 			\textbf{Podmienky} & Shell aplikácia musí byť spustená. Používateľ vloží platný príkaz na vyžiadanie informácií o procesoch. \\ 
 			\hline
 
-			\textbf{Popis} & Program vypíše na štandardný výstup informácie o spustených procesoch, používateľoch, ktorí tieto procesy spúšťajú, koľko percent procesoru, pamäte RAM používajú.\\ 
+			\textbf{Popis} & Program vypíše na štandardný výstup informácie o spustených procesoch, používateľoch, ktorí tieto procesy spúšťajú, koľko percent procesoru, pamäte\acrshort{ram}používajú.\\ 
 			\hline
 
 			\textbf{Výstup} & Výstupom je prehľadný výpis v podobe tabuľky, kde každý riadok zodpovedá jednému procesu. Nad jednotlivými hodnotami je hlavný riadok, ktorý popisuje o akú hodnotu ide.\\
@@ -1072,7 +1072,7 @@ return 4;
 			\hline
 			\textbf{Use case} & UC23\_Implementovať vlastný balíček \\ 
 			\hline
-			\textbf{Podmienky} & Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
+			\textbf{Podmienky} & Používateľ musí mať nainštalovanú Java\acrshort{sdk}vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Balíček obsahujúci všetky potrebné rozhrania, ktoré musí vývojár balíčka implementovať.\\
 			\hline
@@ -1095,7 +1095,7 @@ return 4;
 			\hline
 			\textbf{Use case} & UC24\_Upravovať existujúce balíčky \\ 
 			\hline
-			\textbf{Podmienky} &  Používateľ musí mať nainštalovanú Java SDK vo verzii 8, mať prístup k textovému editoru.  \\ 
+			\textbf{Podmienky} &  Používateľ musí mať nainštalovanú Java\acrshort{sdk}vo verzii 8, mať prístup k textovému editoru.  \\ 
 			\hline
 			\textbf{Vstup} & Zdrojové súbory už existujúceho balíčka.\\
 			\hline
@@ -1322,7 +1322,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 \end{figure}
 \subsubsection{Načítanie pluginov}
 \indent Načítanie pluginov sa uskutočňuje pomocou triedy PluginFactory a JarLoader, kde tento proces pozostáva z troch krokov.\newline
-\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým jar súborom. Jar súbory musia byť uložené na presne špecifikovanom mieste, v akresári libs v koreňovom adresári aplikácie. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, ktoré sme si popísali v , kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. Algoritmus načítania pluginov je zobrazený na nasledujúcej strane - Algoritmus č. 7.
+\paragraph{Načítanie dostupých pluginov z disku} Trieda PluginFactory zavolá metódu registerAllPlugins(), ktorá najprv získa cesty k uloženým\acrshort{jar}súborom.\acrshort{jar}súbory musia byť uložené na presne špecifikovanom mieste, v akresári libs v koreňovom adresári aplikácie. Následne tieto cesty odovzdá triede JarLoader, ktorá sa pokúsi na daných cestách načítať \acrshort{jar} súbory, nájsť v nich triedu implementujúcu rozhranie ShellPlugin. Ak takúto triedu nájde, pokúsi sa z nej vytvoriť inštanciu pomocou reflexie, a takto vytvorenú inštanciu následne vráti triede PluginFactory, ktorá si túto triedu uloží na základe informácií, ktoré každý ShellPlugin poskytuje. PluginFactory ukladá inštancie do mapy, ktoré sme si popísali v , kde kľúč je trieda PluginMeta získaná z pluginu, a hodnotou je práve načítaný plugin. Algoritmus načítania pluginov je zobrazený na nasledujúcej strane - Algoritmus č. 7.
 \paragraph{Načítanie dostupých pluginov z aplikácie}
 \indent Pluginy môžu byť definované priamo v aplikácii. V takom prípade, priamo do rovnakej mapy ako v predchádzajúcom prípade vkladáme inštancie pluginov a informácie o nich. 
 \paragraph{Finálne načítanie pluginov}
@@ -1477,4 +1477,6 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 	
 \end{figure}
 \indent Z grafu je zrejmé, že naše riešenie je pomalšie od jazykov ako sú Python alebo Java. Zo Shell scriptom je rozdiel v rýchlostiach nižší. Pre porovnanie sme sa rozhodli otestovať aj rýchlosť Windows emulátorov, ktoré sa snažia poskytnúť funkcionalitu Shell skriptu. V grafe sme pre ilustráciu zobrazili, graf závislosti dosahovaných časov našej aplikácie, oproti aplikácii cmder, nakoľko ostané emuláry dosahovali podobnú rýchlosť. Z grafu je zreteľné, že emulátory popísané v analýze dosahujú značne horšie výsledky ako vytvorená aplikácia. Naša aplikácia beží na Ubuntu 16.04 a Windows 10 v takmer identických časoch. Porovnanie s MacOs v tomto prípade nedáva zmysel nakoľko vo verzii Mac Pro aplikácii beží náš program pri štyroch milióch výpočtoch v cykle 53 sekúnd oproti 156 sekundám na Linuxe a Windowse. Tento rozdiel je spôsobený hardvérom. 
+\newline
+\indent Na základe vyššie uvedených skutočností je možné povedať, že hoci aplikácia zaostáva za programovacími jazykmi ako Python a Java, Shell scriptu je vyrovvnaným partnerom. Taktiež rované výsledky dosahuje na všetkých platformách, čo sa Shell scripte a jeho emulátoroch nedá povedať. Celkovo teda možno prácu hodnotiť ako úspešne vypracovanú.
 
