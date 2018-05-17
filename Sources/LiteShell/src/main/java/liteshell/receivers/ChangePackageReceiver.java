@@ -15,7 +15,7 @@ public class ChangePackageReceiver implements Receiver {
   @Override
   public CommandIO executeCommand(CommandIO commandIO, String[] strings, Optional<Scope> optional) {
     AbstractScope scope = (AbstractScope) optional.get();
-    scope.getPluginFactory().removePluggin(strings[1]);
+    scope.getPluginFactory().changePlugin(strings[2] + " " + strings[3]);
     return commandIO;
   }
 }

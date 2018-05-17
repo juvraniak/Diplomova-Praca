@@ -94,8 +94,8 @@ public class PluginFactory {
 
   public void removePluggin(final String pluginName) {
     if (shellPlugins.containsKey(pluginName)) {
-//      log.info("Command {} already loaded.", pluginName);
-      shellPlugins.remove(shellPlugins.get(pluginName));
+      shellPlugins.remove(pluginName);
+      System.out.println("tus");
     }
   }
 
@@ -184,10 +184,6 @@ public class PluginFactory {
     String[] parameters = usePlugin.split(" ");
     String searchedPlugin = parameters[0];
     String version = parameters[1];
-
-    log.info(
-        "Will try to use in pluginFactory specified plugin " + searchedPlugin + " version : "
-            + version);
 
     if (shellPlugins.containsKey(searchedPlugin) && shellPlugins.get(searchedPlugin).getInfo()
         .getVersion().equals(version)) {
