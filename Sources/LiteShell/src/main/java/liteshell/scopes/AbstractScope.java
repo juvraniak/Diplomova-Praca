@@ -34,6 +34,7 @@ public class AbstractScope implements Scope, Runnable {
 
   @Getter
   protected String scopeName;
+  @Getter
   protected PluginFactory pluginFactory;
   @Getter
   protected Executor executor;

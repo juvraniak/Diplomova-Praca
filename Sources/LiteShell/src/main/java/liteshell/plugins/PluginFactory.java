@@ -16,12 +16,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import liteshell.commands.Command;
 import liteshell.loaders.JarLoader;
 import lombok.Getter;
 import lombok.Setter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**
@@ -88,6 +90,13 @@ public class PluginFactory {
     }
     //if not download and load
     downloadAndLoad(pluginName);
+  }
+
+  public void removePluggin(final String pluginName) {
+    if (shellPlugins.containsKey(pluginName)) {
+//      log.info("Command {} already loaded.", pluginName);
+      shellPlugins.remove(shellPlugins.get(pluginName));
+    }
   }
 
   private void downloadAndLoad(String pluginName) throws IOException {
@@ -164,6 +173,7 @@ public class PluginFactory {
     allAvailablePlugins.put(new PluginMeta("1.0", "arithmetic"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "stringsPrep"), new VariablePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "booleanPrep"), new VariablePlugin());
+    allAvailablePlugins.put(new PluginMeta("1.0", "pkg"), new PackagePlugin());
     allAvailablePlugins.put(new PluginMeta("1.0", "${"), new VariablePlugin());
     allAvailablePlugins.put(new EchoPlugin().getInfo(), new EchoPlugin());
     allAvailablePlugins.put(new ChangeDirectoryPlugin().getInfo(), new ChangeDirectoryPlugin());
