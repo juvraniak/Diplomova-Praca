@@ -2,6 +2,8 @@ package liteshell.executors;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -39,6 +41,18 @@ public class ExecutorImpl implements Executor {
   public CommandIO execute(String command, Scope scope) {
     CommandIO out = DefaultCommadIO.of(CommandIO.prepareIO(command));
 
+    boolean isStdOut = command.matches("stdout>");
+    boolean isStdErr = command.matches("stderr>");
+    String fileToSave = "";
+
+    if (isStdOut) {
+      fileToSave = command.split("stdout>")[1];
+      command = command.split("stdout>")[0];
+    } else if (isStdErr) {
+      fileToSave = command.split("stderr>")[1];
+      command = command.split("stderr>")[0];
+    }
+
     if (command.startsWith("sh ")) {
       executeCommand(command.substring(3));
     } else if (command.startsWith("win ") || command.startsWith("ext ")) {
@@ -70,7 +84,30 @@ public class ExecutorImpl implements Executor {
     } else {
 
     }
-    return out;
+    if (isStdErr || isStdOut) {
+      File f = new File(fileToSave);
+      try (FileOutputStream fos = new FileOutputStream(f)) {
+        if (out.getCommandErrorOutput().isPresent()) {
+          Optional<String> toWrite = out.getCommandOutput().get().reduce(String::concat);
+          if (toWrite.isPresent()) {
+            fos.write(toWrite.get().getBytes());
+          }
+        } else if (out.getCommandErrorOutput().isPresent()) {
+          Optional<String> toWrite = out.getCommandErrorOutput().get().reduce(String::concat);
+          if (toWrite.isPresent()) {
+            fos.write(toWrite.get().getBytes());
+          }
+        }
+      } catch (FileNotFoundException e) {
+        e.printStackTrace();
+      } catch (IOException e) {
+        e.printStackTrace();
+      } finally {
+        return  DefaultCommadIO.of(CommandIO.prepareIO(command));
+      }
+    } else {
+      return out;
+    }
   }
 
   private CommandIO executeCommand(String command) {
