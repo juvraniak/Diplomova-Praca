@@ -1251,7 +1251,7 @@ Implementuje funkciu runInputCommands(), pomocou ktorej je aplikácia spustená 
 	setFunctionscopeVariables(scopeVariables.clone());
 	
 	for (String command : functionScope.stack) {
-	if (command.startsWith("$(")) {
+	if (command.startsWith("\$(")) {
 	out = executor.execute(command, functionScope);
 	if (command.contains("returnValue = ")) {
 	setReturnValue();
@@ -1468,3 +1468,13 @@ Z prvého riadku sa uloží iba jeden parameter a to podmienka, ktorá sa bude v
 \indent  Podpora základných dátových typov je bezproblémová. Aritmetické operácie, ktoré je nad nimi možné vykonávať sú mierne okresané. Je možné definovať  operácie nad numerickými dátovými typmi ako +, -, *, /, \%, no nie je možné definovať ich prioritu. Rovnako to platí aj pre logické operátory ako \&\&, ||. Dobrou správou však je, že aj tieto funkcionality boli implementované pomocou pluginov a tým pádom je možné ich kedykoľvek nahradiť sofistikovanejšími riešeniami. 
 \newline
 \indent Tým, že je aplikácia postavená na Jave, je plne funkčná na každom \acrshort{pc}, ktorý má \acrshort{os} podporovaný touto platformou. Ako je možné vidieť z príručky, na spustenie aplikácie je potrebné iba nainštalovať Java JRE 8, nastaviť Path aby smerovala na nainštalovanú Javu a spustiť predpripravený skript. Pre úplnosť sme pripravili nasledovné grafy, ktoré zobrazujú efektivitu aritmetických operácií.
+\acrshort{os} Linux s 41.1\% podielom.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{img/porovnanie.png}
+	\caption{Grafy rýchlosti}
+	\label{fig:test}
+	
+\end{figure}
+\indent Z grafu je zrejmé, že naše riešenie je pomalšie od jazykov ako sú Python alebo Java. Zo Shell scriptom je rozdiel v rýchlostiach nižší. Pre porovnanie sme sa rozhodli otestovať aj rýchlosť Windows emulátorov, ktoré sa snažia poskytnúť funkcionalitu Shell skriptu. V grafe sme pre ilustráciu zobrazili, graf závislosti dosahovaných časov našej aplikácie, oproti aplikácii cmder, nakoľko ostané emuláry dosahovali podobnú rýchlosť. Z grafu je zreteľné, že emulátory popísané v analýze dosahujú značne horšie výsledky ako vytvorená aplikácia. Naša aplikácia beží na Ubuntu 16.04 a Windows 10 v takmer identických časoch. Porovnanie s MacOs v tomto prípade nedáva zmysel nakoľko vo verzii Mac Pro aplikácii beží náš program pri štyroch milióch výpočtoch v cykle 53 sekúnd oproti 156 sekundám na Linuxe a Windowse. Tento rozdiel je spôsobený hardvérom. 
+

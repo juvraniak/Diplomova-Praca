@@ -8,7 +8,7 @@
 	\PYG{n}{setFunctionscopeVariables}\PYG{o}{(}\PYG{n}{scopeVariables}\PYG{o}{.}\PYG{n+na}{clone}\PYG{o}{());}
 
 	\PYG{k}{for} \PYG{o}{(}\PYG{n}{String} \PYG{n}{command} \PYG{o}{:} \PYG{n}{functionScope}\PYG{o}{.}\PYG{n+na}{stack}\PYG{o}{)} \PYG{o}{\PYGZob{}}
-	\PYG{k}{if} \PYG{o}{(}\PYG{n}{command}\PYG{o}{.}\PYG{n+na}{startsWith}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(\PYGZdq{}}\PYG{o}{))} \PYG{o}{\PYGZob{}}
+	\PYG{k}{if} \PYG{o}{(}\PYG{n}{command}\PYG{o}{.}\PYG{n+na}{startsWith}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}\PYGZbs{}\PYGZdl{}(\PYGZdq{}}\PYG{o}{))} \PYG{o}{\PYGZob{}}
 	\PYG{n}{out} \PYG{o}{=} \PYG{n}{executor}\PYG{o}{.}\PYG{n+na}{execute}\PYG{o}{(}\PYG{n}{command}\PYG{o}{,} \PYG{n}{functionScope}\PYG{o}{);}
 	\PYG{k}{if} \PYG{o}{(}\PYG{n}{command}\PYG{o}{.}\PYG{n+na}{contains}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}returnValue = \PYGZdq{}}\PYG{o}{))} \PYG{o}{\PYGZob{}}
 	\PYG{n}{setReturnValue}\PYG{o}{();}

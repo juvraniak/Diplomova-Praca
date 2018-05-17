@@ -288,16 +288,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Zhodnotenie v\IeC {\'y}sledkov}{61}{section.204}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'{a}ver}{62}{section*.205}
+\contentsline {section}{Z\'{a}ver}{63}{section*.206}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{63}{section*.206}
+\contentsline {section}{Zoznam pou\v {z}itej literat\'{u}ry}{64}{section*.207}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pr\'{i}lohy}{I}{section*.207}
+\contentsline {section}{Pr\'{i}lohy}{I}{section*.208}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.209}
+\contentsline {section}{\numberline {A}CD s aplik\IeC {\'a}ciou a pr\IeC {\'a}cou}{II}{section.210}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.212}
+\contentsline {section}{\numberline {B}N\IeC {\'a}vod na spustenie a pou\IeC {\v z}\IeC {\'\i }vanie aplik\IeC {\'a}cie}{III}{section.213}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.215}
+\contentsline {section}{\numberline {C}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{IV}{section.216}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.219}
+\contentsline {section}{\numberline {D}Diagram tried rozhran\IeC {\'\i } aplik\IeC {\'a}cie}{V}{section.220}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E}N\IeC {\'a}vod na vytvorenie nov\IeC {\'e}ho pluginu}{VI}{section.224}
