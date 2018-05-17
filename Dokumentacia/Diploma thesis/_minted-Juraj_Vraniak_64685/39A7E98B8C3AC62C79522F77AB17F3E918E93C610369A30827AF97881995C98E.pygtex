@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{function changeName(\PYGZbs{}\PYGZdl{}myObject)}
+\PYG{x}{\PYGZob{}}
+\PYG{x}{if (\PYGZbs{}\PYGZdl{}myObject.GetType() \PYGZhy{}eq [MyType])}
+\PYG{x}{\PYGZob{}}
+\PYG{x}{//vypíš obsah premennej}
+\PYG{x}{\PYGZbs{}\PYGZdl{}myObject.Name}
+\PYG{x}{//zmeň reťazec pre atribút name}
+\PYG{x}{\PYGZbs{}\PYGZdl{}myObject.Name = \PYGZdq{}NewName\PYGZdq{}}
+\PYG{x}{\PYGZcb{}}
+\PYG{x}{return \PYGZbs{}\PYGZdl{}myObject}
+\PYG{x}{\PYGZcb{}}
+
+\PYG{x}{// Vytvorenie objektu s argumentom OriginalName a následné}
+\PYG{x}{//použitie funkcie na zmenu argumentu}
+\PYG{x}{//PS\PYGZgt{} \PYGZbs{}\PYGZdl{}myObject = New\PYGZhy{}Object MyType \PYGZhy{}arg \PYGZdq{}OriginalName\PYGZdq{}}
+\PYG{x}{//PS\PYGZgt{} \PYGZbs{}\PYGZdl{}myObject = changeName \PYGZbs{}\PYGZdl{}myNewObject}
+\PYG{x}{//OriginalName}
+\PYG{x}{//PS\PYGZgt{} \PYGZbs{}\PYGZdl{}myObject.Name}
+\PYG{x}{//NewName}
+\PYG{x}{// Ukážka s využitím pipe}
+\PYG{x}{//PS\PYGZgt{} \PYGZbs{}\PYGZdl{}myObject = New\PYGZhy{}Object MyType \PYGZhy{}arg \PYGZdq{}OriginalName\PYGZdq{} | \PYGZbs{}}
+\PYG{x}{//changeName}
+\PYG{x}{//OriginalName}
+\PYG{x}{//PS\PYGZgt{} \PYGZbs{}\PYGZdl{}myObject.Name}
+\PYG{x}{//NewName}
+\end{Verbatim}

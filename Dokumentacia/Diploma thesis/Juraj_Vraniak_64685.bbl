@@ -425,6 +425,34 @@
       \verb https://www.java.com/en/download/faq/whatis_java.xml
       \endverb
     \endentry
+    \entry{javanew}{book}{}
+      \name{author}{1}{}{%
+        {{hash=56a9caccf96712cefbff26b93e3eeae1}{%
+           family={A.\bibnamedelimi Buckley},
+           familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={et\bibnamedelima al.},
+           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod},
+           suffix={G.\bibnamedelimi Bracha},
+           suffixi={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional, May 2014}%
+      }
+      \strng{namehash}{56a9caccf96712cefbff26b93e3eeae1}
+      \strng{fullhash}{56a9caccf96712cefbff26b93e3eeae1}
+      \strng{authornamehash}{56a9caccf96712cefbff26b93e3eeae1}
+      \strng{authorfullhash}{56a9caccf96712cefbff26b93e3eeae1}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{note}{ISBN: 9780133900767}
+      \field{title}{The Java® Language Specification, Java SE 8 Edition}
+      \field{year}{2014}
+      \field{pages}{s. 780}
+      \range{pages}{-1}
+    \endentry
     \entry{classloader}{online}{}
       \name{author}{1}{}{%
         {{hash=30162ed78b6c10f731411f2fc440c24f}{%
