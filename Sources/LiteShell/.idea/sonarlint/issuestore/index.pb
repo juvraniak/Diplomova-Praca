@@ -55,3 +55,9 @@ L
 src/test/resources/test1.lsh,6/0/6075b633c5b8acab9f4b2482700de6ec304999b5
 [
 +src/main/java/liteshell/scopes/IfScope.java,f/c/fc9456b0511fe16d9857a67abaf4307be7d5f000
+m
+=src/main/java/liteshell/receivers/ChangeVariableReceiver.java,a/1/a196bdb8c1ca2b7b77f875b48cedb2decbe28d4e
+l
+<src/main/java/liteshell/receivers/DeletePackageReceiver.java,6/e/6e2db4bde6c27e955da1a34a9dd5a263bcaf5706
+n
+>src/main/java/liteshell/receivers/DownloadPackageReceiver.java,8/9/8921fe257d7619836c1b2966c17af1515777054a

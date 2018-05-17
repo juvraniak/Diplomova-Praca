@@ -1,3 +1,3 @@
 
-"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Σχ8λ±κτµ,
-isquid:S1192"HDefine a constant instead of duplicating this literal "return " 4 times.(ΓΣ®όÿÿÿÿ8λ±κτµ,
+"squid:SwitchLastCaseIsDefaultCheck&"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Σχ8λ±κτµ,
+ksquid:S1192("HDefine a constant instead of duplicating this literal "return " 4 times.(ΓΣ®όÿÿÿÿ8λ±κτµ,

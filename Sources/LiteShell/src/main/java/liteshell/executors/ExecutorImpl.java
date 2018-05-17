@@ -103,7 +103,7 @@ public class ExecutorImpl implements Executor {
       } catch (IOException e) {
         e.printStackTrace();
       } finally {
-        return  DefaultCommadIO.of(CommandIO.prepareIO(command));
+        return DefaultCommadIO.of(CommandIO.prepareIO(command));
       }
     } else {
       return out;

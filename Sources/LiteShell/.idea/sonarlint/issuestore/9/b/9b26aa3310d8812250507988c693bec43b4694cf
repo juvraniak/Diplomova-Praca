@@ -1,9 +1,10 @@
 
-Gsquid:S3010"&Remove this assignment of "LIBS_PATH".(ξ”®Ϊÿÿÿÿÿ8κ±κτµ,
-?squid:S1148"#Use a logger to log this exception.(Η’Ηκ8κ±κτµ,
-Xsquid:S2629"7Use the built-in formatting to construct this argument.(²Ε©ωÿÿÿÿ8κ±κτµ,
-esquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ήϋψΟύÿÿÿÿ8κ±κτµ,
-`squid:S1134"DTake the required action to fix the issue indicated by this comment.(ΟΈ λ8κ±κτµ,
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬“γB8κ±κτµ,
-psquid:S3008"TRename this field "LIBS_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°—Υ8κ±κτµ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ªƒ‰ÿ8κ±κτµ,
+bsquid:S1134x"DTake the required action to fix the issue indicated by this comment.(ΟΈ λ8κ±κτµ,
+jsquid:CommentedOutCodeLine΄"<This block of commented-out lines of code should be removed.(ªƒ‰ÿ8κ±κτµ,
+rsquid:S3008'"TRename this field "LIBS_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°—Υ8κ±κτµ,
+[
+squid:S106b"9Replace this use of System.out or System.err by a logger.(χΌΚϋÿÿÿÿ8Μ…Φπ¶,
+Asquid:S1148v"#Use a logger to log this exception.(Η’Ηκ8κ±κτµ,
+hsquid:S2095“"DUse try-with-resources or close this "Stream" in a "finally" clause.(ήϋψΟύÿÿÿÿ8κ±κτµ,
+Isquid:S30102"&Remove this assignment of "LIBS_PATH".(ξ”®Ϊÿÿÿÿÿ8κ±κτµ,
+hsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.(¬“γB8κ±κτµ,

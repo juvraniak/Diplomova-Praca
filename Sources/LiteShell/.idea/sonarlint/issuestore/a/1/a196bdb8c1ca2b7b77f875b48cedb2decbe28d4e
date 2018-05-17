@@ -1,0 +1,10 @@
+
+]squid:S3027"FPut single-quotes around '{' to use the faster "indexOf(char)" method.(¶ñÚÚ
+^squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¤â¸
+bsquid:S3027H"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(şôÅ³ûÿÿÿÿ
+bsquid:S3027K"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(şôÅ³ûÿÿÿÿ
+bsquid:S3027E"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(şôÅ³ûÿÿÿÿ
+[squid:S3358`"DExtract this nested ternary operation into an independent statement.(„è…í
+‡"squid:SwitchLastCaseIsDefaultCheck-"YComplete cases by adding the missing enum constants or add a default case to this switch.(°Ó÷
+=squid:S1170"!Make this final field static too.(¿¦üÿÿÿÿ
+]squid:S3027"FPut single-quotes around '}' to use the faster "indexOf(char)" method.(¶ñÚÚ

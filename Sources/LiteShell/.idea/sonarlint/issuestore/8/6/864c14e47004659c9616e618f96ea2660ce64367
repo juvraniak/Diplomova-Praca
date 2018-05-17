@@ -1,18 +1,27 @@
 
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(îåõ÷8æÍÕíµ,
-€squid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ò¨ïıÿÿÿÿ8æÍÕíµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éøÌ·ÿÿÿÿÿ8æÍÕíµ,
-esquid:S1134"DTake the required action to fix the issue indicated by this comment.(åÏµÒşÿÿÿÿ8æÍÕíµ,
-nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Œóò8æÍÕíµ,
-`squid:S1134"DTake the required action to fix the issue indicated by this comment.(•ÔÔ×8æÍÕíµ,
-Ssquid:S3655"7Call "Optional#isPresent()" before accessing the value.(æ¨¤’8æÍÕíµ,
-fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¬£T8æÍÕíµ,
-Fsquid:S00108")Either remove or fill this block of code.(å¥‡8æÍÕíµ,
-bsquid:S3027"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(‰¸ëÂ8æÍÕíµ,
-Xsquid:S1854"7Remove this useless assignment to local variable "out".(·¹£Ùşÿÿÿÿ8æÍÕíµ,
-^squid:S2259"BA "NullPointerException" could be thrown; "temp" is nullable here.(ÏÉš³8æÍÕíµ,
-Hsquid:S1612",Replace this lambda with a method reference.(æ¨¤’8æÍÕíµ,
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ı8æÍÕíµ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–éóõşÿÿÿÿ8æÍÕíµ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ê†¿¸8æÍÕíµ,
-hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8æÍÕíµ,
+osquid:CommentedOutCodeLineü"<This block of commented-out lines of code should be removed.(éøÌ·ÿÿÿÿÿ8æÍÕíµ,
+Zsquid:S3655`"7Call "Optional#isPresent()" before accessing the value.(çŒĞéıÿÿÿÿ8Ë°ñ¶,
+Hsquid:S00108T")Either remove or fill this block of code.(å¥‡8æÍÕíµ,
+[squid:S1854¾"7Remove this useless assignment to local variable "out".(·¹£Ùşÿÿÿÿ8æÍÕíµ,
+Fsquid:S1148f"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹š¦ñ¶,
+isquid:CommentedOutCodeLine|"<This block of commented-out lines of code should be removed.(Ê†¿¸8æÍÕíµ,
+ksquid:S1192-"HDefine a constant instead of duplicating this literal "stderr>" 3 times.(ŠÍúÁÿÿÿÿÿ8ş½Ÿñ¶,
+Vsquid:S3655€"7Call "Optional#isPresent()" before accessing the value.(æ¨¤’8æÍÕíµ,
+nsquid:CommentedOutCodeLines"<This block of commented-out lines of code should be removed.(–éóõşÿÿÿÿ8æÍÕíµ,
+bsquid:S1134r"DTake the required action to fix the issue indicated by this comment.(•ÔÔ×8æÍÕíµ,
+Vsquid:S3655‰"7Call "Optional#isPresent()" before accessing the value.(îåõ÷8æÍÕíµ,
+ƒsquid:S1149˜"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ò¨ïıÿÿÿÿ8æÍÕíµ,
+Ssquid:S1143j"5Remove this return statement from this finally block.(øˆõø8À¨³ñ¶,
+¨squid:S1862_"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(­ìàşÿÿÿÿ8¬¥©ñ¶,
+fsquid:S00112ˆ"FDefine and throw a dedicated exception instead of using a generic one.(ÃÔ÷ı8æÍÕíµ,
+asquid:S2259È"BA "NullPointerException" could be thrown; "temp" is nullable here.(ÏÉš³8æÍÕíµ,
+csquid:S2147g"ECombine this catch with the one at line 101, which has the same body.(ï­£Ä8‹š¦ñ¶,
+hsquid:S1134û"DTake the required action to fix the issue indicated by this comment.(åÏµÒşÿÿÿÿ8æÍÕíµ,
+Zsquid:S3655["7Call "Optional#isPresent()" before accessing the value.(­²Š’ûÿÿÿÿ8‹à¬ñ¶,
+Ksquid:S1612€",Replace this lambda with a method reference.(æ¨¤’8æÍÕíµ,
+psquid:S3776)"RRefactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.(Œóò8æÍÕíµ,
+dsquid:S3027N"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(‰¸ëÂ8æÍÕíµ,
+Fsquid:S1148h"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹š¦ñ¶,
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¬£T8æÍÕíµ,
+fsquid:S1192,"HDefine a constant instead of duplicating this literal "stdout>" 3 times.(ıø–‰8ŒŠñ¶,
+ksquid:S00112Õ"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8æÍÕíµ,

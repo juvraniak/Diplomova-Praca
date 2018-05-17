@@ -179,7 +179,7 @@
       <file leaf-file-name="ExecutorImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="395">
               <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -2881,7 +2881,7 @@
       <workItem from="1526403962509" duration="554000" />
       <workItem from="1526412790901" duration="170000" />
       <workItem from="1526422446124" duration="823000" />
-      <workItem from="1526506338939" duration="4623000" />
+      <workItem from="1526506338939" duration="4667000" />
     </task>
     <servers />
   </component>
@@ -2918,7 +2918,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519779000" />
+    <option name="totallyTimeSpent" value="519823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2947,7 +2947,7 @@
       <window_info anchor="bottom" id="Usages" order="13" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44762954" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44762954" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32199547" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -3582,7 +3582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/liteshell/executors/ExecutorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="395">
           <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />

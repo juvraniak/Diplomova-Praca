@@ -1,33 +1,33 @@
 
-Nsquid:S1068"+Remove this unused "isBreak" private field.(Œ¸úûÿÿÿÿ8­õå™¶,
-Rsquid:S1481t"/Remove this unused "callParams" local variable.(ıúŞŠúÿÿÿÿ8­õå™¶,
-nsquid:CommentedOutCodeLine}"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8­õå™¶,
-\
-squid:S106”"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8­õå™¶,
-ysquid:S1450"VRemove the "isBreak" field and declare it as a local variable in the relevant methods.(Œ¸úûÿÿÿÿ8­õå™¶,
-dsquid:S3027{"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8­õå™¶,
 osquid:CommentedOutCodeLine†"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8­õå™¶,
-dsquid:S11923"GDefine a constant instead of duplicating this literal "fcall " 6 times.(ù‚¼z8­õå™¶,
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8­õå™¶,
-Ksquid:S1905…",Remove this unnecessary cast to "ScopeImpl".(é‡¹÷8­õå™¶,
-bsquid:S3358¯"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_8­õå™¶,
-osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8­õå™¶,
-nsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(û«ƒÜşÿÿÿÿ8­õå™¶,
+esquid:S3027„"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8­õå™¶,
 Usquid:S3655§"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
 [
 squid:S106n"9Replace this use of System.out or System.err by a logger.(‚„õŸøÿÿÿÿ8­õå™¶,
+dsquid:S11923"GDefine a constant instead of duplicating this literal "fcall " 6 times.(ù‚¼z8­õå™¶,
 Usquid:S1135&"2Complete the task associated to this TODO comment.(åÌèÊıÿÿÿÿ8­õå™¶,
-psquid:S3776]"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÿ×¨8­õå™¶,
-[
-squid:S106p"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8­õå™¶,
-isquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ê£Œ©8­õå™¶,
+Rsquid:S1481t"/Remove this unused "callParams" local variable.(ıúŞŠúÿÿÿÿ8­õå™¶,
+\squid:S1481u"9Remove this unused "afterExecuteRetValue" local variable.(’×ƒœøÿÿÿÿ8­õå™¶,
+Usquid:S3655§"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
+Jsquid:S1905|",Remove this unnecessary cast to "ScopeImpl".(ÕòÕ8­õå™¶,
+nsquid:CommentedOutCodeLine@"<This block of commented-out lines of code should be removed.(û«ƒÜşÿÿÿÿ8­õå™¶,
+Gsquid:S00108g")Either remove or fill this block of code.(¿ ùl8­õå™¶,
+ysquid:S1450"VRemove the "isBreak" field and declare it as a local variable in the relevant methods.(Œ¸úûÿÿÿÿ8­õå™¶,
 nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8­õå™¶,
 Psquid:S1135="2Complete the task associated to this TODO comment.(ê£Œ©8­õå™¶,
-Usquid:S3655§"7Call "Optional#isPresent()" before accessing the value.(ùö«Y8­õå™¶,
+[
+squid:S106p"9Replace this use of System.out or System.err by a logger.(¶÷Äøÿÿÿÿ8­õå™¶,
+Nsquid:S1068"+Remove this unused "isBreak" private field.(Œ¸úûÿÿÿÿ8­õå™¶,
 osquid:CommentedOutCodeLineŒ"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8­õå™¶,
-Gsquid:S00108g")Either remove or fill this block of code.(¿ ùl8­õå™¶,
+Ksquid:S1905…",Remove this unnecessary cast to "ScopeImpl".(é‡¹÷8­õå™¶,
+psquid:S3776]"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(ÿ×¨8­õå™¶,
+isquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ê£Œ©8­õå™¶,
+nsquid:CommentedOutCodeLine}"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8­õå™¶,
 jsquid:S3027¡"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(³•Îşÿÿÿÿ8­õå™¶,
-\squid:S1481u"9Remove this unused "afterExecuteRetValue" local variable.(’×ƒœøÿÿÿÿ8­õå™¶,
+bsquid:S3358¯"DExtract this nested ternary operation into an independent statement.(ÎÆÓ_8­õå™¶,
+dsquid:S3027{"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8­õå™¶,
+osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8­õå™¶,
 usquid:S3776!"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Å„ÃÍøÿÿÿÿ8­õå™¶,
-Jsquid:S1905|",Remove this unnecessary cast to "ScopeImpl".(ÕòÕ8­õå™¶,
-esquid:S3027„"FPut single-quotes around '(' to use the faster "indexOf(char)" method.(Ç¥»è8­õå™¶,
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(–Ó½Øÿÿÿÿÿ8­õå™¶,
+\
+squid:S106”"9Replace this use of System.out or System.err by a logger.(… œˆùÿÿÿÿ8­õå™¶,
